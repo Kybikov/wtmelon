@@ -82,7 +82,8 @@ export default {
       languages: [
         { code: 'uk', label: 'UA', name: 'Українська', flag: '🇺🇦' },
         { code: 'ru', label: 'RU', name: 'Русский', flag: '🇷🇺' },
-        { code: 'en', label: 'EN', name: 'English', flag: '🇬🇧' }
+        { code: 'en', label: 'EN', name: 'English', flag: '🇬🇧' },
+        { code: 'de', label: 'DE', name: 'Deutsch', flag: '🇩🇪' }
       ]
     }
   },

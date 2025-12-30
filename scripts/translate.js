@@ -5,6 +5,29 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+function loadEnv() {
+  try {
+    const envPath = join(__dirname, '../.env');
+    const envContent = readFileSync(envPath, 'utf-8');
+    const lines = envContent.split('\n');
+
+    for (const line of lines) {
+      const trimmedLine = line.trim();
+      if (trimmedLine && !trimmedLine.startsWith('#')) {
+        const [key, ...valueParts] = trimmedLine.split('=');
+        const value = valueParts.join('=');
+        if (key && value) {
+          process.env[key.trim()] = value.trim();
+        }
+      }
+    }
+  } catch (error) {
+    console.error('Помилка читання .env файлу:', error.message);
+  }
+}
+
+loadEnv();
+
 const DEEPL_API_KEY = process.env.VITE_DEEPL_API_KEY;
 const DEEPL_API_URL = 'https://api-free.deepl.com/v2/translate';
 
@@ -124,15 +147,17 @@ async function translateLanguageFile() {
 
   const ruTranslations = JSON.parse(JSON.stringify(translations.uk));
   const enTranslations = JSON.parse(JSON.stringify(translations.uk));
+  const deTranslations = JSON.parse(JSON.stringify(translations.uk));
 
   let completed = 0;
+  const totalTranslations = ukTexts.length * 3;
 
   console.log('🇷🇺 Переклад на російську...');
   for (const { path, text } of ukTexts) {
     const translated = await translateText(text, 'RU');
     setNestedValue(ruTranslations, path, translated);
     completed++;
-    process.stdout.write(`\r   Прогрес: ${completed}/${ukTexts.length * 2} (${Math.round(completed / (ukTexts.length * 2) * 100)}%)`);
+    process.stdout.write(`\r   Прогрес: ${completed}/${totalTranslations} (${Math.round(completed / totalTranslations * 100)}%)`);
   }
   console.log('\n\x1b[32m%s\x1b[0m', '✓ Російська мова готова\n');
 
@@ -141,12 +166,22 @@ async function translateLanguageFile() {
     const translated = await translateText(text, 'EN-US');
     setNestedValue(enTranslations, path, translated);
     completed++;
-    process.stdout.write(`\r   Прогрес: ${completed}/${ukTexts.length * 2} (${Math.round(completed / (ukTexts.length * 2) * 100)}%)`);
+    process.stdout.write(`\r   Прогрес: ${completed}/${totalTranslations} (${Math.round(completed / totalTranslations * 100)}%)`);
   }
   console.log('\n\x1b[32m%s\x1b[0m', '✓ Англійська мова готова\n');
 
+  console.log('🇩🇪 Переклад на німецьку...');
+  for (const { path, text } of ukTexts) {
+    const translated = await translateText(text, 'DE');
+    setNestedValue(deTranslations, path, translated);
+    completed++;
+    process.stdout.write(`\r   Прогрес: ${completed}/${totalTranslations} (${Math.round(completed / totalTranslations * 100)}%)`);
+  }
+  console.log('\n\x1b[32m%s\x1b[0m', '✓ Німецька мова готова\n');
+
   translations.ru = ruTranslations;
   translations.en = enTranslations;
+  translations.de = deTranslations;
 
   const newContent = fileContent.replace(
     /const translations = {[\s\S]*?}/,

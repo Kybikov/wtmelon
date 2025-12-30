@@ -30,7 +30,7 @@
                 class="floating-icon icon-1"
               >
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Deezer_logo.svg/200px-Deezer_logo.svg.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/3/32/Deezer_logo.png"
                 alt="Deezer"
                 class="floating-icon icon-2"
               >
