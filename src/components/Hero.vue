@@ -15,13 +15,10 @@
       <div class="row full-screen align-items-center">
         <div class="home-text">
           <h2>
-            <span class="highlight">Подписки</span> на стриминговые сервисы
+            {{ t.hero.title }} <span class="highlight">{{ t.hero.subtitle }}</span>
           </h2>
-          <p>
-            Выгодные предложения на Spotify, Deezer и другие популярные сервисы.
-            Индивидуальные, семейные и групповые планы. Надежно, быстро, выгодно.
-          </p>
-          <a href="#products" class="btn1">Смотреть подписки</a>
+          <p>{{ t.hero.description }}</p>
+          <a href="#products" class="btn1">{{ t.hero.cta }}</a>
         </div>
 
         <div class="home-image">
@@ -46,7 +43,13 @@
 </template>
 
 <script>
+import { useLanguage } from '../composables/useLanguage'
+
 export default {
-  name: 'Hero'
+  name: 'Hero',
+  setup() {
+    const { t } = useLanguage()
+    return { t }
+  }
 }
 </script>

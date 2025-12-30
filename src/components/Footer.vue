@@ -14,26 +14,26 @@
             <a href="#"><i class="fa-brands fa-youtube"></i></a>
           </div>
           <div class="footer-links">
-            <router-link to="/privacy" class="footer-link">Политика конфиденциальности</router-link>
-            <router-link to="/terms" class="footer-link">Договор оферты</router-link>
+            <router-link to="/privacy" class="footer-link">{{ t.footer.privacy }}</router-link>
+            <router-link to="/terms" class="footer-link">{{ t.footer.terms }}</router-link>
           </div>
-          <p class="left-text">&copy; 2024 Watermelon. Все права защищены</p>
+          <p class="left-text">&copy; 2024 Watermelon. {{ t.footer.rights }}</p>
         </div>
 
         <div class="right-col">
-          <h1>Рассылка</h1>
+          <h1>{{ t.footer.newsletter }}</h1>
           <div class="border"></div>
-          <p>Подпишитесь на рассылку и получайте эксклюзивные предложения</p>
+          <p>{{ t.footer.newsletterDesc }}</p>
 
           <form @submit.prevent="handleSubscribe" class="newsletter-form">
             <input
               type="email"
               v-model="email"
               class="txtb"
-              placeholder="Введите ваш email"
+              :placeholder="t.footer.email"
               required
             >
-            <button type="submit" class="btn1">Подписаться</button>
+            <button type="submit" class="btn1">{{ t.footer.subscribe }}</button>
           </form>
         </div>
       </div>
@@ -42,8 +42,14 @@
 </template>
 
 <script>
+import { useLanguage } from '../composables/useLanguage'
+
 export default {
   name: 'Footer',
+  setup() {
+    const { t } = useLanguage()
+    return { t }
+  },
   data() {
     return {
       email: ''
@@ -51,7 +57,7 @@ export default {
   },
   methods: {
     handleSubscribe() {
-      alert(`Спасибо за подписку! Email: ${this.email}`)
+      alert(this.t.footer.subscribeSuccess)
       this.email = ''
     }
   }

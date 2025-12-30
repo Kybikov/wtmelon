@@ -3,14 +3,14 @@
     <div class="container">
       <div class="row">
         <div class="section-title">
-          <h1 class="title">Контакты</h1>
-          <h2 class="subtitle">Свяжитесь с нами</h2>
+          <h1 class="title">{{ t.contact.title }}</h1>
+          <h2 class="subtitle">{{ t.contact.subtitle }}</h2>
         </div>
       </div>
 
       <div class="row">
         <div class="contact-info">
-          <h3>По любым вопросам и поддержке</h3>
+          <h3>{{ t.contact.info }}</h3>
 
           <div class="contact-info-item">
             <i class="fa-brands fa-telegram"></i>
@@ -21,13 +21,13 @@
           <div class="contact-info-item">
             <i class="fa-solid fa-envelope"></i>
             <h4>Email</h4>
-            <p>support@watermelon.ru</p>
+            <p>support@watermelon.ua</p>
           </div>
 
           <div class="contact-info-item">
             <i class="fa-solid fa-clock"></i>
-            <h4>Время работы</h4>
-            <p>24/7 онлайн поддержка</p>
+            <h4>{{ t.contact.workingHours }}</h4>
+            <p>{{ t.contact.support247 }}</p>
           </div>
         </div>
 
@@ -39,7 +39,7 @@
                   <input
                     type="text"
                     v-model="formData.name"
-                    placeholder="Ваше имя"
+                    :placeholder="t.contact.form.name"
                     class="form-control"
                     required
                   >
@@ -51,7 +51,7 @@
                   <input
                     type="email"
                     v-model="formData.email"
-                    placeholder="Ваш Email"
+                    :placeholder="t.contact.form.email"
                     class="form-control"
                     required
                   >
@@ -65,7 +65,7 @@
                   <input
                     type="text"
                     v-model="formData.phone"
-                    placeholder="Ваш телефон"
+                    :placeholder="t.contact.form.phone"
                     class="form-control"
                   >
                 </div>
@@ -78,7 +78,7 @@
                   <input
                     type="text"
                     v-model="formData.subject"
-                    placeholder="Тема"
+                    :placeholder="t.contact.form.subject"
                     class="form-control"
                     required
                   >
@@ -93,7 +93,7 @@
                     v-model="formData.message"
                     cols="30"
                     rows="10"
-                    placeholder="Ваше сообщение"
+                    :placeholder="t.contact.form.message"
                     class="form-control"
                     required
                   ></textarea>
@@ -103,7 +103,7 @@
 
             <div class="row">
               <div class="full-width">
-                <button class="btn1" type="submit">Отправить</button>
+                <button class="btn1" type="submit">{{ t.contact.form.send }}</button>
               </div>
             </div>
           </form>
@@ -114,8 +114,14 @@
 </template>
 
 <script>
+import { useLanguage } from '../composables/useLanguage'
+
 export default {
   name: 'Contact',
+  setup() {
+    const { t } = useLanguage()
+    return { t }
+  },
   data() {
     return {
       formData: {
@@ -129,7 +135,7 @@ export default {
   },
   methods: {
     handleSubmit() {
-      alert('Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.')
+      alert(this.t.contact.form.success)
       this.formData = {
         name: '',
         email: '',
