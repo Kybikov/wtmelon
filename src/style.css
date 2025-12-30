@@ -981,10 +981,12 @@ body {
 
 .contact-section .row:last-child {
   gap: 60px;
+  align-items: flex-start;
 }
 
 .contact-info {
   flex: 1;
+  min-width: 0;
 }
 
 .contact-info h3 {
@@ -1032,6 +1034,7 @@ body {
 
 .contact-form {
   flex: 1;
+  min-width: 0;
 }
 
 .contact-form form {
