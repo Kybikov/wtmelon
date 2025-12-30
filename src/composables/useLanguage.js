@@ -67,6 +67,8 @@ const translations = {
         subject: 'Тема',
         message: 'Ваше повідомлення',
         send: 'Надіслати',
+        show: 'Задати питання',
+        hide: 'Сховати форму',
         success: 'Дякуємо за ваше повідомлення! Ми звʼяжемося з вами найближчим часом.'
       }
     },
@@ -155,6 +157,8 @@ const translations = {
         subject: 'Тема',
         message: 'Ваше сообщение',
         send: 'Отправить',
+        show: 'Задать вопрос',
+        hide: 'Скрыть форму',
         success: 'Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.'
       }
     },
@@ -243,6 +247,8 @@ const translations = {
         subject: 'Subject',
         message: 'Your message',
         send: 'Send',
+        show: 'Ask a question',
+        hide: 'Hide form',
         success: 'Thank you for your message! We will contact you soon.'
       }
     },
@@ -331,6 +337,8 @@ const translations = {
         subject: 'Betreff',
         message: 'Ihre Nachricht',
         send: 'Senden',
+        show: 'Frage stellen',
+        hide: 'Formular ausblenden',
         success: 'Vielen Dank für Ihre Nachricht! Wir werden uns bald bei Ihnen melden.'
       }
     },

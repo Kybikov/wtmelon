@@ -8,48 +8,53 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="contact-info">
-          <h3>{{ t.contact.info }}</h3>
-
-          <div class="contact-info-item">
-            <i class="fa-solid fa-phone"></i>
-            <h4>{{ t.contact.phone }}</h4>
-            <a href="tel:+380633084244" class="contact-link">+380 63 308 42 44</a>
-          </div>
-
-          <div class="contact-info-item">
-            <i class="fa-solid fa-envelope"></i>
-            <h4>Email</h4>
-            <a href="mailto:info@wtmelon.store" class="contact-link">info@wtmelon.store</a>
-          </div>
-
-          <div class="contact-info-item">
-            <i class="fa-brands fa-telegram"></i>
-            <h4>Telegram</h4>
-            <a href="https://t.me/wtmelon_ua" target="_blank" rel="noopener" class="contact-link">@wtmelon_ua</a>
-          </div>
-
-          <div class="contact-info-item">
-            <i class="fa-brands fa-instagram"></i>
-            <h4>Instagram</h4>
-            <a href="https://instagram.com/wtmelon.ua" target="_blank" rel="noopener" class="contact-link">@wtmelon.ua</a>
-          </div>
-
-          <div class="contact-info-item">
-            <i class="fa-brands fa-whatsapp"></i>
-            <h4>WhatsApp</h4>
-            <a href="https://wa.me/380633084244" target="_blank" rel="noopener" class="contact-link">+380 63 308 42 44</a>
-          </div>
-
-          <div class="contact-info-item">
-            <i class="fa-brands fa-viber"></i>
-            <h4>Viber</h4>
-            <a href="viber://chat?number=%2B380633084244" class="contact-link">+380 63 308 42 44</a>
-          </div>
+      <div class="contacts-grid">
+        <div class="contact-info-item">
+          <i class="fa-solid fa-phone"></i>
+          <h4>{{ t.contact.phone }}</h4>
+          <a href="tel:+380633084244" class="contact-link">+380 63 308 42 44</a>
         </div>
 
-        <div class="contact-form">
+        <div class="contact-info-item">
+          <i class="fa-solid fa-envelope"></i>
+          <h4>Email</h4>
+          <a href="mailto:info@wtmelon.store" class="contact-link">info@wtmelon.store</a>
+        </div>
+
+        <div class="contact-info-item">
+          <i class="fa-brands fa-telegram"></i>
+          <h4>Telegram</h4>
+          <a href="https://t.me/wtmelon_ua" target="_blank" rel="noopener" class="contact-link">@wtmelon_ua</a>
+        </div>
+
+        <div class="contact-info-item">
+          <i class="fa-brands fa-instagram"></i>
+          <h4>Instagram</h4>
+          <a href="https://instagram.com/wtmelon.ua" target="_blank" rel="noopener" class="contact-link">@wtmelon.ua</a>
+        </div>
+
+        <div class="contact-info-item">
+          <i class="fa-brands fa-whatsapp"></i>
+          <h4>WhatsApp</h4>
+          <a href="https://wa.me/380633084244" target="_blank" rel="noopener" class="contact-link">+380 63 308 42 44</a>
+        </div>
+
+        <div class="contact-info-item">
+          <i class="fa-brands fa-viber"></i>
+          <h4>Viber</h4>
+          <a href="viber://chat?number=%2B380633084244" class="contact-link">+380 63 308 42 44</a>
+        </div>
+      </div>
+
+      <div class="ask-question-wrapper">
+        <button class="btn1 btn-ask-question" @click="toggleForm">
+          <i class="fa-solid fa-envelope"></i>
+          {{ showForm ? t.contact.form.hide : t.contact.form.show }}
+        </button>
+      </div>
+
+      <transition name="slide-down">
+        <div v-if="showForm" class="contact-form">
           <form @submit.prevent="handleSubmit">
             <div class="row">
               <div class="left">
@@ -126,7 +131,7 @@
             </div>
           </form>
         </div>
-      </div>
+      </transition>
     </div>
   </section>
 </template>
@@ -142,6 +147,7 @@ export default {
   },
   data() {
     return {
+      showForm: false,
       formData: {
         name: '',
         email: '',
@@ -152,6 +158,9 @@ export default {
     }
   },
   methods: {
+    toggleForm() {
+      this.showForm = !this.showForm
+    },
     handleSubmit() {
       alert(this.t.contact.form.success)
       this.formData = {
@@ -161,6 +170,7 @@ export default {
         subject: '',
         message: ''
       }
+      this.showForm = false
     }
   }
 }
