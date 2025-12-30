@@ -16,7 +16,7 @@
           </div>
 
           <div class="modal-body">
-            <p class="product-description">{{ product.description[currentLanguage] }}</p>
+            <p class="product-description">{{ product.description }}</p>
 
             <div class="plan-selector">
               <h4>{{ t.modal.selectPlan }}</h4>
@@ -27,19 +27,19 @@
                   :class="['plan-btn', { active: selectedPlan?.id === plan.id }]"
                   @click="selectPlan(plan)"
                 >
-                  {{ plan.name[currentLanguage] }}
+                  {{ plan.name }}
                 </button>
               </div>
             </div>
 
             <div v-if="selectedPlan" class="plan-details">
-              <p class="plan-desc">{{ selectedPlan.description[currentLanguage] }}</p>
+              <p class="plan-desc">{{ selectedPlan.description }}</p>
 
               <div class="features-duration-grid">
                 <div class="features-section">
                   <h4>{{ t.modal.features }}</h4>
                   <ul class="features">
-                    <li v-for="(feature, index) in selectedPlan.features[currentLanguage]" :key="index">
+                    <li v-for="(feature, index) in selectedPlan.features" :key="index">
                       <i class="fa-solid fa-check"></i>
                       {{ feature }}
                     </li>
@@ -132,7 +132,7 @@ export default {
 
       const message = `
 Послуга: ${this.product.name}
-План: ${this.selectedPlan.name[this.currentLanguage]}
+План: ${this.selectedPlan.name}
 Тривалість: ${this.selectedDuration} міс.
 Ціна: ${this.selectedPlan.prices[this.selectedDuration]} ₴
       `

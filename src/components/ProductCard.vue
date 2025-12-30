@@ -5,7 +5,7 @@
     </div>
 
     <h3>{{ product.name }}</h3>
-    <p class="product-short-desc">{{ product.shortDescription[currentLanguage] }}</p>
+    <p class="product-short-desc">{{ product.shortDescription }}</p>
 
     <div class="product-price">
       <span class="from-label">{{ t.services.from }}</span>
