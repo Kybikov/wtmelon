@@ -241,8 +241,8 @@
             <h2>11. Контакты</h2>
             <p>По всем вопросам обращайтесь:</p>
             <ul>
-              <li>Email: support@watermelon.ru</li>
-              <li>Telegram: @watermelon_support</li>
+              <li>Email: privacy@wtmelon.store</li>
+              <li>Telegram: @WTmelon</li>
             </ul>
           </section>
         </div>
@@ -358,8 +358,8 @@
             <h2>11. Contact</h2>
             <p>For all questions, contact:</p>
             <ul>
-              <li>Email: support@watermelon.com</li>
-              <li>Telegram: @watermelon_support</li>
+              <li>Email: privacy@wtmelon.store</li>
+              <li>Telegram: @WTmelon</li>
             </ul>
           </section>
         </div>
@@ -475,8 +475,8 @@
             <h2>11. Kontakt</h2>
             <p>Für alle Fragen kontaktieren Sie:</p>
             <ul>
-              <li>E-Mail: support@watermelon.de</li>
-              <li>Telegram: @watermelon_support</li>
+              <li>Email: privacy@wtmelon.store</li>
+              <li>Telegram: @WTmelon</li>
             </ul>
           </section>
         </div>
