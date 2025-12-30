@@ -8,9 +8,8 @@
             <span class="logo-text">Watermelon</span>
           </router-link>
           <div class="social-media">
-            <a href="#"><i class="fa-brands fa-telegram"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://t.me/wtmelon_ua" target="_blank" rel="noopener" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://instagram.com/wtmelon.ua" target="_blank" rel="noopener" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
           </div>
           <div class="footer-links">
             <router-link to="/privacy" class="footer-link">{{ t.footer.privacy }}</router-link>

@@ -23,6 +23,11 @@
         </ul>
 
         <div class="nav-controls">
+          <a href="tel:+380633084244" class="phone-link">
+            <i class="fa-solid fa-phone"></i>
+            <span class="phone-number">+380 63 308 42 44</span>
+          </a>
+
           <div class="language-switcher">
             <button class="lang-toggle" @click="toggleLangMenu">
               <i class="fa-solid fa-globe"></i>

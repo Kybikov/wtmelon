@@ -13,21 +13,39 @@
           <h3>{{ t.contact.info }}</h3>
 
           <div class="contact-info-item">
-            <i class="fa-brands fa-telegram"></i>
-            <h4>Telegram</h4>
-            <p>@watermelon_support</p>
+            <i class="fa-solid fa-phone"></i>
+            <h4>{{ t.contact.phone }}</h4>
+            <a href="tel:+380633084244" class="contact-link">+380 63 308 42 44</a>
           </div>
 
           <div class="contact-info-item">
             <i class="fa-solid fa-envelope"></i>
             <h4>Email</h4>
-            <p>support@watermelon.ua</p>
+            <a href="mailto:info@wtmelon.store" class="contact-link">info@wtmelon.store</a>
           </div>
 
           <div class="contact-info-item">
-            <i class="fa-solid fa-clock"></i>
-            <h4>{{ t.contact.workingHours }}</h4>
-            <p>{{ t.contact.support247 }}</p>
+            <i class="fa-brands fa-telegram"></i>
+            <h4>Telegram</h4>
+            <a href="https://t.me/wtmelon_ua" target="_blank" rel="noopener" class="contact-link">@wtmelon_ua</a>
+          </div>
+
+          <div class="contact-info-item">
+            <i class="fa-brands fa-instagram"></i>
+            <h4>Instagram</h4>
+            <a href="https://instagram.com/wtmelon.ua" target="_blank" rel="noopener" class="contact-link">@wtmelon.ua</a>
+          </div>
+
+          <div class="contact-info-item">
+            <i class="fa-brands fa-whatsapp"></i>
+            <h4>WhatsApp</h4>
+            <a href="https://wa.me/380633084244" target="_blank" rel="noopener" class="contact-link">+380 63 308 42 44</a>
+          </div>
+
+          <div class="contact-info-item">
+            <i class="fa-brands fa-viber"></i>
+            <h4>Viber</h4>
+            <a href="viber://chat?number=%2B380633084244" class="contact-link">+380 63 308 42 44</a>
           </div>
         </div>
 

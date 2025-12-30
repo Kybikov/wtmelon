@@ -57,6 +57,7 @@ const translations = {
       title: 'Контакти',
       subtitle: "Зв'яжіться з нами",
       info: 'З будь-яких питань та підтримки',
+      phone: 'Телефон',
       workingHours: 'Час роботи',
       support247: '24/7 онлайн підтримка',
       form: {
@@ -144,6 +145,7 @@ const translations = {
       title: 'Контакты',
       subtitle: 'Свяжитесь с нами',
       info: 'По любым вопросам и поддержке',
+      phone: 'Телефон',
       workingHours: 'Время работы',
       support247: '24/7 онлайн поддержка',
       form: {
@@ -231,6 +233,7 @@ const translations = {
       title: 'Contact',
       subtitle: 'Get in touch',
       info: 'For any questions and support',
+      phone: 'Phone',
       workingHours: 'Working hours',
       support247: '24/7 online support',
       form: {
@@ -318,6 +321,7 @@ const translations = {
       title: 'Kontakt',
       subtitle: 'Kontaktieren Sie uns',
       info: 'Für alle Fragen und Support',
+      phone: 'Telefon',
       workingHours: 'Arbeitszeiten',
       support247: '24/7 Online-Support',
       form: {
