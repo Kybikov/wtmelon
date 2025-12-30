@@ -24,14 +24,23 @@
 
         <div class="nav-controls">
           <div class="language-switcher">
-            <button
-              v-for="lang in languages"
-              :key="lang.code"
-              :class="['lang-btn', { active: currentLanguage === lang.code }]"
-              @click="setLanguage(lang.code)"
-            >
-              {{ lang.label }}
+            <button class="lang-toggle" @click="toggleLangMenu">
+              <i class="fa-solid fa-globe"></i>
+              <span class="current-lang">{{ getCurrentLangLabel }}</span>
+              <i class="fa-solid fa-chevron-down" :class="{ rotated: langMenuOpen }"></i>
             </button>
+            <div v-if="langMenuOpen" class="lang-dropdown">
+              <button
+                v-for="lang in languages"
+                :key="lang.code"
+                :class="['lang-option', { active: currentLanguage === lang.code }]"
+                @click="selectLanguage(lang.code)"
+              >
+                <span class="lang-flag">{{ lang.flag }}</span>
+                <span class="lang-name">{{ lang.name }}</span>
+                <i v-if="currentLanguage === lang.code" class="fa-solid fa-check"></i>
+              </button>
+            </div>
           </div>
 
           <button class="theme-toggle" @click="toggleTheme" :title="isDark ? 'Light mode' : 'Dark mode'">
@@ -69,11 +78,18 @@ export default {
     return {
       isSticky: false,
       menuOpen: false,
+      langMenuOpen: false,
       languages: [
-        { code: 'uk', label: 'UA' },
-        { code: 'ru', label: 'RU' },
-        { code: 'en', label: 'EN' }
+        { code: 'uk', label: 'UA', name: 'Українська', flag: '🇺🇦' },
+        { code: 'ru', label: 'RU', name: 'Русский', flag: '🇷🇺' },
+        { code: 'en', label: 'EN', name: 'English', flag: '🇬🇧' }
       ]
+    }
+  },
+  computed: {
+    getCurrentLangLabel() {
+      const lang = this.languages.find(l => l.code === this.currentLanguage)
+      return lang ? lang.label : 'UA'
     }
   },
   mounted() {
@@ -88,9 +104,17 @@ export default {
     },
     toggleMenu() {
       this.menuOpen = !this.menuOpen
+      this.langMenuOpen = false
     },
     closeMenu() {
       this.menuOpen = false
+    },
+    toggleLangMenu() {
+      this.langMenuOpen = !this.langMenuOpen
+    },
+    selectLanguage(code) {
+      this.setLanguage(code)
+      this.langMenuOpen = false
     }
   }
 }
