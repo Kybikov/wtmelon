@@ -1,0 +1,686 @@
+[
+  {
+    "id": "spotify",
+    "category": "music",
+    "name": "Spotify Premium",
+    "shortDescription": "Доступ до преміум функцій Spotify",
+    "description": "Отримайте доступ до преміум-підписки Spotify. Мільйони треків та подкастів без реклами. Регіон Єгипет (VPN не потрібен для прослуховування).",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/168px-Spotify_logo_without_text.svg.png",
+    "plans": [
+      {
+        "id": "individual",
+        "name": "Spotify Індивідуал",
+        "description": "Преміум на вашому акаунті або новому. Регіон Єгипет (VPN не потрібен!).",
+        "features": [
+          "Без реклами",
+          "Прослуховування офлайн",
+          "Висока якість звуку",
+          "Працює без VPN"
+        ],
+        "prices": {
+          "1": 119,
+          "3": 339,
+          "6": 640,
+          "12": 1100
+        }
+      },
+      {
+        "id": "duo",
+        "name": "Spotify Duo",
+        "description": "Діліться з партнером! Два профілі, будь-який регіон на ваш вибір.",
+        "features": [
+          "2 преміум акаунти",
+          "Спільний плейлист",
+          "Економія для двох"
+        ],
+        "prices": {
+          "1": 180,
+          "3": 520,
+          "6": 1000,
+          "12": 1800
+        }
+      },
+      {
+        "id": "family",
+        "name": "Spotify Сім'я",
+        "description": "До 6 профілів для вашої родини. Оберіть будь-який регіон.",
+        "features": [
+          "До 6 акаунтів",
+          "Family Mix",
+          "Контроль контенту",
+          "Повний доступ адміна"
+        ],
+        "prices": {
+          "1": 250,
+          "3": 730,
+          "6": 1350,
+          "12": 2499
+        }
+      },
+      {
+        "id": "slot",
+        "name": "Spotify Місце в сім'ї",
+        "description": "Приєднуйтесь до існуючого сімейного плану через запрошення.",
+        "features": [
+          "Легке налаштування",
+          "Власний акаунт",
+          "Особисті плейлісти",
+          "Будь-який регіон"
+        ],
+        "prices": {
+          "1": 80,
+          "3": 230,
+          "6": 430,
+          "12": 799
+        }
+      }
+    ]
+  },
+  {
+    "id": "applemusic",
+    "category": "music",
+    "name": "Apple Music",
+    "shortDescription": "Музика без обмежень та реклами",
+    "description": "Безмежний доступ до музики. Слухайте мільйони треків без реклами. Окремі профілі з персональними рекомендаціями.",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Apple_Music_logo.svg/1024px-Apple_Music_logo.svg.png",
+    "plans": [
+      {
+        "id": "ukraine",
+        "name": "Apple Music Україна",
+        "description": "Офіційна підписка (Регіон Україна)",
+        "features": [
+          "Без реклами",
+          "Офлайн режим",
+          "Висока якість (Lossless)",
+          "Доступ до медіатеки"
+        ],
+        "prices": {
+          "1": 99,
+          "3": 289,
+          "6": 559,
+          "12": 1099
+        }
+      }
+    ]
+  },
+  {
+    "id": "youtube",
+    "category": "video",
+    "name": "YouTube Premium",
+    "shortDescription": "YouTube та YouTube Music без реклами",
+    "description": "Дивіться відео без реклами, фонове відтворення, офлайн перегляд. Включає YouTube Music Premium.",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/YouTube_Premium_logo.svg/256px-YouTube_Premium_logo.svg.png",
+    "plans": [
+      {
+        "id": "ukraine",
+        "name": "Premium Україна",
+        "description": "Підписка для українського регіону",
+        "features": [
+          "Без реклами",
+          "Фонове відтворення",
+          "YouTube Music",
+          "Офлайн перегляд"
+        ],
+        "prices": {
+          "1": 70,
+          "3": 200,
+          "6": 370,
+          "12": 700
+        }
+      },
+      {
+        "id": "global",
+        "name": "Premium Інші регіони",
+        "description": "Підписка для інших регіонів (Invites)",
+        "features": [
+          "Просте підключення через запрошення",
+          "Власний акаунт",
+          "Стабільна робота",
+          "Всі преміум функції"
+        ],
+        "prices": {
+          "1": 100,
+          "3": 280,
+          "6": 540,
+          "12": 1000
+        }
+      }
+    ]
+  },
+  {
+    "id": "netflix",
+    "category": "video",
+    "name": "Netflix Premium",
+    "shortDescription": "Кінематографічний досвід у 4K",
+    "description": "Приголомшлива якість 4K. Глобальний доступ — дивіться улюблені шоу та фільми в будь-якому регіоні без обмежень.",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/200px-Netflix_2015_logo.svg.png",
+    "plans": [
+      {
+        "id": "1_profile",
+        "name": "1 Профіль",
+        "description": "Ваш особистий профіль у спільному акаунті",
+        "features": [
+          "Якість 4K Ultra HD",
+          "Перегляд на будь-якому пристрої",
+          "1 екран одночасно",
+          "Особиста історія"
+        ],
+        "prices": {
+          "1": 150,
+          "3": 419,
+          "6": 749,
+          "12": 1299
+        }
+      },
+      {
+        "id": "2_profiles",
+        "name": "2 Профіля",
+        "description": "Два окремих профілі або перегляд на 2 екранах",
+        "features": [
+          "Якість 4K Ultra HD",
+          "2 екрани одночасно",
+          "Вигідніша ціна за профіль"
+        ],
+        "prices": {
+          "1": 260,
+          "3": 749,
+          "6": 1299,
+          "12": 2199
+        }
+      }
+    ]
+  },
+  {
+    "id": "sweet_tv",
+    "category": "video",
+    "name": "Sweet.TV",
+    "shortDescription": "Фільми, серіали та ТБ на будь-якому пристрої",
+    "description": "Висока якість (Full HD / 4K). Популярні телеканали, фільми та мультфільми без реклами.",
+    "icon": "https://sweet.tv/images/logo_sweet_tv.svg",
+    "plans": [
+      {
+        "id": "packet_l_1",
+        "name": "Пакет L (1 профіль)",
+        "description": "Доступ для одного профілю в спільному акаунті.",
+        "features": [
+          "260+ каналів",
+          "Фільми Full HD",
+          "1 пристрій"
+        ],
+        "prices": {
+          "1": 60,
+          "3": 160,
+          "6": 300,
+          "12": 550
+        }
+      },
+      {
+        "id": "packet_l_2",
+        "name": "Пакет L (2 профілі)",
+        "description": "Доступ для двох профілів (або 2 пристрої).",
+        "features": [
+          "260+ каналів",
+          "Фільми Full HD",
+          "2 пристрої одночасно"
+        ],
+        "prices": {
+          "1": 110,
+          "3": 300,
+          "6": 550,
+          "12": 1000
+        }
+      },
+      {
+        "id": "packet_l_personal",
+        "name": "Пакет L (Особистий)",
+        "description": "Повноцінний особистий акаунт (5 пристроїв).",
+        "features": [
+          "Особистий акаунт",
+          "До 5 пристроїв",
+          "Максимальна свобода"
+        ],
+        "prices": {
+          "1": 180,
+          "3": 520,
+          "6": 970,
+          "12": 1800
+        }
+      }
+    ]
+  },
+  {
+    "id": "tidal",
+    "category": "music",
+    "name": "Tidal HiFi",
+    "shortDescription": "Ваша музика в найвищій якості",
+    "description": "360 Reality Audio та Dolby Atmos. Занурюйтесь у просторовий звук для незабутнього музичного досвіду.",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Tidal_%28service%29_logo.svg/1200px-Tidal_%28service%29_logo.svg.png",
+    "plans": [
+      {
+        "id": "individual",
+        "name": "Tidal Individual",
+        "description": "Преміум на вашому акаунті або новому. Регіон Єгипет.",
+        "features": [
+          "HiFi якість звуку",
+          "Без VPN після входу",
+          "Dolby Atmos"
+        ],
+        "prices": {
+          "1": 170,
+          "3": 499,
+          "6": 900
+        }
+      },
+      {
+        "id": "family",
+        "name": "Tidal Family",
+        "description": "Повний сімейний акаунт (до 6 людей)",
+        "features": [
+          "До 6 профілів",
+          "Керування підпискою",
+          "HiFi для всієї родини"
+        ],
+        "prices": {
+          "1": 259,
+          "3": 729,
+          "6": 1399
+        }
+      },
+      {
+        "id": "slot",
+        "name": "Tidal Місце в сім'ї",
+        "description": "Підключення до сімейного плану",
+        "features": [
+          "Ваш власний профіль",
+          "HiFi звук",
+          "Найвигідніша ціна"
+        ],
+        "prices": {
+          "1": 119,
+          "3": 339,
+          "6": 640,
+          "12": 1199
+        }
+      }
+    ]
+  },
+  {
+    "id": "deezer",
+    "category": "music",
+    "name": "Deezer Premium",
+    "shortDescription": "Доступ до преміум функцій Deezer",
+    "description": "Отримайте доступ до преміум-підписки Deezer. 90+ мільйонів треків та ексклюзивні подкасти. HiFi якість звуку.",
+    "icon": "https://www.deezer-investors.com/wp-content/themes/deezer/images/logo_deezer_wide.png",
+    "plans": [
+      {
+        "id": "individual",
+        "name": "Індивідуальний",
+        "description": "1 преміум акаунт",
+        "features": [
+          "Без реклами",
+          "HiFi якість звуку",
+          "Прослуховування офлайн",
+          "Необмежені пропуски"
+        ],
+        "prices": {
+          "1": 199,
+          "3": 549,
+          "6": 1049,
+          "12": 1949
+        }
+      },
+      {
+        "id": "duo",
+        "name": "Duo",
+        "description": "2 преміум акаунти",
+        "features": [
+          "Всі переваги Індивідуального",
+          "2 незалежні акаунти",
+          "Спільний плейлист",
+          "HiFi якість для обох"
+        ],
+        "prices": {
+          "1": 269,
+          "3": 729,
+          "6": 1389,
+          "12": 2569
+        }
+      },
+      {
+        "id": "family",
+        "name": "Сімейний",
+        "description": "До 6 преміум акаунтів",
+        "features": [
+          "Всі переваги Duo",
+          "До 6 акаунтів",
+          "Сімейний профіль",
+          "Дитячий режим",
+          "HiFi для всіх"
+        ],
+        "prices": {
+          "1": 329,
+          "3": 899,
+          "6": 1719,
+          "12": 3179
+        }
+      },
+      {
+        "id": "slot",
+        "name": "Місце в сім'ї",
+        "description": "Підключення до існуючої сім'ї",
+        "features": [
+          "Доступ до преміум функцій",
+          "Власний профіль",
+          "HiFi якість",
+          "Прослуховування офлайн"
+        ],
+        "prices": {
+          "1": 109,
+          "3": 299,
+          "6": 569,
+          "12": 1059
+        }
+      }
+    ]
+  },
+  {
+    "id": "chatgpt",
+    "category": "ai",
+    "name": "ChatGPT",
+    "shortDescription": "Золотий стандарт штучного інтелекту",
+    "description": "Доступ до найпотужніших моделей OpenAI: GPT-5.2, o3, Sora 2 (в окремих планах). Обирайте між особистим акаунтом та спільним доступом.",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/1024px-ChatGPT_logo.svg.png",
+    "plans": [
+      {
+        "id": "go_personal",
+        "name": "ChatGPT GO (Personal)",
+        "description": "Золота середина. Особистий акаунт, лише твій.",
+        "features": [
+          "Особиста пошта",
+          "Модель GPT-5.2 Auto",
+          "До 25 файлів у проекті",
+          "15-25 зображень на день"
+        ],
+        "prices": {
+          "1": 130,
+          "3": 300,
+          "6": 500,
+          "12": 850
+        }
+      },
+      {
+        "id": "teacher_business",
+        "name": "ChatGPT Teacher (Business)",
+        "description": "Максимальні ліміти для професіоналів.",
+        "features": [
+          "GPT-5.2 (160/3 години)",
+          "Sora 2 (30 відео/день)",
+          "Deep Research (10-15/міс)",
+          "До 80 файлів кожні 3 години"
+        ],
+        "prices": {
+          "1": 200,
+          "3": 550,
+          "6": 1050,
+          "12": 2000
+        }
+      },
+      {
+        "id": "plus_shared",
+        "name": "ChatGPT Plus (Shared)",
+        "description": "Спільний акаунт (1 місце з 5).",
+        "features": [
+          "Доступ до Plus функцій",
+          "Спільне використання",
+          "Вигідна ціна"
+        ],
+        "prices": {
+          "1": 200,
+          "3": 550,
+          "6": 1050,
+          "12": 2000
+        }
+      }
+    ]
+  },
+  {
+    "id": "discord",
+    "category": "social",
+    "name": "Discord",
+    "shortDescription": "Покращуйте свій досвід у Discord",
+    "description": "Потужне розширення можливостей для спілкування, творчості та ігор. Активується напряму на ваш акаунт.",
+    "icon": "https://assets-global.website-files.com/6257adef93867e56f84d3092/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png",
+    "plans": [
+      {
+        "id": "basic",
+        "name": "Nitro Basic",
+        "description": "Дешевший, але функціональний план.",
+        "features": [
+          "Кастомні емодзі скрізь",
+          "Завантаження файлів до 50 МБ",
+          "Значок Nitro в профілі"
+        ],
+        "prices": {
+          "1": 80,
+          "12": 800
+        }
+      },
+      {
+        "id": "nitro",
+        "name": "Discord Nitro",
+        "description": "Максимально потужний план з усіма фішками.",
+        "features": [
+          "2 безкоштовних бусти серверу",
+          "Стрімінг 4K/60fps",
+          "Завантаження до 500 МБ",
+          "Анімований аватар та банери"
+        ],
+        "prices": {
+          "1": 200,
+          "12": 2000
+        }
+      }
+    ]
+  },
+  {
+    "id": "duolingo",
+    "category": "education",
+    "name": "Duolingo",
+    "shortDescription": "Вчися ефективно та без обмежень",
+    "description": "Вчися будь-де — вдома, у дорозі чи на перерві. Кожен план активуємо на ваш акаунт.",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Duolingo_logo_2019.svg/1024px-Duolingo_logo_2019.svg.png",
+    "plans": [
+      {
+        "id": "education",
+        "name": "Duolingo Education",
+        "description": "Ідеальний економний варіант.",
+        "features": [
+          "Без реклами",
+          "Необмежені життя",
+          "Доступна ціна"
+        ],
+        "prices": {
+          "1": 60,
+          "3": 170,
+          "6": 320,
+          "12": 600
+        }
+      },
+      {
+        "id": "super",
+        "name": "Super Duolingo",
+        "description": "Оптимальний вибір для навчання офлайн.",
+        "features": [
+          "Все, що в Education",
+          "Персоналізована практика",
+          "Робота над помилками",
+          "Навчання офлайн"
+        ],
+        "prices": {
+          "1": 80,
+          "3": 230,
+          "6": 430,
+          "12": 799
+        }
+      },
+      {
+        "id": "max",
+        "name": "Duolingo Max",
+        "description": "Максимальний досвід з AI.",
+        "features": [
+          "Все, що в Super",
+          "AI-помічник",
+          "Пояснення помилок",
+          "Інтерактивні діалоги (Roleplay)"
+        ],
+        "prices": {
+          "1": 160,
+          "3": 460,
+          "6": 900,
+          "12": 1600
+        }
+      }
+    ]
+  },
+  {
+    "id": "perplexity",
+    "category": "ai",
+    "name": "Perplexity AI",
+    "shortDescription": "Інтелектуальний асистент нового покоління",
+    "description": "Потужний інструмент для навчання та роботи. Доступ до Chat GPT 5.1, Claude 4.5 Sonnet, Gemini 3 Pro та інших моделей.",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Perplexity_AI_logo.svg/1024px-Perplexity_AI_logo.svg.png",
+    "plans": [
+      {
+        "id": "pro",
+        "name": "Perplexity Pro",
+        "description": "Особистий акаунт при покупці на 12 місяців. На менший термін — доступ від нас.",
+        "features": [
+          "Доступ до топових AI моделей",
+          "Voice-mod (голосовий режим)",
+          "Пошук актуальної інформації",
+          "Аналіз файлів"
+        ],
+        "prices": {
+          "1": 169,
+          "3": 440,
+          "6": 699,
+          "12": 1099
+        }
+      }
+    ]
+  },
+  {
+    "id": "surfshark",
+    "category": "vpn",
+    "name": "Surfshark VPN",
+    "shortDescription": "Захист інтернету без кордонів",
+    "description": "Потужний VPN для безпечного серфінгу, відпочинку та роботи. Максимальна анонімність.",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Surfshark_Logo.png/800px-Surfshark_Logo.png",
+    "plans": [
+      {
+        "id": "unlimited",
+        "name": "Безліч пристроїв",
+        "description": "Одна підписка на всі ваші гаджети.",
+        "features": [
+          "Безліч пристроїв (ПК, смартфон)",
+          "Необмежена кількість підключень",
+          "Старт пакет захисту",
+          "Зміна IP та локації"
+        ],
+        "prices": {
+          "1": 60,
+          "3": 170,
+          "6": 320,
+          "12": 600
+        }
+      }
+    ]
+  },
+  {
+    "id": "adobe_cloud",
+    "category": "design",
+    "name": "Adobe Creative Cloud",
+    "shortDescription": "Професійний набір інструментів для креативу",
+    "description": "Photoshop, Premiere Pro, After Effects та інші програми. Обирайте між стабільністю та об'ємом сховища.",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Adobe_Creative_Cloud_rainbow_icon.svg/1024px-Adobe_Creative_Cloud_rainbow_icon.svg.png",
+    "plans": [
+      {
+        "id": "stable_80gb",
+        "name": "Стабільний 80 ГБ",
+        "description": "Ідеальний для тих, хто цінує стабільність. Працює без збоїв.",
+        "features": [
+          "80 ГБ хмарного сховища",
+          "250 AI кредитів щомісяця",
+          "Стабільна робота",
+          "Можливість докупити кредити"
+        ],
+        "prices": {
+          "1": 400,
+          "3": 1200,
+          "6": 2200,
+          "12": 4000
+        }
+      },
+      {
+        "id": "unstable_1tb",
+        "name": "Нестабільний 1 ТБ",
+        "description": "Вигідний варіант для великих файлів. Можливі рідкісні вильоти (4-7 на рік).",
+        "features": [
+          "1 ТБ хмарного простору",
+          "4000 AI кредитів",
+          "Повний набір програм",
+          "Виправлення вильотів того ж дня"
+        ],
+        "prices": {
+          "1": 300,
+          "3": 900,
+          "6": 1700,
+          "12": 3000
+        }
+      }
+    ]
+  },
+  {
+    "id": "canva",
+    "category": "design",
+    "name": "Canva",
+    "shortDescription": "Створюй дизайн легко та без обмежень",
+    "description": "Дизайн твого життя. Кожен тариф активуємо на твій акаунт безпечно та швидко.",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Canva_icon_2021.svg/150px-Canva_icon_2021.svg.png",
+    "plans": [
+      {
+        "id": "education",
+        "name": "Canva Education",
+        "description": "Доступна ціна, без реклами, усі інструменти відкриті.",
+        "features": [
+          "Без реклами",
+          "Всі шаблони та інструменти",
+          "Доступна ціна"
+        ],
+        "prices": {
+          "1": 90,
+          "3": 260,
+          "6": 500,
+          "12": 800
+        }
+      },
+      {
+        "id": "pro",
+        "name": "Canva Pro",
+        "description": "Професійні фішки, преміум графіка та масштабування.",
+        "features": [
+          "Бренд-кіт",
+          "Magic Resize",
+          "Видалення фону",
+          "Преміум контент"
+        ],
+        "prices": {
+          "1": 170,
+          "3": 520,
+          "6": 900,
+          "12": 1500
+        }
+      }
+    ]
+  }
+]

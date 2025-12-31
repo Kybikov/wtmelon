@@ -38,8 +38,8 @@ export default {
     ProductModal
   },
   setup() {
-    const { t } = useLanguage()
-    return { t }
+    const { currentLanguage, t } = useLanguage()
+    return { currentLanguage, t }
   },
   data() {
     return {
@@ -49,14 +49,27 @@ export default {
     }
   },
   async mounted() {
-    try {
-      const response = await fetch('/products.json')
-      this.products = await response.json()
-    } catch (error) {
-      console.error('Error loading products:', error)
+    await this.loadProducts()
+  },
+  watch: {
+    currentLanguage() {
+      this.loadProducts()
     }
   },
   methods: {
+    async loadProducts() {
+      try {
+        const response = await fetch(`/products-${this.currentLanguage}.json`)
+        if (!response.ok) {
+          const fallback = await fetch('/products.json')
+          this.products = await fallback.json()
+        } else {
+          this.products = await response.json()
+        }
+      } catch (error) {
+        console.error('Error loading products:', error)
+      }
+    },
     openModal(product) {
       this.selectedProduct = product
       this.showModal = true
