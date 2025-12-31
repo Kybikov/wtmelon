@@ -40,9 +40,9 @@
         </div>
 
         <div class="contact-info-item">
-          <i class="fa-brands fa-viber"></i>
-          <h4>Viber</h4>
-          <a href="viber://chat?number=%2B380633084244" class="contact-link">+380 63 308 42 44</a>
+          <i class="fa-brands fa-telegram"></i>
+          <h4>Telegram</h4>
+          <a href="https://t.me/WTmelon" target="_blank" rel="noopener" class="contact-link">@WTmelon</a>
         </div>
       </div>
 
