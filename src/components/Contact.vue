@@ -23,7 +23,7 @@
 
         <div class="contact-info-item">
           <i class="fa-brands fa-telegram"></i>
-          <h4>Telegram</h4>
+          <h4>Telegram Канал</h4>
           <a href="https://t.me/wtmelon_ua" target="_blank" rel="noopener" class="contact-link">@wtmelon_ua</a>
         </div>
 
@@ -41,7 +41,7 @@
 
         <div class="contact-info-item">
           <i class="fa-brands fa-telegram"></i>
-          <h4>Telegram</h4>
+          <h4>Telegram Контакт</h4>
           <a href="https://t.me/WTmelon" target="_blank" rel="noopener" class="contact-link">@WTmelon</a>
         </div>
       </div>
