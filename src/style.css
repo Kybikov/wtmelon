@@ -387,6 +387,27 @@ body {
   box-shadow: var(--shadow);
 }
 
+.mobile-only {
+  display: none;
+}
+
+.desktop-only {
+  display: flex;
+}
+
+.mobile-controls {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 20px 0;
+  border-top: 1px solid var(--border-color);
+  margin-top: 20px;
+}
+
+.mobile-language-switcher {
+  position: relative;
+}
+
 .home-section {
   position: relative;
   padding-top: 120px;
@@ -1410,6 +1431,14 @@ footer .right-col p {
 
   .navbar .menu-btn {
     display: flex;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .desktop-only {
+    display: none;
   }
 
   .nav-controls {

@@ -20,6 +20,34 @@
           <li class="nav-item">
             <a href="#contact" class="nav-link" @click="closeMenu">{{ t.nav.contact }}</a>
           </li>
+
+          <li class="nav-item mobile-only">
+            <div class="mobile-controls">
+              <div class="mobile-language-switcher">
+                <button class="lang-toggle" @click="toggleLangMenu">
+                  <i class="fa-solid fa-globe"></i>
+                  <span class="current-lang">{{ getCurrentLangLabel }}</span>
+                  <i class="fa-solid fa-chevron-down" :class="{ rotated: langMenuOpen }"></i>
+                </button>
+                <div v-if="langMenuOpen" class="lang-dropdown">
+                  <button
+                    v-for="lang in languages"
+                    :key="lang.code"
+                    :class="['lang-option', { active: currentLanguage === lang.code }]"
+                    @click="selectLanguage(lang.code)"
+                  >
+                    <span class="lang-flag">{{ lang.flag }}</span>
+                    <span class="lang-name">{{ lang.name }}</span>
+                    <i v-if="currentLanguage === lang.code" class="fa-solid fa-check"></i>
+                  </button>
+                </div>
+              </div>
+
+              <button class="theme-toggle" @click="toggleTheme" :title="isDark ? 'Light mode' : 'Dark mode'">
+                <i :class="isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon'"></i>
+              </button>
+            </div>
+          </li>
         </ul>
 
         <div class="nav-controls">
@@ -28,7 +56,7 @@
             <span class="phone-number">+380 63 308 42 44</span>
           </a>
 
-          <div class="language-switcher">
+          <div class="language-switcher desktop-only">
             <button class="lang-toggle" @click="toggleLangMenu">
               <i class="fa-solid fa-globe"></i>
               <span class="current-lang">{{ getCurrentLangLabel }}</span>
@@ -48,7 +76,7 @@
             </div>
           </div>
 
-          <button class="theme-toggle" @click="toggleTheme" :title="isDark ? 'Light mode' : 'Dark mode'">
+          <button class="theme-toggle desktop-only" @click="toggleTheme" :title="isDark ? 'Light mode' : 'Dark mode'">
             <i :class="isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon'"></i>
           </button>
 
