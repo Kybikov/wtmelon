@@ -127,7 +127,9 @@ const translations = {
       registerLink: 'Зареєструватися',
       loginLink: 'Увійти',
       passwordMismatch: 'Паролі не співпадають',
-      error: 'Виникла помилка. Спробуйте ще раз'
+      error: 'Виникла помилка. Спробуйте ще раз',
+      quickDemo: 'Швидкий вхід для демонстрації',
+      demoLogin: 'Демо-вхід'
     },
     dashboard: {
       welcome: 'Вітаємо',

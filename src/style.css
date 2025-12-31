@@ -142,6 +142,33 @@ body {
   padding: 15px 0;
 }
 
+.navbar.force-light {
+  background: #ffffff !important;
+  box-shadow: var(--shadow);
+}
+
+.navbar.force-light .nav-link,
+.navbar.force-light .logo,
+.navbar.force-light .phone-link,
+.navbar.force-light .lang-toggle,
+.navbar.force-light .theme-toggle {
+  color: #2c3e50 !important;
+}
+
+.navbar.force-light .phone-link {
+  background: #f8f9fa;
+  color: #2c3e50;
+}
+
+.navbar.force-light .lang-toggle {
+  background: #f8f9fa;
+  color: #2c3e50;
+}
+
+.navbar.force-light .menu-btn {
+  color: #2c3e50 !important;
+}
+
 .navbar .nav-row {
   display: flex;
   justify-content: space-between;

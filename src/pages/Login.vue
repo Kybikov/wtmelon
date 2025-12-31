@@ -75,6 +75,18 @@
           </button>
         </form>
 
+        <div v-if="mode === 'login'" class="demo-accounts">
+          <div class="demo-divider">
+            <span>{{ t.auth.quickDemo }}</span>
+          </div>
+          <div class="demo-buttons">
+            <button @click="quickLogin" class="btn-demo" type="button">
+              <i class="fa-solid fa-bolt"></i>
+              <span>{{ t.auth.demoLogin }}</span>
+            </button>
+          </div>
+        </div>
+
         <div class="form-footer">
           <p>
             {{ mode === 'login' ? t.auth.noAccount : t.auth.hasAccount }}
@@ -133,6 +145,11 @@ export default {
         confirmPassword: ''
       }
     },
+    async quickLogin() {
+      this.formData.email = 'demo@watermelon.com'
+      this.formData.password = '123456'
+      await this.handleSubmit()
+    },
     async handleSubmit() {
       this.error = ''
 
@@ -174,19 +191,20 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 1.5rem;
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  padding-top: calc(80px + 2rem);
 }
 
 .login-container {
   width: 100%;
-  max-width: 480px;
+  max-width: 500px;
 }
 
 .login-card {
   background: var(--bg-primary);
   border-radius: 20px;
-  padding: 3rem;
+  padding: 2.5rem;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
@@ -308,13 +326,119 @@ export default {
   text-decoration: underline;
 }
 
+.demo-accounts {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.demo-divider {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.demo-divider span {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.demo-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.btn-demo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.btn-demo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-demo i {
+  font-size: 1.1rem;
+}
+
 @media (max-width: 768px) {
+  .login-page {
+    padding: 1rem;
+    padding-top: calc(80px + 1rem);
+  }
+
   .login-card {
-    padding: 2rem;
+    padding: 1.75rem;
+    border-radius: 16px;
+  }
+
+  .login-logo {
+    width: 120px;
+    margin-bottom: 1rem;
   }
 
   .login-title {
     font-size: 1.5rem;
+  }
+
+  .login-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .login-form {
+    gap: 1.25rem;
+  }
+
+  .form-group input {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.95rem;
+  }
+
+  .btn-submit {
+    padding: 0.875rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-page {
+    padding: 0.75rem;
+    padding-top: calc(80px + 0.75rem);
+  }
+
+  .login-card {
+    padding: 1.5rem;
+  }
+
+  .login-logo {
+    width: 100px;
+  }
+
+  .login-title {
+    font-size: 1.35rem;
+  }
+
+  .demo-buttons {
+    gap: 0.5rem;
+  }
+
+  .btn-demo {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.9rem;
   }
 }
 </style>

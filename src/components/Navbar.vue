@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar" :class="{ sticky: isSticky }">
+  <nav class="navbar" :class="{ sticky: isSticky, 'force-light': isLoginPage }">
     <div class="container">
       <div class="nav-row">
         <router-link to="/" class="logo">
@@ -116,6 +116,7 @@
 import { useLanguage } from '../composables/useLanguage'
 import { useTheme } from '../composables/useTheme'
 import { useAuth } from '../composables/useAuth'
+import { useRoute } from 'vue-router'
 
 export default {
   name: 'Navbar',
@@ -123,6 +124,7 @@ export default {
     const { currentLanguage, setLanguage, t } = useLanguage()
     const { isDark, toggleTheme } = useTheme()
     const { isAuthenticated, currentUser } = useAuth()
+    const route = useRoute()
 
     return {
       currentLanguage,
@@ -131,7 +133,8 @@ export default {
       isDark,
       toggleTheme,
       isAuthenticated,
-      currentUser
+      currentUser,
+      route
     }
   },
   data() {
@@ -151,6 +154,9 @@ export default {
     getCurrentLangLabel() {
       const lang = this.languages.find(l => l.code === this.currentLanguage)
       return lang ? lang.label : 'UA'
+    },
+    isLoginPage() {
+      return this.route.path === '/login'
     }
   },
   mounted() {
