@@ -61,72 +61,95 @@ export default {
 
 
 <style scoped>
-/* Контейнер для зображення */
+/* --- КОНТЕЙНЕР --- */
+/* Важливо: задаємо висоту контейнеру, щоб було де "плавати" */
 .img-box {
   position: relative;
   width: 100%;
-  max-width: 450px; /* Обмеження ширини синього блоку */
-  height: 400px; /* Висота блоку */
-  margin: auto;
+  height: 500px; /* Збільшив висоту для простору */
+  /* Можна додати тимчасову рамку, щоб бачити межі блоку: */
+  /* border: 1px dashed red; */
 }
 
-/* Обгортка іконок */
 .floating-icons {
-  position: relative;
   width: 100%;
   height: 100%;
 }
 
-/* Загальні стилі для всіх іконок */
+/* --- БАЗОВИЙ СТИЛЬ ІКОНКИ --- */
 .floating-icon {
-  position: absolute; /* Це дозволяє рухати їх вільно всередині блоку */
-  width: 70px; /* Розмір іконок */
+  position: absolute;
+  width: 75px; /* Середній розмір */
   height: auto;
-  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15)); /* Тінь для об'єму */
-  animation: float 4s ease-in-out infinite; /* Анімація плавання */
+  /* Глибша, м'якша тінь для 3D ефекту */
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.2));
+  will-change: transform; /* Оптимізація анімації */
 }
 
-/* --- КООРДИНАТИ ЛОГОТИПІВ --- */
+/* --- ІНДИВІДУАЛЬНІ ПОЗИЦІЇ ТА АНІМАЦІЇ --- */
 
-/* Spotify (верхній лівий) */
+/* Spotify (Верхній лівий кут) */
+/* Рухається повільно, по діагоналі */
 .icon-1 {
-  top: 15%;
+  top: 10%;
   left: 10%;
-  width: 80px; /* Можна зробити трохи більшим */
-  animation-delay: 0s;
+  width: 85px; /* Трохи більша */
+  animation: floatDiagonal 6s ease-in-out infinite;
 }
 
-/* ChatGPT (нижній правий) */
+/* ChatGPT (Нижній правий кут) */
+/* Рухається швидше, починається з іншої фази */
 .icon-2 {
-  bottom: 20%;
-  right: 15%;
+  bottom: 15%;
+  right: 10%;
   width: 75px;
-  animation-delay: 1s;
+  /* Негативна затримка (-2s) робить рух розсинхронізованим */
+  animation: floatVertical 4.5s ease-in-out -2s infinite;
 }
 
-/* Canva (десь посередині або зміщена) */
+/* Canva (Центр) */
+/* Найбільша, плаває найповільніше і в інший бік */
 .icon-3 {
-  top: 40%;
-  right: 35%; 
+  top: 50%;
+  left: 50%;
+  /* Зміщуємо центр іконки в центр контейнера */
+  margin-left: -45px; 
+  margin-top: -45px;
   width: 90px;
-  animation-delay: 2s;
+  z-index: 2; /* Поверх інших, якщо перетнуться */
+  animation: floatDiagonalReverse 7s ease-in-out -1s infinite;
 }
 
-/* Анімація плавання вгору-вниз */
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-  100% { transform: translateY(0px); }
+
+/* --- КЕЙФРЕЙМИ АНІМАЦІЙ (Сценарії руху) --- */
+
+/* Сценарій 1: Плавання вгору і трохи вправо */
+@keyframes floatDiagonal {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(15px, -25px) rotate(3deg); }
 }
 
-/* Адаптив для мобільних (якщо потрібно) */
-@media (max-width: 767px) {
+/* Сценарій 2: Плавання вниз і трохи вліво (зворотній) */
+@keyframes floatDiagonalReverse {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-15px, 25px) rotate(-3deg); }
+}
+
+/* Сценарій 3: Більш вертикальне плавання */
+@keyframes floatVertical {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+}
+
+/* --- АДАПТИВ --- */
+@media (max-width: 768px) {
   .img-box {
-    height: 300px;
-    margin-top: 30px;
+     height: 350px; /* Менша висота на мобільних */
+     margin-bottom: 50px;
   }
   .floating-icon {
-    width: 50px; /* Менші іконки на телефоні */
+     transform-origin: center;
+     scale: 0.8; /* Зменшуємо всі іконки на 20% */
   }
 }
 </style>
