@@ -516,8 +516,8 @@ body {
 
 .home-image .img-box {
   position: relative;
-  width: 450px;
-  height: 450px;
+  width: 280px;
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -531,8 +531,8 @@ body {
 
 .floating-icon {
   position: absolute;
-  width: 140px;
-  height: 140px;
+  width: 110px;
+  height: 110px;
   object-fit: contain;
   border-radius: 25%;
   transition: all 0.3s ease;
@@ -540,21 +540,21 @@ body {
 }
 
 .floating-icon.icon-1 {
-  top: 0;
-  left: 0;
+  top: 20px;
+  left: 20px;
   animation: floatIcon1 6s ease-in-out infinite;
   filter: drop-shadow(0 15px 40px rgba(30, 215, 96, 0.4));
 }
 
 .floating-icon.icon-2 {
-  top: 0;
-  right: 0;
+  top: 20px;
+  right: 20px;
   animation: floatIcon2 7s ease-in-out infinite;
   filter: drop-shadow(0 15px 40px rgba(255, 107, 107, 0.4));
 }
 
 .floating-icon.icon-3 {
-  bottom: 40px;
+  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
   animation: floatIcon3 6.5s ease-in-out infinite;
