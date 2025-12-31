@@ -25,7 +25,7 @@
           <div class="img-box">
             <div class="floating-icons">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/168px-Spotify_logo_without_text.svg.png"
+                src="https://5odmiluatb.ucarecd.net/04ecb6ec-58b8-41ef-9e0e-a5adf914818f/ApplicationEmoji_AgADHT4AApkSMUo.gif"
                 alt="Spotify"
                 class="floating-icon icon-1"
               >
