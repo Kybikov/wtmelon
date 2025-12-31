@@ -3,8 +3,7 @@
     <div class="container">
       <div class="nav-row">
         <router-link to="/" class="logo">
-          <span class="logo-icon">🍉</span>
-          <span class="logo-text">Watermelon</span>
+          <img src="/banner_2.png" alt="Watermelon" class="logo-banner">
         </router-link>
 
         <ul class="menu" :class="{ active: menuOpen }">
