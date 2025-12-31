@@ -30,7 +30,7 @@
                 class="floating-icon icon-1"
               >
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/3/32/Deezer_logo.png"
+                src="https://5odmiluatb.ucarecd.net/2d718fcc-1a45-4daa-9835-47b47773f4a9/ApplicationEmoji_AgADrDsAAu6SYUo.jpeg"
                 alt="Deezer"
                 class="floating-icon icon-2"
               >
