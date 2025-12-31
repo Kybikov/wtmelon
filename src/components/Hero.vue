@@ -30,7 +30,7 @@
                 class="floating-icon icon-1"
               >
               <img
-                src="https://5odmiluatb.ucarecd.net/2d718fcc-1a45-4daa-9835-47b47773f4a9/ApplicationEmoji_AgADrDsAAu6SYUo.jpeg"
+                src="https://5odmiluatb.ucarecd.net/dce730b1-d163-4131-91d1-05e0911b997a/ApplicationEmoji_AgADrDsAAu6SYUo.png"
                 alt="Deezer"
                 class="floating-icon icon-2"
               >
