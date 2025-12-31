@@ -17,31 +17,31 @@
 
         <div class="contact-info-item">
           <i class="fa-solid fa-envelope"></i>
-          <h4>Email</h4>
+          <h4>{{ t.contact.email }}</h4>
           <a href="mailto:info@wtmelon.store" class="contact-link">info@wtmelon.store</a>
         </div>
 
         <div class="contact-info-item">
           <i class="fa-brands fa-telegram"></i>
-          <h4>Telegram Канал</h4>
+          <h4>{{ t.contact.telegramChannel }}</h4>
           <a href="https://t.me/wtmelon_ua" target="_blank" rel="noopener" class="contact-link">@wtmelon_ua</a>
         </div>
 
         <div class="contact-info-item">
           <i class="fa-brands fa-instagram"></i>
-          <h4>Instagram</h4>
+          <h4>{{ t.contact.instagram }}</h4>
           <a href="https://instagram.com/wtmelon.ua" target="_blank" rel="noopener" class="contact-link">@wtmelon.ua</a>
         </div>
 
         <div class="contact-info-item">
           <i class="fa-brands fa-whatsapp"></i>
-          <h4>WhatsApp</h4>
+          <h4>{{ t.contact.whatsapp }}</h4>
           <a href="https://wa.me/380633084244" target="_blank" rel="noopener" class="contact-link">+380 63 308 42 44</a>
         </div>
 
         <div class="contact-info-item">
           <i class="fa-brands fa-telegram"></i>
-          <h4>Telegram Контакт</h4>
+          <h4>{{ t.contact.telegramSupport }}</h4>
           <a href="https://t.me/WTmelon" target="_blank" rel="noopener" class="contact-link">@WTmelon</a>
         </div>
       </div>

@@ -10,12 +10,15 @@
           <div class="social-media">
             <a href="https://t.me/wtmelon_ua" target="_blank" rel="noopener" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
             <a href="https://instagram.com/wtmelon.ua" target="_blank" rel="noopener" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/380633084244" target="_blank" rel="noopener" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="viber://chat?number=%2B380633084244" target="_blank" rel="noopener" title="Viber"><i class="fa-brands fa-viber"></i></a>
+            <a href="https://t.me/WTmelon" target="_blank" rel="noopener" title="Telegram Support"><i class="fa-solid fa-headset"></i></a>
           </div>
           <div class="footer-links">
             <router-link to="/privacy" class="footer-link">{{ t.footer.privacy }}</router-link>
             <router-link to="/terms" class="footer-link">{{ t.footer.terms }}</router-link>
           </div>
-          <p class="left-text">&copy; 2024 Watermelon. {{ t.footer.rights }}</p>
+          <p class="left-text">&copy; 2025 Watermelon. {{ t.footer.rights }}</p>
         </div>
 
         <div class="right-col">

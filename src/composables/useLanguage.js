@@ -30,7 +30,12 @@ const translations = {
       features: 'Що входить',
       total: 'До сплати',
       order: 'Замовити',
-      serviceAccess: 'Послуга надання доступу'
+      serviceAccess: 'Послуга надання доступу',
+      orderSuccess: 'Замовлення оформлено!',
+      orderService: 'Послуга',
+      orderPlan: 'План',
+      orderDuration: 'Тривалість',
+      orderPrice: 'Ціна'
     },
     about: {
       title: 'Про Watermelon',
@@ -58,6 +63,11 @@ const translations = {
       subtitle: "Зв'яжіться з нами",
       info: 'З будь-яких питань та підтримки',
       phone: 'Телефон',
+      email: 'Email',
+      telegramChannel: 'Telegram Канал',
+      instagram: 'Instagram',
+      whatsapp: 'WhatsApp',
+      telegramSupport: 'Telegram Підтримка',
       workingHours: 'Час роботи',
       support247: '24/7 онлайн підтримка',
       form: {
@@ -120,7 +130,12 @@ const translations = {
       features: 'Что входит',
       total: 'К оплате',
       order: 'Заказать',
-      serviceAccess: 'Услуга предоставления доступа'
+      serviceAccess: 'Услуга предоставления доступа',
+      orderSuccess: 'Заказ оформлен!',
+      orderService: 'Услуга',
+      orderPlan: 'План',
+      orderDuration: 'Длительность',
+      orderPrice: 'Цена'
     },
     about: {
       title: 'О Watermelon',
@@ -148,6 +163,11 @@ const translations = {
       subtitle: 'Свяжитесь с нами',
       info: 'По любым вопросам и поддержке',
       phone: 'Телефон',
+      email: 'Email',
+      telegramChannel: 'Telegram Канал',
+      instagram: 'Instagram',
+      whatsapp: 'WhatsApp',
+      telegramSupport: 'Telegram Поддержка',
       workingHours: 'Время работы',
       support247: '24/7 онлайн поддержка',
       form: {
@@ -210,7 +230,12 @@ const translations = {
       features: "What's included",
       total: 'Total',
       order: 'Order',
-      serviceAccess: 'Access service'
+      serviceAccess: 'Access service',
+      orderSuccess: 'Order placed!',
+      orderService: 'Service',
+      orderPlan: 'Plan',
+      orderDuration: 'Duration',
+      orderPrice: 'Price'
     },
     about: {
       title: 'About Watermelon',
@@ -238,6 +263,11 @@ const translations = {
       subtitle: 'Get in touch',
       info: 'For any questions and support',
       phone: 'Phone',
+      email: 'Email',
+      telegramChannel: 'Telegram Channel',
+      instagram: 'Instagram',
+      whatsapp: 'WhatsApp',
+      telegramSupport: 'Telegram Support',
       workingHours: 'Working hours',
       support247: '24/7 online support',
       form: {
@@ -300,7 +330,12 @@ const translations = {
       features: 'Enthalten',
       total: 'Gesamt',
       order: 'Bestellen',
-      serviceAccess: 'Zugriffsdienst'
+      serviceAccess: 'Zugriffsdienst',
+      orderSuccess: 'Bestellung aufgegeben!',
+      orderService: 'Dienstleistung',
+      orderPlan: 'Plan',
+      orderDuration: 'Dauer',
+      orderPrice: 'Preis'
     },
     about: {
       title: 'Über Watermelon',
@@ -328,6 +363,11 @@ const translations = {
       subtitle: 'Kontaktieren Sie uns',
       info: 'Für alle Fragen und Support',
       phone: 'Telefon',
+      email: 'E-Mail',
+      telegramChannel: 'Telegram Kanal',
+      instagram: 'Instagram',
+      whatsapp: 'WhatsApp',
+      telegramSupport: 'Telegram Support',
       workingHours: 'Arbeitszeiten',
       support247: '24/7 Online-Support',
       form: {

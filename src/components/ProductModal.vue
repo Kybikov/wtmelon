@@ -131,12 +131,12 @@ export default {
       if (!this.selectedPlan || !this.selectedDuration) return
 
       const message = `
-Послуга: ${this.product.name}
-План: ${this.selectedPlan.name}
-Тривалість: ${this.selectedDuration} міс.
-Ціна: ${this.selectedPlan.prices[this.selectedDuration]} ₴
+${this.t.modal.orderService}: ${this.product.name}
+${this.t.modal.orderPlan}: ${this.selectedPlan.name}
+${this.t.modal.orderDuration}: ${this.selectedDuration} ${this.t.modal.months}
+${this.t.modal.orderPrice}: ${this.selectedPlan.prices[this.selectedDuration]} ₴
       `
-      alert(`Замовлення оформлено!\n${message}`)
+      alert(`${this.t.modal.orderSuccess}\n${message}`)
       this.$emit('close')
     }
   }

@@ -7,10 +7,10 @@
         <h1 v-else-if="currentLanguage === 'en'">Terms of Service</h1>
         <h1 v-else-if="currentLanguage === 'de'">Nutzungsbedingungen</h1>
 
-        <p class="updated" v-if="currentLanguage === 'uk'">Останнє оновлення: 31 грудня 2024</p>
-        <p class="updated" v-else-if="currentLanguage === 'ru'">Последнее обновление: 30 декабря 2024</p>
-        <p class="updated" v-else-if="currentLanguage === 'en'">Last updated: December 30, 2024</p>
-        <p class="updated" v-else-if="currentLanguage === 'de'">Zuletzt aktualisiert: 30. Dezember 2024</p>
+        <p class="updated" v-if="currentLanguage === 'uk'">Останнє оновлення: 1 січня 2025</p>
+        <p class="updated" v-else-if="currentLanguage === 'ru'">Последнее обновление: 1 января 2025</p>
+        <p class="updated" v-else-if="currentLanguage === 'en'">Last updated: January 1, 2025</p>
+        <p class="updated" v-else-if="currentLanguage === 'de'">Zuletzt aktualisiert: 1. Januar 2025</p>
 
         <div v-if="currentLanguage === 'uk'">
           <section>
