@@ -1301,6 +1301,17 @@ footer .logo-icon {
   font-size: 32px;
 }
 
+footer .logo-banner {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  transition: var(--transition);
+}
+
+footer .logo:hover .logo-banner {
+  transform: scale(1.05);
+}
+
 .social-media {
   display: flex;
   gap: 12px;
@@ -1500,6 +1511,10 @@ footer .right-col p {
     display: flex;
   }
 
+  .navbar .logo-banner {
+    height: 35px;
+  }
+
   .mobile-only {
     display: block;
   }
@@ -1647,6 +1662,14 @@ footer .right-col p {
     width: 100%;
   }
 
+  footer .logo-banner {
+    height: 40px;
+  }
+
+  .navbar .logo-banner {
+    height: 32px;
+  }
+
   .newsletter-form {
     flex-direction: column;
   }
@@ -1707,6 +1730,14 @@ footer .right-col p {
 
   .products-grid {
     gap: 20px;
+  }
+
+  .navbar .logo-banner {
+    height: 28px;
+  }
+
+  footer .logo-banner {
+    height: 35px;
   }
 
   .product-card {

@@ -4,8 +4,7 @@
       <div class="row">
         <div class="left-col">
           <router-link to="/" class="logo">
-            <span class="logo-icon">🍉</span>
-            <span class="logo-text">Watermelon</span>
+            <img src="/banner_2.png" alt="Watermelon" class="logo-banner">
           </router-link>
           <div class="social-media">
             <a href="https://t.me/wtmelon_ua" target="_blank" rel="noopener" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
