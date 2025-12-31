@@ -1260,6 +1260,15 @@ footer .logo-icon {
   font-size: 13px;
 }
 
+.no-service-notice {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-weight: 500;
+}
+
 footer .right-col {
   flex: 1;
 }

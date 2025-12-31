@@ -90,7 +90,8 @@ const translations = {
       subscribeSuccess: 'Дякуємо за підписку!',
       privacy: 'Політика конфіденційності',
       terms: 'Договір оферти',
-      rights: 'Всі права захищені'
+      rights: 'Всі права захищені',
+      noService: 'Ми не надаємо послуги громадянам росії та білорусі'
     },
     legal: {
       privacy: {
@@ -190,7 +191,8 @@ const translations = {
       subscribeSuccess: 'Спасибо за подписку!',
       privacy: 'Политика конфиденциальности',
       terms: 'Договор оферты',
-      rights: 'Все права защищены'
+      rights: 'Все права защищены',
+      noService: 'Мы не предоставляем услуги гражданам россии и беларуси'
     },
     legal: {
       privacy: {
@@ -290,7 +292,8 @@ const translations = {
       subscribeSuccess: 'Thank you for subscribing!',
       privacy: 'Privacy Policy',
       terms: 'Terms of Service',
-      rights: 'All rights reserved'
+      rights: 'All rights reserved',
+      noService: 'We do not provide services to citizens of russia and belarus'
     },
     legal: {
       privacy: {
@@ -390,7 +393,8 @@ const translations = {
       subscribeSuccess: 'Vielen Dank für Ihr Abonnement!',
       privacy: 'Datenschutzrichtlinie',
       terms: 'Nutzungsbedingungen',
-      rights: 'Alle Rechte vorbehalten'
+      rights: 'Alle Rechte vorbehalten',
+      noService: 'Wir bieten keine Dienstleistungen für Bürger von Russland und Belarus an'
     },
     legal: {
       privacy: {

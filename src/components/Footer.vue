@@ -19,6 +19,7 @@
             <router-link to="/terms" class="footer-link">{{ t.footer.terms }}</router-link>
           </div>
           <p class="left-text">&copy; 2025 Watermelon. {{ t.footer.rights }}</p>
+          <p class="no-service-notice">{{ t.footer.noService }}</p>
         </div>
 
         <div class="right-col">
