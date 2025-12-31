@@ -62,94 +62,88 @@ export default {
 
 <style scoped>
 /* --- КОНТЕЙНЕР --- */
-/* Важливо: задаємо висоту контейнеру, щоб було де "плавати" */
 .img-box {
   position: relative;
   width: 100%;
-  height: 500px; /* Збільшив висоту для простору */
-  /* Можна додати тимчасову рамку, щоб бачити межі блоку: */
-  /* border: 1px dashed red; */
+  max-width: 450px;
+  height: 400px; /* Фіксуємо висоту, щоб була гарна композиція */
+  margin: 0 auto; /* Центруємо сам блок */
 }
 
 .floating-icons {
+  position: relative;
   width: 100%;
   height: 100%;
 }
 
-/* --- БАЗОВИЙ СТИЛЬ ІКОНКИ --- */
+/* --- ЗАГАЛЬНИЙ ВИГЛЯД ІКОНОК --- */
 .floating-icon {
   position: absolute;
-  width: 75px; /* Середній розмір */
   height: auto;
-  /* Глибша, м'якша тінь для 3D ефекту */
-  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.2));
-  will-change: transform; /* Оптимізація анімації */
+  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.15)); /* М'яка тінь */
+  transition: all 0.3s ease;
 }
 
-/* --- ІНДИВІДУАЛЬНІ ПОЗИЦІЇ ТА АНІМАЦІЇ --- */
+/* --- КРАСИВЕ РОЗТАШУВАННЯ (ТРИКУТНИК) --- */
 
-/* Spotify (Верхній лівий кут) */
-/* Рухається повільно, по діагоналі */
+/* 1. Spotify — Лівий нижній кут (Основа) */
 .icon-1 {
-  top: 10%;
-  left: 10%;
-  width: 85px; /* Трохи більша */
-  animation: floatDiagonal 6s ease-in-out infinite;
+  width: 80px;
+  bottom: 15%; /* Відступ знизу */
+  left: 8%;    /* Відступ зліва */
+  animation: floatSlow 7s ease-in-out infinite;
 }
 
-/* ChatGPT (Нижній правий кут) */
-/* Рухається швидше, починається з іншої фази */
+/* 2. ChatGPT — Правий нижній кут (Основа) */
 .icon-2 {
-  bottom: 15%;
-  right: 10%;
   width: 75px;
-  /* Негативна затримка (-2s) робить рух розсинхронізованим */
-  animation: floatVertical 4.5s ease-in-out -2s infinite;
+  bottom: 25%; /* Трохи вище за Spotify */
+  right: 8%;   /* Відступ справа */
+  animation: floatMid 5s ease-in-out infinite;
+  animation-delay: 1s; /* Стартує пізніше */
 }
 
-/* Canva (Центр) */
-/* Найбільша, плаває найповільніше і в інший бік */
+/* 3. Canva — Верхній центр (Вершина трикутника) */
 .icon-3 {
-  top: 50%;
-  left: 50%;
-  /* Зміщуємо центр іконки в центр контейнера */
-  margin-left: -45px; 
-  margin-top: -45px;
-  width: 90px;
-  z-index: 2; /* Поверх інших, якщо перетнуться */
-  animation: floatDiagonalReverse 7s ease-in-out -1s infinite;
+  width: 90px; /* Найбільша іконка як акцент */
+  top: 15%;    /* Високо зверху */
+  left: 50%;   /* Рівно по центру по горизонталі */
+  transform: translateX(-50%); /* Центрування самої іконки */
+  animation: floatCenter 6s ease-in-out infinite;
+  z-index: 2; /* Вона "ближче" до глядача */
 }
 
 
-/* --- КЕЙФРЕЙМИ АНІМАЦІЙ (Сценарії руху) --- */
+/* --- АНІМАЦІЇ (Різні для кожного, щоб було живим) --- */
 
-/* Сценарій 1: Плавання вгору і трохи вправо */
-@keyframes floatDiagonal {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  50% { transform: translate(15px, -25px) rotate(3deg); }
+/* Плавний рух вгору-вниз з легким погойдуванням */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
 }
 
-/* Сценарій 2: Плавання вниз і трохи вліво (зворотній) */
-@keyframes floatDiagonalReverse {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  50% { transform: translate(-15px, 25px) rotate(-3deg); }
+/* Рух трохи активніший */
+@keyframes floatMid {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-25px) rotate(-2deg); }
 }
 
-/* Сценарій 3: Більш вертикальне плавання */
-@keyframes floatVertical {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-30px); }
+/* Центральна іконка плаває строго вертикально, велично */
+@keyframes floatCenter {
+  0%, 100% { transform: translateX(-50%) translateY(0); } /* Зберігаємо центрування по X */
+  50% { transform: translateX(-50%) translateY(-15px); }
 }
 
-/* --- АДАПТИВ --- */
+/* --- МОБІЛЬНА ВЕРСІЯ --- */
 @media (max-width: 768px) {
   .img-box {
-     height: 350px; /* Менша висота на мобільних */
-     margin-bottom: 50px;
+    height: 300px; /* Зменшуємо висоту блоку */
+    margin-top: 20px;
   }
+  
   .floating-icon {
-     transform-origin: center;
-     scale: 0.8; /* Зменшуємо всі іконки на 20% */
+    transform-origin: center;
+    scale: 0.8; /* Робимо всі іконки трохи меншими */
   }
 }
 </style>
