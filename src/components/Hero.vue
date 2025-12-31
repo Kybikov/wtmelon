@@ -23,11 +23,23 @@
 
         <div class="home-image">
           <div class="img-box">
-            <img
-              src="/banner_2.png"
-              alt="Watermelon Banner"
-              class="hero-banner"
-            >
+            <div class="floating-icons">
+              <img
+                src="https://5odmiluatb.ucarecd.net/abf1a71e-11bc-4e4e-9533-2d8c0691c3ba/spotify_alt_macos_bigsur_icon_189703.png"
+                alt="Spotify"
+                class="floating-icon icon-1"
+              >
+              <img
+                src="https://5odmiluatb.ucarecd.net/99e82837-4f38-4ac6-ae5e-e0ac158a923e/ChatGPT_logo.svg.png"
+                alt="ChatGPT"
+                class="floating-icon icon-2"
+              >
+              <img
+                src="https://5odmiluatb.ucarecd.net/8cc3eb47-74c3-4dd3-9458-d1aa6dbed306/Adobe_Corporate_logo.svg.png"
+                alt="Adobe"
+                class="floating-icon icon-3"
+              >
+            </div>
           </div>
         </div>
       </div>
