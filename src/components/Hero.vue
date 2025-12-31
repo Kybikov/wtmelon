@@ -35,7 +35,7 @@
                 class="floating-icon icon-2"
               >
               <img
-                src="https://5odmiluatb.ucarecd.net/6ace973e-bdd4-469f-b083-95263e478bcd/canvaapplogoonatransparentbackgroundfreepng.png"
+                src="https://5odmiluatb.ucarecd.net/7c52764e-df5a-4991-a93f-b346ead9aedb/Adobe_Creative_Cloud_rainbow_iconsvg.png"
                 alt="Adobe"
                 class="floating-icon icon-3"
               >
