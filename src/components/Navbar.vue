@@ -20,6 +20,20 @@
             <a href="#contact" class="nav-link" @click="closeMenu">{{ t.nav.contact }}</a>
           </li>
 
+          <li v-if="!isAuthenticated" class="nav-item mobile-only">
+            <router-link to="/login" class="nav-link" @click="closeMenu">
+              <i class="fa-solid fa-user"></i>
+              {{ t.nav.login }}
+            </router-link>
+          </li>
+
+          <li v-else class="nav-item mobile-only">
+            <router-link to="/dashboard" class="nav-link" @click="closeMenu">
+              <i class="fa-solid fa-user-circle"></i>
+              {{ currentUser?.name?.split(' ')[0] }}
+            </router-link>
+          </li>
+
           <li class="nav-item mobile-only">
             <div class="mobile-controls">
               <div class="mobile-language-switcher">
@@ -79,6 +93,16 @@
             <i :class="isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon'"></i>
           </button>
 
+          <router-link v-if="!isAuthenticated" to="/login" class="login-btn desktop-only">
+            <i class="fa-solid fa-user"></i>
+            <span>{{ t.nav.login }}</span>
+          </router-link>
+
+          <router-link v-else to="/dashboard" class="profile-btn desktop-only">
+            <i class="fa-solid fa-user-circle"></i>
+            <span>{{ currentUser?.name?.split(' ')[0] }}</span>
+          </router-link>
+
           <div class="menu-btn" @click="toggleMenu">
             <i class="fa-solid fa-bars"></i>
           </div>
@@ -91,19 +115,23 @@
 <script>
 import { useLanguage } from '../composables/useLanguage'
 import { useTheme } from '../composables/useTheme'
+import { useAuth } from '../composables/useAuth'
 
 export default {
   name: 'Navbar',
   setup() {
     const { currentLanguage, setLanguage, t } = useLanguage()
     const { isDark, toggleTheme } = useTheme()
+    const { isAuthenticated, currentUser } = useAuth()
 
     return {
       currentLanguage,
       setLanguage,
       t,
       isDark,
-      toggleTheme
+      toggleTheme,
+      isAuthenticated,
+      currentUser
     }
   },
   data() {
