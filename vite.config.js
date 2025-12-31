@@ -5,5 +5,15 @@ export default defineConfig({
   plugins: [vue()],
   server: {
     port: 5173
+  },
+  preview: {
+    port: 5173
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
+    }
   }
 })

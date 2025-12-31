@@ -1,6 +1,5 @@
 <template>
   <div class="legal-page section-padding">
-    <Navbar />
     <div class="container">
       <div class="legal-content">
         <h1 v-if="currentLanguage === 'uk'">Договір оферти</h1>
@@ -456,21 +455,14 @@
         </div>
       </div>
     </div>
-    <Footer />
   </div>
 </template>
 
 <script>
 import { useLanguage } from '../composables/useLanguage'
-import Navbar from '../components/Navbar.vue'
-import Footer from '../components/Footer.vue'
 
 export default {
   name: 'Terms',
-  components: {
-    Navbar,
-    Footer
-  },
   setup() {
     const { currentLanguage } = useLanguage()
     return { currentLanguage }
