@@ -1,6 +1,9 @@
 <template>
   <footer class="section-padding">
     <div class="container">
+      <div class="footer-banner-wrapper">
+        <img src="/banner_2.png" alt="Watermelon" class="footer-banner">
+      </div>
       <div class="row">
         <div class="left-col">
           <router-link to="/" class="logo">

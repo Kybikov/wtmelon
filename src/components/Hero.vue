@@ -23,18 +23,11 @@
 
         <div class="home-image">
           <div class="img-box">
-            <div class="floating-icons">
-              <img
-                src="https://5odmiluatb.ucarecd.net/abf1a71e-11bc-4e4e-9533-2d8c0691c3ba/spotify_alt_macos_bigsur_icon_189703.png"
-                alt="Spotify"
-                class="floating-icon icon-1"
-              >
-              <img
-                src="https://5odmiluatb.ucarecd.net/dce730b1-d163-4131-91d1-05e0911b997a/ApplicationEmoji_AgADrDsAAu6SYUo.png"
-                alt="Deezer"
-                class="floating-icon icon-2"
-              >
-            </div>
+            <img
+              src="/banner_2.png"
+              alt="Watermelon Banner"
+              class="hero-banner"
+            >
           </div>
         </div>
       </div>
