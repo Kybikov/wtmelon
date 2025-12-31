@@ -25,7 +25,7 @@
           <div class="img-box">
             <div class="floating-icons">
               <img
-                src="https://5odmiluatb.ucarecd.net/04ecb6ec-58b8-41ef-9e0e-a5adf914818f/ApplicationEmoji_AgADHT4AApkSMUo.gif"
+                src="https://5odmiluatb.ucarecd.net/abf1a71e-11bc-4e4e-9533-2d8c0691c3ba/spotify_alt_macos_bigsur_icon_189703.png"
                 alt="Spotify"
                 class="floating-icon icon-1"
               >
