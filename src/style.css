@@ -2,6 +2,7 @@
 
 :root {
   --primary-color: #ff4757;
+  --primary-rgb: 255, 71, 87;
   --primary-dark: #ee3344;
   --secondary-color: #2ed573;
   --secondary-dark: #26d467;
@@ -631,6 +632,46 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   width: 100%;
+}
+
+.products-loading,
+.products-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+  gap: 20px;
+  min-height: 300px;
+}
+
+.products-loading p,
+.products-error p {
+  font-size: 18px;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.products-error i {
+  font-size: 48px;
+  color: var(--primary-color);
+  opacity: 0.6;
+}
+
+.loading-spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(var(--primary-rgb), 0.1);
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  animation: spinner 0.8s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .product-card {

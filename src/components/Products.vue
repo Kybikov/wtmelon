@@ -8,7 +8,17 @@
         </div>
       </div>
 
-      <div class="products-grid">
+      <div v-if="loading" class="products-loading">
+        <div class="loading-spinner"></div>
+        <p>{{ t.services.loading || 'Loading...' }}</p>
+      </div>
+
+      <div v-else-if="error" class="products-error">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <p>{{ t.services.error || 'Error loading products' }}</p>
+      </div>
+
+      <div v-else class="products-grid">
         <ProductCard
           v-for="product in products"
           :key="product.id"
@@ -44,6 +54,8 @@ export default {
   data() {
     return {
       products: [],
+      loading: true,
+      error: false,
       showModal: false,
       selectedProduct: null
     }
@@ -58,16 +70,27 @@ export default {
   },
   methods: {
     async loadProducts() {
+      this.loading = true
+      this.error = false
+
       try {
         const response = await fetch(`/products-${this.currentLanguage}.json`)
+
         if (!response.ok) {
-          const fallback = await fetch('/products.json')
+          const fallback = await fetch('/products-uk.json')
+          if (!fallback.ok) {
+            throw new Error('Failed to load products')
+          }
           this.products = await fallback.json()
         } else {
           this.products = await response.json()
         }
       } catch (error) {
         console.error('Error loading products:', error)
+        this.error = true
+        this.products = []
+      } finally {
+        this.loading = false
       }
     },
     openModal(product) {
