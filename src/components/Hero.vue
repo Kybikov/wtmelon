@@ -15,10 +15,10 @@
       <div class="row full-screen align-items-center">
         <div class="home-text">
           <h2>
-            {{ t.hero.title }} <span class="highlight">{{ t.hero.subtitle }}</span>
+            {{ t('hero.title') }} <span class="highlight">{{ t('hero.subtitle') }}</span>
           </h2>
-          <p>{{ t.hero.description }}</p>
-          <a href="#products" class="btn1">{{ t.hero.cta }}</a>
+          <p>{{ t('hero.subtitle') }}</p>
+          <a href="#products" class="btn1">{{ t('hero.cta') }}</a>
         </div>
 
         <div class="home-image">

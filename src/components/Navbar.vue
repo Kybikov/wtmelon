@@ -8,16 +8,16 @@
 
         <ul class="menu" :class="{ active: menuOpen }">
           <li class="nav-item">
-            <a href="#home" class="nav-link" @click="closeMenu">{{ t.nav.home }}</a>
+            <a href="#home" class="nav-link" @click="closeMenu">{{ t('hero.title') }}</a>
           </li>
           <li class="nav-item">
-            <a href="#products" class="nav-link" @click="closeMenu">{{ t.nav.services }}</a>
+            <a href="#products" class="nav-link" @click="closeMenu">{{ t('nav.products') }}</a>
           </li>
           <li class="nav-item">
-            <a href="#about" class="nav-link" @click="closeMenu">{{ t.nav.about }}</a>
+            <a href="#about" class="nav-link" @click="closeMenu">{{ t('nav.about') }}</a>
           </li>
           <li class="nav-item">
-            <a href="#contact" class="nav-link" @click="closeMenu">{{ t.nav.contact }}</a>
+            <a href="#contact" class="nav-link" @click="closeMenu">{{ t('nav.contact') }}</a>
           </li>
 
           <li class="nav-item mobile-only">

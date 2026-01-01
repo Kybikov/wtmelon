@@ -105,7 +105,7 @@ export default {
   computed: {
     localePrices() {
       if (!this.selectedPlan) return {}
-      return this.selectedPlan.prices[this.locale] || this.selectedPlan.prices
+      return this.selectedPlan.prices || {}
     }
   },
   watch: {

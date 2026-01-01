@@ -10,43 +10,40 @@
 
         <div class="about-text">
           <div class="section-title">
-            <h1 class="title">{{ t.about.title }}</h1>
-            <h2 class="subtitle">{{ t.about.subtitle }}</h2>
+            <h1 class="title">{{ t('about.title') }}</h1>
           </div>
 
           <div class="about-content">
-            <p>{{ t.about.description }}</p>
-
             <div class="features-list">
               <div class="feature-item">
-                <i class="fa-solid fa-shield-halved"></i>
+                <i class="fa-solid fa-crown"></i>
                 <div>
-                  <h4>{{ t.about.security.title }}</h4>
-                  <p>{{ t.about.security.desc }}</p>
-                </div>
-              </div>
-
-              <div class="feature-item">
-                <i class="fa-solid fa-bolt"></i>
-                <div>
-                  <h4>{{ t.about.speed.title }}</h4>
-                  <p>{{ t.about.speed.desc }}</p>
+                  <h4>{{ t('about.quality') }}</h4>
+                  <p>{{ t('about.qualityDesc') }}</p>
                 </div>
               </div>
 
               <div class="feature-item">
                 <i class="fa-solid fa-headset"></i>
                 <div>
-                  <h4>{{ t.about.support.title }}</h4>
-                  <p>{{ t.about.support.desc }}</p>
+                  <h4>{{ t('about.support') }}</h4>
+                  <p>{{ t('about.supportDesc') }}</p>
                 </div>
               </div>
 
               <div class="feature-item">
                 <i class="fa-solid fa-tag"></i>
                 <div>
-                  <h4>{{ t.about.price.title }}</h4>
-                  <p>{{ t.about.price.desc }}</p>
+                  <h4>{{ t('about.price') }}</h4>
+                  <p>{{ t('about.priceDesc') }}</p>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div>
+                  <h4>{{ t('about.safety') }}</h4>
+                  <p>{{ t('about.safetyDesc') }}</p>
                 </div>
               </div>
             </div>

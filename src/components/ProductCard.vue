@@ -38,12 +38,14 @@ export default {
     const minPrice = computed(() => {
       let min = Infinity
       props.product.plans.forEach(plan => {
-        const localePrices = plan.prices[locale.value] || plan.prices
-        Object.values(localePrices).forEach(price => {
-          if (price < min) min = price
+        const prices = plan.prices
+        Object.values(prices).forEach(price => {
+          if (typeof price === 'number' && price < min) {
+            min = price
+          }
         })
       })
-      return min
+      return min === Infinity ? 0 : min
     })
 
     return {

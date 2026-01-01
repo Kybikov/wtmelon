@@ -17,24 +17,24 @@
             <router-link :to="privacyPath" class="footer-link">{{ t('nav.privacy') }}</router-link>
             <router-link :to="termsPath" class="footer-link">{{ t('nav.terms') }}</router-link>
           </div>
-          <p class="left-text">&copy; 2025 Watermelon. {{ t.footer.rights }}</p>
-          <p class="no-service-notice">{{ t.footer.noService }}</p>
+          <p class="left-text">&copy; 2025 Watermelon. {{ t('footer.rights') }}</p>
+          <p class="no-service-notice">{{ t('footer.noService') }}</p>
         </div>
 
         <div class="right-col">
-          <h1>{{ t.footer.newsletter }}</h1>
+          <h1>{{ t('footer.newsletter') }}</h1>
           <div class="border"></div>
-          <p>{{ t.footer.newsletterDesc }}</p>
+          <p>{{ t('footer.newsletterDesc') }}</p>
 
           <form @submit.prevent="handleSubscribe" class="newsletter-form">
             <input
               type="email"
               v-model="email"
               class="txtb"
-              :placeholder="t.footer.email"
+              :placeholder="t('footer.email')"
               required
             >
-            <button type="submit" class="btn1">{{ t.footer.subscribe }}</button>
+            <button type="submit" class="btn1">{{ t('footer.subscribe') }}</button>
           </form>
         </div>
       </div>

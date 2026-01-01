@@ -53,13 +53,36 @@
     "title": "Contact Us",
     "subtitle": "Have questions? We're here to help!",
     "telegram": "Write to us on Telegram",
-    "telegramUsername": "@watermelon_subs"
+    "telegramUsername": "@watermelon_subs",
+    "phone": "Phone",
+    "email": "Email",
+    "telegramChannel": "Telegram Channel",
+    "instagram": "Instagram",
+    "whatsapp": "WhatsApp",
+    "telegramSupport": "Telegram Support",
+    "form": {
+      "show": "Ask a Question",
+      "hide": "Hide Form",
+      "name": "Your Name",
+      "email": "Your Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send",
+      "success": "Thank you! We will contact you soon."
+    }
   },
   "footer": {
     "description": "Your trusted source for premium subscriptions",
     "quickLinks": "Quick Links",
     "legal": "Legal",
     "followUs": "Follow Us",
-    "rights": "All rights reserved"
+    "rights": "All rights reserved",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Get the latest news and special offers",
+    "email": "Enter your email",
+    "subscribe": "Subscribe",
+    "subscribeSuccess": "Thank you for subscribing!",
+    "noService": "We do not provide services in Russia"
   }
 }

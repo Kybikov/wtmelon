@@ -3,19 +3,19 @@
     <div class="container">
       <div class="row">
         <div class="section-title">
-          <h1 class="title">{{ t.services.title }}</h1>
-          <h2 class="subtitle">{{ t.services.subtitle }}</h2>
+          <h1 class="title">{{ t('products.title') }}</h1>
+          <h2 class="subtitle">{{ t('products.subtitle') }}</h2>
         </div>
       </div>
 
       <div v-if="loading" class="products-loading">
         <div class="loading-spinner"></div>
-        <p>{{ t.services.loading || 'Loading...' }}</p>
+        <p>Loading...</p>
       </div>
 
       <div v-else-if="error" class="products-error">
         <i class="fa-solid fa-circle-exclamation"></i>
-        <p>{{ t.services.error || 'Error loading products' }}</p>
+        <p>Error loading products</p>
       </div>
 
       <div v-else class="products-grid">

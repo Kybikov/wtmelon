@@ -53,13 +53,36 @@
     "title": "Свяжитесь с нами",
     "subtitle": "Есть вопросы? Мы здесь, чтобы помочь!",
     "telegram": "Напишите нам в Telegram",
-    "telegramUsername": "@watermelon_subs"
+    "telegramUsername": "@watermelon_subs",
+    "phone": "Телефон",
+    "email": "Email",
+    "telegramChannel": "Telegram канал",
+    "instagram": "Instagram",
+    "whatsapp": "WhatsApp",
+    "telegramSupport": "Telegram поддержка",
+    "form": {
+      "show": "Задать вопрос",
+      "hide": "Скрыть форму",
+      "name": "Ваше имя",
+      "email": "Ваш email",
+      "phone": "Телефон",
+      "subject": "Тема",
+      "message": "Сообщение",
+      "send": "Отправить",
+      "success": "Спасибо! Мы свяжемся с вами в ближайшее время."
+    }
   },
   "footer": {
     "description": "Ваш надежный источник премиум подписок",
     "quickLinks": "Быстрые ссылки",
     "legal": "Правовая информация",
     "followUs": "Следите за нами",
-    "rights": "Все права защищены"
+    "rights": "Все права защищены",
+    "newsletter": "Подписка на новости",
+    "newsletterDesc": "Получайте последние новости и специальные предложения",
+    "email": "Введите ваш email",
+    "subscribe": "Подписаться",
+    "subscribeSuccess": "Спасибо за подписку!",
+    "noService": "Мы не предоставляем услуги в России"
   }
 }
