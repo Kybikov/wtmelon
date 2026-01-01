@@ -137,12 +137,12 @@
 </template>
 
 <script>
-import { useLanguage } from '../composables/useLanguage'
+import { useLocale } from '../composables/useLocale'
 
 export default {
   name: 'Contact',
   setup() {
-    const { t } = useLanguage()
+    const { t } = useLocale()
     return { t }
   },
   data() {
@@ -162,7 +162,7 @@ export default {
       this.showForm = !this.showForm
     },
     handleSubmit() {
-      alert(this.t.contact.form.success)
+      alert(this.t('contact.form.success'))
       this.formData = {
         name: '',
         email: '',

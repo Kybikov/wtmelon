@@ -39,7 +39,7 @@
 <script>
 import ProductCard from './ProductCard.vue'
 import ProductModal from './ProductModal.vue'
-import { useLanguage } from '../composables/useLanguage'
+import { useLocale } from '../composables/useLocale'
 
 export default {
   name: 'Products',
@@ -48,8 +48,8 @@ export default {
     ProductModal
   },
   setup() {
-    const { currentLanguage, t } = useLanguage()
-    return { currentLanguage, t }
+    const { locale, t } = useLocale()
+    return { currentLanguage: locale, t }
   },
   data() {
     return {
@@ -77,7 +77,7 @@ export default {
         const response = await fetch(`/products-${this.currentLanguage}.json`)
 
         if (!response.ok) {
-          const fallback = await fetch('/products-uk.json')
+          const fallback = await fetch('/products.json')
           if (!fallback.ok) {
             throw new Error('Failed to load products')
           }

@@ -8,12 +8,12 @@
     <p class="product-short-desc">{{ product.shortDescription }}</p>
 
     <div class="product-price">
-      <span class="from-label">{{ t.services.from }}</span>
-      <span class="price-amount">{{ minPrice }} ₴</span>
+      <span class="from-label">{{ t('productCard.from') }}</span>
+      <span class="price-amount">{{ currency }}{{ minPrice }}</span>
     </div>
 
     <button class="btn-details">
-      {{ t.services.viewDetails }}
+      {{ t('productCard.learnMore') }}
       <i class="fa-solid fa-arrow-right"></i>
     </button>
   </div>
@@ -21,7 +21,7 @@
 
 <script>
 import { computed } from 'vue'
-import { useLanguage } from '../composables/useLanguage'
+import { useLocale } from '../composables/useLocale'
 
 export default {
   name: 'ProductCard',
@@ -33,12 +33,13 @@ export default {
   },
   emits: ['click'],
   setup(props) {
-    const { currentLanguage, t } = useLanguage()
+    const { locale, currency, t } = useLocale()
 
     const minPrice = computed(() => {
       let min = Infinity
       props.product.plans.forEach(plan => {
-        Object.values(plan.prices).forEach(price => {
+        const localePrices = plan.prices[locale.value] || plan.prices
+        Object.values(localePrices).forEach(price => {
           if (price < min) min = price
         })
       })
@@ -46,7 +47,8 @@ export default {
     })
 
     return {
-      currentLanguage,
+      locale,
+      currency,
       t,
       minPrice
     }

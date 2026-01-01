@@ -459,13 +459,21 @@
 </template>
 
 <script>
-import { useLanguage } from '../composables/useLanguage'
+import { onMounted } from 'vue'
+import { useRoute } from 'vue-router'
+import { useLocale } from '../composables/useLocale'
 
 export default {
   name: 'Terms',
   setup() {
-    const { currentLanguage } = useLanguage()
-    return { currentLanguage }
+    const route = useRoute()
+    const { locale, initLocale } = useLocale()
+
+    onMounted(() => {
+      initLocale(route.params.locale)
+    })
+
+    return { currentLanguage: locale }
   }
 }
 </script>

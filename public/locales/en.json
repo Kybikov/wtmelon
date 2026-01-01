@@ -1,0 +1,65 @@
+{
+  "nav": {
+    "about": "About",
+    "products": "Products",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "hero": {
+    "title": "Premium Subscriptions",
+    "subtitle": "Get access to the best streaming services, music platforms, and productivity tools at unbeatable prices",
+    "cta": "View Products"
+  },
+  "about": {
+    "title": "Why Choose Us?",
+    "quality": "Best Quality",
+    "qualityDesc": "We provide only premium subscriptions with full functionality",
+    "support": "24/7 Support",
+    "supportDesc": "Our team is always ready to help you with any questions",
+    "price": "Best Prices",
+    "priceDesc": "Get premium services at the most competitive prices on the market",
+    "safety": "Safe & Secure",
+    "safetyDesc": "All transactions are protected and your data is completely safe"
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "Choose from our wide selection of premium subscriptions",
+    "allCategories": "All",
+    "music": "Music",
+    "video": "Video",
+    "ai": "AI Tools",
+    "vpn": "VPN",
+    "design": "Design",
+    "education": "Education",
+    "social": "Social"
+  },
+  "productCard": {
+    "learnMore": "Learn More",
+    "from": "from"
+  },
+  "productModal": {
+    "close": "Close",
+    "selectPlan": "Select Plan",
+    "duration": {
+      "1": "1 Month",
+      "3": "3 Months",
+      "6": "6 Months",
+      "12": "12 Months"
+    },
+    "features": "Features"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Have questions? We're here to help!",
+    "telegram": "Write to us on Telegram",
+    "telegramUsername": "@watermelon_subs"
+  },
+  "footer": {
+    "description": "Your trusted source for premium subscriptions",
+    "quickLinks": "Quick Links",
+    "legal": "Legal",
+    "followUs": "Follow Us",
+    "rights": "All rights reserved"
+  }
+}

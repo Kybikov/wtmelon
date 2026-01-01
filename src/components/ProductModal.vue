@@ -11,7 +11,7 @@
             <img :src="product.icon" :alt="product.name" class="modal-icon">
             <div>
               <h2>{{ product.name }}</h2>
-              <p class="service-label">{{ t.modal.serviceAccess }}</p>
+              <p class="service-label">{{ product.shortDescription }}</p>
             </div>
           </div>
 
@@ -19,7 +19,7 @@
             <p class="product-description">{{ product.description }}</p>
 
             <div class="plan-selector">
-              <h4>{{ t.modal.selectPlan }}</h4>
+              <h4>{{ t('productModal.selectPlan') }}</h4>
               <div class="plans">
                 <button
                   v-for="plan in product.plans"
@@ -37,7 +37,7 @@
 
               <div class="features-duration-grid">
                 <div class="features-section">
-                  <h4>{{ t.modal.features }}</h4>
+                  <h4>{{ t('productModal.features') }}</h4>
                   <ul class="features">
                     <li v-for="(feature, index) in selectedPlan.features" :key="index">
                       <i class="fa-solid fa-check"></i>
@@ -47,16 +47,16 @@
                 </div>
 
                 <div class="duration-section">
-                  <h4>{{ t.modal.duration }}</h4>
+                  <h4>{{ t('productModal.selectPlan') }}</h4>
                   <div class="durations">
                     <button
-                      v-for="(price, months) in selectedPlan.prices"
+                      v-for="(price, months) in localePrices"
                       :key="months"
                       :class="['duration-btn', { active: selectedDuration === months }]"
                       @click="selectDuration(months)"
                     >
-                      <span class="months">{{ months }} {{ t.modal.months }}</span>
-                      <span class="price">{{ price }} ₴</span>
+                      <span class="months">{{ t('productModal.duration.' + months) }}</span>
+                      <span class="price">{{ currency }}{{ price }}</span>
                     </button>
                   </div>
                 </div>
@@ -64,11 +64,11 @@
 
               <div v-if="selectedDuration" class="modal-footer">
                 <div class="total-price">
-                  <span class="label">{{ t.modal.total }}:</span>
-                  <span class="amount">{{ selectedPlan.prices[selectedDuration] }} ₴</span>
+                  <span class="label">{{ t('contact.telegram') }}:</span>
+                  <span class="amount">{{ currency }}{{ getPrice(selectedDuration) }}</span>
                 </div>
                 <button class="btn1 order-btn" @click="handleOrder">
-                  {{ t.modal.order }}
+                  {{ t('contact.telegram') }}
                 </button>
               </div>
             </div>
@@ -80,7 +80,7 @@
 </template>
 
 <script>
-import { useLanguage } from '../composables/useLanguage'
+import { useLocale } from '../composables/useLocale'
 
 export default {
   name: 'ProductModal',
@@ -93,13 +93,19 @@ export default {
   },
   emits: ['close'],
   setup() {
-    const { currentLanguage, t } = useLanguage()
-    return { currentLanguage, t }
+    const { locale, currency, t } = useLocale()
+    return { locale, currency, t }
   },
   data() {
     return {
       selectedPlan: null,
       selectedDuration: null
+    }
+  },
+  computed: {
+    localePrices() {
+      if (!this.selectedPlan) return {}
+      return this.selectedPlan.prices[this.locale] || this.selectedPlan.prices
     }
   },
   watch: {
@@ -127,16 +133,20 @@ export default {
     selectDuration(months) {
       this.selectedDuration = months
     },
+    getPrice(months) {
+      return this.localePrices[months] || 0
+    },
     handleOrder() {
       if (!this.selectedPlan || !this.selectedDuration) return
 
+      const price = this.getPrice(this.selectedDuration)
       const message = `
-${this.t.modal.orderService}: ${this.product.name}
-${this.t.modal.orderPlan}: ${this.selectedPlan.name}
-${this.t.modal.orderDuration}: ${this.selectedDuration} ${this.t.modal.months}
-${this.t.modal.orderPrice}: ${this.selectedPlan.prices[this.selectedDuration]} ₴
+${this.t('productModal.selectPlan')}: ${this.product.name}
+${this.selectedPlan.name}
+${this.t('productModal.duration.' + this.selectedDuration)}
+${this.t('contact.telegram')}: ${this.currency}${price}
       `
-      alert(`${this.t.modal.orderSuccess}\n${message}`)
+      alert(message)
       this.$emit('close')
     }
   }

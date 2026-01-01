@@ -89,18 +89,25 @@
 </template>
 
 <script>
-import { useLanguage } from '../composables/useLanguage'
+import { onMounted } from 'vue'
+import { useRoute } from 'vue-router'
+import { useLocale } from '../composables/useLocale'
 import { useTheme } from '../composables/useTheme'
 
 export default {
   name: 'Navbar',
   setup() {
-    const { currentLanguage, setLanguage, t } = useLanguage()
+    const route = useRoute()
+    const { locale, setLocale, initLocale, t } = useLocale()
     const { isDark, toggleTheme } = useTheme()
 
+    onMounted(() => {
+      initLocale(route.params.locale)
+    })
+
     return {
-      currentLanguage,
-      setLanguage,
+      currentLanguage: locale,
+      setLocale,
       t,
       isDark,
       toggleTheme
@@ -122,7 +129,7 @@ export default {
   computed: {
     getCurrentLangLabel() {
       const lang = this.languages.find(l => l.code === this.currentLanguage)
-      return lang ? lang.label : 'UA'
+      return lang ? lang.label : 'EN'
     }
   },
   mounted() {
@@ -146,8 +153,9 @@ export default {
       this.langMenuOpen = !this.langMenuOpen
     },
     selectLanguage(code) {
-      this.setLanguage(code)
+      this.setLocale(code)
       this.langMenuOpen = false
+      this.closeMenu()
     }
   }
 }

@@ -48,12 +48,12 @@
 </template>
 
 <script>
-import { useLanguage } from '../composables/useLanguage'
+import { useLocale } from '../composables/useLocale'
 
 export default {
   name: 'Hero',
   setup() {
-    const { t } = useLanguage()
+    const { t } = useLocale()
     return { t }
   }
 }

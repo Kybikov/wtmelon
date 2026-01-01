@@ -14,8 +14,8 @@
             <a href="https://t.me/WTmelon" target="_blank" rel="noopener" title="Telegram Support"><i class="fa-solid fa-headset"></i></a>
           </div>
           <div class="footer-links">
-            <router-link to="/privacy" class="footer-link">{{ t.footer.privacy }}</router-link>
-            <router-link to="/terms" class="footer-link">{{ t.footer.terms }}</router-link>
+            <router-link :to="privacyPath" class="footer-link">{{ t('nav.privacy') }}</router-link>
+            <router-link :to="termsPath" class="footer-link">{{ t('nav.terms') }}</router-link>
           </div>
           <p class="left-text">&copy; 2025 Watermelon. {{ t.footer.rights }}</p>
           <p class="no-service-notice">{{ t.footer.noService }}</p>
@@ -43,13 +43,30 @@
 </template>
 
 <script>
-import { useLanguage } from '../composables/useLanguage'
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
+import { useLocale } from '../composables/useLocale'
 
 export default {
   name: 'Footer',
   setup() {
-    const { t } = useLanguage()
-    return { t }
+    const route = useRoute()
+    const { t, locale } = useLocale()
+
+    const getLocalePath = (path) => {
+      return computed(() => {
+        if (locale.value === 'en') {
+          return path
+        }
+        return `/${locale.value}${path}`
+      })
+    }
+
+    return {
+      t,
+      privacyPath: getLocalePath('/privacy'),
+      termsPath: getLocalePath('/terms')
+    }
   },
   data() {
     return {
@@ -58,7 +75,7 @@ export default {
   },
   methods: {
     handleSubscribe() {
-      alert(this.t.footer.subscribeSuccess)
+      alert(this.t('footer.subscribeSuccess'))
       this.email = ''
     }
   }

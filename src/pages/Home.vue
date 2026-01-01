@@ -8,6 +8,9 @@
 </template>
 
 <script>
+import { onMounted } from 'vue'
+import { useRoute } from 'vue-router'
+import { useLocale } from '../composables/useLocale'
 import Hero from '../components/Hero.vue'
 import Products from '../components/Products.vue'
 import About from '../components/About.vue'
@@ -20,6 +23,14 @@ export default {
     Products,
     About,
     Contact
+  },
+  setup() {
+    const route = useRoute()
+    const { initLocale } = useLocale()
+
+    onMounted(() => {
+      initLocale(route.params.locale)
+    })
   }
 }
 </script>
