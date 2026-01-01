@@ -462,6 +462,42 @@ body {
   border-radius: 10px;
   background: var(--bg-color);
   box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.menu-btn:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.menu-btn.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.menu-btn i {
+  transition: transform 0.3s ease;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  backdrop-filter: blur(2px);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .mobile-only {
@@ -1562,6 +1598,21 @@ footer .right-col p {
   text-decoration: underline;
 }
 
+@media (max-width: 1200px) {
+  .phone-link .phone-number {
+    display: none;
+  }
+
+  .phone-link {
+    padding: 10px 12px;
+    min-width: auto;
+  }
+
+  .nav-controls {
+    gap: 8px;
+  }
+}
+
 @media (max-width: 991px) {
   .navbar .menu {
     position: fixed;
@@ -1575,6 +1626,8 @@ footer .right-col p {
     transform: translateX(-100%);
     transition: var(--transition);
     height: calc(100vh - 80px);
+    overflow-y: auto;
+    z-index: 999;
   }
 
   .navbar .menu.active {
@@ -1598,7 +1651,7 @@ footer .right-col p {
   }
 
   .nav-controls {
-    gap: 10px;
+    gap: 8px;
   }
 
   .phone-link .phone-number {
@@ -1607,7 +1660,7 @@ footer .right-col p {
 
   .phone-link {
     padding: 10px;
-    width: 42px;
+    min-width: 42px;
     justify-content: center;
   }
 
@@ -1793,6 +1846,32 @@ footer .right-col p {
   }
 }
 
+@media (max-width: 767px) {
+  .navbar .menu {
+    padding: 20px;
+  }
+
+  .navbar .nav-item {
+    padding: 12px 0;
+  }
+
+  .nav-link {
+    font-size: 16px;
+    padding: 8px 0;
+  }
+
+  .mobile-controls {
+    flex-direction: row;
+    gap: 12px;
+    padding: 16px 0;
+    margin-top: 16px;
+  }
+
+  .phone-link {
+    padding: 10px;
+  }
+}
+
 @media (max-width: 480px) {
   .home-text h2 {
     font-size: 28px;
@@ -1806,8 +1885,62 @@ footer .right-col p {
     gap: 20px;
   }
 
+  .navbar {
+    padding: 12px 0;
+  }
+
   .navbar .logo-banner {
     height: 28px;
+  }
+
+  .navbar .menu {
+    padding: 15px;
+    top: 70px;
+    height: calc(100vh - 70px);
+  }
+
+  .navbar .nav-item {
+    padding: 10px 0;
+  }
+
+  .nav-link {
+    font-size: 15px;
+  }
+
+  .nav-controls {
+    gap: 6px;
+  }
+
+  .phone-link {
+    padding: 8px;
+    min-width: 38px;
+  }
+
+  .phone-link i {
+    font-size: 14px;
+  }
+
+  .lang-toggle {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .theme-toggle {
+    padding: 8px;
+    width: 38px;
+    height: 38px;
+    font-size: 14px;
+  }
+
+  .menu-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+
+  .mobile-controls {
+    gap: 10px;
+    padding: 12px 0;
   }
 
   footer .logo-banner {
@@ -1820,5 +1953,67 @@ footer .right-col p {
 
   .total-price .amount {
     font-size: 26px;
+  }
+
+  .lang-dropdown {
+    min-width: 180px;
+  }
+
+  .lang-option {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar .logo-banner {
+    height: 24px;
+  }
+
+  .nav-controls {
+    gap: 4px;
+  }
+
+  .phone-link {
+    padding: 6px;
+    min-width: 36px;
+  }
+
+  .phone-link i {
+    font-size: 13px;
+  }
+
+  .lang-toggle {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+
+  .lang-toggle .current-lang {
+    font-size: 11px;
+  }
+
+  .theme-toggle {
+    padding: 6px;
+    width: 36px;
+    height: 36px;
+    font-size: 13px;
+  }
+
+  .menu-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
+
+  .navbar .menu {
+    padding: 12px;
+  }
+
+  .navbar {
+    padding: 10px 0;
+  }
+
+  .container {
+    padding: 0 12px;
   }
 }
