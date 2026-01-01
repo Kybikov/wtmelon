@@ -130,7 +130,7 @@ export default {
     getMethodLabel(method) {
       const labels = {
         card: this.t.payments.methodCard,
-        crypto: this.t.payments.methodCrypto,
+        crypto: this.t.payments.methodCard,
         paypal: this.t.payments.methodPayPal
       }
       return labels[method] || method
