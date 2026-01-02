@@ -3,28 +3,29 @@
     "about": "Über uns",
     "products": "Produkte",
     "contact": "Kontakt",
-    "privacy": "Datenschutz",
+    "privacy": "Datenschutzerklärung",
     "terms": "Nutzungsbedingungen"
   },
   "hero": {
-    "title": "Premium-Abonnements",
-    "subtitle": "Erhalten Sie Zugang zu den besten Streaming-Diensten, Musikplattformen und Produktivitätstools zu unschlagbaren Preisen",
+    "title": "Zugangsdienste für",
+    "subtitle": "Streaming-Plattformen",
+    "subsubtitle": "Günstige Angebote für Spotify, Deezer und andere beliebte Dienste. Einzel-, Familien- und Gruppentarife. Zuverlässig, schnell, günstig.",
     "cta": "Produkte ansehen"
   },
   "about": {
     "title": "Warum uns wählen?",
     "quality": "Beste Qualität",
-    "qualityDesc": "Wir bieten nur Premium-Abonnements mit vollem Funktionsumfang",
+    "qualityDesc": "Wir bieten nur Premium-Abonnements mit vollem Funktionsumfang an",
     "support": "24/7 Support",
-    "supportDesc": "Unser Team ist immer bereit, Ihnen bei allen Fragen zu helfen",
+    "supportDesc": "Unser Team steht Ihnen jederzeit bei Fragen zur Verfügung",
     "price": "Beste Preise",
-    "priceDesc": "Erhalten Sie Premium-Services zu den wettbewerbsfähigsten Preisen auf dem Markt",
-    "safety": "Sicher",
-    "safetyDesc": "Alle Transaktionen sind geschützt und Ihre Daten sind vollkommen sicher"
+    "priceDesc": "Erhalten Sie Premium-Dienste zu den wettbewerbsfähigsten Preisen auf dem Markt",
+    "safety": "Sicherheit",
+    "safetyDesc": "Alle Transaktionen sind geschützt und Ihre Daten sind absolut sicher"
   },
   "products": {
     "title": "Unsere Produkte",
-    "subtitle": "Wählen Sie aus unserer großen Auswahl an Premium-Abonnements",
+    "subtitle": "Wählen Sie aus unserem breiten Angebot an Premium-Abonnements",
     "allCategories": "Alle",
     "music": "Musik",
     "video": "Video",
@@ -40,14 +41,14 @@
   },
   "productModal": {
     "close": "Schließen",
-    "selectPlan": "Plan auswählen",
+    "selectPlan": "Plan wählen",
     "duration": {
       "1": "1 Monat",
       "3": "3 Monate",
       "6": "6 Monate",
       "12": "12 Monate"
     },
-    "features": "Funktionen"
+    "features": "Vorteile"
   },
   "contact": {
     "title": "Kontaktieren Sie uns",
@@ -56,10 +57,10 @@
     "telegramUsername": "@watermelon_subs",
     "phone": "Telefon",
     "email": "E-Mail",
-    "telegramChannel": "Telegram-Kanal",
+    "telegramChannel": "Telegram Kanal",
     "instagram": "Instagram",
     "whatsapp": "WhatsApp",
-    "telegramSupport": "Telegram-Support",
+    "telegramSupport": "Telegram Support",
     "form": {
       "show": "Frage stellen",
       "hide": "Formular ausblenden",
@@ -69,20 +70,152 @@
       "subject": "Betreff",
       "message": "Nachricht",
       "send": "Senden",
-      "success": "Vielen Dank! Wir werden uns bald bei Ihnen melden."
+      "success": "Vielen Dank! Wir werden uns in Kürze bei Ihnen melden."
     }
   },
   "footer": {
-    "description": "Ihre vertrauenswürdige Quelle für Premium-Abonnements",
+    "description": "Ihre zuverlässige Quelle für Premium-Abonnements",
     "quickLinks": "Schnelllinks",
-    "legal": "Rechtliches",
+    "legal": "Rechtliche Informationen",
     "followUs": "Folgen Sie uns",
     "rights": "Alle Rechte vorbehalten",
     "newsletter": "Newsletter",
     "newsletterDesc": "Erhalten Sie die neuesten Nachrichten und Sonderangebote",
     "email": "Geben Sie Ihre E-Mail ein",
     "subscribe": "Abonnieren",
-    "subscribeSuccess": "Vielen Dank für Ihr Abonnement!",
+    "subscribeSuccess": "Danke für das Abonnement!",
     "noService": "Wir bieten keine Dienstleistungen in Russland an"
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "subtitle": "Richtlinie zur Verarbeitung personenbezogener Daten",
+    "updated": "Letzte Aktualisierung: 1. Januar 2025",
+    "intro": "Diese Datenschutzerklärung legt das Verfahren zur Erhebung, Speicherung, Nutzung und zum Schutz personenbezogener Daten der Benutzer des Online-Shops „WaterMelon“ fest. Wir respektieren Ihre Privatsphäre. Mit Ihrer Bestellung vertrauen Sie uns Ihre Daten an, und wir garantieren, dass diese ausschließlich zur Erbringung der Dienstleistungen verwendet werden.",
+    "section1": {
+      "title": "1. ALLGEMEINE BESTIMMUNGEN",
+      "p1": "Diese Richtlinie wurde in Übereinstimmung mit der geltenden Gesetzgebung der Ukraine entwickelt, insbesondere dem Gesetz der Ukraine „Über den Schutz personenbezogener Daten“.",
+      "p2": "Durch die Nutzung der Website oder des Bots des WaterMelon-Shops sowie durch die Bezahlung der Bestellung gibt der Benutzer (Kunde) seine bedingungslose Zustimmung zur Verarbeitung personenbezogener Daten gemäß dieser Richtlinie.",
+      "p3": "Inhaber und Verantwortlicher für personenbezogene Daten ist die Einzelunternehmerin Sovha Yevheniia Vasylivna."
+    },
+    "section2": {
+      "title": "2. WELCHE DATEN WIR SAMMELN",
+      "intro": "Wir sammeln nur die Mindestinformationen, die für die Auftragsabwicklung und Rückmeldung erforderlich sind:",
+      "contact": "Kontaktdaten: Name, Telegram-Benutzername, Telefonnummer, E-Mail-Adresse.",
+      "service": "Dienstleistungsdaten: In Fällen, in denen die Aktivierung des Abonnements eine Anmeldung im Konto erfordert (z. B. Spotify, YouTube), können wir temporäre Zugangsdaten (Login/Passwort) anfordern.",
+      "payment": "Zahlungsdaten: Wir sammeln oder speichern keine vollständigen Daten Ihrer Bankkarten (Nummer, CVV). Sie bezahlen die Bestellung über eine Bank-App oder ein Zahlungsgateway, und wir sehen nur den Eingang der Gelder.",
+      "technical": "Technische Daten: IP-Adresse, Browser- und Gerätetyp (werden automatisch für den korrekten Betrieb der Website gesammelt)."
+    },
+    "section3": {
+      "title": "3. ZWECK DER DATENERHEBUNG",
+      "intro": "Wir verwenden Ihre Daten für:",
+      "item1": "Bearbeitung und Ausführung Ihrer Bestellung (Versand von Zugangsschlüsseln, Einladungen).",
+      "item2": "Kommunikation mit Ihnen über Messenger für technischen Support.",
+      "item3": "Lösung von Streitfällen (Rückerstattung, Produktaustausch).",
+      "item4": "Information über den Abonnementstatus (Erinnerung an Ablauf)."
+    },
+    "section4": {
+      "title": "4. SICHERHEIT VON KONTODATEN (Wichtig)",
+      "p1": "Wenn Sie uns zur Aktivierung des Dienstes Login und Passwort für Ihr persönliches Konto übermitteln:",
+      "item1": "Wir verwenden diese Daten ausschließlich zum Zeitpunkt der Aktivierung.",
+      "item2": "Wir speichern Ihre Passwörter nach Abschluss der Bestellung nicht in Datenbanken.",
+      "item3": "Wir verpflichten uns, Ihre persönlichen Daten nicht zu ändern und den Zugang nicht an Dritte weiterzugeben.",
+      "p2": "Nach Erbringung der Dienstleistung (Aktivierung des Abonnements) empfehlen wir dringend, das Passwort Ihres Kontos zu ändern."
+    },
+    "section5": {
+      "title": "5. WEITERGABE VON DATEN AN DRITTE",
+      "intro": "Wir geben Ihre personenbezogenen Daten nicht an Dritte weiter, außer in folgenden Fällen:",
+      "item1": "An Bankinstitute (zur Durchführung und Bestätigung von Transaktionen).",
+      "item2": "Auf begründete Anfrage staatlicher Behörden (gemäß der Gesetzgebung der Ukraine).",
+      "note": "Wir verkaufen Kundenbasen kategorisch nicht an Spammer oder Werbeunternehmen."
+    },
+    "section6": {
+      "title": "6. DATENSCHUTZ",
+      "p1": "Zugang zu personenbezogenen Daten haben nur autorisierte Manager des WaterMelon-Shops, die eine Geheimhaltungsvereinbarung unterzeichnet haben.",
+      "p2": "Die Website verwendet SSL-Verschlüsselung zum Schutz der Datenübertragung."
+    },
+    "section7": {
+      "title": "7. RECHTE DES BENUTZERS",
+      "intro": "Gemäß Art. 8 des Gesetzes der Ukraine „Über den Schutz personenbezogener Daten“ haben Sie das Recht:",
+      "item1": "Zu wissen, welche Ihrer Daten wir genau verarbeiten.",
+      "item2": "Die Änderung oder Löschung Ihrer personenbezogenen Daten aus unserer Datenbank zu verlangen (Recht auf Vergessenwerden).",
+      "item3": "Die Einwilligung zur Datenverarbeitung zu widerrufen.",
+      "note": "Um diese Rechte auszuüben, kontaktieren Sie bitte unseren Support."
+    },
+    "section8": {
+      "title": "8. KONTAKTINFORMATIONEN",
+      "intro": "Wenn Sie Fragen zum Datenschutz haben, kontaktieren Sie uns bitte:",
+      "company": "Einzelunternehmerin Sovha Yevheniia Vasylivna",
+      "email": "E-Mail: support@wtmelon.store",
+      "telegram": "Telegram: @WTmelon (oder aktueller Support-Kontakt)",
+      "phone": "Telefon: +380633084244",
+      "address": "Postanschrift: Ukraine, 90000, Gebiet Transkarpatien, Bezirk Chust, Siedlung Mischhirja, Unabhängigkeitsstraße, Haus 19"
+    }
+  },
+  "terms": {
+    "title": "Allgemeine Geschäftsbedingungen (AGB)",
+    "subtitle": "Vereinbarung über die Bereitstellung von Dienstleistungen und digitalen Inhalten",
+    "updated": "Letzte Aktualisierung: 1. Januar 2025",
+    "intro": "Dieser Vertrag ist ein offizielles öffentliches Angebot (Offerte) des Online-Shops „WaterMelon“, vertreten durch die Einzelunternehmerin Sovha Yevheniia Vasylivna (im Folgenden – „Auftragnehmer“), die auf der Grundlage eines Eintrags im Einheitlichen Staatsregister der juristischen Personen und Einzelunternehmer handelt, gerichtet an jede natürliche Person (im Folgenden – „Kunde“), einen Vertrag zu den unten aufgeführten Bedingungen abzuschließen.",
+    "section1": {
+      "title": "1. BEGRIFFSBESTIMMUNGEN",
+      "offer": "Offerte – ein öffentliches Angebot des Auftragnehmers, das auf der Website oder in offiziellen Kanälen des WaterMelon-Shops veröffentlicht wird, bezüglich der Bereitstellung digitaler Dienstleistungen.",
+      "acceptance": "Akzeptanz – die vollständige und bedingungslose Annahme der Bedingungen dieser Offerte durch den Kunden durch Bezahlung der Dienstleistungen oder Beginn der tatsächlichen Nutzung der Dienstleistungen (bei Aktivierung vor Bezahlung).",
+      "service": "Dienstleistung / Digitales Produkt – Bereitstellung des Zugangs zu kostenpflichtigen Funktionen von Drittanbieterdiensten (Spotify, Canva, YouTube, Netflix usw.) durch Übermittlung von Codes, Links oder Kontokonfiguration."
+    },
+    "section2": {
+      "title": "2. VERTRAGSGEGENSTAND",
+      "p1": "Der Auftragnehmer verpflichtet sich, dem Kunden die Dienstleistung zur Aktivierung des Zugangs zum gewählten Dienst zu erbringen, und der Kunde verpflichtet sich, diese anzunehmen und zu bezahlen.",
+      "p2": "Besonderheiten der Dienstleistung: Der Auftragnehmer ist nicht Eigentümer, Entwickler oder offizieller Vertreter der Plattformen (Canva, Spotify usw.). Der Auftragnehmer bietet Vermittlungs- und technische Hilfsdienste bei der Organisation des Zugangs an (z. B. Aufnahme in eine „Familiengruppe“, Bereitstellung eines Prepaid-Kontos usw.)."
+    },
+    "section3": {
+      "title": "3. BESTELL- UND AKTIVIERUNGSVERFAHREN",
+      "p1": "Die Bestellung erfolgt über die Website-Schnittstelle oder durch Kontaktaufnahme mit einem Manager über Messenger (Telegram, Viber, Instagram).",
+      "p2": "Bereitstellungsmethoden (Lieferung): Abhängig von der Art des erworbenen Abonnements kann der Auftragnehmer den Zugang auf eine der folgenden Weisen gewähren:",
+      "method1": "Senden von Login und Passwort eines aktivierten Kontos an den Kunden;",
+      "method2": "Senden eines Einladungslinks (Invite) zum Beitritt des eigenen Kontos des Kunden zum Abonnement;",
+      "method3": "Manuelle Aktivierung durch den Manager: Anmeldung im Konto des Kunden (mit den bereitgestellten Daten) und Durchführung der Zahlung/Einrichtung des Abonnements.",
+      "p3": "Ausführungszeit: Die Dienstleistung wird von einem WaterMelon-Manager während der Arbeitszeit nach Auftragsbestätigung erbracht. Die Standardausführungszeit beträgt 15 Minuten bis 24 Stunden.",
+      "p4": "Der Auftragnehmer behält sich das Recht vor, das Abonnement für den Kunden nach eigenem Ermessen vor der Bezahlung zu aktivieren (Post-Payment). In diesem Fall verpflichtet sich der Kunde, die Zahlung innerhalb der vereinbarten Frist zu leisten. Bei Nichtzahlung wird der Zugang widerrufen."
+    },
+    "section4": {
+      "title": "4. BEZAHLUNG DER DIENSTLEISTUNGEN",
+      "p1": "Die Preise für Dienstleistungen sind auf der Website oder im Katalog des WaterMelon-Shops angegeben.",
+      "p2": "Die Zahlung erfolgt in der Landeswährung der Ukraine (Hrywnja).",
+      "p3": "Zahlungsmethode: Die Zahlung erfolgt durch Überweisung von Geldern auf das Bankkonto des Auftragnehmers (IBAN), dessen Daten vom Manager bei der Bestellung mitgeteilt oder auf der Website angegeben werden. Bei Anschluss von Acquiring kann die Zahlung per Bankkarte direkt auf der Website erfolgen.",
+      "p4": "Der Vertrag gilt im Moment der Gutschrift der Gelder auf dem Konto des Auftragnehmers als bezahlt."
+    },
+    "section5": {
+      "title": "5. GARANTIEN UND RÜCKERSTATTUNG",
+      "warranty": "Garantiezeitraum: Der Auftragnehmer garantiert die Funktionsfähigkeit der bereitgestellten Dienstleistung (Abonnement) während des gesamten bezahlten Zeitraums (z. B. 1, 3, 6 oder 12 Monate).",
+      "replacement": "Ersatzbedingungen: Wenn der Zugang zum Dienst vor Ablauf des bezahlten Zeitraums ohne Verschulden des Kunden endet (technischer Fehler, Verlust des Premium-Status), verpflichtet sich der Auftragnehmer, den Zugang wiederherzustellen oder innerhalb von 24 Stunden nach Anfrage des Kunden Ersatz (anderes Konto/Link) zu leisten.",
+      "refund": "Rückerstattung:",
+      "refundItem1": "Eine Rückerstattung ist möglich, wenn sich die Dienstleistung als nicht funktionsfähig erwiesen hat und der Auftragnehmer innerhalb von 24 Stunden keinen Ersatz leisten oder den Betrieb wiederherstellen konnte.",
+      "refundItem2": "Gelder werden nicht zurückerstattet, wenn der Kunde es sich nach Erhalt des funktionierenden Zugangs anders überlegt hat, da das digitale Produkt im Moment der Gewährung des Zugangs als konsumiert gilt (gemäß dem Gesetz der Ukraine „Über digitale Inhalte und digitale Dienstleistungen“)."
+    },
+    "section6": {
+      "title": "6. NUTZUNGSREGELN UND HAFTUNGSBESCHRÄNKUNG",
+      "prohibition": "Verbot der Datenänderung: Dem Kunden ist es untersagt, kritische Einstellungen der bereitgestellten Konten (Login, E-Mail, Passwort, Zahlungsprofil) ohne vorherige Zustimmung des Auftragnehmers zu ändern.",
+      "warranty_void": "Erlöschen der Garantie: Bei Verletzung von Punkt 6.1 (eigenmächtige Datenänderung) erlischt die Garantie für die Ware, und der Auftragnehmer haftet nicht für den weiteren Betrieb des Kontos. Gelder werden in diesem Fall nicht zurückerstattet.",
+      "liability": "Der Auftragnehmer haftet nicht für:",
+      "liabilityItem1": "Globale technische Ausfälle im Betrieb der Dienste (z. B. wenn Spotify-Server weltweit nicht funktionieren);",
+      "liabilityItem2": "Sperrung des Kontos durch die Verwaltung des Dienstes aufgrund von Verstößen des Kunden gegen die Community-Regeln (Spam, Verwendung verbotener Software usw.)."
+    },
+    "section7": {
+      "title": "7. PERSONENBEZOGENE DATEN",
+      "p1": "Der Kunde stimmt der Verarbeitung seiner personenbezogenen Daten (Name, Telefon, Kontodaten) ausschließlich zum Zweck der Auftragsabwicklung und der Bereitstellung technischer Unterstützung zu.",
+      "p2": "Falls der Kunde dem Auftragnehmer zur Aktivierung des Abonnements Zugangsdaten für sein persönliches Konto übermittelt, verpflichtet sich der Auftragnehmer, diese Daten nicht für andere Zwecke zu verwenden, sie nicht zu ändern und nicht an Dritte weiterzugeben. Nach Aktivierung des Abonnements empfiehlt der Auftragnehmer dem Kunden, das temporäre Passwort zu ändern."
+    },
+    "section8": {
+      "title": "8. HÖHERE GEWALT",
+      "p1": "Die Parteien sind von der Haftung für teilweise oder vollständige Nichterfüllung der Verpflichtungen aus diesem Vertrag befreit, wenn dies die Folge von Umständen höherer Gewalt war (Kriegsrecht, Blackouts, Cyberangriffe auf das Bankensystem usw.)."
+    },
+    "section9": {
+      "title": "9. KONTAKTDATEN DES AUFTRAGNEHMERS",
+      "company": "Einzelunternehmerin Sovha Yevheniia Vasylivna",
+      "code": "Steuernummer (RNOKPP): 3053915382",
+      "address": "Adresse: Ukraine, 90000, Gebiet Transkarpatien, Bezirk Chust, Siedlung Mischhirja, Unabhängigkeitsstraße, Haus 19",
+      "email": "E-Mail: support@wtmelon.store",
+      "phone": "Telefon: +380633084244"
+    }
   }
 }
