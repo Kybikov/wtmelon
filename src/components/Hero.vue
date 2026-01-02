@@ -30,12 +30,12 @@
                 class="floating-icon icon-1"
               >
               <img
-                src="https://5odmiluatb.ucarecd.net/dce730b1-d163-4131-91d1-05e0911b997a/ApplicationEmoji_AgADrDsAAu6SYUo.png"
+                src="https://5odmiluatb.ucarecd.net/7c52764e-df5a-4991-a93f-b346ead9aedb/Adobe_Creative_Cloud_rainbow_iconsvg.png"
                 alt="ChatGPT"
                 class="floating-icon icon-2"
               >
               <img
-                src="https://5odmiluatb.ucarecd.net/7c52764e-df5a-4991-a93f-b346ead9aedb/Adobe_Creative_Cloud_rainbow_iconsvg.png"
+                src="https://5odmiluatb.ucarecd.net/dce730b1-d163-4131-91d1-05e0911b997a/ApplicationEmoji_AgADrDsAAu6SYUo.png"
                 alt="Adobe"
                 class="floating-icon icon-3"
               >
