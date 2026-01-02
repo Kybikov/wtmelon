@@ -1,26 +1,27 @@
 {
   "nav": {
-    "about": "About",
+    "about": "About Us",
     "products": "Products",
     "contact": "Contact",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+    "terms": "Terms of Use"
   },
   "hero": {
-    "title": "Premium Subscriptions",
-    "subtitle": "Get access to the best streaming services, music platforms, and productivity tools at unbeatable prices",
+    "title": "Access services for",
+    "subtitle": "streaming platforms",
+    "subsubtitle": "Great deals on Spotify, Deezer, and other popular services. Individual, family, and group plans. Reliable, fast, affordable.",
     "cta": "View Products"
   },
   "about": {
-    "title": "Why Choose Us?",
+    "title": "Why choose us?",
     "quality": "Best Quality",
     "qualityDesc": "We provide only premium subscriptions with full functionality",
     "support": "24/7 Support",
     "supportDesc": "Our team is always ready to help you with any questions",
     "price": "Best Prices",
     "priceDesc": "Get premium services at the most competitive prices on the market",
-    "safety": "Safe & Secure",
-    "safetyDesc": "All transactions are protected and your data is completely safe"
+    "safety": "Security",
+    "safetyDesc": "All transactions are protected, and your data is completely safe"
   },
   "products": {
     "title": "Our Products",
@@ -32,7 +33,7 @@
     "vpn": "VPN",
     "design": "Design",
     "education": "Education",
-    "social": "Social"
+    "social": "Social Media"
   },
   "productCard": {
     "learnMore": "Learn More",
@@ -42,16 +43,16 @@
     "close": "Close",
     "selectPlan": "Select Plan",
     "duration": {
-      "1": "1 Month",
-      "3": "3 Months",
-      "6": "6 Months",
-      "12": "12 Months"
+      "1": "1 month",
+      "3": "3 months",
+      "6": "6 months",
+      "12": "12 months"
     },
     "features": "Features"
   },
   "contact": {
     "title": "Contact Us",
-    "subtitle": "Have questions? We're here to help!",
+    "subtitle": "Have questions? We are here to help!",
     "telegram": "Write to us on Telegram",
     "telegramUsername": "@watermelon_subs",
     "phone": "Phone",
@@ -69,20 +70,152 @@
       "subject": "Subject",
       "message": "Message",
       "send": "Send",
-      "success": "Thank you! We will contact you soon."
+      "success": "Thank you! We will contact you shortly."
     }
   },
   "footer": {
-    "description": "Your trusted source for premium subscriptions",
+    "description": "Your reliable source for premium subscriptions",
     "quickLinks": "Quick Links",
-    "legal": "Legal",
+    "legal": "Legal Information",
     "followUs": "Follow Us",
     "rights": "All rights reserved",
     "newsletter": "Newsletter",
     "newsletterDesc": "Get the latest news and special offers",
     "email": "Enter your email",
     "subscribe": "Subscribe",
-    "subscribeSuccess": "Thank you for subscribing!",
+    "subscribeSuccess": "Thanks for subscribing!",
     "noService": "We do not provide services in Russia"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "subtitle": "Personal Data Processing Policy",
+    "updated": "Last updated: January 1, 2025",
+    "intro": "This Privacy Policy determines the procedure for collecting, storing, using, and protecting the personal data of users of the \"WaterMelon\" online store. We respect your privacy. By placing an order, you trust us with your information, and we guarantee that it will be used exclusively for providing services.",
+    "section1": {
+      "title": "1. GENERAL PROVISIONS",
+      "p1": "This Policy is developed in accordance with the current legislation of Ukraine, in particular the Law of Ukraine \"On Personal Data Protection\".",
+      "p2": "By using the WaterMelon website or bot, as well as paying for an order, the User (Customer) gives their unconditional consent to the processing of personal data in accordance with this Policy.",
+      "p3": "The owner and controller of personal data is Sole Proprietorship Sovha Yevheniia Vasylivna."
+    },
+    "section2": {
+      "title": "2. WHAT DATA WE COLLECT",
+      "intro": "We collect only the minimum information necessary for order fulfillment and feedback:",
+      "contact": "Contact details: Name, Telegram username, phone number, email address.",
+      "service": "Service data: In cases where subscription activation requires logging into an account (e.g., Spotify, YouTube), we may request temporary login credentials (login/password).",
+      "payment": "Payment data: We do not collect or store full details of your bank cards (number, CVV). You pay for the order via a banking app or payment gateway, and we only see the fact of receipt of funds.",
+      "technical": "Technical data: IP address, browser type, and device type (collected automatically for the correct operation of the site)."
+    },
+    "section3": {
+      "title": "3. PURPOSE OF DATA COLLECTION",
+      "intro": "We use your data for:",
+      "item1": "Processing and fulfilling your order (sending access keys, invites).",
+      "item2": "Communicating with you via messengers for technical support.",
+      "item3": "Resolving disputes (refunds, product replacement).",
+      "item4": "Informing about subscription status (reminders about expiration)."
+    },
+    "section4": {
+      "title": "4. ACCOUNT DATA SECURITY (Important)",
+      "p1": "If you provide us with a login and password for your personal account to activate the service:",
+      "item1": "We use this data exclusively at the moment of activation.",
+      "item2": "We do not store your passwords in databases after the order is completed.",
+      "item3": "We undertake not to change your personal data or transfer access to third parties.",
+      "p2": "After the service is performed (subscription activation), we strongly recommend changing your account password."
+    },
+    "section5": {
+      "title": "5. DATA TRANSFER TO THIRD PARTIES",
+      "intro": "We do not transfer your personal data to third parties, except in the following cases:",
+      "item1": "To banking institutions (for processing and confirming transactions).",
+      "item2": "Upon reasonable request of state authorities (in accordance with the legislation of Ukraine).",
+      "note": "We strictly do not sell customer databases to spammers or advertising companies."
+    },
+    "section6": {
+      "title": "6. INFORMATION PROTECTION",
+      "p1": "Access to personal data is granted only to authorized managers of the WaterMelon store who have signed a non-disclosure agreement.",
+      "p2": "The site uses SSL encryption to protect data transmission."
+    },
+    "section7": {
+      "title": "7. USER RIGHTS",
+      "intro": "According to Art. 8 of the Law of Ukraine \"On Personal Data Protection\", you have the right to:",
+      "item1": "Know exactly which of your data we process.",
+      "item2": "Request the change or deletion of your personal data from our database (right to be forgotten).",
+      "item3": "Withdraw consent to data processing.",
+      "note": "To exercise these rights, please contact our support."
+    },
+    "section8": {
+      "title": "8. CONTACT INFORMATION",
+      "intro": "If you have questions regarding privacy, please contact us:",
+      "company": "Sole Proprietorship Sovha Yevheniia Vasylivna",
+      "email": "E-mail: support@wtmelon.store",
+      "telegram": "Telegram: @WTmelon (or current support contact)",
+      "phone": "Phone: +380633084244",
+      "address": "Mailing address: Ukraine, 90000, Zakarpattia region, Khust district, Mizhhirya village, Nezalezhnosti St., bldg. 19"
+    }
+  },
+  "terms": {
+    "title": "Public Offer Agreement",
+    "subtitle": "Agreement on the provision of services and digital content",
+    "updated": "Last updated: January 1, 2025",
+    "intro": "This Agreement is an official public offer (Offer) of the Internet store \"WaterMelon\", represented by Sole Proprietorship Sovha Yevheniia Vasylivna (hereinafter – \"Contractor\"), acting on the basis of a record in the Unified State Register of Legal Entities, Individual Entrepreneurs and Public Organizations, addressed to any individual (hereinafter – \"Customer\"), to conclude an agreement on the conditions set forth below.",
+    "section1": {
+      "title": "1. DEFINITION OF TERMS",
+      "offer": "Offer – a public proposal by the Contractor, posted on the website or in official channels of the WaterMelon store, regarding the provision of digital services.",
+      "acceptance": "Acceptance – full and unconditional acceptance by the Customer of the terms of this Offer by making payment for services or starting actual use of services (in case of activation before payment).",
+      "service": "Service / Digital Product – providing the Customer with access to paid functions of third-party services (Spotify, Canva, YouTube, Netflix, etc.) by transferring codes, links, or configuring an account."
+    },
+    "section2": {
+      "title": "2. SUBJECT OF THE AGREEMENT",
+      "p1": "The Contractor undertakes to provide the Customer with the Service of activating access to the selected platform, and the Customer undertakes to accept and pay for it.",
+      "p2": "Service specifics: The Contractor is not the owner, developer, or official representative of the platforms (Canva, Spotify, etc.). The Contractor provides intermediation and technical assistance services in organizing access (e.g., inclusion in a \"family group\", providing a prepaid account, etc.)."
+    },
+    "section3": {
+      "title": "3. ORDERING AND ACTIVATION PROCEDURE",
+      "p1": "An order is placed through the site interface or by contacting a manager via messengers (Telegram, Viber, Instagram).",
+      "p2": "Service delivery methods: Depending on the type of subscription purchased, the Contractor may provide access in one of the following ways:",
+      "method1": "Sending the Customer the login and password for an activated account;",
+      "method2": "Sending an invitation link (invite) to join the Customer's own account to the subscription;",
+      "method3": "Manual activation by manager: logging into the Customer's account (using provided data) and making payment/setting up the subscription.",
+      "p3": "Execution time: The service is provided by a WaterMelon manager during working hours after order confirmation. Standard execution time is from 15 minutes to 24 hours.",
+      "p4": "The Contractor reserves the right, at its own discretion, to activate the subscription for the Customer before payment (post-payment). In this case, the Customer undertakes to make payment within the agreed period. In case of non-payment, access will be revoked."
+    },
+    "section4": {
+      "title": "4. PAYMENT FOR SERVICES",
+      "p1": "Prices for services are indicated on the website or in the WaterMelon store catalog.",
+      "p2": "Payment is made in the national currency of Ukraine (Hryvnia).",
+      "p3": "Payment method: Payment is made by transferring funds to the Contractor's bank account (IBAN), the details of which are provided by the manager when placing an order or listed on the website. If acquiring is connected, payment can be made by bank card directly on the site.",
+      "p4": "The agreement is considered paid at the moment funds are credited to the Contractor's account."
+    },
+    "section5": {
+      "title": "5. WARRANTIES AND REFUNDS",
+      "warranty": "Warranty period: The Contractor guarantees the functionality of the provided service (subscription) during the entire paid period (e.g., 1, 3, 6, or 12 months).",
+      "replacement": "Replacement conditions: If access to the service has stopped before the end of the paid period through no fault of the Customer (technical failure, premium status loss), the Contractor undertakes to restore access or provide a replacement (another account/link) within 24 hours from the moment of the Customer's request.",
+      "refund": "Refunds:",
+      "refundItem1": "A refund is possible if the service turned out to be non-functional and the Contractor was unable to provide a replacement or restore operation within 24 hours.",
+      "refundItem2": "Funds are not returned if the Customer changed their mind after receiving working access, as the digital product is considered consumed at the moment access is granted (according to the Law of Ukraine \"On Digital Content and Digital Services\")."
+    },
+    "section6": {
+      "title": "6. RULES OF USE AND LIMITATION OF LIABILITY",
+      "prohibition": "Prohibition on data modification: The Customer is prohibited from changing critical settings of the provided accounts (login, email, password, payment profile) without the prior consent of the Contractor.",
+      "warranty_void": "Warranty voiding: In case of violation of clause 6.1 (unauthorized data modification), the warranty for the product is voided, and the Contractor is not responsible for the further operation of the account. Funds are not returned in this case.",
+      "liability": "The Contractor is not responsible for:",
+      "liabilityItem1": "Global technical failures in the operation of services (e.g., if Spotify servers are down worldwide);",
+      "liabilityItem2": "Account blocking by the service administration due to violation of community rules by the Customer (spam, use of prohibited software, etc.)."
+    },
+    "section7": {
+      "title": "7. PERSONAL DATA",
+      "p1": "The Customer consents to the processing of their personal data (full name, phone, account data) exclusively for the purpose of fulfilling the order and providing technical support.",
+      "p2": "In case the Customer transfers login data for their personal account to the Contractor for subscription activation, the Contractor undertakes not to use this data for other purposes, not to change it, and not to transfer it to third parties. After subscription activation, the Contractor recommends the Customer to change the temporary password."
+    },
+    "section8": {
+      "title": "8. FORCE MAJEURE",
+      "p1": "The parties are released from liability for partial or full non-fulfillment of obligations under this Agreement if it was the result of force majeure circumstances (martial law, blackouts, cyberattacks on the banking system, etc.)."
+    },
+    "section9": {
+      "title": "9. CONTRACTOR DETAILS",
+      "company": "Sole Proprietorship Sovha Yevheniia Vasylivna",
+      "code": "Tax ID (RNOKPP): 3053915382",
+      "address": "Address: Ukraine, 90000, Zakarpattia region, Khust district, Mizhhirya village, Nezalezhnosti St., bldg. 19",
+      "email": "E-mail: support@wtmelon.store",
+      "phone": "Phone: +380633084244"
+    }
   }
 }
