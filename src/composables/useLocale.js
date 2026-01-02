@@ -70,7 +70,21 @@ export function useLocale() {
   }
 
   const t = (key) => {
-    return translations.value[currentLocale.value]?.[key] || key
+    const locale = translations.value[currentLocale.value]
+    if (!locale) return key
+
+    const keys = key.split('.')
+    let value = locale
+
+    for (const k of keys) {
+      if (value && typeof value === 'object' && k in value) {
+        value = value[k]
+      } else {
+        return key
+      }
+    }
+
+    return value
   }
 
   const loadTranslations = async () => {
