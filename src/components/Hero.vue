@@ -17,7 +17,7 @@
           <h2>
             {{ t('hero.title') }} <span class="highlight">{{ t('hero.subtitle') }}</span>
           </h2>
-          <p>{{ t('hero.subtitle') }}</p>
+          <p>{{ t('hero.subsubtitle') }}</p>
           <a href="#products" class="btn1">{{ t('hero.cta') }}</a>
         </div>
 
