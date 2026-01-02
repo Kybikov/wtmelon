@@ -8,9 +8,6 @@
 
         <ul class="menu" :class="{ active: menuOpen }">
           <li class="nav-item">
-            <a href="#home" class="nav-link" @click="closeMenu">{{ t('hero.title') }}</a>
-          </li>
-          <li class="nav-item">
             <a href="#products" class="nav-link" @click="closeMenu">{{ t('nav.products') }}</a>
           </li>
           <li class="nav-item">
