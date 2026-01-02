@@ -1,0 +1,686 @@
+[
+  {
+    "id": "spotify",
+    "category": "music",
+    "name": "Spotify Premium",
+    "shortDescription": "Access to Spotify premium features",
+    "description": "Get access to Spotify premium subscription. Millions of tracks and podcasts ad-free. Egypt region (no VPN required for listening).",
+    "icon": "https://5odmiluatb.ucarecd.net/04ecb6ec-58b8-41ef-9e0e-a5adf914818f/ApplicationEmoji_AgADHT4AApkSMUo.gif",
+    "plans": [
+      {
+        "id": "individual",
+        "name": "Spotify Individual",
+        "description": "Premium on your account or new one. Egypt region (no VPN needed!).",
+        "features": [
+          "Ad-free",
+          "Offline listening",
+          "High quality audio",
+          "Works without VPN"
+        ],
+        "prices": {
+          "1": 119,
+          "3": 339,
+          "6": 640,
+          "12": 1100
+        }
+      },
+      {
+        "id": "duo",
+        "name": "Spotify Duo",
+        "description": "Share with your partner! Two profiles, any region of your choice.",
+        "features": [
+          "2 premium accounts",
+          "Shared playlist",
+          "Savings for two"
+        ],
+        "prices": {
+          "1": 180,
+          "3": 520,
+          "6": 1000,
+          "12": 1800
+        }
+      },
+      {
+        "id": "family",
+        "name": "Spotify Family",
+        "description": "Up to 6 profiles for your family. Choose any region.",
+        "features": [
+          "Up to 6 accounts",
+          "Family Mix",
+          "Content control",
+          "Full admin access"
+        ],
+        "prices": {
+          "1": 250,
+          "3": 730,
+          "6": 1350,
+          "12": 2499
+        }
+      },
+      {
+        "id": "slot",
+        "name": "Spotify Family Slot",
+        "description": "Join an existing family plan via invitation.",
+        "features": [
+          "Easy setup",
+          "Own account",
+          "Personal playlists",
+          "Any region"
+        ],
+        "prices": {
+          "1": 80,
+          "3": 230,
+          "6": 430,
+          "12": 799
+        }
+      }
+    ]
+  },
+  {
+    "id": "applemusic",
+    "category": "music",
+    "name": "Apple Music",
+    "shortDescription": "Music without limits and ads",
+    "description": "Unlimited access to music. Listen to millions of tracks ad-free. Separate profiles with personal recommendations.",
+    "icon": "https://5odmiluatb.ucarecd.net/ede08b37-b82e-4204-8a0e-d87daff29f68/ApplicationEmoji_AgADDEQAAkuzMUo.gif",
+    "plans": [
+      {
+        "id": "ukraine",
+        "name": "Apple Music Ukraine",
+        "description": "Official subscription (Ukraine Region)",
+        "features": [
+          "Ad-free",
+          "Offline mode",
+          "High quality (Lossless)",
+          "Library access"
+        ],
+        "prices": {
+          "1": 99,
+          "3": 289,
+          "6": 559,
+          "12": 1099
+        }
+      }
+    ]
+  },
+  {
+    "id": "youtube",
+    "category": "video",
+    "name": "YouTube Premium",
+    "shortDescription": "YouTube and YouTube Music ad-free",
+    "description": "Watch videos ad-free, background playback, offline viewing. Includes YouTube Music Premium.",
+    "icon": "https://5odmiluatb.ucarecd.net/a834f19e-2259-429c-a117-bd1ddc37f5e0/ApplicationEmoji_AgADv0IAAsGYCEo.gif",
+    "plans": [
+      {
+        "id": "ukraine",
+        "name": "Premium Ukraine",
+        "description": "Subscription for Ukrainian region",
+        "features": [
+          "Ad-free",
+          "Background playback",
+          "YouTube Music",
+          "Offline viewing"
+        ],
+        "prices": {
+          "1": 70,
+          "3": 200,
+          "6": 370,
+          "12": 700
+        }
+      },
+      {
+        "id": "global",
+        "name": "Premium Other regions",
+        "description": "Subscription for other regions (Invites)",
+        "features": [
+          "Easy connection via invitation",
+          "Own account",
+          "Stable operation",
+          "All premium features"
+        ],
+        "prices": {
+          "1": 100,
+          "3": 280,
+          "6": 540,
+          "12": 1000
+        }
+      }
+    ]
+  },
+  {
+    "id": "netflix",
+    "category": "video",
+    "name": "Netflix Premium",
+    "shortDescription": "Cinematic experience in 4K",
+    "description": "Stunning 4K quality. Global access — watch your favorite shows and movies in any region without restrictions.",
+    "icon": "https://5odmiluatb.ucarecd.net/43f110a3-bcbd-4440-b54a-d091554b3d12/ApplicationEmoji_AgADkUMAAtWR0Ek.gif",
+    "plans": [
+      {
+        "id": "1_profile",
+        "name": "1 Profile",
+        "description": "Your personal profile in shared account",
+        "features": [
+          "4K Ultra HD quality",
+          "Watch on any device",
+          "1 screen simultaneously",
+          "Personal history"
+        ],
+        "prices": {
+          "1": 150,
+          "3": 419,
+          "6": 749,
+          "12": 1299
+        }
+      },
+      {
+        "id": "2_profiles",
+        "name": "2 Profiles",
+        "description": "Two separate profiles or viewing on 2 screens",
+        "features": [
+          "4K Ultra HD quality",
+          "2 screens simultaneously",
+          "Better price per profile"
+        ],
+        "prices": {
+          "1": 260,
+          "3": 749,
+          "6": 1299,
+          "12": 2199
+        }
+      }
+    ]
+  },
+  {
+    "id": "sweet_tv",
+    "category": "video",
+    "name": "Sweet.TV",
+    "shortDescription": "Movies, series and TV on any device",
+    "description": "High quality (Full HD / 4K). Popular TV channels, movies and cartoons ad-free.",
+    "icon": "https://5odmiluatb.ucarecd.net/f2d0d221-7170-4e63-9331-ecd25060cb7a/sweet.png",
+    "plans": [
+      {
+        "id": "packet_l_1",
+        "name": "Package L (1 profile)",
+        "description": "Access for one profile in shared account.",
+        "features": [
+          "260+ channels",
+          "Movies Full HD",
+          "1 device"
+        ],
+        "prices": {
+          "1": 60,
+          "3": 160,
+          "6": 300,
+          "12": 550
+        }
+      },
+      {
+        "id": "packet_l_2",
+        "name": "Package L (2 profiles)",
+        "description": "Access for two profiles (or 2 devices).",
+        "features": [
+          "260+ channels",
+          "Movies Full HD",
+          "2 devices simultaneously"
+        ],
+        "prices": {
+          "1": 110,
+          "3": 300,
+          "6": 550,
+          "12": 1000
+        }
+      },
+      {
+        "id": "packet_l_personal",
+        "name": "Package L (Personal)",
+        "description": "Full personal account (5 devices).",
+        "features": [
+          "Personal account",
+          "Up to 5 devices",
+          "Maximum freedom"
+        ],
+        "prices": {
+          "1": 180,
+          "3": 520,
+          "6": 970,
+          "12": 1800
+        }
+      }
+    ]
+  },
+  {
+    "id": "tidal",
+    "category": "music",
+    "name": "Tidal HiFi",
+    "shortDescription": "Your music in highest quality",
+    "description": "360 Reality Audio and Dolby Atmos. Immerse yourself in spatial sound for unforgettable musical experience.",
+    "icon": "https://5odmiluatb.ucarecd.net/5b3289f2-5c66-4b5a-a49c-141fd3b3a7b0/tidal.png",
+    "plans": [
+      {
+        "id": "individual",
+        "name": "Tidal Individual",
+        "description": "Premium on your account or new one. Egypt region.",
+        "features": [
+          "HiFi sound quality",
+          "No VPN after login",
+          "Dolby Atmos"
+        ],
+        "prices": {
+          "1": 170,
+          "3": 499,
+          "6": 900
+        }
+      },
+      {
+        "id": "family",
+        "name": "Tidal Family",
+        "description": "Full family account (up to 6 people)",
+        "features": [
+          "Up to 6 profiles",
+          "Subscription management",
+          "HiFi for whole family"
+        ],
+        "prices": {
+          "1": 259,
+          "3": 729,
+          "6": 1399
+        }
+      },
+      {
+        "id": "slot",
+        "name": "Tidal Family Slot",
+        "description": "Join family plan",
+        "features": [
+          "Your own profile",
+          "HiFi sound",
+          "Best price"
+        ],
+        "prices": {
+          "1": 119,
+          "3": 339,
+          "6": 640,
+          "12": 1199
+        }
+      }
+    ]
+  },
+  {
+    "id": "deezer",
+    "category": "music",
+    "name": "Deezer Premium",
+    "shortDescription": "Access to Deezer premium features",
+    "description": "Get access to Deezer premium subscription. 90+ million tracks and exclusive podcasts. HiFi sound quality.",
+    "icon": "https://5odmiluatb.ucarecd.net/673dda7d-e522-448d-b1d7-da17d7053b21/deezerappiconmusicstreamingservicesocialmediaplatform_277909851.png",
+    "plans": [
+      {
+        "id": "individual",
+        "name": "Individual",
+        "description": "1 premium account",
+        "features": [
+          "Ad-free",
+          "HiFi sound quality",
+          "Offline listening",
+          "Unlimited skips"
+        ],
+        "prices": {
+          "1": 199,
+          "3": 549,
+          "6": 1049,
+          "12": 1949
+        }
+      },
+      {
+        "id": "duo",
+        "name": "Duo",
+        "description": "2 premium accounts",
+        "features": [
+          "All Individual benefits",
+          "2 independent accounts",
+          "Shared playlist",
+          "HiFi quality for both"
+        ],
+        "prices": {
+          "1": 269,
+          "3": 729,
+          "6": 1389,
+          "12": 2569
+        }
+      },
+      {
+        "id": "family",
+        "name": "Family",
+        "description": "Up to 6 premium accounts",
+        "features": [
+          "All Duo benefits",
+          "Up to 6 accounts",
+          "Family profile",
+          "Kids mode",
+          "HiFi for everyone"
+        ],
+        "prices": {
+          "1": 329,
+          "3": 899,
+          "6": 1719,
+          "12": 3179
+        }
+      },
+      {
+        "id": "slot",
+        "name": "Family Slot",
+        "description": "Join existing family",
+        "features": [
+          "Access to premium features",
+          "Own profile",
+          "HiFi quality",
+          "Offline listening"
+        ],
+        "prices": {
+          "1": 109,
+          "3": 299,
+          "6": 569,
+          "12": 1059
+        }
+      }
+    ]
+  },
+  {
+    "id": "chatgpt",
+    "category": "ai",
+    "name": "ChatGPT",
+    "shortDescription": "Gold standard of artificial intelligence",
+    "description": "Access to OpenAI's most powerful models: GPT-5.2, o3, Sora 2 (in select plans). Choose between personal account and shared access.",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/1024px-ChatGPT_logo.svg.png",
+    "plans": [
+      {
+        "id": "go_personal",
+        "name": "ChatGPT GO (Personal)",
+        "description": "Golden middle. Personal account, only yours.",
+        "features": [
+          "Personal email",
+          "GPT-5.2 Auto model",
+          "Up to 25 files per project",
+          "15-25 images per day"
+        ],
+        "prices": {
+          "1": 130,
+          "3": 300,
+          "6": 500,
+          "12": 850
+        }
+      },
+      {
+        "id": "teacher_business",
+        "name": "ChatGPT Teacher (Business)",
+        "description": "Maximum limits for professionals.",
+        "features": [
+          "GPT-5.2 (160/3 hours)",
+          "Sora 2 (30 videos/day)",
+          "Deep Research (10-15/month)",
+          "Up to 80 files every 3 hours"
+        ],
+        "prices": {
+          "1": 200,
+          "3": 550,
+          "6": 1050,
+          "12": 2000
+        }
+      },
+      {
+        "id": "plus_shared",
+        "name": "ChatGPT Plus (Shared)",
+        "description": "Shared account (1 slot of 5).",
+        "features": [
+          "Access to Plus features",
+          "Shared usage",
+          "Great price"
+        ],
+        "prices": {
+          "1": 200,
+          "3": 550,
+          "6": 1050,
+          "12": 2000
+        }
+      }
+    ]
+  },
+  {
+    "id": "discord",
+    "category": "social",
+    "name": "Discord",
+    "shortDescription": "Enhance your Discord experience",
+    "description": "Powerful extension of possibilities for communication, creativity and gaming. Activated directly on your account.",
+    "icon": "https://5odmiluatb.ucarecd.net/65518193-f9c4-4472-ba10-bb6aa9647155/ApplicationEmoji_AgADajoAAnpg6Ek.gif",
+    "plans": [
+      {
+        "id": "basic",
+        "name": "Nitro Basic",
+        "description": "Cheaper but functional plan.",
+        "features": [
+          "Custom emojis everywhere",
+          "Upload files up to 50 MB",
+          "Nitro badge in profile"
+        ],
+        "prices": {
+          "1": 80,
+          "12": 800
+        }
+      },
+      {
+        "id": "nitro",
+        "name": "Discord Nitro",
+        "description": "Maximum powerful plan with all features.",
+        "features": [
+          "2 free server boosts",
+          "4K/60fps streaming",
+          "Upload up to 500 MB",
+          "Animated avatar and banners"
+        ],
+        "prices": {
+          "1": 200,
+          "12": 2000
+        }
+      }
+    ]
+  },
+  {
+    "id": "duolingo",
+    "category": "education",
+    "name": "Duolingo",
+    "shortDescription": "Learn effectively without limits",
+    "description": "Learn anywhere — at home, on the go or during break. We activate each plan on your account.",
+    "icon": "https://5odmiluatb.ucarecd.net/93583c3a-5c45-493f-ad38-7ccd5ebe7f05/duolingo.png",
+    "plans": [
+      {
+        "id": "education",
+        "name": "Duolingo Education",
+        "description": "Perfect budget option.",
+        "features": [
+          "Ad-free",
+          "Unlimited hearts",
+          "Affordable price"
+        ],
+        "prices": {
+          "1": 60,
+          "3": 170,
+          "6": 320,
+          "12": 600
+        }
+      },
+      {
+        "id": "super",
+        "name": "Super Duolingo",
+        "description": "Optimal choice for offline learning.",
+        "features": [
+          "Everything in Education",
+          "Personalized practice",
+          "Mistake review",
+          "Offline learning"
+        ],
+        "prices": {
+          "1": 80,
+          "3": 230,
+          "6": 430,
+          "12": 799
+        }
+      },
+      {
+        "id": "max",
+        "name": "Duolingo Max",
+        "description": "Maximum experience with AI.",
+        "features": [
+          "Everything in Super",
+          "AI assistant",
+          "Mistake explanations",
+          "Interactive dialogs (Roleplay)"
+        ],
+        "prices": {
+          "1": 160,
+          "3": 460,
+          "6": 900,
+          "12": 1600
+        }
+      }
+    ]
+  },
+  {
+    "id": "perplexity",
+    "category": "ai",
+    "name": "Perplexity AI",
+    "shortDescription": "Next generation intelligent assistant",
+    "description": "Powerful tool for learning and work. Access to Chat GPT 5.1, Claude 4.5 Sonnet, Gemini 3 Pro and other models.",
+    "icon": "https://5odmiluatb.ucarecd.net/74f2b7b2-06c9-4827-ad87-b2f1ffb185f9/perplexity.webp",
+    "plans": [
+      {
+        "id": "pro",
+        "name": "Perplexity Pro",
+        "description": "Personal account with 12-month purchase. For shorter terms — access from us.",
+        "features": [
+          "Access to top AI models",
+          "Voice-mod (voice mode)",
+          "Current information search",
+          "File analysis"
+        ],
+        "prices": {
+          "1": 169,
+          "3": 440,
+          "6": 699,
+          "12": 1099
+        }
+      }
+    ]
+  },
+  {
+    "id": "surfshark",
+    "category": "vpn",
+    "name": "Surfshark VPN",
+    "shortDescription": "Internet protection without borders",
+    "description": "Powerful VPN for secure surfing, rest and work. Maximum anonymity.",
+    "icon": "https://5odmiluatb.ucarecd.net/40c687be-c0e2-4664-b909-ab7b6a4c89f1/1200x630bb.png",
+    "plans": [
+      {
+        "id": "unlimited",
+        "name": "Unlimited devices",
+        "description": "One subscription for all your gadgets.",
+        "features": [
+          "Multiple devices (PC, smartphone)",
+          "Unlimited connections",
+          "Starter protection package",
+          "IP and location change"
+        ],
+        "prices": {
+          "1": 60,
+          "3": 170,
+          "6": 320,
+          "12": 600
+        }
+      }
+    ]
+  },
+  {
+    "id": "adobe_cloud",
+    "category": "design",
+    "name": "Adobe Creative Cloud",
+    "shortDescription": "Professional creative toolkit",
+    "description": "Photoshop, Premiere Pro, After Effects and other programs. Choose between stability and storage volume.",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Adobe_Creative_Cloud_rainbow_icon.svg/1024px-Adobe_Creative_Cloud_rainbow_icon.svg.png",
+    "plans": [
+      {
+        "id": "stable_80gb",
+        "name": "Stable 80 GB",
+        "description": "Perfect for those who value stability. Works without failures.",
+        "features": [
+          "80 GB cloud storage",
+          "250 AI credits monthly",
+          "Stable operation",
+          "Option to purchase credits"
+        ],
+        "prices": {
+          "1": 400,
+          "3": 1200,
+          "6": 2200,
+          "12": 4000
+        }
+      },
+      {
+        "id": "unstable_1tb",
+        "name": "Unstable 1 TB",
+        "description": "Budget option for large files. Possible rare crashes (4-7 per year).",
+        "features": [
+          "1 TB cloud space",
+          "4000 AI credits",
+          "Full program suite",
+          "Same-day crash fixes"
+        ],
+        "prices": {
+          "1": 300,
+          "3": 900,
+          "6": 1700,
+          "12": 3000
+        }
+      }
+    ]
+  },
+  {
+    "id": "canva",
+    "category": "design",
+    "name": "Canva",
+    "shortDescription": "Create designs easily without limits",
+    "description": "Design of your life. We activate each plan on your account safely and quickly.",
+    "icon": "https://5odmiluatb.ucarecd.net/6ace973e-bdd4-469f-b083-95263e478bcd/canvaapplogoonatransparentbackgroundfreepng.png",
+    "plans": [
+      {
+        "id": "education",
+        "name": "Canva Education",
+        "description": "Affordable price, ad-free, all tools unlocked.",
+        "features": [
+          "Ad-free",
+          "All templates and tools",
+          "Affordable price"
+        ],
+        "prices": {
+          "1": 90,
+          "3": 260,
+          "6": 500,
+          "12": 800
+        }
+      },
+      {
+        "id": "pro",
+        "name": "Canva Pro",
+        "description": "Professional features, premium graphics and scaling.",
+        "features": [
+          "Brand kit",
+          "Magic Resize",
+          "Background removal",
+          "Premium content"
+        ],
+        "prices": {
+          "1": 170,
+          "3": 520,
+          "6": 900,
+          "12": 1500
+        }
+      }
+    ]
+  }
+]

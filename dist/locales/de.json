@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "about": "Über uns",
+    "products": "Produkte",
+    "contact": "Kontakt",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen"
+  },
+  "hero": {
+    "title": "Premium-Abonnements",
+    "subtitle": "Erhalten Sie Zugang zu den besten Streaming-Diensten, Musikplattformen und Produktivitätstools zu unschlagbaren Preisen",
+    "cta": "Produkte ansehen"
+  },
+  "about": {
+    "title": "Warum uns wählen?",
+    "quality": "Beste Qualität",
+    "qualityDesc": "Wir bieten nur Premium-Abonnements mit vollem Funktionsumfang",
+    "support": "24/7 Support",
+    "supportDesc": "Unser Team ist immer bereit, Ihnen bei allen Fragen zu helfen",
+    "price": "Beste Preise",
+    "priceDesc": "Erhalten Sie Premium-Services zu den wettbewerbsfähigsten Preisen auf dem Markt",
+    "safety": "Sicher",
+    "safetyDesc": "Alle Transaktionen sind geschützt und Ihre Daten sind vollkommen sicher"
+  },
+  "products": {
+    "title": "Unsere Produkte",
+    "subtitle": "Wählen Sie aus unserer großen Auswahl an Premium-Abonnements",
+    "allCategories": "Alle",
+    "music": "Musik",
+    "video": "Video",
+    "ai": "KI-Tools",
+    "vpn": "VPN",
+    "design": "Design",
+    "education": "Bildung",
+    "social": "Soziale Netzwerke"
+  },
+  "productCard": {
+    "learnMore": "Mehr erfahren",
+    "from": "ab"
+  },
+  "productModal": {
+    "close": "Schließen",
+    "selectPlan": "Plan auswählen",
+    "duration": {
+      "1": "1 Monat",
+      "3": "3 Monate",
+      "6": "6 Monate",
+      "12": "12 Monate"
+    },
+    "features": "Funktionen"
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Haben Sie Fragen? Wir sind hier, um zu helfen!",
+    "telegram": "Schreiben Sie uns auf Telegram",
+    "telegramUsername": "@watermelon_subs",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "telegramChannel": "Telegram-Kanal",
+    "instagram": "Instagram",
+    "whatsapp": "WhatsApp",
+    "telegramSupport": "Telegram-Support",
+    "form": {
+      "show": "Frage stellen",
+      "hide": "Formular ausblenden",
+      "name": "Ihr Name",
+      "email": "Ihre E-Mail",
+      "phone": "Telefon",
+      "subject": "Betreff",
+      "message": "Nachricht",
+      "send": "Senden",
+      "success": "Vielen Dank! Wir werden uns bald bei Ihnen melden."
+    }
+  },
+  "footer": {
+    "description": "Ihre vertrauenswürdige Quelle für Premium-Abonnements",
+    "quickLinks": "Schnelllinks",
+    "legal": "Rechtliches",
+    "followUs": "Folgen Sie uns",
+    "rights": "Alle Rechte vorbehalten",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Erhalten Sie die neuesten Nachrichten und Sonderangebote",
+    "email": "Geben Sie Ihre E-Mail ein",
+    "subscribe": "Abonnieren",
+    "subscribeSuccess": "Vielen Dank für Ihr Abonnement!",
+    "noService": "Wir bieten keine Dienstleistungen in Russland an"
+  }
+}
