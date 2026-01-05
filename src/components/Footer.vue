@@ -14,7 +14,7 @@
             <a href="https://t.me/WTmelon" target="_blank" rel="noopener" title="Telegram Support"><i class="fa-solid fa-headset"></i></a>
           </div>
           <div class="payment-methods">
-            <i class="fa-brands fa-cc-visa"></i>
+            <a href="https://4cd6555acz.ucarecd.net/d9aeb598-96ce-473e-a237-caff2564a9fd/Mastercard.svg" title="visa"></a>
             <i class="fa-brands fa-cc-mastercard"></i>
           </div>
           <div class="footer-links">
