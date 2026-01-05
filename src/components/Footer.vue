@@ -15,7 +15,7 @@
           </div>
           <div class="payment-methods">
             <img src="https://4cd6555acz.ucarecd.net/794a6951-9d91-451a-9f34-3430da501606/Visa.png" alt="Visa" title="Visa">
-            <img src="https://4cd6555acz.ucarecd.net/d9aeb598-96ce-473e-a237-caff2564a9fd/Mastercard.svg" alt="Mastercard" title="Mastercard">
+            <img src="https://4cd6555acz.ucarecd.net/50c1c2bb-adad-4196-9371-887a18890732/Mastercard.png" alt="Mastercard" title="Mastercard">
           </div>
           <div class="footer-links">
             <router-link :to="privacyPath" class="footer-link">{{ t('nav.privacy') }}</router-link>
