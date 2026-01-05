@@ -14,8 +14,8 @@
             <a href="https://t.me/WTmelon" target="_blank" rel="noopener" title="Telegram Support"><i class="fa-solid fa-headset"></i></a>
           </div>
           <div class="payment-methods">
-            <a href="https://4cd6555acz.ucarecd.net/d9aeb598-96ce-473e-a237-caff2564a9fd/Mastercard.svg" title="visa"></a>
-            <i class="fa-brands fa-cc-mastercard"></i>
+            <img src="https://4cd6555acz.ucarecd.net/b9a2bfb0-fc3b-41ad-aa53-8e86f0e43b25/Visa.svg" alt="Visa" title="Visa">
+            <img src="https://4cd6555acz.ucarecd.net/d9aeb598-96ce-473e-a237-caff2564a9fd/Mastercard.svg" alt="Mastercard" title="Mastercard">
           </div>
           <div class="footer-links">
             <router-link :to="privacyPath" class="footer-link">{{ t('nav.privacy') }}</router-link>
