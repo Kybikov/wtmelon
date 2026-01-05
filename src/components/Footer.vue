@@ -13,6 +13,10 @@
             <a href="viber://chat?number=%2B380633084244" target="_blank" rel="noopener" title="Viber"><i class="fa-brands fa-viber"></i></a>
             <a href="https://t.me/WTmelon" target="_blank" rel="noopener" title="Telegram Support"><i class="fa-solid fa-headset"></i></a>
           </div>
+          <div class="payment-methods">
+            <i class="fa-brands fa-cc-visa"></i>
+            <i class="fa-brands fa-cc-mastercard"></i>
+          </div>
           <div class="footer-links">
             <router-link :to="privacyPath" class="footer-link">{{ t('nav.privacy') }}</router-link>
             <router-link :to="termsPath" class="footer-link">{{ t('nav.terms') }}</router-link>

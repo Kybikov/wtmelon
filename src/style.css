@@ -1385,6 +1385,24 @@ footer .logo:hover .logo-banner {
   transform: translateY(-4px);
 }
 
+.payment-methods {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.payment-methods i {
+  font-size: 42px;
+  color: white;
+  transition: var(--transition);
+  opacity: 0.9;
+}
+
+.payment-methods i:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
 .footer-links {
   display: flex;
   gap: 20px;
