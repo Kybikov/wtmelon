@@ -25,17 +25,17 @@
           <div class="img-box">
             <div class="floating-icons">
               <img
-                src="https://5odmiluatb.ucarecd.net/abf1a71e-11bc-4e4e-9533-2d8c0691c3ba/spotify_alt_macos_bigsur_icon_189703.png"
+                src="https://res.cloudinary.com/dtvh4rws0/image/upload/v1767723180/spotify_alt_macos_bigsur_icon_189703_ocfw9l.png"
                 alt="Spotify"
                 class="floating-icon icon-1"
               >
               <img
-                src="https://5odmiluatb.ucarecd.net/7c52764e-df5a-4991-a93f-b346ead9aedb/Adobe_Creative_Cloud_rainbow_iconsvg.png"
+                src="https://res.cloudinary.com/dtvh4rws0/image/upload/v1767723236/Adobe_Creative_Cloud_rainbow_icon.svg_b9azkx.png"
                 alt="ChatGPT"
                 class="floating-icon icon-2"
               >
               <img
-                src="https://5odmiluatb.ucarecd.net/dce730b1-d163-4131-91d1-05e0911b997a/ApplicationEmoji_AgADrDsAAu6SYUo.png"
+                src="https://res.cloudinary.com/dtvh4rws0/image/upload/v1767723168/ApplicationEmoji_AgADrDsAAu6SYUo_%D1%84%D0%BE%D0%BD_%D1%83%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD_lwjoby.png"
                 alt="Adobe"
                 class="floating-icon icon-3"
               >
