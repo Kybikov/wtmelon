@@ -4,7 +4,7 @@
       <div class="row">
         <div class="about-img">
           <div class="img-box">
-            <img src="https://5odmiluatb.ucarecd.net/654c7d6d-2928-46c8-b519-07cbbc59e3d4/32.jpg" alt="Watermelon" class="watermelon-logo">
+            <img src="https://res.cloudinary.com/dtvh4rws0/image/upload/v1767721003/32_j4gavw.jpg" alt="Watermelon" class="watermelon-logo">
           </div>
         </div>
 
