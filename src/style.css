@@ -1334,6 +1334,7 @@ body {
   color: var(--text-color);
   line-height: 1.7;
   margin: 0;
+  text-align: center;
 }
 
 .services-section {
