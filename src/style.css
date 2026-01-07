@@ -1121,6 +1121,142 @@ body {
   margin: 0;
 }
 
+.btn-partner-details {
+  margin-top: 8px;
+  padding: 12px 24px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.partner-card:hover .btn-partner-details {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-partner-details:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+}
+
+.partner-modal .modal-header {
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+}
+
+.partner-logo-large {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--light-color);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.partner-logo-large img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.partner-modal .modal-body {
+  padding: 32px;
+}
+
+.partner-description {
+  margin-bottom: 32px;
+}
+
+.partner-description p {
+  color: var(--text-color);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.partnership-section,
+.benefits-section {
+  margin-bottom: 32px;
+}
+
+.partnership-section h4,
+.benefits-section h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark-color);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.partnership-section h4 i {
+  color: var(--primary-color);
+  font-size: 20px;
+}
+
+.benefits-section h4 i {
+  color: var(--accent-color);
+  font-size: 20px;
+}
+
+.partnership-section p {
+  color: var(--text-color);
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.benefits-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--text-color);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.benefits-list li i {
+  color: var(--secondary-color);
+  font-size: 16px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.visit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: auto;
+  padding: 16px 32px;
+  font-size: 16px;
+}
+
+.visit-btn i {
+  font-size: 14px;
+}
+
 .about-section .row {
   gap: 60px;
   align-items: center;
@@ -1828,6 +1964,16 @@ footer .right-col p {
 
   .modal-body {
     padding: 20px;
+  }
+
+  .partner-modal .modal-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .partner-logo-large {
+    width: 80px;
+    height: 80px;
   }
 
   .features-duration-grid {
