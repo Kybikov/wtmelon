@@ -15,7 +15,7 @@
           </div>
 
           <div class="mission-block">
-            <h3 style="text-align: center;">{{ t('about.mission.title') }}</h3>
+            <h3>{{ t('about.mission.title') }}</h3>
             <p>{{ t('about.mission.description') }}</p>
           </div>
         </div>
