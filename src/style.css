@@ -1063,7 +1063,7 @@ body {
 }
 
 .partners-section {
-  background: var(--bg-color);
+  background: var(--light-color);
 }
 
 .partners-grid {
@@ -1794,6 +1794,10 @@ footer {
 
 .dark-theme .step-icon-wrapper {
   background: linear-gradient(135deg, #3a2529 0%, #3a2b2c 100%);
+}
+
+.dark-theme .partners-section {
+  background: var(--bg-color);
 }
 
 footer .row {

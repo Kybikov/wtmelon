@@ -15,7 +15,7 @@
           </div>
 
           <div class="mission-block">
-            <h3>{{ t('about.mission.title') }}</h3>
+            <h3 style="text-align: center;">{{ t('about.mission.title') }}</h3>
             <p>{{ t('about.mission.description') }}</p>
           </div>
         </div>
@@ -62,7 +62,7 @@
         </div>
       </div>
 
-      <div class="workflow-section">
+      <div class="workflow-section" id="how-it-works">
         <div class="section-header">
           <h2>{{ t('about.howWeWork.title') }}</h2>
           <p>{{ t('about.howWeWork.description') }}</p>
