@@ -15,7 +15,36 @@
     "cta": "Produkte ansehen"
   },
   "about": {
-    "title": "Warum uns wählen?",
+    "title": "Wer ist WaterMelon?",
+    "subtitle": "Wir sind WaterMelon, ein internationaler Online-Shop, der seit über einem Jahr Menschen dabei hilft, Zugang zu ihren Lieblingsdiensten zu erschwinglichen Preisen zu erhalten.",
+    "mission": {
+      "title": "Unsere Mission",
+      "description": "Moderne Unterhaltung für alle zugänglich zu machen, unabhängig von Land oder Budget. Wir bieten einen bequemen Service, der Zeit, Geld und Nerven spart, damit Sie maximalen Genuss von dem erhalten, was Sie lieben."
+    },
+    "services": {
+      "title": "Was machen wir?",
+      "description": "WaterMelon ist nicht nur ein Shop, sondern ein Ort, an dem Sie finden:",
+      "item1": "Abonnements für beliebte Dienste",
+      "item1desc": "Spotify, Netflix, YouTube und viele mehr",
+      "item2": "Aktuelle Angebote",
+      "item2desc": "Interessante Neuheiten und Trends",
+      "item3": "Tolle Deals",
+      "item3desc": "Verschiedene Verlosungen und Rabatte",
+      "item4": "Internationaler Service",
+      "item4desc": "Wir arbeiten mit Kunden aus der ganzen Welt"
+    },
+    "howWeWork": {
+      "title": "Wie arbeiten wir?",
+      "description": "Unser Team hat ein System entwickelt, das Ihnen den Zugang zu den benötigten Inhalten ohne unnötige Komplikationen ermöglicht. Alles ist so einfach wie möglich:",
+      "step1": "Sie bestellen",
+      "step1desc": "Wählen Sie das benötigte Abonnement aus unserem Katalog und geben Sie eine Bestellung auf",
+      "step2": "Wir bearbeiten",
+      "step2desc": "Unsere Spezialisten bearbeiten Ihre Bestellung schnell",
+      "step3": "Sie erhalten Zugang",
+      "step3desc": "Erhalten Sie Zugang und genießen Sie den Service",
+      "guarantee": "Wir garantieren, dass alles stabil und zuverlässig funktioniert",
+      "guaranteeDesc": "Unser Support ist immer erreichbar, um Ihnen zu helfen"
+    },
     "quality": "Beste Qualität",
     "qualityDesc": "Wir bieten nur Premium-Abonnements mit vollem Funktionsumfang an",
     "support": "24/7 Support",

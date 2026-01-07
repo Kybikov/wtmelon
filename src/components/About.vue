@@ -77,7 +77,7 @@
               <i class="fa-solid fa-cart-shopping"></i>
             </div>
             <h4>{{ t('about.howWeWork.step1') }}</h4>
-            <p>Оберіть потрібну підписку з нашого каталогу та оформіть замовлення</p>
+            <p>{{ t('about.howWeWork.step1desc') }}</p>
           </div>
 
           <div class="workflow-arrow">
@@ -92,7 +92,7 @@
               <i class="fa-solid fa-gears"></i>
             </div>
             <h4>{{ t('about.howWeWork.step2') }}</h4>
-            <p>Наші фахівці швидко обробляють ваше замовлення</p>
+            <p>{{ t('about.howWeWork.step2desc') }}</p>
           </div>
 
           <div class="workflow-arrow">
@@ -107,7 +107,7 @@
               <i class="fa-solid fa-check-circle"></i>
             </div>
             <h4>{{ t('about.howWeWork.step3') }}</h4>
-            <p>Отримуєте доступ та насолоджуєтесь сервісом</p>
+            <p>{{ t('about.howWeWork.step3desc') }}</p>
           </div>
         </div>
 
@@ -115,7 +115,7 @@
           <i class="fa-solid fa-shield-check"></i>
           <div>
             <strong>{{ t('about.howWeWork.guarantee') }}</strong>
-            <span>Наша підтримка завжди на зв'язку, щоб допомогти вам</span>
+            <span>{{ t('about.howWeWork.guaranteeDesc') }}</span>
           </div>
         </div>
       </div>

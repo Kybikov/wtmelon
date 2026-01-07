@@ -15,7 +15,36 @@
     "cta": "View Products"
   },
   "about": {
-    "title": "Why choose us?",
+    "title": "Who is WaterMelon?",
+    "subtitle": "We are WaterMelon, an international online store that has been helping people access their favorite services at affordable prices for over a year.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To make modern entertainment accessible to everyone, regardless of country or budget. We provide a convenient service that saves time, money, and nerves so you can get maximum enjoyment from what you love."
+    },
+    "services": {
+      "title": "What do we do?",
+      "description": "WaterMelon is not just a store, but a place where you will find:",
+      "item1": "Subscriptions to popular services",
+      "item1desc": "Spotify, Netflix, YouTube, and many more",
+      "item2": "Current offers",
+      "item2desc": "Interesting new products and trends",
+      "item3": "Great deals",
+      "item3desc": "Various giveaways and discounts",
+      "item4": "International service",
+      "item4desc": "We work with clients from all over the world"
+    },
+    "howWeWork": {
+      "title": "How do we work?",
+      "description": "Our team has developed a system that allows you to access the content you need without unnecessary complications. Everything is as simple as possible:",
+      "step1": "You order",
+      "step1desc": "Choose the subscription you need from our catalog and place an order",
+      "step2": "We process",
+      "step2desc": "Our specialists quickly process your order",
+      "step3": "You get access",
+      "step3desc": "Get access and enjoy the service",
+      "guarantee": "We guarantee that everything works stably and reliably",
+      "guaranteeDesc": "Our support is always in touch to help you"
+    },
     "quality": "Best Quality",
     "qualityDesc": "We provide only premium subscriptions with full functionality",
     "support": "24/7 Support",
