@@ -5,7 +5,7 @@
     "name": "Spotify Premium",
     "shortDescription": "Zugang zu Spotify Premium-Funktionen",
     "description": "Erhalten Sie Zugang zum Spotify Premium-Abo. Millionen von Tracks und Podcasts werbefrei. Region Ägypten (kein VPN zum Anhören erforderlich).",
-    "icon": "https://5odmiluatb.ucarecd.net/04ecb6ec-58b8-41ef-9e0e-a5adf914818f/ApplicationEmoji_AgADHT4AApkSMUo.gif",
+    "icon": "https://res.cloudinary.com/dtvh4rws0/image/upload/v1767722489/ApplicationEmoji_AgADHT4AApkSMUo_obgamr.gif",
     "plans": [
       {
         "id": "individual",
@@ -86,7 +86,7 @@
     "name": "Apple Music",
     "shortDescription": "Musik ohne Grenzen und Werbung",
     "description": "Unbegrenzter Zugang zu Musik. Hören Sie Millionen von Tracks werbefrei. Separate Profile mit persönlichen Empfehlungen.",
-    "icon": "https://5odmiluatb.ucarecd.net/ede08b37-b82e-4204-8a0e-d87daff29f68/ApplicationEmoji_AgADDEQAAkuzMUo.gif",
+    "icon": "https://res.cloudinary.com/dtvh4rws0/image/upload/v1767722600/ApplicationEmoji_AgADDEQAAkuzMUo_zvtobj.gif",
     "plans": [
       {
         "id": "ukraine",
@@ -113,7 +113,7 @@
     "name": "YouTube Premium",
     "shortDescription": "YouTube und YouTube Music werbefrei",
     "description": "Schauen Sie Videos werbefrei, Hintergrundwiedergabe, Offline-Anzeige. Beinhaltet YouTube Music Premium.",
-    "icon": "https://5odmiluatb.ucarecd.net/a834f19e-2259-429c-a117-bd1ddc37f5e0/ApplicationEmoji_AgADv0IAAsGYCEo.gif",
+    "icon": "https://res.cloudinary.com/dtvh4rws0/image/upload/v1767721991/ApplicationEmoji_AgADv0IAAsGYCEo_kkxmn7.gif",
     "plans": [
       {
         "id": "ukraine",
@@ -158,7 +158,7 @@
     "name": "Netflix Premium",
     "shortDescription": "Kinematografisches Erlebnis in 4K",
     "description": "Atemberaubende 4K-Qualität. Globaler Zugang — schauen Sie Ihre Lieblingsserien und -filme in jeder Region ohne Einschränkungen.",
-    "icon": "https://5odmiluatb.ucarecd.net/43f110a3-bcbd-4440-b54a-d091554b3d12/ApplicationEmoji_AgADkUMAAtWR0Ek.gif",
+    "icon": "https://res.cloudinary.com/dtvh4rws0/image/upload/v1767722495/ApplicationEmoji_AgADkUMAAtWR0Ek_y8bjm2.gif",
     "plans": [
       {
         "id": "1_profile",
@@ -201,7 +201,7 @@
     "name": "Sweet.TV",
     "shortDescription": "Filme, Serien und TV auf jedem Gerät",
     "description": "Hohe Qualität (Full HD / 4K). Beliebte TV-Kanäle, Filme und Zeichentrickfilme werbefrei.",
-    "icon": "https://5odmiluatb.ucarecd.net/f2d0d221-7170-4e63-9331-ecd25060cb7a/sweet.png",
+    "icon": "https://res.cloudinary.com/dtvh4rws0/image/upload/v1767721612/sweet_mkz1x0.png",
     "plans": [
       {
         "id": "packet_l_1",
@@ -259,7 +259,7 @@
     "name": "Tidal HiFi",
     "shortDescription": "Ihre Musik in höchster Qualität",
     "description": "360 Reality Audio und Dolby Atmos. Tauchen Sie ein in räumlichen Klang für ein unvergessliches Musikerlebnis.",
-    "icon": "https://5odmiluatb.ucarecd.net/5b3289f2-5c66-4b5a-a49c-141fd3b3a7b0/tidal.png",
+    "icon": "https://res.cloudinary.com/dtvh4rws0/image/upload/v1767722475/tidal_jk7qlg.png",
     "plans": [
       {
         "id": "individual",
@@ -317,7 +317,7 @@
     "name": "Deezer Premium",
     "shortDescription": "Zugang zu Deezer Premium-Funktionen",
     "description": "Erhalten Sie Zugang zum Deezer Premium-Abo. 90+ Millionen Tracks und exklusive Podcasts. HiFi-Klangqualität.",
-    "icon": "https://5odmiluatb.ucarecd.net/673dda7d-e522-448d-b1d7-da17d7053b21/deezerappiconmusicstreamingservicesocialmediaplatform_277909851.png",
+    "icon": "https://res.cloudinary.com/dtvh4rws0/image/upload/v1767722585/deezer-app-icon-music-streaming-service-social-media-platform_277909-851_slwqhz.png",
     "plans": [
       {
         "id": "individual",
@@ -396,7 +396,7 @@
     "name": "ChatGPT",
     "shortDescription": "Goldstandard der künstlichen Intelligenz",
     "description": "Zugang zu den leistungsstärksten OpenAI-Modellen: GPT-5.2, o3, Sora 2 (in ausgewählten Plänen). Wählen Sie zwischen persönlichem Konto und gemeinsamen Zugang.",
-    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/1024px-ChatGPT_logo.svg.png",
+    "icon": "https://res.cloudinary.com/dtvh4rws0/image/upload/v1767722595/ApplicationEmoji_AgADrDsAAu6SYUo_cucvqf.gif",
     "plans": [
       {
         "id": "go_personal",
@@ -456,7 +456,7 @@
     "name": "Discord",
     "shortDescription": "Verbessern Sie Ihr Discord-Erlebnis",
     "description": "Leistungsstarke Erweiterung der Möglichkeiten für Kommunikation, Kreativität und Gaming. Wird direkt auf Ihr Konto aktiviert.",
-    "icon": "https://5odmiluatb.ucarecd.net/65518193-f9c4-4472-ba10-bb6aa9647155/ApplicationEmoji_AgADajoAAnpg6Ek.gif",
+    "icon": "https://res.cloudinary.com/dtvh4rws0/image/upload/v1767722505/ApplicationEmoji_AgADajoAAnpg6Ek_luzl5z.gif",
     "plans": [
       {
         "id": "basic",
@@ -495,7 +495,7 @@
     "name": "Duolingo",
     "shortDescription": "Effektiv ohne Grenzen lernen",
     "description": "Lernen Sie überall — zu Hause, unterwegs oder in der Pause. Wir aktivieren jeden Plan auf Ihr Konto.",
-    "icon": "https://5odmiluatb.ucarecd.net/93583c3a-5c45-493f-ad38-7ccd5ebe7f05/duolingo.png",
+    "icon": "https://res.cloudinary.com/dtvh4rws0/image/upload/v1767722697/duolingo_cziyte.png",
     "plans": [
       {
         "id": "education",
@@ -555,7 +555,7 @@
     "name": "Perplexity AI",
     "shortDescription": "Intelligenter Assistent der nächsten Generation",
     "description": "Leistungsstarkes Tool für Lernen und Arbeit. Zugang zu Chat GPT 5.1, Claude 4.5 Sonnet, Gemini 3 Pro und anderen Modellen.",
-    "icon": "https://5odmiluatb.ucarecd.net/74f2b7b2-06c9-4827-ad87-b2f1ffb185f9/perplexity.webp",
+    "icon": "https://res.cloudinary.com/dtvh4rws0/image/upload/v1767721978/perplexity_ydthgf.webp",
     "plans": [
       {
         "id": "pro",
@@ -582,7 +582,7 @@
     "name": "Surfshark VPN",
     "shortDescription": "Internet-Schutz ohne Grenzen",
     "description": "Leistungsstarkes VPN für sicheres Surfen, Ruhe und Arbeit. Maximale Anonymität.",
-    "icon": "https://5odmiluatb.ucarecd.net/40c687be-c0e2-4664-b909-ab7b6a4c89f1/1200x630bb.png",
+    "icon": "https://res.cloudinary.com/dtvh4rws0/image/upload/v1767722976/1200x630bb_gsygv6.png",
     "plans": [
       {
         "id": "unlimited",
@@ -653,7 +653,7 @@
     "name": "Canva",
     "shortDescription": "Designs einfach ohne Grenzen erstellen",
     "description": "Design Ihres Lebens. Wir aktivieren jeden Plan sicher und schnell auf Ihr Konto.",
-    "icon": "https://5odmiluatb.ucarecd.net/6ace973e-bdd4-469f-b083-95263e478bcd/canvaapplogoonatransparentbackgroundfreepng.png",
+    "icon": "https://res.cloudinary.com/dtvh4rws0/image/upload/v1767722693/canva-app-logo-on-a-transparent-background-free-png_hb4j0i.png",
     "plans": [
       {
         "id": "education",
