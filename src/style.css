@@ -1559,6 +1559,17 @@ body {
   }
 }
 
+@keyframes arrowPulseVertical {
+  0%, 100% {
+    transform: rotate(90deg) translateX(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: rotate(90deg) translateX(8px);
+    opacity: 1;
+  }
+}
+
 .guarantee-box {
   background: linear-gradient(135deg, #ff4757 0%, #ff6b95 100%);
   padding: 28px 40px;
@@ -2141,7 +2152,7 @@ footer .right-col p {
   }
 
   .workflow-arrow {
-    transform: rotate(90deg);
+    animation: arrowPulseVertical 2s ease-in-out infinite;
   }
 
   .guarantee-box {
