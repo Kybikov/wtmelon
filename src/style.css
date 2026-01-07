@@ -1258,293 +1258,31 @@ body {
 }
 
 .about-section {
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-}
-
-.text-center {
-  text-align: center;
-}
-
-.subtitle-text {
-  font-size: 18px;
-  color: var(--text-color);
-  line-height: 1.7;
-  max-width: 800px;
-  margin: 16px auto 0;
-}
-
-.about-content-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-  margin-top: 60px;
-}
-
-.about-mission {
-  background: white;
-  border-radius: 24px;
-  padding: 48px;
-  text-align: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-  border: 2px solid var(--light-color);
-}
-
-.mission-icon {
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 24px;
-  box-shadow: 0 8px 20px rgba(255, 71, 87, 0.3);
-}
-
-.mission-icon i {
-  font-size: 36px;
-  color: white;
-}
-
-.about-mission h3 {
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--dark-color);
-  margin-bottom: 16px;
-}
-
-.about-mission p {
-  font-size: 17px;
-  color: var(--text-color);
-  line-height: 1.8;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.about-services h3,
-.about-how-we-work h3 {
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--dark-color);
-  margin-bottom: 16px;
-  text-align: center;
-}
-
-.services-intro,
-.how-we-work-intro {
-  font-size: 17px;
-  color: var(--text-color);
-  text-align: center;
-  margin-bottom: 40px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-}
-
-.service-card {
-  background: white;
-  border-radius: 20px;
-  padding: 32px;
-  text-align: center;
-  transition: var(--transition);
-  border: 2px solid var(--light-color);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
-  border-color: var(--primary-color);
-}
-
-.service-icon {
-  width: 64px;
-  height: 64px;
-  background: var(--light-color);
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 20px;
-  transition: var(--transition);
-}
-
-.service-card:hover .service-icon {
-  background: var(--primary-color);
-  transform: scale(1.1);
-}
-
-.service-icon i {
-  font-size: 28px;
-  color: var(--primary-color);
-  transition: var(--transition);
-}
-
-.service-card:hover .service-icon i {
-  color: white;
-}
-
-.service-card h4 {
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--dark-color);
-  margin-bottom: 12px;
-}
-
-.service-card p {
-  font-size: 15px;
-  color: var(--text-color);
-  line-height: 1.6;
-  margin: 0;
-}
-
-.steps-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
-}
-
-.step-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  flex: 0 0 auto;
-}
-
-.step-number {
-  width: 72px;
-  height: 72px;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 32px;
-  font-weight: 700;
-  color: white;
-  box-shadow: 0 8px 24px rgba(255, 71, 87, 0.3);
-}
-
-.step-content h4 {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--dark-color);
-  margin: 0;
-  text-align: center;
-}
-
-.step-arrow {
-  color: var(--primary-color);
-  font-size: 24px;
-  margin: 0 8px;
-  flex: 0 0 auto;
-}
-
-.guarantee-badge {
-  background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
-  color: white;
-  padding: 20px 40px;
-  border-radius: 16px;
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 18px;
-  font-weight: 600;
-  margin: 0 auto;
-  box-shadow: 0 8px 24px rgba(139, 195, 74, 0.3);
-}
-
-.guarantee-badge i {
-  font-size: 24px;
-}
-
-.about-how-we-work {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.about-features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-}
-
-.feature-card {
-  background: white;
-  border-radius: 20px;
-  padding: 32px;
-  text-align: center;
-  transition: var(--transition);
-  border: 2px solid var(--light-color);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-}
-
-.feature-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
-  border-color: var(--secondary-color);
-}
-
-.feature-icon {
-  width: 64px;
-  height: 64px;
-  background: var(--light-color);
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 20px;
-  transition: var(--transition);
-}
-
-.feature-card:hover .feature-icon {
-  background: var(--secondary-color);
-  transform: scale(1.1);
-}
-
-.feature-icon i {
-  font-size: 28px;
-  color: var(--secondary-color);
-  transition: var(--transition);
-}
-
-.feature-card:hover .feature-icon i {
-  color: white;
-}
-
-.feature-card h4 {
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--dark-color);
-  margin-bottom: 12px;
-}
-
-.feature-card p {
-  font-size: 15px;
-  color: var(--text-color);
-  line-height: 1.6;
-  margin: 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
 }
 
 .about-section .row {
+  display: flex;
   gap: 60px;
   align-items: center;
 }
 
-.watermelon-icon {
-  font-size: 150px;
-  animation: float 3s ease-in-out infinite;
+.about-img {
+  flex: 0 0 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img .img-box {
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 20px 60px rgba(255, 107, 107, 0.3);
 }
 
 .watermelon-logo {
@@ -1553,6 +1291,162 @@ body {
   object-fit: cover;
   border-radius: 50%;
   animation: float 3s ease-in-out infinite;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text .section-title .title {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--dark-color);
+  margin-bottom: 16px;
+}
+
+.subtitle-desc {
+  font-size: 17px;
+  color: var(--text-color);
+  line-height: 1.7;
+  margin-bottom: 32px;
+  opacity: 0.9;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.mission-block h3,
+.services-block h3,
+.how-work-block h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mission-block h3:before {
+  content: "🎯";
+  font-size: 24px;
+}
+
+.services-block h3:before {
+  content: "💼";
+  font-size: 24px;
+}
+
+.how-work-block h3:before {
+  content: "⚙️";
+  font-size: 24px;
+}
+
+.mission-block p,
+.intro-text {
+  font-size: 15px;
+  color: var(--text-color);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.service-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 16px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 12px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.service-item:hover {
+  border-color: #4ecdc4;
+  transform: translateX(5px);
+  box-shadow: 0 8px 20px rgba(78, 205, 196, 0.2);
+}
+
+.service-item i {
+  font-size: 24px;
+  color: #4ecdc4;
+  min-width: 24px;
+  margin-top: 2px;
+}
+
+.service-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.service-item strong {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.service-item span {
+  font-size: 13px;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.steps-inline {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.step-badge {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+  transition: all 0.3s ease;
+}
+
+.step-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 107, 107, 0.4);
+}
+
+.arrow-icon {
+  color: #4ecdc4;
+  font-size: 18px;
+}
+
+.guarantee-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #4ecdc4 0%, #44a39f 100%);
+  color: white;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: 0 6px 16px rgba(78, 205, 196, 0.3);
+  margin-top: 8px;
+}
+
+.guarantee-line i {
+  font-size: 20px;
 }
 
 .contacts-grid {
@@ -2039,25 +1933,26 @@ footer .right-col p {
     flex-direction: column;
   }
 
-  .about-mission {
-    padding: 32px;
+  .about-img {
+    flex: 0 0 auto;
   }
 
-  .about-mission h3 {
-    font-size: 24px;
+  .about-img .img-box {
+    width: 280px;
+    height: 280px;
   }
 
-  .services-grid,
-  .about-features {
+  .services-list {
     grid-template-columns: 1fr;
   }
 
-  .steps-container {
+  .steps-inline {
     flex-direction: column;
+    align-items: stretch;
   }
 
-  .step-arrow {
-    transform: rotate(90deg);
+  .arrow-icon {
+    display: none;
   }
 
   .contacts-grid {
@@ -2104,37 +1999,23 @@ footer .right-col p {
     height: 120px;
   }
 
-  .about-mission {
-    padding: 24px;
+  .about-img .img-box {
+    width: 240px;
+    height: 240px;
   }
 
-  .mission-icon {
-    width: 64px;
-    height: 64px;
-  }
-
-  .mission-icon i {
+  .about-text .section-title .title {
     font-size: 28px;
   }
 
-  .about-services h3,
-  .about-how-we-work h3 {
-    font-size: 26px;
+  .subtitle-desc {
+    font-size: 15px;
   }
 
-  .step-number {
-    width: 60px;
-    height: 60px;
-    font-size: 26px;
-  }
-
-  .guarantee-badge {
-    padding: 16px 28px;
-    font-size: 16px;
-  }
-
-  .watermelon-icon {
-    font-size: 120px;
+  .mission-block h3,
+  .services-block h3,
+  .how-work-block h3 {
+    font-size: 20px;
   }
 
   .plans {
