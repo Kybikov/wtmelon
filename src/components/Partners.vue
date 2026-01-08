@@ -50,12 +50,12 @@ export default {
       {
         id: 'rozetka',
         name: 'Rozetka',
-        logo: 'https://4cd6555acz.ucarecd.net/9bd83bd9-1ef4-4e7f-9c40-53e0f6fcd99a/rozetka.svg'
+        logo: 'https://res.cloudinary.com/dtvh4rws0/image/upload/v1767861324/rozetka_gvyhg8.png'
       },
       {
         id: 'sweettv',
         name: 'Sweet TV',
-        logo: 'https://4cd6555acz.ucarecd.net/75766c92-72a1-4d8e-aad4-dd8e07bef87e/sweettv.svg'
+        logo: 'https://res.cloudinary.com/dtvh4rws0/image/upload/v1767721612/sweet_mkz1x0.png'
       }
     ]
 
