@@ -81,6 +81,40 @@
     },
     "features": "Vorteile"
   },
+  "partners": {
+    "title": "Unsere Partner",
+    "subtitle": "Wir arbeiten mit den besten Unternehmen der Ukraine zusammen",
+    "learnMore": "Mehr erfahren",
+    "close": "Schließen",
+    "visitWebsite": "Website besuchen",
+    "partnershipTitle": "Unsere Partnerschaft",
+    "benefitsTitle": "Vorteile",
+    "rozetka": {
+      "name": "Rozetka",
+      "description": "Rozetka ist der größte Online-Shop in der Ukraine. Der Marktplatz bietet Millionen von Produkten von Elektronik über Haushaltsgeräte bis hin zu Kleidung und Kosmetik.",
+      "partnership": "Unsere Partnerschaft mit Rozetka ermöglicht es unseren Kunden, Sonderkonditionen und Rabatte auf beliebte Waren und Dienstleistungen zu erhalten.",
+      "benefits": [
+        "Zugang zu exklusiven Rabatten",
+        "Schnelle Lieferung in der ganzen Ukraine",
+        "Qualitätsgarantie auf alle Produkte",
+        "Treueprogramm für Stammkunden"
+      ],
+      "website": "https://rozetka.com.ua"
+    },
+    "sweettv": {
+      "name": "Sweet TV",
+      "description": "Sweet.TV ist ein führender ukrainischer Online-Fernsehdienst. Über 260 Kanäle, Tausende von Filmen und Serien in hoher Qualität.",
+      "partnership": "Dank unserer Partnerschaft mit Sweet.TV bieten wir unseren Kunden günstige Tarife für Premium-Abonnements und Zugang zu exklusiven Inhalten.",
+      "benefits": [
+        "Über 260 Fernsehkanäle",
+        "Große Bibliothek mit Filmen und Serien",
+        "Ansehen auf jedem Gerät",
+        "HD- und 4K-Qualität",
+        "TV-Programmarchiv bis zu 14 Tage"
+      ],
+      "website": "https://sweet.tv"
+    }
+  },
   "contact": {
     "title": "Kontaktieren Sie uns",
     "subtitle": "Haben Sie Fragen? Wir sind hier, um zu helfen!",

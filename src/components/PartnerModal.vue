@@ -21,12 +21,12 @@
           </div>
 
           <div class="partnership-section">
-            <h4><i class="fas fa-handshake"></i> Наше партнерство</h4>
+            <h4><i class="fas fa-handshake"></i> {{ t('partners.partnershipTitle') }}</h4>
             <p>{{ t(`partners.${partner.id}.partnership`) }}</p>
           </div>
 
           <div class="benefits-section">
-            <h4><i class="fas fa-star"></i> Переваги</h4>
+            <h4><i class="fas fa-star"></i> {{ t('partners.benefitsTitle') }}</h4>
             <ul class="benefits-list">
               <li v-for="(benefit, index) in t(`partners.${partner.id}.benefits`)" :key="index">
                 <i class="fas fa-check-circle"></i>
