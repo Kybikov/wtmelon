@@ -3,6 +3,7 @@
     <Hero />
     <Products />
     <About />
+    <Reviews />
     <Partners />
     <Contact />
   </div>
@@ -15,6 +16,7 @@ import { useLocale } from '../composables/useLocale'
 import Hero from '../components/Hero.vue'
 import Products from '../components/Products.vue'
 import About from '../components/About.vue'
+import Reviews from '../components/Reviews.vue'
 import Partners from '../components/Partners.vue'
 import Contact from '../components/Contact.vue'
 
@@ -24,6 +26,7 @@ export default {
     Hero,
     Products,
     About,
+    Reviews,
     Partners,
     Contact
   },

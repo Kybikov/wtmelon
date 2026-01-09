@@ -83,6 +83,21 @@
     },
     "features": "Features"
   },
+  "reviews": {
+    "title": "Customer Reviews",
+    "subtitle": "See what our customers say about us",
+    "sampleReview": {
+      "author": "Oleksandr Tymchenko Petrovych",
+      "text": "Fast and high quality. Everything works!"
+    },
+    "sampleReview2": {
+      "author": "Atlas 🦋",
+      "text": "Everything is great! Already bought ChatGPT subscription again, and everything works perfectly. Support is instant, and managers are real professionals! Recommend, the best service! 😍"
+    },
+    "ctaText": "View all our reviews on platforms",
+    "rozetkaButton": "Reviews on Rozetka",
+    "telegramButton": "Reviews on Telegram"
+  },
   "partners": {
     "title": "Our Partners",
     "subtitle": "We collaborate with the best companies in Ukraine",

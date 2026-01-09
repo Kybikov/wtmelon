@@ -1066,6 +1066,158 @@ body {
   transform: scale(0.9);
 }
 
+.reviews-section {
+  background: var(--bg-color);
+  padding: 100px 0;
+}
+
+.reviews-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.review-sample {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.review-card {
+  background: var(--light-color);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border: 2px solid var(--border-color);
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.review-platform {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--dark-color);
+  font-size: 14px;
+}
+
+.review-platform i {
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+.telegram-review .review-platform i {
+  color: #0088cc;
+}
+
+.review-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  color: var(--dark-color);
+}
+
+.review-rating i {
+  color: #ffa500;
+  font-size: 18px;
+}
+
+.review-emoji {
+  display: flex;
+  gap: 8px;
+  font-size: 20px;
+}
+
+.review-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.review-author {
+  font-weight: 600;
+  color: var(--dark-color);
+  font-size: 15px;
+  margin: 0;
+}
+
+.review-text {
+  color: var(--text-color);
+  line-height: 1.7;
+  font-size: 14px;
+  margin: 0;
+}
+
+.reviews-cta {
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  padding: 48px 32px;
+  border-radius: 24px;
+  box-shadow: var(--shadow-lg);
+}
+
+.cta-text {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 32px 0;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-review {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  background: white;
+  color: var(--dark-color);
+  text-decoration: none;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-review:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-review i {
+  font-size: 20px;
+}
+
+.rozetka-btn:hover i {
+  color: var(--primary-color);
+}
+
+.telegram-btn:hover i {
+  color: #0088cc;
+}
+
 .partners-section {
   background: var(--light-color);
 }
@@ -1813,6 +1965,23 @@ footer {
   background: linear-gradient(135deg, #3a2529 0%, #3a2b2c 100%);
 }
 
+.dark-theme .reviews-section {
+  background: var(--dark-bg);
+}
+
+.dark-theme .review-card {
+  background: var(--bg-color);
+  border-color: var(--dark-border);
+}
+
+.dark-theme .review-card:hover {
+  border-color: var(--primary-color);
+}
+
+.dark-theme .review-header {
+  border-bottom-color: var(--dark-border);
+}
+
 .dark-theme .partners-section {
   background: var(--bg-color);
 }
@@ -2173,6 +2342,25 @@ footer .right-col p {
     grid-template-columns: 1fr;
   }
 
+  .review-sample {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .reviews-cta {
+    padding: 40px 24px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-review {
+    justify-content: center;
+  }
+
   .modal-container {
     max-height: 85vh;
   }
@@ -2375,6 +2563,23 @@ footer .right-col p {
   .price-amount {
     font-size: 28px;
   }
+
+  .reviews-section {
+    padding: 60px 0;
+  }
+
+  .review-card {
+    padding: 24px;
+  }
+
+  .cta-text {
+    font-size: 16px;
+  }
+
+  .btn-review {
+    padding: 14px 24px;
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -2404,5 +2609,26 @@ footer .right-col p {
 
   .total-price .amount {
     font-size: 26px;
+  }
+
+  .reviews-section {
+    padding: 50px 0;
+  }
+
+  .review-card {
+    padding: 20px;
+  }
+
+  .review-text {
+    font-size: 13px;
+  }
+
+  .reviews-cta {
+    padding: 32px 20px;
+  }
+
+  .btn-review {
+    padding: 12px 20px;
+    font-size: 14px;
   }
 }

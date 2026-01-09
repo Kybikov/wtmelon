@@ -83,6 +83,21 @@
     },
     "features": "Vorteile"
   },
+  "reviews": {
+    "title": "Kundenbewertungen",
+    "subtitle": "Sehen Sie, was unsere Kunden über uns sagen",
+    "sampleReview": {
+      "author": "Oleksandr Tymchenko Petrovych",
+      "text": "Schnell und hochwertig. Alles funktioniert!"
+    },
+    "sampleReview2": {
+      "author": "Atlas 🦋",
+      "text": "Alles ist großartig! Habe bereits wieder das ChatGPT-Abonnement gekauft, und alles funktioniert einwandfrei. Support ist sofort da, und die Manager sind echte Profis! Empfehle, der beste Service! 😍"
+    },
+    "ctaText": "Sehen Sie alle unsere Bewertungen auf den Plattformen",
+    "rozetkaButton": "Bewertungen auf Rozetka",
+    "telegramButton": "Bewertungen auf Telegram"
+  },
   "partners": {
     "title": "Unsere Partner",
     "subtitle": "Wir arbeiten mit den besten Unternehmen der Ukraine zusammen",
