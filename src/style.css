@@ -1078,57 +1078,19 @@ body {
   padding: 0 20px;
 }
 
-.reviews-carousel-wrapper {
-  position: relative;
-  max-width: 1400px;
-  margin: 0 auto 60px;
-  padding: 0 60px;
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: white;
-  border: 2px solid var(--border-color);
-  color: var(--dark-color);
-  font-size: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--shadow);
-}
-
-.carousel-btn:hover {
-  background: var(--primary-color);
-  color: white;
-  border-color: var(--primary-color);
-  transform: translateY(-50%) scale(1.1);
-}
-
-.carousel-btn-prev {
-  left: 0;
-}
-
-.carousel-btn-next {
-  right: 0;
-}
-
 .reviews-carousel {
   width: 100%;
   overflow: hidden;
+  margin-bottom: 60px;
   position: relative;
+}
+
+.reviews-wrapper {
   cursor: grab;
   user-select: none;
 }
 
-.reviews-carousel:active {
+.reviews-wrapper:active {
   cursor: grabbing;
 }
 
@@ -1136,7 +1098,6 @@ body {
   display: flex;
   gap: 24px;
   will-change: transform;
-  transition: transform 0.1s linear;
 }
 
 .review-card {
@@ -2027,18 +1988,6 @@ footer {
   border-bottom-color: var(--dark-border);
 }
 
-.dark-theme .carousel-btn {
-  background: var(--bg-color);
-  border-color: var(--dark-border);
-  color: var(--text-color);
-}
-
-.dark-theme .carousel-btn:hover {
-  background: var(--primary-color);
-  color: white;
-  border-color: var(--primary-color);
-}
-
 .dark-theme .partners-section {
   background: var(--bg-color);
 }
@@ -2399,16 +2348,6 @@ footer .right-col p {
     grid-template-columns: 1fr;
   }
 
-  .reviews-carousel-wrapper {
-    padding: 0 50px;
-  }
-
-  .carousel-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 16px;
-  }
-
   .review-card {
     min-width: 350px;
     max-width: 350px;
@@ -2635,16 +2574,6 @@ footer .right-col p {
     padding: 60px 0;
   }
 
-  .reviews-carousel-wrapper {
-    padding: 0 45px;
-  }
-
-  .carousel-btn {
-    width: 36px;
-    height: 36px;
-    font-size: 14px;
-  }
-
   .review-card {
     min-width: 300px;
     max-width: 300px;
@@ -2692,16 +2621,6 @@ footer .right-col p {
 
   .reviews-section {
     padding: 50px 0;
-  }
-
-  .reviews-carousel-wrapper {
-    padding: 0 40px;
-  }
-
-  .carousel-btn {
-    width: 32px;
-    height: 32px;
-    font-size: 12px;
   }
 
   .review-card {

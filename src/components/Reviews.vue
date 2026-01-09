@@ -5,18 +5,10 @@
       <p class="subtitle">{{ t('reviews.subtitle') }}</p>
     </div>
 
-    <div class="reviews-carousel-wrapper">
-      <button
-        class="carousel-btn carousel-btn-prev"
-        @click="scrollLeft"
-        aria-label="Previous reviews"
-      >
-        <i class="fa-solid fa-chevron-left"></i>
-      </button>
-
+    <div class="reviews-carousel">
       <div
         ref="carouselRef"
-        class="reviews-carousel"
+        class="reviews-wrapper"
         @mousedown="startDrag"
         @mousemove="drag"
         @mouseup="endDrag"
@@ -49,14 +41,6 @@
           </div>
         </div>
       </div>
-
-      <button
-        class="carousel-btn carousel-btn-next"
-        @click="scrollRight"
-        aria-label="Next reviews"
-      >
-        <i class="fa-solid fa-chevron-right"></i>
-      </button>
     </div>
 
     <div class="container">
@@ -109,7 +93,19 @@ export default {
         const response = await fetch(`/locales/${locale.value}.json`)
         if (response.ok) {
           const data = await response.json()
-          reviewItems.value = data.reviews?.items || []
+          const items = data.reviews?.items || []
+
+          const rozetkaReview = items.find(r => r.platform === 'rozetka')
+          const telegramReviews = items.filter(r => r.platform === 'telegram')
+
+          const middleIndex = Math.floor(telegramReviews.length / 2)
+          const reorderedItems = [
+            ...telegramReviews.slice(0, middleIndex),
+            rozetkaReview,
+            ...telegramReviews.slice(middleIndex)
+          ].filter(Boolean)
+
+          reviewItems.value = reorderedItems
         }
       } catch (error) {
         console.error('Failed to load reviews:', error)
@@ -125,13 +121,14 @@ export default {
     })
 
     const trackStyle = computed(() => ({
-      transform: `translateX(${scrollPosition.value}px)`
+      transform: `translateX(${scrollPosition.value}px)`,
+      transition: isDragging.value ? 'none' : 'transform 0.05s linear'
     }))
 
     const autoScroll = () => {
       if (!isAutoScrolling.value || !carouselRef.value) return
 
-      scrollPosition.value -= 0.5
+      scrollPosition.value -= 1
 
       const track = carouselRef.value.querySelector('.reviews-track')
       if (track) {
@@ -142,24 +139,6 @@ export default {
       }
 
       animationFrame.value = requestAnimationFrame(autoScroll)
-    }
-
-    const scrollLeftBtn = () => {
-      isAutoScrolling.value = false
-      scrollPosition.value += 424
-      setTimeout(() => {
-        isAutoScrolling.value = true
-        autoScroll()
-      }, 3000)
-    }
-
-    const scrollRightBtn = () => {
-      isAutoScrolling.value = false
-      scrollPosition.value -= 424
-      setTimeout(() => {
-        isAutoScrolling.value = true
-        autoScroll()
-      }, 3000)
     }
 
     const startDrag = (e) => {
@@ -189,7 +168,7 @@ export default {
       setTimeout(() => {
         isAutoScrolling.value = true
         autoScroll()
-      }, 3000)
+      }, 2000)
     }
 
     onMounted(() => {
@@ -207,8 +186,6 @@ export default {
       duplicatedReviews,
       carouselRef,
       trackStyle,
-      scrollLeft: scrollLeftBtn,
-      scrollRight: scrollRightBtn,
       startDrag,
       drag,
       endDrag
