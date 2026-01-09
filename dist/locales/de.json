@@ -77,7 +77,9 @@
       "1": "1 Monat",
       "3": "3 Monate",
       "6": "6 Monate",
-      "12": "12 Monate"
+      "12": "12 Monate",
+      "15": "15 Monate",
+      "18": "18 Monate"
     },
     "features": "Vorteile"
   },
