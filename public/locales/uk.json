@@ -224,6 +224,8 @@
     "plan": "План",
     "duration": "Термін",
     "price": "Ціна",
+    "total": "Сума",
+    "placeOrder": "Замовити",
     "form": {
       "name": "Ваше ім'я",
       "namePlaceholder": "Введіть ваше ім'я",

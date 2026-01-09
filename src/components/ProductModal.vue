@@ -65,11 +65,11 @@
 
                 <div v-if="selectedDuration" class="modal-footer">
                   <div class="total-price">
-                    <span class="label">{{ t('contact.telegram') }}:</span>
+                    <span class="label">{{ t('order.total') }}:</span>
                     <span class="amount">{{ currency }}{{ getPrice(selectedDuration) }}</span>
                   </div>
                   <button class="btn1 order-btn" @click="handleOrder">
-                    {{ t('contact.telegram') }}
+                    {{ t('order.placeOrder') }}
                   </button>
                 </div>
               </div>

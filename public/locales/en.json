@@ -224,6 +224,8 @@
     "plan": "Plan",
     "duration": "Duration",
     "price": "Price",
+    "total": "Total",
+    "placeOrder": "Order",
     "form": {
       "name": "Your Name",
       "namePlaceholder": "Enter your name",
