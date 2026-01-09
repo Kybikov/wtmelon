@@ -128,7 +128,7 @@ export default {
     const autoScroll = () => {
       if (!isAutoScrolling.value || !carouselRef.value) return
 
-      scrollPosition.value -= 1
+      scrollPosition.value -= 0.5
 
       const track = carouselRef.value.querySelector('.reviews-track')
       if (track) {

@@ -17,6 +17,9 @@
             <a href="#partners" class="nav-link" @click="closeMenu">{{ t('nav.partners') }}</a>
           </li>
           <li class="nav-item">
+            <a href="#reviews" class="nav-link" @click="closeMenu">{{ t('nav.reviews') }}</a>
+          </li>
+          <li class="nav-item">
             <a href="#how-it-works" class="nav-link" @click="closeMenu">{{ t('nav.howItWorks') }}</a>
           </li>
           <li class="nav-item">
