@@ -33,7 +33,7 @@
                 </div>
               </div>
 
-              <div v-if="selectedPlan" class="plan-details">
+              <div v-if="selectedPlan" ref="planDetails" class="plan-details">
                 <p class="plan-desc">{{ selectedPlan.description }}</p>
 
                 <div class="features-duration-grid">
@@ -47,7 +47,7 @@
                     </ul>
                   </div>
 
-                  <div class="duration-section">
+                  <div class="duration-section" ref="durationSection">
                     <h4>{{ t('productModal.selectPlan') }}</h4>
                     <div class="durations">
                       <button
@@ -63,7 +63,7 @@
                   </div>
                 </div>
 
-                <div v-if="selectedDuration" class="modal-footer">
+                <div v-if="selectedDuration" ref="modalFooter" class="modal-footer">
                   <div class="total-price">
                     <span class="label">{{ t('order.total') }}:</span>
                     <span class="amount">{{ currency }}{{ getPrice(selectedDuration) }}</span>
@@ -76,7 +76,7 @@
             </div>
           </div>
 
-          <div v-else class="order-form-container">
+          <div v-else ref="orderFormContainer" class="order-form-container">
             <OrderForm
               :order-data="orderData"
               @back="showOrderForm = false"
@@ -149,9 +149,27 @@ export default {
     selectPlan(plan) {
       this.selectedPlan = plan
       this.selectedDuration = null
+
+      this.$nextTick(() => {
+        if (this.$refs.durationSection) {
+          this.$refs.durationSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest'
+          })
+        }
+      })
     },
     selectDuration(months) {
       this.selectedDuration = months
+
+      this.$nextTick(() => {
+        if (this.$refs.modalFooter) {
+          this.$refs.modalFooter.scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest'
+          })
+        }
+      })
     },
     getPrice(months) {
       return this.localePrices[months] || 0
@@ -168,6 +186,15 @@ export default {
         currency: this.currency
       }
       this.showOrderForm = true
+
+      this.$nextTick(() => {
+        if (this.$refs.orderFormContainer) {
+          this.$refs.orderFormContainer.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          })
+        }
+      })
     },
     handleOrderSuccess(result) {
       alert(this.t('order.success.message'))
