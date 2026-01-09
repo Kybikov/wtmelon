@@ -233,14 +233,15 @@
       "emailPlaceholder": "ihre@email.com",
       "comment": "Kommentar",
       "commentPlaceholder": "Zusätzliche Wünsche oder Fragen",
-      "contactNote": "Bitte geben Sie mindestens eine Kontaktmöglichkeit an (Telegram, Telefon oder E-Mail)",
+      "contactNote": "Bitte geben Sie Telegram oder Telefon (erforderlich) und E-Mail (erforderlich) an",
       "submit": "Bestellung absenden"
     },
     "errors": {
       "nameRequired": "Bitte geben Sie Ihren Namen ein",
       "telegramInvalid": "Ungültiges Telegram-Benutzername-Format",
+      "emailRequired": "E-Mail ist erforderlich",
       "emailInvalid": "Ungültiges E-Mail-Format",
-      "contactRequired": "Bitte geben Sie mindestens eine Kontaktmöglichkeit an",
+      "telegramOrPhoneRequired": "Bitte geben Sie Telegram oder Telefon an",
       "submitFailed": "Fehler beim Absenden der Bestellung. Bitte versuchen Sie es erneut."
     },
     "success": {

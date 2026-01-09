@@ -63,7 +63,7 @@
       </div>
 
       <div class="form-group" :class="{ error: errors.email }">
-        <label>{{ t('order.form.email') }}</label>
+        <label>{{ t('order.form.email') }} <span class="required">*</span></label>
         <input
           v-model="formData.email"
           type="email"
@@ -138,7 +138,11 @@ const validateField = (field) => {
     return false;
   }
 
-  if (field === 'email' && formData.email) {
+  if (field === 'email') {
+    if (!formData.email.trim()) {
+      errors.email = t('order.errors.emailRequired');
+      return false;
+    }
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       errors.email = t('order.errors.emailInvalid');
@@ -165,19 +169,22 @@ const validateForm = () => {
     isValid = false;
   }
 
-  if (!formData.telegram && !formData.phone && !formData.email) {
-    submitError.value = t('order.errors.contactRequired');
+  if (!formData.email.trim()) {
+    errors.email = t('order.errors.emailRequired');
     isValid = false;
   } else {
-    submitError.value = '';
-  }
-
-  if (formData.email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       errors.email = t('order.errors.emailInvalid');
       isValid = false;
     }
+  }
+
+  if (!formData.telegram && !formData.phone) {
+    submitError.value = t('order.errors.telegramOrPhoneRequired');
+    isValid = false;
+  } else {
+    submitError.value = '';
   }
 
   if (formData.telegram) {

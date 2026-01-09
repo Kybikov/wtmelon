@@ -233,14 +233,15 @@
       "emailPlaceholder": "your@email.com",
       "comment": "Comment",
       "commentPlaceholder": "Additional wishes or questions",
-      "contactNote": "Please provide at least one contact method (Telegram, phone, or email)",
+      "contactNote": "Please provide Telegram or Phone (required) and Email (required)",
       "submit": "Submit Order"
     },
     "errors": {
       "nameRequired": "Please enter your name",
       "telegramInvalid": "Invalid Telegram username format",
+      "emailRequired": "Email is required",
       "emailInvalid": "Invalid email format",
-      "contactRequired": "Please provide at least one contact method",
+      "telegramOrPhoneRequired": "Please provide Telegram or Phone",
       "submitFailed": "Failed to submit order. Please try again."
     },
     "success": {

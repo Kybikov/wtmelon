@@ -233,14 +233,15 @@
       "emailPlaceholder": "your@email.com",
       "comment": "Коментар",
       "commentPlaceholder": "Додаткові побажання або питання",
-      "contactNote": "Вкажіть хоча б один спосіб зв'язку (Telegram, телефон або email)",
+      "contactNote": "Вкажіть Telegram або телефон (обов'язково) та Email (обов'язково)",
       "submit": "Відправити замовлення"
     },
     "errors": {
       "nameRequired": "Введіть ваше ім'я",
       "telegramInvalid": "Невірний формат Telegram username",
+      "emailRequired": "Email обов'язковий",
       "emailInvalid": "Невірний формат email",
-      "contactRequired": "Вкажіть хоча б один спосіб зв'язку",
+      "telegramOrPhoneRequired": "Вкажіть Telegram або телефон",
       "submitFailed": "Помилка при відправці замовлення. Спробуйте ще раз."
     },
     "success": {
