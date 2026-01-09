@@ -35,7 +35,7 @@ exports.handler = async (event, context) => {
       comment
     } = JSON.parse(event.body);
 
-    if (!customerName || (!telegram && !phone && !email)) {
+    if (!customerName || !email || (!telegram && !phone)) {
       return {
         statusCode: 400,
         headers,
