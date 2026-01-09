@@ -858,6 +858,10 @@ body {
   padding: 32px;
 }
 
+.order-form-container {
+  padding: 32px;
+}
+
 .product-description {
   color: var(--text-color);
   line-height: 1.7;
@@ -2180,6 +2184,10 @@ footer .right-col p {
   .modal-body {
     padding: 24px;
   }
+
+  .order-form-container {
+    padding: 24px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2333,6 +2341,10 @@ footer .right-col p {
   }
 
   .modal-body {
+    padding: 20px;
+  }
+
+  .order-form-container {
     padding: 20px;
   }
 
