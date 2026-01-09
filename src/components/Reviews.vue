@@ -60,21 +60,32 @@
 </template>
 
 <script>
-import { computed } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useLocale } from '../composables/useLocale'
 
 export default {
   name: 'Reviews',
   setup() {
-    const { t, currentLocale } = useLocale()
+    const { t, locale } = useLocale()
+    const reviewItems = ref([])
 
-    const reviews = computed(() => {
-      const locale = currentLocale.value || {}
-      return locale.reviews?.items || []
-    })
+    const loadReviews = async () => {
+      try {
+        const response = await fetch(`/locales/${locale.value}.json`)
+        if (response.ok) {
+          const data = await response.json()
+          reviewItems.value = data.reviews?.items || []
+        }
+      } catch (error) {
+        console.error('Failed to load reviews:', error)
+        reviewItems.value = []
+      }
+    }
+
+    watch(locale, loadReviews, { immediate: true })
 
     const duplicatedReviews = computed(() => {
-      const items = reviews.value
+      const items = reviewItems.value
       return [...items, ...items, ...items]
     })
 
