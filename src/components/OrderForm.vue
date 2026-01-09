@@ -261,9 +261,9 @@ const handleSubmit = async () => {
 
 .order-summary {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 20px;
+  padding: 24px;
   border-radius: 12px;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
   color: white;
 }
 
@@ -271,46 +271,51 @@ const handleSubmit = async () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  gap: 16px;
 }
 
 .summary-item:last-child {
   margin-bottom: 0;
-  padding-top: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .summary-item .label {
   font-size: 14px;
-  opacity: 0.9;
+  opacity: 0.95;
+  white-space: nowrap;
 }
 
 .summary-item .value {
   font-weight: 600;
   font-size: 15px;
+  text-align: right;
 }
 
 .summary-item .value.price {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 
 .form-group label {
   font-size: 14px;
   font-weight: 500;
   color: #333;
+  margin-bottom: 2px;
 }
 
 .required {
@@ -319,12 +324,13 @@ const handleSubmit = async () => {
 
 .form-group input,
 .form-group textarea {
-  padding: 12px 16px;
+  padding: 14px 16px;
   border: 2px solid #e2e8f0;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 15px;
   transition: all 0.2s;
   font-family: inherit;
+  background: #fff;
 }
 
 .form-group input:focus,
@@ -349,27 +355,28 @@ const handleSubmit = async () => {
   font-size: 13px;
   color: #666;
   margin: 0;
-  padding: 12px;
+  padding: 14px 16px;
   background: #f7fafc;
-  border-radius: 8px;
-  border-left: 3px solid #667eea;
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+  line-height: 1.5;
 }
 
 .submit-error {
-  padding: 12px;
+  padding: 14px 16px;
   background: #fed7d7;
   color: #c53030;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 14px;
   text-align: center;
 }
 
 .submit-button {
-  padding: 14px 24px;
+  padding: 16px 24px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
@@ -377,7 +384,8 @@ const handleSubmit = async () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 50px;
+  min-height: 54px;
+  margin-top: 4px;
 }
 
 .submit-button:hover:not(:disabled) {
@@ -406,16 +414,48 @@ const handleSubmit = async () => {
 }
 
 @media (max-width: 768px) {
+  .form-header {
+    margin-bottom: 20px;
+  }
+
   .form-header h3 {
     font-size: 20px;
   }
 
   .order-summary {
-    padding: 16px;
+    padding: 20px;
+    margin-bottom: 24px;
+  }
+
+  .summary-item {
+    margin-bottom: 10px;
+  }
+
+  .summary-item .label {
+    font-size: 13px;
+  }
+
+  .summary-item .value {
+    font-size: 14px;
   }
 
   .summary-item .value.price {
-    font-size: 18px;
+    font-size: 20px;
+  }
+
+  .contact-form {
+    gap: 18px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 12px 14px;
+    font-size: 16px;
+  }
+
+  .submit-button {
+    padding: 14px 20px;
+    font-size: 15px;
   }
 }
 </style>
