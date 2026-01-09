@@ -86,14 +86,43 @@
   "reviews": {
     "title": "Kundenbewertungen",
     "subtitle": "Sehen Sie, was unsere Kunden über uns sagen",
-    "sampleReview": {
-      "author": "Oleksandr Tymchenko Petrovych",
-      "text": "Schnell und hochwertig. Alles funktioniert!"
-    },
-    "sampleReview2": {
-      "author": "Atlas 🦋",
-      "text": "Alles ist großartig! Habe bereits wieder das ChatGPT-Abonnement gekauft, und alles funktioniert einwandfrei. Support ist sofort da, und die Manager sind echte Profis! Empfehle, der beste Service! 😍"
-    },
+    "items": [
+      {
+        "author": "Oleksandr Tymchenko Petrovych",
+        "text": "Schnell und hochwertig. Alles funktioniert!",
+        "platform": "rozetka"
+      },
+      {
+        "author": "Atlas 🦋",
+        "text": "Alles ist großartig! Habe bereits wieder das ChatGPT-Abonnement gekauft, und alles funktioniert einwandfrei. Support ist sofort da, und die Manager sind echte Profis! Empfehle, der beste Service! 😍",
+        "platform": "telegram"
+      },
+      {
+        "author": "Rafchik",
+        "text": "Alles ist sehr cool, ich kaufe Discord Nitro seit einem halben Jahr, sie erinnern mich, wann ich bezahlen muss, der Service ist bombastisch (ICH EMPFEHLE ES ALLEN!!)",
+        "platform": "telegram"
+      },
+      {
+        "author": "Nanami.o.o",
+        "text": "Der beste Service und erschwinglicher Preis, sie machen alles sehr schnell und sind vollständig kundenorientiert 💯",
+        "platform": "telegram"
+      },
+      {
+        "author": "Ivan Andreevich",
+        "text": "Habe GPT und Canva bekommen, alles ist schnell, klar und zuverlässig, ich empfehle es, werde es weiterhin nutzen und andere Abonnements bekommen 💪🔥",
+        "platform": "telegram"
+      },
+      {
+        "author": "thelifeofpablo 🤪",
+        "text": "Habe vorher Photoshop genommen und dann das Abonnement verlängert, heute habe ich Google + Netflix für sechs Monate genommen, alles ist ausgezeichnet, danke Leute! ❤️🔥🎉🎊",
+        "platform": "telegram"
+      },
+      {
+        "author": "Vs",
+        "text": "Habe GPTChat gekauft, glücklich wie ein Elefant!!!! Sehr reaktionsschnell und anständig, was heutzutage selten ist! Nutzen Sie die Empfehlung!!!! ❤️👍🔥",
+        "platform": "telegram"
+      }
+    ],
     "ctaText": "Sehen Sie alle unsere Bewertungen auf den Plattformen",
     "rozetkaButton": "Bewertungen auf Rozetka",
     "telegramButton": "Bewertungen auf Telegram"

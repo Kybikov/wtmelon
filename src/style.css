@@ -1068,19 +1068,41 @@ body {
 
 .reviews-section {
   background: var(--bg-color);
-  padding: 100px 0;
+  padding: 80px 0;
+  overflow: hidden;
 }
 
-.reviews-content {
-  max-width: 1000px;
-  margin: 0 auto;
+.reviews-section .section-title {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 0 20px;
 }
 
-.review-sample {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
-  margin-bottom: 48px;
+.reviews-carousel {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.reviews-track {
+  display: flex;
+  gap: 24px;
+  animation: scrollReviews 60s linear infinite;
+  will-change: transform;
+}
+
+@keyframes scrollReviews {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.reviews-track:hover {
+  animation-play-state: paused;
 }
 
 .review-card {
@@ -1088,14 +1110,10 @@ body {
   border-radius: 20px;
   padding: 32px;
   box-shadow: var(--shadow);
-  transition: var(--transition);
   border: 2px solid var(--border-color);
-}
-
-.review-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--primary-color);
+  min-width: 400px;
+  max-width: 400px;
+  flex-shrink: 0;
 }
 
 .review-header {
@@ -1138,12 +1156,6 @@ body {
   font-size: 18px;
 }
 
-.review-emoji {
-  display: flex;
-  gap: 8px;
-  font-size: 20px;
-}
-
 .review-body {
   display: flex;
   flex-direction: column;
@@ -1170,6 +1182,8 @@ body {
   padding: 48px 32px;
   border-radius: 24px;
   box-shadow: var(--shadow-lg);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .cta-text {
@@ -1974,10 +1988,6 @@ footer {
   border-color: var(--dark-border);
 }
 
-.dark-theme .review-card:hover {
-  border-color: var(--primary-color);
-}
-
 .dark-theme .review-header {
   border-bottom-color: var(--dark-border);
 }
@@ -2342,10 +2352,10 @@ footer .right-col p {
     grid-template-columns: 1fr;
   }
 
-  .review-sample {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    margin-bottom: 40px;
+  .review-card {
+    min-width: 350px;
+    max-width: 350px;
+    padding: 28px;
   }
 
   .reviews-cta {
@@ -2569,6 +2579,8 @@ footer .right-col p {
   }
 
   .review-card {
+    min-width: 300px;
+    max-width: 300px;
     padding: 24px;
   }
 
@@ -2616,6 +2628,8 @@ footer .right-col p {
   }
 
   .review-card {
+    min-width: 280px;
+    max-width: 280px;
     padding: 20px;
   }
 

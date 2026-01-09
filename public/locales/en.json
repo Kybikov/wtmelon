@@ -86,14 +86,43 @@
   "reviews": {
     "title": "Customer Reviews",
     "subtitle": "See what our customers say about us",
-    "sampleReview": {
-      "author": "Oleksandr Tymchenko Petrovych",
-      "text": "Fast and high quality. Everything works!"
-    },
-    "sampleReview2": {
-      "author": "Atlas 🦋",
-      "text": "Everything is great! Already bought ChatGPT subscription again, and everything works perfectly. Support is instant, and managers are real professionals! Recommend, the best service! 😍"
-    },
+    "items": [
+      {
+        "author": "Oleksandr Tymchenko Petrovych",
+        "text": "Fast and high quality. Everything works!",
+        "platform": "rozetka"
+      },
+      {
+        "author": "Atlas 🦋",
+        "text": "Everything is great! Already bought ChatGPT subscription again, and everything works perfectly. Support is instant, and managers are real professionals! Recommend, the best service! 😍",
+        "platform": "telegram"
+      },
+      {
+        "author": "Rafchik",
+        "text": "Everything is very cool, I've been buying Discord Nitro for half a year now, they remind me when I need to pay, the service is amazing (I RECOMMEND IT TO EVERYONE!!)",
+        "platform": "telegram"
+      },
+      {
+        "author": "Nanami.o.o",
+        "text": "The best service and affordable price, they do everything very quickly and are completely client-oriented 💯",
+        "platform": "telegram"
+      },
+      {
+        "author": "Ivan Andreevich",
+        "text": "Got GPT and Canva, everything is fast, clear and reliable, I recommend it, will continue to use it and get other subscriptions 💪🔥",
+        "platform": "telegram"
+      },
+      {
+        "author": "thelifeofpablo 🤪",
+        "text": "I took Photoshop before and then renewed the subscription today took Google + Netflix for six months everything is excellent, thanks guys! ❤️🔥🎉🎊",
+        "platform": "telegram"
+      },
+      {
+        "author": "Vs",
+        "text": "Bought GPTChat, happy as an elephant!!!! Very responsive and decent person, which is rare these days! Use the recommendation!!!! ❤️👍🔥",
+        "platform": "telegram"
+      }
+    ],
     "ctaText": "View all our reviews on platforms",
     "rozetkaButton": "Reviews on Rozetka",
     "telegramButton": "Reviews on Telegram"
