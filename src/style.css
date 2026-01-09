@@ -122,7 +122,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 0;
+  padding: 28px 0;
   z-index: 999;
   transition: var(--transition);
   background: transparent;
@@ -131,7 +131,7 @@ body {
 .navbar.sticky {
   background: var(--bg-color);
   box-shadow: var(--shadow);
-  padding: 15px 0;
+  padding: 20px 0;
 }
 
 .navbar .nav-row {
@@ -255,30 +255,34 @@ body {
 }
 
 .language-switcher {
-  position: relative;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 998;
 }
 
 .lang-toggle {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 16px;
+  gap: 10px;
+  padding: 12px 18px;
   border: none;
   background: var(--bg-color);
   color: var(--text-color);
   font-weight: 600;
-  font-size: 14px;
-  border-radius: 10px;
+  font-size: 15px;
+  border-radius: 25px;
   cursor: pointer;
   transition: var(--transition);
   font-family: 'Inter', sans-serif;
-  box-shadow: var(--shadow);
-  height: 42px;
+  box-shadow: var(--shadow-lg);
+  height: 50px;
 }
 
 .lang-toggle:hover {
   background: var(--light-color);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 8px 30px rgba(255, 71, 87, 0.3);
+  transform: scale(1.05);
 }
 
 .lang-toggle i.fa-globe {
@@ -302,7 +306,7 @@ body {
 
 .lang-dropdown {
   position: absolute;
-  top: calc(100% + 8px);
+  bottom: calc(100% + 10px);
   right: 0;
   background: var(--bg-color);
   border-radius: 12px;
@@ -310,13 +314,13 @@ body {
   min-width: 200px;
   padding: 8px;
   z-index: 1000;
-  animation: slideDown 0.2s ease;
+  animation: slideUp 0.2s ease;
 }
 
-@keyframes slideDown {
+@keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
@@ -365,24 +369,28 @@ body {
 }
 
 .theme-toggle {
-  width: 42px;
-  height: 42px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   border: none;
   background: var(--bg-color);
   color: var(--primary-color);
-  font-size: 18px;
+  font-size: 20px;
   cursor: pointer;
   transition: var(--transition);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-lg);
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  z-index: 998;
 }
 
 .theme-toggle:hover {
-  transform: rotate(20deg) scale(1.05);
-  box-shadow: var(--shadow-lg);
+  transform: rotate(20deg) scale(1.1);
+  box-shadow: 0 8px 30px rgba(255, 71, 87, 0.3);
 }
 
 .menu-btn {
@@ -418,6 +426,32 @@ body {
 
 .mobile-language-switcher {
   position: relative;
+  flex: 1;
+}
+
+.mobile-language-switcher .lang-toggle {
+  width: 100%;
+  height: 42px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  box-shadow: var(--shadow);
+}
+
+.mobile-language-switcher .lang-toggle:hover {
+  transform: none;
+}
+
+.mobile-controls .theme-toggle {
+  width: 42px;
+  height: 42px;
+  font-size: 18px;
+  box-shadow: var(--shadow);
+}
+
+.mobile-controls .theme-toggle:hover {
+  transform: rotate(20deg) scale(1.05);
+  box-shadow: var(--shadow-lg);
 }
 
 .home-section {
@@ -2269,13 +2303,23 @@ footer .right-col p {
     justify-content: center;
   }
 
-  .language-switcher {
-    position: relative;
-  }
-
-  .lang-dropdown {
+  .mobile-language-switcher .lang-dropdown {
+    bottom: auto;
+    top: calc(100% + 8px);
     left: 0;
     right: auto;
+    animation: slideDown 0.2s ease;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .home-text h2 {
