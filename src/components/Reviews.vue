@@ -26,7 +26,8 @@
           >
             <div class="review-header">
               <div class="review-platform">
-                <i :class="review.platform === 'telegram' ? 'fa-brands fa-telegram' : 'fa-solid fa-store'"></i>
+                <img v-if="review.platform === 'rozetka'" src="https://res.cloudinary.com/dtvh4rws0/image/upload/v1767861324/rozetka_gvyhg8.png" alt="Rozetka" class="rozetka-logo" />
+                <i v-else class="fa-brands fa-telegram"></i>
                 <span>{{ review.platform === 'telegram' ? 'Telegram' : 'Rozetka' }}</span>
               </div>
               <div v-if="review.platform === 'rozetka'" class="review-rating">
@@ -53,7 +54,7 @@
             rel="noopener noreferrer"
             class="btn-review rozetka-btn"
           >
-            <i class="fa-solid fa-store"></i>
+            <img src="https://res.cloudinary.com/dtvh4rws0/image/upload/v1767861324/rozetka_gvyhg8.png" alt="Rozetka" class="rozetka-logo" />
             {{ t('reviews.rozetkaButton') }}
           </a>
           <a

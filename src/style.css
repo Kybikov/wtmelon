@@ -1169,6 +1169,12 @@ body {
   color: var(--primary-color);
 }
 
+.review-platform .rozetka-logo {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
 .telegram-review .review-platform i {
   color: #0088cc;
 }
@@ -1252,6 +1258,13 @@ body {
 
 .btn-review i {
   font-size: 20px;
+  transition: var(--transition);
+}
+
+.btn-review .rozetka-logo {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
   transition: var(--transition);
 }
 
