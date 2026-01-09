@@ -216,6 +216,37 @@
       "address": "Postanschrift: Ukraine, 90000, Gebiet Transkarpatien, Bezirk Chust, Siedlung Mischhirja, Unabhängigkeitsstraße, Haus 19"
     }
   },
+  "order": {
+    "title": "Bestellung aufgeben",
+    "product": "Produkt",
+    "plan": "Plan",
+    "duration": "Dauer",
+    "price": "Preis",
+    "form": {
+      "name": "Ihr Name",
+      "namePlaceholder": "Geben Sie Ihren Namen ein",
+      "telegram": "Telegram (empfohlen)",
+      "telegramPlaceholder": "@username",
+      "phone": "Telefon",
+      "phonePlaceholder": "+380XXXXXXXXX",
+      "email": "E-Mail",
+      "emailPlaceholder": "ihre@email.com",
+      "comment": "Kommentar",
+      "commentPlaceholder": "Zusätzliche Wünsche oder Fragen",
+      "contactNote": "Bitte geben Sie mindestens eine Kontaktmöglichkeit an (Telegram, Telefon oder E-Mail)",
+      "submit": "Bestellung absenden"
+    },
+    "errors": {
+      "nameRequired": "Bitte geben Sie Ihren Namen ein",
+      "telegramInvalid": "Ungültiges Telegram-Benutzername-Format",
+      "emailInvalid": "Ungültiges E-Mail-Format",
+      "contactRequired": "Bitte geben Sie mindestens eine Kontaktmöglichkeit an",
+      "submitFailed": "Fehler beim Absenden der Bestellung. Bitte versuchen Sie es erneut."
+    },
+    "success": {
+      "message": "Vielen Dank für Ihre Bestellung! Unser Manager wird sich in Kürze mit Ihnen in Verbindung setzen."
+    }
+  },
   "terms": {
     "title": "Allgemeine Geschäftsbedingungen (AGB)",
     "subtitle": "Vereinbarung über die Bereitstellung von Dienstleistungen und digitalen Inhalten",

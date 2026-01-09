@@ -216,6 +216,37 @@
       "address": "Адрес для переписки: Украина, 90000, Закарпатская обл., Хустский р-н, поселок Межгорье, ул. Независимости, д. 19"
     }
   },
+  "order": {
+    "title": "Оформление заказа",
+    "product": "Продукт",
+    "plan": "План",
+    "duration": "Срок",
+    "price": "Цена",
+    "form": {
+      "name": "Ваше имя",
+      "namePlaceholder": "Введите ваше имя",
+      "telegram": "Telegram (рекомендуется)",
+      "telegramPlaceholder": "@username",
+      "phone": "Телефон",
+      "phonePlaceholder": "+380XXXXXXXXX",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "comment": "Комментарий",
+      "commentPlaceholder": "Дополнительные пожелания или вопросы",
+      "contactNote": "Укажите хотя бы один способ связи (Telegram, телефон или email)",
+      "submit": "Отправить заказ"
+    },
+    "errors": {
+      "nameRequired": "Введите ваше имя",
+      "telegramInvalid": "Неверный формат Telegram username",
+      "emailInvalid": "Неверный формат email",
+      "contactRequired": "Укажите хотя бы один способ связи",
+      "submitFailed": "Ошибка при отправке заказа. Попробуйте еще раз."
+    },
+    "success": {
+      "message": "Спасибо за заказ! Наш менеджер свяжется с вами в ближайшее время."
+    }
+  },
   "terms": {
     "title": "Договор оферты",
     "subtitle": "Соглашение о предоставлении услуг и цифрового контента",

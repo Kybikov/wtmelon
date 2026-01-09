@@ -216,6 +216,37 @@
       "address": "Адреса для листування: Україна, 90000, Закарпатська обл., Хустський р-н, селище Міжгір'я, вул. Незалежності, буд. 19"
     }
   },
+  "order": {
+    "title": "Оформлення замовлення",
+    "product": "Продукт",
+    "plan": "План",
+    "duration": "Термін",
+    "price": "Ціна",
+    "form": {
+      "name": "Ваше ім'я",
+      "namePlaceholder": "Введіть ваше ім'я",
+      "telegram": "Telegram (рекомендовано)",
+      "telegramPlaceholder": "@username",
+      "phone": "Телефон",
+      "phonePlaceholder": "+380XXXXXXXXX",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "comment": "Коментар",
+      "commentPlaceholder": "Додаткові побажання або питання",
+      "contactNote": "Вкажіть хоча б один спосіб зв'язку (Telegram, телефон або email)",
+      "submit": "Відправити замовлення"
+    },
+    "errors": {
+      "nameRequired": "Введіть ваше ім'я",
+      "telegramInvalid": "Невірний формат Telegram username",
+      "emailInvalid": "Невірний формат email",
+      "contactRequired": "Вкажіть хоча б один спосіб зв'язку",
+      "submitFailed": "Помилка при відправці замовлення. Спробуйте ще раз."
+    },
+    "success": {
+      "message": "Дякуємо за замовлення! Наш менеджер зв'яжеться з вами найближчим часом."
+    }
+  },
   "terms": {
     "title": "Договір оферти",
     "subtitle": "Угода про надання послуг та цифрового контенту",

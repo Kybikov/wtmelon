@@ -216,6 +216,37 @@
       "address": "Mailing address: Ukraine, 90000, Zakarpattia region, Khust district, Mizhhirya village, Nezalezhnosti St., bldg. 19"
     }
   },
+  "order": {
+    "title": "Order Placement",
+    "product": "Product",
+    "plan": "Plan",
+    "duration": "Duration",
+    "price": "Price",
+    "form": {
+      "name": "Your Name",
+      "namePlaceholder": "Enter your name",
+      "telegram": "Telegram (recommended)",
+      "telegramPlaceholder": "@username",
+      "phone": "Phone",
+      "phonePlaceholder": "+380XXXXXXXXX",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "comment": "Comment",
+      "commentPlaceholder": "Additional wishes or questions",
+      "contactNote": "Please provide at least one contact method (Telegram, phone, or email)",
+      "submit": "Submit Order"
+    },
+    "errors": {
+      "nameRequired": "Please enter your name",
+      "telegramInvalid": "Invalid Telegram username format",
+      "emailInvalid": "Invalid email format",
+      "contactRequired": "Please provide at least one contact method",
+      "submitFailed": "Failed to submit order. Please try again."
+    },
+    "success": {
+      "message": "Thank you for your order! Our manager will contact you shortly."
+    }
+  },
   "terms": {
     "title": "Public Offer Agreement",
     "subtitle": "Agreement on the provision of services and digital content",
