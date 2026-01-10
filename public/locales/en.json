@@ -7,7 +7,10 @@
     "howItWorks": "How It Works",
     "contact": "Contact",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Use"
+    "terms": "Terms of Use",
+    "refund": "Refund & Exchange",
+    "delivery": "Delivery & Payment",
+    "requisites": "Company Details"
   },
   "hero": {
     "title": "Access services for",
@@ -362,6 +365,115 @@
       "address": "Address: Ukraine, 90000, Zakarpattia region, Khust district, Mizhhirya village, Nezalezhnosti St., bldg. 19",
       "email": "E-mail: support@wtmelon.store",
       "phone": "Phone: +380633084244"
+    }
+  },
+  "refund": {
+    "title": "Refund & Exchange",
+    "updated": "Last updated: January 1, 2025",
+    "section1": {
+      "title": "1. GENERAL TERMS",
+      "p1": "We strive to provide the highest quality of service and guarantee the functionality of all provided services for the paid period.",
+      "p2": "In case of problems with service access, we undertake to resolve them as quickly as possible or refund your money according to the terms outlined below."
+    },
+    "section2": {
+      "title": "2. REFUND CONDITIONS",
+      "intro": "Refunds are possible in the following cases:",
+      "item1": "The service proved to be non-functional due to technical reasons, and we were unable to provide a replacement or restore functionality within 24 hours.",
+      "item2": "We failed to fulfill the obligation to activate the subscription within the specified timeframe.",
+      "item3": "Access was provided before payment (post-payment), but it doesn't work and we couldn't fix the situation."
+    },
+    "section3": {
+      "title": "3. CASES WHEN REFUNDS ARE NOT ISSUED",
+      "p1": "Refunds are not issued in the following cases:",
+      "item1": "The customer changed their mind after receiving working access to the service (digital goods are considered consumed at the moment of provision).",
+      "item2": "Problems arose due to violation of usage rules by the customer (unauthorized changes to account data, violation of service rules, etc.)."
+    },
+    "section4": {
+      "title": "4. REFUND PROCEDURE",
+      "p1": "To request a refund, contact our support via Telegram or email within 7 days from the payment date.",
+      "p2": "Refunds are made to the same account from which payment was made, within 5-10 business days after request approval."
+    },
+    "section5": {
+      "title": "5. CONTACT INFORMATION",
+      "contact": "For refund or exchange requests, contact us:",
+      "telegram": "Telegram: @WTmelon",
+      "email": "Email: wtmelon.ua@gmail.com"
+    }
+  },
+  "delivery": {
+    "title": "Delivery & Payment",
+    "updated": "Last updated: January 1, 2025",
+    "section1": {
+      "title": "1. SERVICE DELIVERY METHODS",
+      "p1": "Since we provide digital services (subscription access), physical delivery is not required. Access is provided online in one of the following ways:",
+      "p2": "Access delivery depends on the type of subscription chosen and the specific service features."
+    },
+    "section2": {
+      "title": "2. ORDER AND DELIVERY PROCESS",
+      "intro": "The process of receiving subscription access:",
+      "step1": "Choose the desired subscription on our website or contact our manager via Telegram.",
+      "step2": "Place your order and make payment.",
+      "step3": "Receive order confirmation from our manager.",
+      "step4": "Receive access within 15 minutes - 24 hours after payment."
+    },
+    "section3": {
+      "title": "3. SERVICE DELIVERY TIME",
+      "p1": "Standard subscription activation time: from 15 minutes to 24 hours during business hours.",
+      "p2": "In exceptional cases (technical failures, high load), the time may be extended to 48 hours. We will definitely notify you about this."
+    },
+    "section4": {
+      "title": "4. PAYMENT METHODS",
+      "p1": "We accept payment by the following methods:",
+      "item1": "Bank transfer to Sole Proprietorship account (details provided when placing order).",
+      "item2": "Bank card payment (Visa, Mastercard).",
+      "item3": "Electronic wallet transfers (by agreement)."
+    },
+    "section5": {
+      "title": "5. CONTACT INFORMATION",
+      "contact": "For questions about payment and service delivery, contact us:",
+      "telegram": "Telegram: @WTmelon",
+      "email": "Email: wtmelon.ua@gmail.com"
+    }
+  },
+  "requisites": {
+    "title": "Company Details",
+    "updated": "Last updated: January 1, 2025",
+    "section1": {
+      "title": "1. BASIC INFORMATION",
+      "company": "Name:",
+      "companyName": "Sole Proprietorship Sovha Yevheniia Vasylivna",
+      "registration": "Tax ID (RNOKPP):",
+      "registrationNumber": "3053915382",
+      "vat": "IPN:",
+      "vatNumber": "3053915382"
+    },
+    "section2": {
+      "title": "2. ADDRESS",
+      "legal": "Legal address:",
+      "legalAddress": "Ukraine, 90000, Zakarpattia region, Khust district, Mizhhirya village, Nezalezhnosti St., bldg. 19",
+      "physical": "Physical address:",
+      "physicalAddress": "Ukraine, 90000, Zakarpattia region, Khust district, Mizhhirya village, Nezalezhnosti St., bldg. 19"
+    },
+    "section3": {
+      "title": "3. CONTACT INFORMATION",
+      "email": "Email:",
+      "phone": "Phone:",
+      "telegram": "Telegram:",
+      "website": "Website:"
+    },
+    "section4": {
+      "title": "4. BANKING DETAILS",
+      "bank": "Bank:",
+      "bankName": "JSC CB \"PRIVATBANK\"",
+      "iban": "IBAN:",
+      "ibanNumber": "UA123456789012345678901234567",
+      "swift": "SWIFT:",
+      "swiftCode": "PBANUA2X"
+    },
+    "section5": {
+      "title": "5. MANAGEMENT",
+      "director": "Director:",
+      "directorName": "Sovha Yevheniia Vasylivna"
     }
   }
 }

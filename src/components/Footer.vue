@@ -20,6 +20,9 @@
           <div class="footer-links">
             <router-link :to="privacyPath" class="footer-link">{{ t('nav.privacy') }}</router-link>
             <router-link :to="termsPath" class="footer-link">{{ t('nav.terms') }}</router-link>
+            <router-link :to="refundPath" class="footer-link">{{ t('nav.refund') }}</router-link>
+            <router-link :to="deliveryPath" class="footer-link">{{ t('nav.delivery') }}</router-link>
+            <router-link :to="requisitesPath" class="footer-link">{{ t('nav.requisites') }}</router-link>
           </div>
           <p class="left-text">&copy; 2025 Watermelon. {{ t('footer.rights') }}</p>
           <p class="no-service-notice">{{ t('footer.noService') }}</p>
@@ -69,7 +72,10 @@ export default {
     return {
       t,
       privacyPath: getLocalePath('/privacy'),
-      termsPath: getLocalePath('/terms')
+      termsPath: getLocalePath('/terms'),
+      refundPath: getLocalePath('/refund'),
+      deliveryPath: getLocalePath('/delivery'),
+      requisitesPath: getLocalePath('/requisites')
     }
   },
   data() {

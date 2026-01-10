@@ -2,6 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../pages/Home.vue'
 import Privacy from '../pages/Privacy.vue'
 import Terms from '../pages/Terms.vue'
+import Refund from '../pages/Refund.vue'
+import Delivery from '../pages/Delivery.vue'
+import Requisites from '../pages/Requisites.vue'
 
 const SUPPORTED_LOCALES = ['en', 'uk', 'de', 'ru']
 
@@ -20,6 +23,21 @@ const routes = [
     path: '/terms',
     name: 'Terms',
     component: Terms
+  },
+  {
+    path: '/refund',
+    name: 'Refund',
+    component: Refund
+  },
+  {
+    path: '/delivery',
+    name: 'Delivery',
+    component: Delivery
+  },
+  {
+    path: '/requisites',
+    name: 'Requisites',
+    component: Requisites
   },
   {
     path: '/:locale',
@@ -54,6 +72,42 @@ const routes = [
         next()
       } else {
         next('/terms')
+      }
+    }
+  },
+  {
+    path: '/:locale/refund',
+    name: 'LocaleRefund',
+    component: Refund,
+    beforeEnter: (to, from, next) => {
+      if (SUPPORTED_LOCALES.includes(to.params.locale)) {
+        next()
+      } else {
+        next('/refund')
+      }
+    }
+  },
+  {
+    path: '/:locale/delivery',
+    name: 'LocaleDelivery',
+    component: Delivery,
+    beforeEnter: (to, from, next) => {
+      if (SUPPORTED_LOCALES.includes(to.params.locale)) {
+        next()
+      } else {
+        next('/delivery')
+      }
+    }
+  },
+  {
+    path: '/:locale/requisites',
+    name: 'LocaleRequisites',
+    component: Requisites,
+    beforeEnter: (to, from, next) => {
+      if (SUPPORTED_LOCALES.includes(to.params.locale)) {
+        next()
+      } else {
+        next('/requisites')
       }
     }
   }

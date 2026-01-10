@@ -7,7 +7,10 @@
     "howItWorks": "So funktioniert es",
     "contact": "Kontakt",
     "privacy": "Datenschutzerklärung",
-    "terms": "Nutzungsbedingungen"
+    "terms": "Nutzungsbedingungen",
+    "refund": "Rückgabe & Umtausch",
+    "delivery": "Lieferung & Zahlung",
+    "requisites": "Firmendetails"
   },
   "hero": {
     "title": "Zugangsdienste für",
@@ -362,6 +365,115 @@
       "address": "Adresse: Ukraine, 90000, Gebiet Transkarpatien, Bezirk Chust, Siedlung Mischhirja, Unabhängigkeitsstraße, Haus 19",
       "email": "E-Mail: support@wtmelon.store",
       "phone": "Telefon: +380633084244"
+    }
+  },
+  "refund": {
+    "title": "Rückgabe & Umtausch",
+    "updated": "Letzte Aktualisierung: 1. Januar 2025",
+    "section1": {
+      "title": "1. ALLGEMEINE BEDINGUNGEN",
+      "p1": "Wir streben danach, den höchsten Servicestandard zu bieten und garantieren die Funktionsfähigkeit aller bereitgestellten Dienste für den bezahlten Zeitraum.",
+      "p2": "Bei Problemen mit dem Servicezugang verpflichten wir uns, diese so schnell wie möglich zu lösen oder Ihr Geld gemäß den unten aufgeführten Bedingungen zurückzuerstatten."
+    },
+    "section2": {
+      "title": "2. RÜCKERSTATTUNGSBEDINGUNGEN",
+      "intro": "Rückerstattungen sind in folgenden Fällen möglich:",
+      "item1": "Der Service erwies sich als nicht funktionsfähig aus technischen Gründen, und wir konnten innerhalb von 24 Stunden keinen Ersatz bereitstellen oder die Funktionalität wiederherstellen.",
+      "item2": "Wir haben unsere Verpflichtung zur Aktivierung des Abonnements innerhalb des angegebenen Zeitrahmens nicht erfüllt.",
+      "item3": "Der Zugang wurde vor der Zahlung bereitgestellt (Nachzahlung), funktioniert aber nicht und wir konnten die Situation nicht beheben."
+    },
+    "section3": {
+      "title": "3. FÄLLE, IN DENEN KEINE RÜCKERSTATTUNG ERFOLGT",
+      "p1": "Rückerstattungen erfolgen nicht in folgenden Fällen:",
+      "item1": "Der Kunde hat seine Meinung geändert, nachdem er funktionierenden Zugang zum Service erhalten hat (digitale Güter gelten zum Zeitpunkt der Bereitstellung als verbraucht).",
+      "item2": "Probleme entstanden durch Verstöße gegen Nutzungsregeln durch den Kunden (unbefugte Änderungen von Kontodaten, Verstöße gegen Serviceregeln usw.)."
+    },
+    "section4": {
+      "title": "4. RÜCKERSTATTUNGSVERFAHREN",
+      "p1": "Um eine Rückerstattung zu beantragen, kontaktieren Sie unseren Support per Telegram oder E-Mail innerhalb von 7 Tagen ab Zahlungsdatum.",
+      "p2": "Rückerstattungen erfolgen auf dasselbe Konto, von dem die Zahlung erfolgte, innerhalb von 5-10 Werktagen nach Genehmigung des Antrags."
+    },
+    "section5": {
+      "title": "5. KONTAKTINFORMATIONEN",
+      "contact": "Für Rückerstattungs- oder Umtauschanfragen kontaktieren Sie uns:",
+      "telegram": "Telegram: @WTmelon",
+      "email": "E-Mail: wtmelon.ua@gmail.com"
+    }
+  },
+  "delivery": {
+    "title": "Lieferung & Zahlung",
+    "updated": "Letzte Aktualisierung: 1. Januar 2025",
+    "section1": {
+      "title": "1. SERVICEBEREITSTELLUNGSMETHODEN",
+      "p1": "Da wir digitale Dienste (Abonnementzugang) bereitstellen, ist keine physische Lieferung erforderlich. Der Zugang wird online auf eine der folgenden Arten bereitgestellt:",
+      "p2": "Die Zugangsbereitstellung hängt von der Art des gewählten Abonnements und den spezifischen Servicefunktionen ab."
+    },
+    "section2": {
+      "title": "2. BESTELL- UND LIEFERPROZESS",
+      "intro": "Der Prozess des Erhalts von Abonnementzugang:",
+      "step1": "Wählen Sie das gewünschte Abonnement auf unserer Website oder kontaktieren Sie unseren Manager per Telegram.",
+      "step2": "Geben Sie Ihre Bestellung auf und tätigen Sie die Zahlung.",
+      "step3": "Erhalten Sie eine Bestellbestätigung von unserem Manager.",
+      "step4": "Erhalten Sie Zugang innerhalb von 15 Minuten - 24 Stunden nach Zahlung."
+    },
+    "section3": {
+      "title": "3. SERVICEBEREITSTELLUNGSZEIT",
+      "p1": "Standard-Aktivierungszeit für Abonnements: von 15 Minuten bis 24 Stunden während der Geschäftszeiten.",
+      "p2": "In Ausnahmefällen (technische Ausfälle, hohe Auslastung) kann die Zeit auf 48 Stunden verlängert werden. Wir werden Sie auf jeden Fall darüber informieren."
+    },
+    "section4": {
+      "title": "4. ZAHLUNGSMETHODEN",
+      "p1": "Wir akzeptieren Zahlungen auf folgende Weise:",
+      "item1": "Banküberweisung auf das Konto des Einzelunternehmers (Details werden bei Bestellaufgabe bereitgestellt).",
+      "item2": "Zahlung mit Bankkarte (Visa, Mastercard).",
+      "item3": "Überweisungen über elektronische Geldbörsen (nach Vereinbarung)."
+    },
+    "section5": {
+      "title": "5. KONTAKTINFORMATIONEN",
+      "contact": "Für Fragen zu Zahlung und Servicebereitstellung kontaktieren Sie uns:",
+      "telegram": "Telegram: @WTmelon",
+      "email": "E-Mail: wtmelon.ua@gmail.com"
+    }
+  },
+  "requisites": {
+    "title": "Firmendetails",
+    "updated": "Letzte Aktualisierung: 1. Januar 2025",
+    "section1": {
+      "title": "1. GRUNDINFORMATIONEN",
+      "company": "Name:",
+      "companyName": "Einzelunternehmer Sovha Yevheniia Vasylivna",
+      "registration": "Steuer-ID (RNOKPP):",
+      "registrationNumber": "3053915382",
+      "vat": "IPN:",
+      "vatNumber": "3053915382"
+    },
+    "section2": {
+      "title": "2. ADRESSE",
+      "legal": "Rechtsadresse:",
+      "legalAddress": "Ukraine, 90000, Region Zakarpattia, Bezirk Khust, Dorf Mizhhirya, Nezalezhnosti Str., Geb. 19",
+      "physical": "Physische Adresse:",
+      "physicalAddress": "Ukraine, 90000, Region Zakarpattia, Bezirk Khust, Dorf Mizhhirya, Nezalezhnosti Str., Geb. 19"
+    },
+    "section3": {
+      "title": "3. KONTAKTINFORMATIONEN",
+      "email": "E-Mail:",
+      "phone": "Telefon:",
+      "telegram": "Telegram:",
+      "website": "Website:"
+    },
+    "section4": {
+      "title": "4. BANKVERBINDUNGEN",
+      "bank": "Bank:",
+      "bankName": "JSC CB \"PRIVATBANK\"",
+      "iban": "IBAN:",
+      "ibanNumber": "UA123456789012345678901234567",
+      "swift": "SWIFT:",
+      "swiftCode": "PBANUA2X"
+    },
+    "section5": {
+      "title": "5. MANAGEMENT",
+      "director": "Direktor:",
+      "directorName": "Sovha Yevheniia Vasylivna"
     }
   }
 }
