@@ -642,6 +642,10 @@ const handleSubmit = async () => {
 </style>
 
 <style>
+.dark-theme .form-header h3 {
+  color: #f7fafc !important;
+}
+
 .dark-theme .checkbox-text {
   color: #e2e8f0 !important;
 }
