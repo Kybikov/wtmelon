@@ -510,42 +510,49 @@
   },
   "requisites": {
     "title": "Company Details",
-    "updated": "Last updated: January 1, 2025",
+    "updated": "Last updated: January 11, 2026",
     "section1": {
       "title": "1. BASIC INFORMATION",
-      "company": "Name:",
-      "companyName": "Sole Proprietorship Sovha Yevheniia Vasylivna",
+      "company": "Legal name:",
+      "companyName": "Sole Proprietor (FOP) Sovha Yevheniia Vasylivna",
       "registration": "Tax ID (RNOKPP):",
       "registrationNumber": "3053915382",
-      "vat": "IPN:",
-      "vatNumber": "3053915382"
+      "vat": "VAT/Tax number:",
+      "vatNumber": "3053915382",
+      "brand": "Trade name/brand:",
+      "brandName": "WaterMelon (wtmelon.store)"
     },
     "section2": {
       "title": "2. ADDRESS",
-      "legal": "Legal address:",
-      "legalAddress": "Ukraine, 90000, Zakarpattia region, Khust district, Mizhhirya village, Nezalezhnosti St., bldg. 19",
-      "physical": "Physical address:",
-      "physicalAddress": "Ukraine, 90000, Zakarpattia region, Khust district, Mizhhirya village, Nezalezhnosti St., bldg. 19"
+      "legal": "Registered address:",
+      "legalAddress": "Ukraine, 90000, Zakarpattia region, Khust district, urban-type settlement Mizhhiria, Nezalezhnosti street, building 19",
+      "physical": "Operating address:",
+      "physicalAddress": "Ukraine, 90000, Zakarpattia region, Khust district, urban-type settlement Mizhhiria, Nezalezhnosti street, building 19"
     },
     "section3": {
       "title": "3. CONTACT INFORMATION",
       "email": "Email:",
+      "emailValue": "support@wtmelon.store",
       "phone": "Phone:",
+      "phoneValue": "+380633084244",
       "telegram": "Telegram:",
-      "website": "Website:"
+      "telegramValue": "@WTmelon",
+      "website": "Website:",
+      "websiteValue": "wtmelon.store"
     },
     "section4": {
-      "title": "4. BANKING DETAILS",
+      "title": "4. BANK DETAILS",
       "bank": "Bank:",
       "bankName": "JSC CB \"PRIVATBANK\"",
       "iban": "IBAN:",
-      "ibanNumber": "UA123456789012345678901234567",
+      "ibanNumber": "UA___________________________",
       "swift": "SWIFT:",
-      "swiftCode": "PBANUA2X"
+      "swiftCode": "PBANUA2X",
+      "note": "Exact bank details for payment are provided during checkout or by our manager in the chat."
     },
     "section5": {
       "title": "5. MANAGEMENT",
-      "director": "Director:",
+      "director": "Owner (Sole Proprietor):",
       "directorName": "Sovha Yevheniia Vasylivna"
     }
   }

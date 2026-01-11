@@ -510,7 +510,7 @@
   },
   "requisites": {
     "title": "Реквізити компанії",
-    "updated": "Останнє оновлення: 1 січня 2025",
+    "updated": "Останнє оновлення: 11 січня 2026",
     "section1": {
       "title": "1. ОСНОВНА ІНФОРМАЦІЯ",
       "company": "Назва:",
@@ -518,7 +518,9 @@
       "registration": "РНОКПП:",
       "registrationNumber": "3053915382",
       "vat": "ІПН:",
-      "vatNumber": "3053915382"
+      "vatNumber": "3053915382",
+      "brand": "Торгова назва/бренд:",
+      "brandName": "WaterMelon (wtmelon.store)"
     },
     "section2": {
       "title": "2. АДРЕСА",
@@ -530,22 +532,27 @@
     "section3": {
       "title": "3. КОНТАКТНА ІНФОРМАЦІЯ",
       "email": "Email:",
+      "emailValue": "support@wtmelon.store",
       "phone": "Телефон:",
+      "phoneValue": "+380633084244",
       "telegram": "Telegram:",
-      "website": "Веб-сайт:"
+      "telegramValue": "@WTmelon",
+      "website": "Веб-сайт:",
+      "websiteValue": "wtmelon.store"
     },
     "section4": {
       "title": "4. БАНКІВСЬКІ РЕКВІЗИТИ",
       "bank": "Банк:",
       "bankName": "АТ КБ \"ПРИВАТБАНК\"",
       "iban": "IBAN:",
-      "ibanNumber": "UA123456789012345678901234567",
+      "ibanNumber": "UA___________________________",
       "swift": "SWIFT:",
-      "swiftCode": "PBANUA2X"
+      "swiftCode": "PBANUA2X",
+      "note": "Точні банківські реквізити для оплати надаються під час оформлення замовлення або менеджером у переписці."
     },
     "section5": {
       "title": "5. КЕРІВНИЦТВО",
-      "director": "Директор:",
+      "director": "Керівник (ФОП):",
       "directorName": "Совга Євгенія Василівна"
     }
   }

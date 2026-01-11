@@ -509,43 +509,50 @@
     }
   },
   "requisites": {
-    "title": "Firmendetails",
-    "updated": "Letzte Aktualisierung: 1. Januar 2025",
+    "title": "Unternehmensangaben",
+    "updated": "Zuletzt aktualisiert: 11. Januar 2026",
     "section1": {
       "title": "1. GRUNDINFORMATIONEN",
-      "company": "Name:",
-      "companyName": "Einzelunternehmer Sovha Yevheniia Vasylivna",
+      "company": "Rechtlicher Name:",
+      "companyName": "Einzelunternehmerin (FOP) Sovha Yevheniia Vasylivna",
       "registration": "Steuer-ID (RNOKPP):",
       "registrationNumber": "3053915382",
-      "vat": "IPN:",
-      "vatNumber": "3053915382"
+      "vat": "USt-/Steuernummer:",
+      "vatNumber": "3053915382",
+      "brand": "Handelsname/Marke:",
+      "brandName": "WaterMelon (wtmelon.store)"
     },
     "section2": {
       "title": "2. ADRESSE",
       "legal": "Rechtsadresse:",
-      "legalAddress": "Ukraine, 90000, Region Zakarpattia, Bezirk Khust, Dorf Mizhhirya, Nezalezhnosti Str., Geb. 19",
-      "physical": "Physische Adresse:",
-      "physicalAddress": "Ukraine, 90000, Region Zakarpattia, Bezirk Khust, Dorf Mizhhirya, Nezalezhnosti Str., Geb. 19"
+      "legalAddress": "Ukraine, 90000, Oblast Transkarpatien, Bezirk Chust, Siedlung Mizhhiria, Nezalezhnosti-Straße, Gebäude 19",
+      "physical": "Geschäftsadresse:",
+      "physicalAddress": "Ukraine, 90000, Oblast Transkarpatien, Bezirk Chust, Siedlung Mizhhiria, Nezalezhnosti-Straße, Gebäude 19"
     },
     "section3": {
       "title": "3. KONTAKTINFORMATIONEN",
-      "email": "E-Mail:",
+      "email": "E-mail:",
+      "emailValue": "support@wtmelon.store",
       "phone": "Telefon:",
+      "phoneValue": "+380633084244",
       "telegram": "Telegram:",
-      "website": "Website:"
+      "telegramValue": "@WTmelon",
+      "website": "Webseite:",
+      "websiteValue": "wtmelon.store"
     },
     "section4": {
-      "title": "4. BANKVERBINDUNGEN",
+      "title": "4. BANKVERBINDUNG",
       "bank": "Bank:",
-      "bankName": "JSC CB \"PRIVATBANK\"",
+      "bankName": "JSC CB „PRIVATBANK“",
       "iban": "IBAN:",
-      "ibanNumber": "UA123456789012345678901234567",
+      "ibanNumber": "UA___________________________",
       "swift": "SWIFT:",
-      "swiftCode": "PBANUA2X"
+      "swiftCode": "PBANUA2X",
+      "note": "Die genauen Bankdaten für die Zahlung werden beim Checkout oder durch unseren Manager im Chat bereitgestellt."
     },
     "section5": {
-      "title": "5. MANAGEMENT",
-      "director": "Direktor:",
+      "title": "5. LEITUNG",
+      "director": "Inhaberin (Einzelunternehmerin):",
       "directorName": "Sovha Yevheniia Vasylivna"
     }
   }
