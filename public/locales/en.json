@@ -464,37 +464,48 @@
   },
   "delivery": {
     "title": "Delivery & Payment",
-    "updated": "Last updated: January 1, 2025",
+    "updated": "Last updated: January 11, 2026",
     "section1": {
-      "title": "1. SERVICE DELIVERY METHODS",
-      "p1": "Since we provide digital services (subscription access), physical delivery is not required. Access is provided online in one of the following ways:",
-      "p2": "Access delivery depends on the type of subscription chosen and the specific service features."
+      "title": "1. HOW WE DELIVER DIGITAL GOODS/SERVICES",
+      "p1": "Since we supply digital goods and provide digital services (subscription access, codes, invites, activations), no physical shipping is required. Delivery is provided online in one of the following ways:",
+      "p2": "The delivery method depends on the selected service/plan and may differ across products."
     },
     "section2": {
-      "title": "2. ORDER AND DELIVERY PROCESS",
-      "intro": "The process of receiving subscription access:",
-      "step1": "Choose the desired subscription on our website or contact our manager via Telegram.",
-      "step2": "Place your order and make payment.",
-      "step3": "Receive order confirmation from our manager.",
-      "step4": "Receive access within 15 minutes - 24 hours after payment."
+      "title": "2. ORDERING AND RECEIVING ACCESS",
+      "intro": "The process of receiving access to a subscription/digital product typically looks like this:",
+      "step1": "Choose the service and plan on our website or contact our manager via official support channels (e.g., Telegram).",
+      "step2": "Place an order and complete the payment (or agree on another payment method).",
+      "step3": "Receive an order/payment confirmation electronically (message/e-mail).",
+      "step4": "Receive access via one of the methods: code/link/invite/instructions, or activation/setup coordinated with our manager."
     },
     "section3": {
-      "title": "3. SERVICE DELIVERY TIME",
-      "p1": "Standard subscription activation time: from 15 minutes to 24 hours during business hours.",
-      "p2": "In exceptional cases (technical failures, high load), the time may be extended to 48 hours. We will definitely notify you about this."
+      "title": "3. DELIVERY TIMEFRAMES",
+      "p1": "Standard delivery/activation time: from 15 minutes up to 24 hours during support hours (daily 10:00–22:00 Kyiv time), unless otherwise stated on the product page.",
+      "p2": "In exceptional cases (third-party service outages, high workload, additional payment verification) the timeframe may be extended. We will inform you via chat or e-mail."
     },
     "section4": {
       "title": "4. PAYMENT METHODS",
-      "p1": "We accept payment by the following methods:",
-      "item1": "Bank transfer to Sole Proprietorship account (details provided when placing order).",
-      "item2": "Bank card payment (Visa, Mastercard).",
-      "item3": "Electronic wallet transfers (by agreement)."
+      "p1": "We accept payments using the following methods (depending on availability on the website and the buyer’s country):",
+      "item1": "Bank card payment (Visa/Mastercard) via acquiring/payment provider (e.g., Fondy).",
+      "item2": "Bank transfer to the sole proprietor’s IBAN account — details are provided during checkout or available on the website.",
+      "item3": "Other methods available on the payment page or agreed with our manager (if needed)."
     },
     "section5": {
-      "title": "5. CONTACT INFORMATION",
-      "contact": "For questions about payment and service delivery, contact us:",
-      "telegram": "Telegram: @WTmelon",
-      "email": "Email: wtmelon.ua@gmail.com"
+      "title": "5. CURRENCY AND PAYMENT CONFIRMATION",
+      "p1": "Payments may be made in UAH / USD / EUR (depending on the payment page). If currency conversion is required, it is performed by the buyer’s bank/payment system.",
+      "p2": "Payment is considered completed once the transaction is confirmed by the payment system or funds are credited to the Provider’s account. Order/payment confirmation is provided electronically."
+    },
+    "section6": {
+      "title": "6. IMPORTANT USAGE CONDITIONS",
+      "p1": "To use a service, the customer must have the technical capability and the right to use the relevant service (including the service’s requirements/restrictions, regional and/or age restrictions, and account/device settings).",
+      "p2": "In some cases, at your request, we may provide remote technical assistance for activation/setup. Such actions are performed only with your consent and only to the extent necessary to fulfill the order."
+    },
+    "section7": {
+      "title": "7. CONTACT INFORMATION",
+      "contact": "If you have questions about payment or delivery, please contact us:",
+      "telegram": "Telegram: @WTmelon (or the current support contact listed on the website)",
+      "email": "Email: support@wtmelon.store",
+      "phone": "Phone: +380633084244"
     }
   },
   "requisites": {

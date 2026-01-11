@@ -464,37 +464,48 @@
   },
   "delivery": {
     "title": "Lieferung & Zahlung",
-    "updated": "Letzte Aktualisierung: 1. Januar 2025",
+    "updated": "Zuletzt aktualisiert: 11. Januar 2026",
     "section1": {
-      "title": "1. SERVICEBEREITSTELLUNGSMETHODEN",
-      "p1": "Da wir digitale Dienste (Abonnementzugang) bereitstellen, ist keine physische Lieferung erforderlich. Der Zugang wird online auf eine der folgenden Arten bereitgestellt:",
-      "p2": "Die Zugangsbereitstellung hängt von der Art des gewählten Abonnements und den spezifischen Servicefunktionen ab."
+      "title": "1. WIE WIR DIGITALE PRODUKTE/DIENSTLEISTUNGEN LIEFERN",
+      "p1": "Da wir digitale Produkte liefern und digitale Dienstleistungen anbieten (Abo-Zugang, Codes, Einladungen, Aktivierungen), ist keine physische Lieferung erforderlich. Die Bereitstellung erfolgt online auf eine der folgenden Arten:",
+      "p2": "Die Art der Bereitstellung hängt vom gewählten Dienst/Tarif ab und kann je nach Produkt variieren."
     },
     "section2": {
-      "title": "2. BESTELL- UND LIEFERPROZESS",
-      "intro": "Der Prozess des Erhalts von Abonnementzugang:",
-      "step1": "Wählen Sie das gewünschte Abonnement auf unserer Website oder kontaktieren Sie unseren Manager per Telegram.",
-      "step2": "Geben Sie Ihre Bestellung auf und tätigen Sie die Zahlung.",
-      "step3": "Erhalten Sie eine Bestellbestätigung von unserem Manager.",
-      "step4": "Erhalten Sie Zugang innerhalb von 15 Minuten - 24 Stunden nach Zahlung."
+      "title": "2. BESTELLUNG UND ZUGANGSERHALT",
+      "intro": "Der Ablauf zur Bereitstellung eines Abos/digitalen Produkts sieht in der Regel so aus:",
+      "step1": "Wählen Sie den gewünschten Dienst und Tarif auf unserer Website oder kontaktieren Sie unseren Manager über offizielle Support-Kanäle (z. B. Telegram).",
+      "step2": "Geben Sie eine Bestellung auf und führen Sie die Zahlung durch (oder vereinbaren Sie eine andere Zahlungsart).",
+      "step3": "Sie erhalten eine Bestell-/Zahlungsbestätigung in elektronischer Form (Nachricht/E-Mail).",
+      "step4": "Sie erhalten den Zugang über eine der folgenden Methoden: Code/Link/Einladung/Anleitung oder Aktivierung/Einrichtung in Abstimmung mit unserem Manager."
     },
     "section3": {
-      "title": "3. SERVICEBEREITSTELLUNGSZEIT",
-      "p1": "Standard-Aktivierungszeit für Abonnements: von 15 Minuten bis 24 Stunden während der Geschäftszeiten.",
-      "p2": "In Ausnahmefällen (technische Ausfälle, hohe Auslastung) kann die Zeit auf 48 Stunden verlängert werden. Wir werden Sie auf jeden Fall darüber informieren."
+      "title": "3. LIEFERZEITEN",
+      "p1": "Standard-Liefer-/Aktivierungszeit: 15 Minuten bis 24 Stunden innerhalb der Supportzeiten (täglich 10:00–22:00 Uhr, Kyjiw-Zeit), sofern auf der Produktseite nichts anderes angegeben ist.",
+      "p2": "In Ausnahmefällen (Ausfälle von Drittanbieterdiensten, hohe Auslastung, zusätzliche Zahlungsprüfung) kann sich die Lieferzeit verlängern. Wir informieren Sie darüber per Chat oder E-Mail."
     },
     "section4": {
       "title": "4. ZAHLUNGSMETHODEN",
-      "p1": "Wir akzeptieren Zahlungen auf folgende Weise:",
-      "item1": "Banküberweisung auf das Konto des Einzelunternehmers (Details werden bei Bestellaufgabe bereitgestellt).",
-      "item2": "Zahlung mit Bankkarte (Visa, Mastercard).",
-      "item3": "Überweisungen über elektronische Geldbörsen (nach Vereinbarung)."
+      "p1": "Wir akzeptieren Zahlungen mit folgenden Methoden (abhängig von der Verfügbarkeit auf der Website und dem Land des Käufers):",
+      "item1": "Kartenzahlung (Visa/Mastercard) über Acquiring/Zahlungsdienstleister (z. B. Fondy).",
+      "item2": "Banküberweisung auf das IBAN-Konto der Einzelunternehmerin – die Daten werden beim Checkout bereitgestellt oder sind auf der Website verfügbar.",
+      "item3": "Weitere Methoden, die auf der Zahlungsseite verfügbar sind oder mit unserem Manager vereinbart werden (falls erforderlich)."
     },
     "section5": {
-      "title": "5. KONTAKTINFORMATIONEN",
-      "contact": "Für Fragen zu Zahlung und Servicebereitstellung kontaktieren Sie uns:",
-      "telegram": "Telegram: @WTmelon",
-      "email": "E-Mail: wtmelon.ua@gmail.com"
+      "title": "5. WÄHRUNG UND ZAHLUNGSBESTÄTIGUNG",
+      "p1": "Zahlungen können in UAH / USD / EUR erfolgen (abhängig von der Zahlungsseite). Eine ggf. erforderliche Währungsumrechnung erfolgt durch die Bank/Zahlungsplattform des Käufers.",
+      "p2": "Die Zahlung gilt als abgeschlossen, sobald die Transaktion vom Zahlungssystem bestätigt wurde oder die Mittel dem Konto des Anbieters gutgeschrieben wurden. Eine Bestell-/Zahlungsbestätigung wird elektronisch bereitgestellt."
+    },
+    "section6": {
+      "title": "6. WICHTIGE NUTZUNGSBEDINGUNGEN",
+      "p1": "Um einen Dienst nutzen zu können, muss der Kunde die technische Möglichkeit und das Nutzungsrecht für den jeweiligen Dienst besitzen (einschließlich Anforderungen/Restriktionen des Dienstes, regionaler und/oder Altersbeschränkungen sowie Konto-/Geräteeinstellungen).",
+      "p2": "In einigen Fällen können wir auf Ihren Wunsch Remote-technische Unterstützung für Aktivierung/Einrichtung leisten. Solche Handlungen erfolgen nur mit Ihrer Zustimmung und nur in dem Umfang, der zur Auftragsausführung erforderlich ist."
+    },
+    "section7": {
+      "title": "7. KONTAKTINFORMATIONEN",
+      "contact": "Bei Fragen zu Zahlung oder Lieferung kontaktieren Sie uns bitte:",
+      "telegram": "Telegram: @WTmelon (oder der aktuelle Support-Kontakt, der auf der Website angegeben ist)",
+      "email": "E-mail: support@wtmelon.store",
+      "phone": "Telefon: +380633084244"
     }
   },
   "requisites": {
