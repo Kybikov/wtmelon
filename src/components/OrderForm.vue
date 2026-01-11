@@ -84,11 +84,53 @@
 
       <p class="contact-note">{{ t('order.form.contactNote') }}</p>
 
+      <div class="terms-agreement" :class="{ error: errors.termsAgreed }">
+        <label class="checkbox-label">
+          <input
+            type="checkbox"
+            v-model="formData.termsAgreed"
+            @change="validateField('termsAgreed')"
+          />
+          <span class="checkbox-text">
+            {{ t('order.form.agreement.prefix') }}
+            <router-link :to="termsPath" target="_blank" class="agreement-link">{{ t('order.form.agreement.terms') }}</router-link>,
+            <router-link :to="privacyPath" target="_blank" class="agreement-link">{{ t('order.form.agreement.privacy') }}</router-link>
+            {{ t('order.form.agreement.and') }}
+            <router-link :to="refundPath" target="_blank" class="agreement-link">{{ t('order.form.agreement.refund') }}</router-link>
+          </span>
+        </label>
+        <span v-if="errors.termsAgreed" class="error-message">{{ errors.termsAgreed }}</span>
+      </div>
+
+      <div class="immediate-start-agreement">
+        <label class="checkbox-label">
+          <input
+            type="checkbox"
+            v-model="formData.immediateStart"
+          />
+          <span class="checkbox-text">
+            {{ t('order.form.immediateStart.label') }}
+            <button
+              type="button"
+              class="info-icon"
+              @click="toggleTooltip"
+              @mouseenter="showTooltip = true"
+              @mouseleave="showTooltip = false"
+            >
+              i
+            </button>
+          </span>
+        </label>
+        <div v-if="showTooltip" class="tooltip">
+          {{ t('order.form.immediateStart.fullText') }}
+        </div>
+      </div>
+
       <div v-if="submitError" class="submit-error">
         {{ submitError }}
       </div>
 
-      <button type="submit" class="submit-button" :disabled="loading">
+      <button type="submit" class="submit-button" :disabled="loading || !formData.termsAgreed">
         <span v-if="!loading">{{ t('order.form.submit') }}</span>
         <span v-else class="loading-spinner"></span>
       </button>
@@ -97,11 +139,22 @@
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue';
+import { ref, reactive, computed } from 'vue';
 import { useLocale } from '../composables/useLocale';
 import { sendOrder } from '../services/orderService';
 
-const { t } = useLocale();
+const { t, locale } = useLocale();
+
+const getLocalePath = (path) => {
+  if (locale.value === 'en') {
+    return path;
+  }
+  return `/${locale.value}${path}`;
+};
+
+const termsPath = computed(() => getLocalePath('/terms'));
+const privacyPath = computed(() => getLocalePath('/privacy'));
+const refundPath = computed(() => getLocalePath('/refund'));
 
 const props = defineProps({
   orderData: {
@@ -117,18 +170,26 @@ const formData = reactive({
   telegram: '',
   phone: '',
   email: '',
-  comment: ''
+  comment: '',
+  termsAgreed: false,
+  immediateStart: false
 });
 
 const errors = reactive({
   customerName: '',
   telegram: '',
   phone: '',
-  email: ''
+  email: '',
+  termsAgreed: ''
 });
 
 const loading = ref(false);
 const submitError = ref('');
+const showTooltip = ref(false);
+
+const toggleTooltip = () => {
+  showTooltip.value = !showTooltip.value;
+};
 
 const validateField = (field) => {
   errors[field] = '';
@@ -156,6 +217,11 @@ const validateField = (field) => {
       errors.telegram = t('order.errors.telegramInvalid');
       return false;
     }
+  }
+
+  if (field === 'termsAgreed' && !formData.termsAgreed) {
+    errors.termsAgreed = t('order.errors.termsRequired');
+    return false;
   }
 
   return true;
@@ -193,6 +259,11 @@ const validateForm = () => {
       errors.telegram = t('order.errors.telegramInvalid');
       isValid = false;
     }
+  }
+
+  if (!formData.termsAgreed) {
+    errors.termsAgreed = t('order.errors.termsRequired');
+    isValid = false;
   }
 
   return isValid;
@@ -360,6 +431,116 @@ const handleSubmit = async () => {
   border-radius: 10px;
   border-left: 4px solid #667eea;
   line-height: 1.5;
+}
+
+.terms-agreement,
+.immediate-start-agreement {
+  margin: 8px 0;
+  position: relative;
+}
+
+.terms-agreement.error .checkbox-text {
+  color: #e53e3e;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-top: 3px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  flex-shrink: 0;
+  accent-color: #667eea;
+}
+
+.checkbox-text {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.agreement-link {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.agreement-link:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+.info-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #667eea;
+  color: white;
+  border: none;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: italic;
+  cursor: help;
+  transition: all 0.2s;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.info-icon:hover {
+  background: #764ba2;
+  transform: scale(1.1);
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background: #2d3748;
+  color: white;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 20px;
+  border: 6px solid transparent;
+  border-top-color: #2d3748;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .submit-error {

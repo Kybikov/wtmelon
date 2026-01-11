@@ -286,6 +286,17 @@
       "comment": "Comment",
       "commentPlaceholder": "Additional wishes or questions",
       "contactNote": "Please provide Telegram or Phone (required) and Email (required)",
+      "agreement": {
+        "prefix": "I agree to the",
+        "terms": "terms of service",
+        "privacy": "privacy policy",
+        "and": "and",
+        "refund": "refund policy"
+      },
+      "immediateStart": {
+        "label": "Start execution immediately (within 14 days)",
+        "fullText": "I request to begin the execution of the order and/or delivery of digital content before the end of the 14-day period (if applicable) and confirm that after the actual start of delivery, the right to cancel may be limited in accordance with the Terms of Offer and legislation."
+      },
       "submit": "Submit Order"
     },
     "errors": {
@@ -294,6 +305,7 @@
       "emailRequired": "Email is required",
       "emailInvalid": "Invalid email format",
       "telegramOrPhoneRequired": "Please provide Telegram or Phone",
+      "termsRequired": "You must agree to the terms",
       "submitFailed": "Failed to submit order. Please try again."
     },
     "success": {

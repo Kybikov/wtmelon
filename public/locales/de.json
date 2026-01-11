@@ -286,6 +286,17 @@
       "comment": "Kommentar",
       "commentPlaceholder": "Zusätzliche Wünsche oder Fragen",
       "contactNote": "Bitte geben Sie Telegram oder Telefon (erforderlich) und E-Mail (erforderlich) an",
+      "agreement": {
+        "prefix": "Ich stimme den",
+        "terms": "Nutzungsbedingungen",
+        "privacy": "Datenschutzerklärung",
+        "and": "und",
+        "refund": "Rückgabebedingungen zu"
+      },
+      "immediateStart": {
+        "label": "Sofort mit der Ausführung beginnen (innerhalb von 14 Tagen)",
+        "fullText": "Ich bitte um den Beginn der Auftragsausführung und/oder Lieferung digitaler Inhalte vor Ablauf der 14-tägigen Frist (falls zutreffend) und bestätige, dass nach dem tatsächlichen Beginn der Lieferung das Widerrufsrecht gemäß den Angebotsbedingungen und der Gesetzgebung eingeschränkt sein kann."
+      },
       "submit": "Bestellung absenden"
     },
     "errors": {
@@ -294,6 +305,7 @@
       "emailRequired": "E-Mail ist erforderlich",
       "emailInvalid": "Ungültiges E-Mail-Format",
       "telegramOrPhoneRequired": "Bitte geben Sie Telegram oder Telefon an",
+      "termsRequired": "Sie müssen den Bedingungen zustimmen",
       "submitFailed": "Fehler beim Absenden der Bestellung. Bitte versuchen Sie es erneut."
     },
     "success": {
