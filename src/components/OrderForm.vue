@@ -657,4 +657,12 @@ const handleSubmit = async () => {
 .dark-theme .terms-agreement.error .checkbox-text {
   color: #fc8181 !important;
 }
+
+.dark-theme .form-group label {
+  color: #e2e8f0 !important;
+}
+
+.dark-theme .form-group label .required {
+  color: #fc8181 !important;
+}
 </style>
