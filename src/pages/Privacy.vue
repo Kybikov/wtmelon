@@ -57,6 +57,7 @@
           <ul>
             <li>{{ t('privacy.section5.item1') }}</li>
             <li>{{ t('privacy.section5.item2') }}</li>
+            <li>{{ t('privacy.section5.item3') }}</li>
           </ul>
           <p>{{ t('privacy.section5.note') }}</p>
         </section>
@@ -65,6 +66,7 @@
           <h2>{{ t('privacy.section6.title') }}</h2>
           <p><strong>6.1.</strong> {{ t('privacy.section6.p1') }}</p>
           <p><strong>6.2.</strong> {{ t('privacy.section6.p2') }}</p>
+          <p><strong>6.3.</strong> {{ t('privacy.section6.p3') }}</p>
         </section>
 
         <section>
