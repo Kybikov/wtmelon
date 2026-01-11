@@ -428,6 +428,40 @@
       "brand": "Handelsname/Marke: WaterMelon (wtmelon.store)"
     }
   },
+  "refund": {
+    "title": "Rückgabe & Umtausch",
+    "updated": "Zuletzt aktualisiert: 11. Januar 2026",
+    "section1": {
+      "title": "1. ALLGEMEINE BEDINGUNGEN",
+      "p1": "Wir bemühen uns um einen hohen Service-Standard und gewährleisten die Funktionsfähigkeit des bereitgestellten Zugangs/Abonnements für den bezahlten Zeitraum, sofern der Kunde die Regeln des jeweiligen Dienstes sowie unsere Public Offer (AGB) einhält.",
+      "p2": "Bei Problemen mit dem Zugang stellen wir den Zugang wieder her oder bieten innerhalb von 24 Stunden nach Ihrer Anfrage einen Ersatz an. Ist dies aufgrund eines Verschuldens des Anbieters nicht möglich, kann der Kunde gemäß den nachstehenden Bedingungen eine Rückerstattung verlangen."
+    },
+    "section2": {
+      "title": "2. VORAUSSETZUNGEN FÜR EINE RÜCKERSTATTUNG",
+      "intro": "Eine Rückerstattung ist in folgenden Fällen möglich:",
+      "item1": "Zugang/Aktivierung funktioniert nicht oder wurde ohne Verschulden des Kunden beendet und wir konnten den Zugang nicht wiederherstellen oder innerhalb von 24 Stunden nach Ihrer Anfrage keinen Ersatz bereitstellen.",
+      "item2": "Wir konnten den Zugang aufgrund eines Verschuldens des Anbieters nicht bereitstellen/verbinden (z. B. Aktivierungs-/Einrichtungsfehler auf unserer Seite).",
+      "item3": "Nach gegenseitiger Vereinbarung – eine anteilige Rückerstattung für den ungenutzten Teil des bezahlten Zeitraums, wenn der Kunde diese Option anstelle eines Ersatzes wählt."
+    },
+    "section3": {
+      "title": "3. FÄLLE, IN DENEN KEINE RÜCKERSTATTUNG ERFOLGT",
+      "p1": "Eine Rückerstattung wird in folgenden Fällen nicht gewährt:",
+      "item1": "Der Kunde hat es sich nach Erhalt eines funktionierenden Zugangs/einer Aktivierung anders überlegt (digitale Produkte gelten als geliefert, sobald der Zugang freigeschaltet oder ein Code/Link/Anweisungen bereitgestellt wurden).",
+      "item2": "Das Problem entstand aufgrund eines Verstoßes des Kunden gegen Nutzungsregeln (unautorisierte Änderungen kritischer Kontodaten, Verstoß gegen Dienstregeln, betrügerische Handlungen usw.).",
+      "item3": "Dem Kunden fehlt die technische Möglichkeit oder das Nutzungsrecht für den Dienst (z. B. regionale/Altersbeschränkungen, Konto-/Geräteeinstellungen), sofern wir den Zugang gemäß der Bestellbeschreibung bereitgestellt haben."
+    },
+    "section4": {
+      "title": "4. ABLAUF DER RÜCKERSTATTUNG",
+      "p1": "Um eine Rückerstattung oder einen Ersatz zu beantragen, kontaktieren Sie bitte unseren Support über Telegram oder per E-Mail und nennen Sie: Angaben zur Identifizierung des Kaufs (Bestellung/Datum/Betrag), den Namen des Dienstes sowie eine kurze Problembeschreibung (wenn möglich mit Screenshot). Wir empfehlen, sich unmittelbar nach Auftreten des Problems zu melden.",
+      "p2": "Rückerstattungen erfolgen über dieselbe Zahlungsmethode, die für die Transaktion verwendet wurde (sofern technisch möglich). Die Bearbeitungszeit richtet sich nach den Regeln der Bank/Zahlungssysteme: typischerweise 5–10 Werktage nach Genehmigung, jedoch in der Regel nicht später als 14 Kalendertage (sofern nicht gesetzlich oder durch Bank/Provider-Prozesse anders erforderlich)."
+    },
+    "section5": {
+      "title": "5. KONTAKTINFORMATIONEN",
+      "contact": "Für Rückerstattungen oder Umtausch kontaktieren Sie uns bitte:",
+      "telegram": "Telegram: @WTmelon (oder der aktuelle Support-Kontakt, der auf der Website angegeben ist)",
+      "email": "Email: support@wtmelon.store"
+    }
+  },
   "delivery": {
     "title": "Lieferung & Zahlung",
     "updated": "Letzte Aktualisierung: 1. Januar 2025",

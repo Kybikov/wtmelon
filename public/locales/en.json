@@ -429,36 +429,37 @@
     }
   },
   "refund": {
-    "title": "Refund & Exchange",
-    "updated": "Last updated: January 1, 2025",
+    "title": "Refunds & Exchanges",
+    "updated": "Last updated: January 11, 2026",
     "section1": {
       "title": "1. GENERAL TERMS",
-      "p1": "We strive to provide the highest quality of service and guarantee the functionality of all provided services for the paid period.",
-      "p2": "In case of problems with service access, we undertake to resolve them as quickly as possible or refund your money according to the terms outlined below."
+      "p1": "We aim to provide a high level of service and guarantee that the delivered access/subscription works for the paid period, provided the Customer complies with the service rules and our Public Offer (Terms).",
+      "p2": "If you experience access issues, we will restore access or provide a replacement within 24 hours from your request. If this is not possible due to the Provider’s fault, the customer may request a refund under the terms below."
     },
     "section2": {
-      "title": "2. REFUND CONDITIONS",
-      "intro": "Refunds are possible in the following cases:",
-      "item1": "The service proved to be non-functional due to technical reasons, and we were unable to provide a replacement or restore functionality within 24 hours.",
-      "item2": "We failed to fulfill the obligation to activate the subscription within the specified timeframe.",
-      "item3": "Access was provided before payment (post-payment), but it doesn't work and we couldn't fix the situation."
+      "title": "2. REFUND ELIGIBILITY",
+      "intro": "A refund is possible in the following cases:",
+      "item1": "Access/activation is not working or stopped through no fault of the customer, and we failed to restore it or provide a replacement within 24 hours after your request.",
+      "item2": "We failed to connect/provide access due to the Provider’s fault (e.g., activation/setup error on our side).",
+      "item3": "By mutual agreement — a pro-rated refund for the unused part of the paid period, if the customer chooses this option instead of a replacement."
     },
     "section3": {
-      "title": "3. CASES WHEN REFUNDS ARE NOT ISSUED",
-      "p1": "Refunds are not issued in the following cases:",
-      "item1": "The customer changed their mind after receiving working access to the service (digital goods are considered consumed at the moment of provision).",
-      "item2": "Problems arose due to violation of usage rules by the customer (unauthorized changes to account data, violation of service rules, etc.)."
+      "title": "3. CASES WHEN REFUNDS ARE NOT PROVIDED",
+      "p1": "Refunds are not provided in the following cases:",
+      "item1": "The customer changed their mind after receiving working access/activation (digital goods are considered delivered once access is opened or a code/link/instructions are provided).",
+      "item2": "The issue occurred due to the customer’s violation of usage rules (unauthorized changes to critical account data, violation of the service’s rules, fraudulent actions, etc.).",
+      "item3": "The customer lacks the technical capability or the right to use the service (e.g., regional/age restrictions, account/device settings), provided we delivered access according to the order description."
     },
     "section4": {
-      "title": "4. REFUND PROCEDURE",
-      "p1": "To request a refund, contact our support via Telegram or email within 7 days from the payment date.",
-      "p2": "Refunds are made to the same account from which payment was made, within 5-10 business days after request approval."
+      "title": "4. REFUND PROCESS",
+      "p1": "To request a refund or replacement, contact our support via Telegram or e-mail and provide: purchase identification details (order/date/amount), the service name, and a short description of the issue (a screenshot is helpful if available). We recommend contacting us as soon as the issue occurs.",
+      "p2": "Refunds are issued to the same payment method used for the transaction (if technically possible). The processing time depends on the bank/payment system rules: typically 5–10 business days after approval, but usually no later than 14 calendar days (unless otherwise required by law or the bank/provider procedure)."
     },
     "section5": {
       "title": "5. CONTACT INFORMATION",
-      "contact": "For refund or exchange requests, contact us:",
-      "telegram": "Telegram: @WTmelon",
-      "email": "Email: wtmelon.ua@gmail.com"
+      "contact": "To request a refund or exchange, please contact us:",
+      "telegram": "Telegram: @WTmelon (or the current support contact listed on the website)",
+      "email": "Email: support@wtmelon.store"
     }
   },
   "delivery": {
