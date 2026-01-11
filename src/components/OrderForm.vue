@@ -640,3 +640,21 @@ const handleSubmit = async () => {
   }
 }
 </style>
+
+<style>
+.dark-theme .checkbox-text {
+  color: #e2e8f0 !important;
+}
+
+.dark-theme .agreement-link {
+  color: #a5b4fc !important;
+}
+
+.dark-theme .agreement-link:hover {
+  color: #c4b5fd !important;
+}
+
+.dark-theme .terms-agreement.error .checkbox-text {
+  color: #fc8181 !important;
+}
+</style>
