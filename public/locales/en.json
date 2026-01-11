@@ -204,66 +204,68 @@
   "privacy": {
     "title": "Privacy Policy",
     "subtitle": "Personal Data Processing Policy",
-    "updated": "Last updated: January 1, 2025",
-    "intro": "This Privacy Policy determines the procedure for collecting, storing, using, and protecting the personal data of users of the \"WaterMelon\" online store. We respect your privacy. By placing an order, you trust us with your information, and we guarantee that it will be used exclusively for providing services.",
+    "updated": "Last updated: January 11, 2026",
+    "intro": "This Privacy Policy explains how the online store “WaterMelon” (wtmelon.store) collects, stores, uses and protects users’ personal data. We respect your privacy. By placing an order or contacting support, you provide certain information, and we use it solely to fulfill your order, provide technical support, and handle requests.",
     "section1": {
       "title": "1. GENERAL PROVISIONS",
-      "p1": "This Policy is developed in accordance with the current legislation of Ukraine, in particular the Law of Ukraine \"On Personal Data Protection\".",
-      "p2": "By using the WaterMelon website or bot, as well as paying for an order, the User (Customer) gives their unconditional consent to the processing of personal data in accordance with this Policy.",
-      "p3": "The owner and controller of personal data is Sole Proprietorship Sovha Yevheniia Vasylivna."
+      "p1": "This Policy is prepared in accordance with applicable Ukrainian legislation, including the Law of Ukraine “On Personal Data Protection”.",
+      "p2": "By using the WaterMelon website, contacting us via official channels (messengers/social media) and/or paying for an order, the User (Customer) gives consent to the processing of personal data under this Policy to the extent necessary to provide services and fulfill the order.",
+      "p3": "The controller (owner) of personal data is Sole Proprietor (FOP) Sovha Yevheniia Vasylivna."
     },
     "section2": {
       "title": "2. WHAT DATA WE COLLECT",
-      "intro": "We collect only the minimum information necessary for order fulfillment and feedback:",
-      "contact": "Contact details: Name, Telegram username, phone number, email address.",
-      "service": "Service data: In cases where subscription activation requires logging into an account (e.g., Spotify, YouTube), we may request temporary login credentials (login/password).",
-      "payment": "Payment data: We do not collect or store full details of your bank cards (number, CVV). You pay for the order via a banking app or payment gateway, and we only see the fact of receipt of funds.",
-      "technical": "Technical data: IP address, browser type, and device type (collected automatically for the correct operation of the site)."
+      "intro": "We collect only the minimum information necessary to fulfill orders, communicate with you, and provide support:",
+      "contact": "Contact data: name (or nickname), messenger username/profile (e.g., Telegram), phone number, e-mail address.",
+      "service": "Service-related data: data required to provide access (e.g., account e-mail, invitation link, profile identifier). If, at your request, remote technical assistance is required, we may receive temporary access credentials (login/password or another access method) solely for activation/setup and only with your explicit consent.",
+      "payment": "Payment data: we do not collect or store full bank card details (card number, expiry date, CVV). Payments are processed by a bank/payment gateway (acquiring, including Fondy or another provider). We receive payment confirmation and basic payment attributes (amount, currency, status, transaction ID) only to the extent needed to fulfill the order and for accounting/tax purposes.",
+      "technical": "Technical data: IP address, browser and device type, event logs (may be collected automatically for security, fraud prevention and proper website operation)."
     },
     "section3": {
-      "title": "3. PURPOSE OF DATA COLLECTION",
-      "intro": "We use your data for:",
-      "item1": "Processing and fulfilling your order (sending access keys, invites).",
-      "item2": "Communicating with you via messengers for technical support.",
-      "item3": "Resolving disputes (refunds, product replacement).",
-      "item4": "Informing about subscription status (reminders about expiration)."
+      "title": "3. PURPOSES OF DATA PROCESSING",
+      "intro": "We use your data to:",
+      "item1": "Process and fulfill your order (provide access codes, invites, instructions, activation/setup).",
+      "item2": "Communicate with you via e-mail/messengers to clarify order details and provide technical support.",
+      "item3": "Resolve disputes and requests (access replacement, refunds, complaint handling).",
+      "item4": "Inform you about your order/subscription status (service messages related to your order)."
     },
     "section4": {
-      "title": "4. ACCOUNT DATA SECURITY (Important)",
-      "p1": "If you provide us with a login and password for your personal account to activate the service:",
-      "item1": "We use this data exclusively at the moment of activation.",
-      "item2": "We do not store your passwords in databases after the order is completed.",
-      "item3": "We undertake not to change your personal data or transfer access to third parties.",
-      "p2": "After the service is performed (subscription activation), we strongly recommend changing your account password."
+      "title": "4. ACCOUNT DATA SECURITY (IMPORTANT)",
+      "p1": "If, for activation/setup, you voluntarily provide us with access credentials to your account:",
+      "item1": "We use such credentials solely to fulfill your order and provide technical assistance.",
+      "item2": "We do not use your credentials for any other purposes and do not share them with third parties without lawful grounds.",
+      "item3": "We do not change critical account settings (email/login/password/payment settings) unless required to fulfill the order and agreed with you.",
+      "p2": "After the service is completed (activation/setup), we recommend changing your password (or another access method) if you provided it during order fulfillment."
     },
     "section5": {
-      "title": "5. DATA TRANSFER TO THIRD PARTIES",
-      "intro": "We do not transfer your personal data to third parties, except in the following cases:",
-      "item1": "To banking institutions (for processing and confirming transactions).",
-      "item2": "Upon reasonable request of state authorities (in accordance with the legislation of Ukraine).",
-      "note": "We strictly do not sell customer databases to spammers or advertising companies."
+      "title": "5. SHARING DATA WITH THIRD PARTIES",
+      "intro": "We do not sell or share your personal data with third parties except where necessary to provide services or as required by law, including:",
+      "item1": "Banks, payment systems and payment providers/acquirers (e.g., Fondy or another provider) — to process and confirm transactions, prevent fraud, and process refunds.",
+      "item2": "Communication services/messengers/e-mail providers (Telegram, Viber, Instagram, e-mail providers) — to the extent necessary to communicate with you and provide support.",
+      "item3": "Upon a justified request by government authorities — in accordance with Ukrainian law.",
+      "note": "We do not provide customer databases to spammers or advertising companies."
     },
     "section6": {
-      "title": "6. INFORMATION PROTECTION",
-      "p1": "Access to personal data is granted only to authorized managers of the WaterMelon store who have signed a non-disclosure agreement.",
-      "p2": "The site uses SSL encryption to protect data transmission."
+      "title": "6. INFORMATION SECURITY AND RETENTION",
+      "p1": "Access to personal data is limited to authorized persons who need it to fulfill orders and provide support. We apply organizational and technical security measures to prevent unauthorized access.",
+      "p2": "The website uses SSL/TLS encryption to protect data transmission.",
+      "p3": "Retention period: we keep data no longer than necessary to fulfill orders, provide support, resolve disputes and/or comply with legal requirements (including payment accounting). Once it is no longer needed, data may be deleted or anonymized."
     },
     "section7": {
       "title": "7. USER RIGHTS",
-      "intro": "According to Art. 8 of the Law of Ukraine \"On Personal Data Protection\", you have the right to:",
-      "item1": "Know exactly which of your data we process.",
-      "item2": "Request the change or deletion of your personal data from our database (right to be forgotten).",
-      "item3": "Withdraw consent to data processing.",
-      "note": "To exercise these rights, please contact our support."
+      "intro": "Under Ukrainian law, you have the right to:",
+      "item1": "Know what personal data we process and for what purposes.",
+      "item2": "Request correction of inaccurate data or deletion of data if there are no lawful grounds for further retention.",
+      "item3": "Withdraw consent to data processing (this may make it impossible to fulfill an order or continue support if such data is technically/legally required).",
+      "note": "To exercise these rights, please contact our support using the details below."
     },
     "section8": {
       "title": "8. CONTACT INFORMATION",
-      "intro": "If you have questions regarding privacy, please contact us:",
-      "company": "Sole Proprietorship Sovha Yevheniia Vasylivna",
+      "intro": "If you have questions about privacy or want to exercise your rights, please contact us:",
+      "company": "Sole Proprietor (FOP) Sovha Yevheniia Vasylivna",
       "email": "E-mail: support@wtmelon.store",
-      "telegram": "Telegram: @WTmelon (or current support contact)",
+      "telegram": "Telegram: @WTmelon (or the current support contact listed on the website)",
       "phone": "Phone: +380633084244",
-      "address": "Mailing address: Ukraine, 90000, Zakarpattia region, Khust district, Mizhhirya village, Nezalezhnosti St., bldg. 19"
+      "address": "Mailing address: Ukraine, 90000, Zakarpattia region, Khust district, urban-type settlement Mizhhiria, Nezalezhnosti street, building 19"
     }
   },
   "order": {
