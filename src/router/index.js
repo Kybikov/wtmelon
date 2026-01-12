@@ -137,10 +137,10 @@ const router = createRouter({
   }
 })
 
-router.beforeEach(async (to, from, next) => {
+router.beforeEach((to, from, next) => {
   const { initLocale } = useLocale()
   const routeLocale = to.params.locale
-  await initLocale(routeLocale)
+  initLocale(routeLocale)
   next()
 })
 

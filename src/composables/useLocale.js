@@ -23,6 +23,32 @@ const translations = ref({})
 const isLoading = ref(true)
 let isInitialized = false
 
+const loadTranslations = async () => {
+  const locale = currentLocale.value
+
+  if (translations.value[locale]) {
+    isLoading.value = false
+    return
+  }
+
+  isLoading.value = true
+  try {
+    const response = await fetch(`/locales/${locale}.json`)
+    if (response.ok) {
+      const data = await response.json()
+      translations.value = { ...translations.value, [locale]: data }
+    } else {
+      console.error(`Failed to load translations for ${locale}: HTTP ${response.status}`)
+    }
+  } catch (error) {
+    console.error(`Failed to load translations for ${locale}:`, error)
+  } finally {
+    isLoading.value = false
+  }
+}
+
+watch(currentLocale, loadTranslations, { immediate: true })
+
 export function useLocale() {
   const router = useRouter()
   const route = useRoute()
@@ -51,28 +77,29 @@ export function useLocale() {
     }
   }
 
-  const initLocale = async (routeLocale) => {
-    if (isInitialized && !routeLocale) {
+  const initLocale = (routeLocale) => {
+    if (routeLocale && SUPPORTED_LOCALES.includes(routeLocale)) {
+      currentLocale.value = routeLocale
+      isInitialized = true
       return
     }
 
-    if (routeLocale && SUPPORTED_LOCALES.includes(routeLocale)) {
-      currentLocale.value = routeLocale
-    } else if (!isInitialized) {
-      const savedLocale = localStorage.getItem('preferredLocale')
-      if (savedLocale && SUPPORTED_LOCALES.includes(savedLocale)) {
-        currentLocale.value = savedLocale
+    if (isInitialized) {
+      return
+    }
+
+    const savedLocale = localStorage.getItem('preferredLocale')
+    if (savedLocale && SUPPORTED_LOCALES.includes(savedLocale)) {
+      currentLocale.value = savedLocale
+    } else {
+      const browserLocale = navigator.language.split('-')[0]
+      if (SUPPORTED_LOCALES.includes(browserLocale)) {
+        currentLocale.value = browserLocale
       } else {
-        const browserLocale = navigator.language.split('-')[0]
-        if (SUPPORTED_LOCALES.includes(browserLocale)) {
-          currentLocale.value = browserLocale
-        } else {
-          currentLocale.value = DEFAULT_LOCALE
-        }
+        currentLocale.value = DEFAULT_LOCALE
       }
     }
 
-    await loadTranslations()
     isInitialized = true
   }
 
@@ -94,28 +121,12 @@ export function useLocale() {
     return value
   }
 
-  const loadTranslations = async () => {
-    isLoading.value = true
-    try {
-      const response = await fetch(`/locales/${currentLocale.value}.json`)
-      if (response.ok) {
-        translations.value[currentLocale.value] = await response.json()
-      }
-    } catch (error) {
-      console.error('Failed to load translations:', error)
-    } finally {
-      isLoading.value = false
-    }
-  }
-
   const formatPrice = (prices) => {
     if (!prices || typeof prices !== 'object') return {}
 
     const localePrices = prices[currentLocale.value] || prices[DEFAULT_LOCALE] || prices
     return localePrices
   }
-
-  watch(locale, loadTranslations)
 
   return {
     locale,
