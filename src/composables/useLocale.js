@@ -20,6 +20,34 @@ const LOCALE_NAMES = {
 
 const currentLocale = ref(DEFAULT_LOCALE)
 const translations = ref({})
+const isLoading = ref(true)
+let isInitialized = false
+
+const loadTranslations = async () => {
+  const locale = currentLocale.value
+
+  if (translations.value[locale]) {
+    isLoading.value = false
+    return
+  }
+
+  isLoading.value = true
+  try {
+    const response = await fetch(`/locales/${locale}.json`)
+    if (response.ok) {
+      const data = await response.json()
+      translations.value = { ...translations.value, [locale]: data }
+    } else {
+      console.error(`Failed to load translations for ${locale}: HTTP ${response.status}`)
+    }
+  } catch (error) {
+    console.error(`Failed to load translations for ${locale}:`, error)
+  } finally {
+    isLoading.value = false
+  }
+}
+
+watch(currentLocale, loadTranslations, { immediate: true })
 
 export function useLocale() {
   const router = useRouter()
@@ -27,6 +55,7 @@ export function useLocale() {
 
   const locale = computed(() => currentLocale.value)
   const currency = computed(() => CURRENCY_SYMBOLS[currentLocale.value])
+  const loading = computed(() => isLoading.value)
 
   const setLocale = (newLocale) => {
     if (!SUPPORTED_LOCALES.includes(newLocale)) {
@@ -51,22 +80,27 @@ export function useLocale() {
   const initLocale = (routeLocale) => {
     if (routeLocale && SUPPORTED_LOCALES.includes(routeLocale)) {
       currentLocale.value = routeLocale
+      isInitialized = true
+      return
+    }
+
+    if (isInitialized) {
       return
     }
 
     const savedLocale = localStorage.getItem('preferredLocale')
     if (savedLocale && SUPPORTED_LOCALES.includes(savedLocale)) {
       currentLocale.value = savedLocale
-      return
+    } else {
+      const browserLocale = navigator.language.split('-')[0]
+      if (SUPPORTED_LOCALES.includes(browserLocale)) {
+        currentLocale.value = browserLocale
+      } else {
+        currentLocale.value = DEFAULT_LOCALE
+      }
     }
 
-    const browserLocale = navigator.language.split('-')[0]
-    if (SUPPORTED_LOCALES.includes(browserLocale)) {
-      currentLocale.value = browserLocale
-      return
-    }
-
-    currentLocale.value = DEFAULT_LOCALE
+    isInitialized = true
   }
 
   const t = (key) => {
@@ -87,17 +121,6 @@ export function useLocale() {
     return value
   }
 
-  const loadTranslations = async () => {
-    try {
-      const response = await fetch(`/locales/${currentLocale.value}.json`)
-      if (response.ok) {
-        translations.value[currentLocale.value] = await response.json()
-      }
-    } catch (error) {
-      console.error('Failed to load translations:', error)
-    }
-  }
-
   const formatPrice = (prices) => {
     if (!prices || typeof prices !== 'object') return {}
 
@@ -105,11 +128,10 @@ export function useLocale() {
     return localePrices
   }
 
-  watch(locale, loadTranslations, { immediate: true })
-
   return {
     locale,
     currency,
+    loading,
     setLocale,
     initLocale,
     t,

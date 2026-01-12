@@ -5,6 +5,8 @@ import Terms from '../pages/Terms.vue'
 import Refund from '../pages/Refund.vue'
 import Delivery from '../pages/Delivery.vue'
 import Requisites from '../pages/Requisites.vue'
+import NotFound from '../pages/NotFound.vue'
+import { useLocale } from '../composables/useLocale'
 
 const SUPPORTED_LOCALES = ['en', 'uk', 'de', 'ru']
 
@@ -110,6 +112,11 @@ const routes = [
         next('/requisites')
       }
     }
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: NotFound
   }
 ]
 
@@ -128,6 +135,13 @@ const router = createRouter({
     }
     return { top: 0 }
   }
+})
+
+router.beforeEach((to, from, next) => {
+  const { initLocale } = useLocale()
+  const routeLocale = to.params.locale
+  initLocale(routeLocale)
+  next()
 })
 
 export default router

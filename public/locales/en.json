@@ -565,5 +565,10 @@
       "director": "Owner (Sole Proprietor/FOP):",
       "directorName": "Sovga Yevheniia Vasylivna"
     }
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "message": "Sorry, but the page you are looking for does not exist or has been moved.",
+    "backHome": "Back to Home"
   }
 }
