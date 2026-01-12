@@ -86,9 +86,9 @@
           <p>
             <strong>{{ t('privacy.section8.company') }}</strong><br>
             {{ t('privacy.section8.email') }}<br>
-            {{ t('privacy.section8.telegram') }}<br>
             {{ t('privacy.section8.phone') }}<br>
-            {{ t('privacy.section8.address') }}
+            {{ t('privacy.section8.address') }}<br>
+            {{ t('privacy.section8.additional') }}
           </p>
         </section>
       </div>

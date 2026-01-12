@@ -39,11 +39,11 @@
 
         <section>
           <h2>{{ t('refund.section5.title') }}</h2>
-          <p>
-            {{ t('refund.section5.contact') }}<br>
-            <strong>{{ t('refund.section5.telegram') }}</strong><br>
-            <strong>{{ t('refund.section5.email') }}</strong>
-          </p>
+          <p>{{ t('refund.section5.contact') }}</p>
+          <p><strong>{{ t('refund.section5.email') }}</strong></p>
+          <p><strong>{{ t('refund.section5.phone') }}</strong></p>
+          <p><strong>{{ t('refund.section5.address') }}</strong></p>
+          <p><strong>{{ t('refund.section5.telegram') }}</strong></p>
         </section>
       </div>
     </div>

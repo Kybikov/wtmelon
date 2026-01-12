@@ -10,6 +10,8 @@
             <strong>{{ t('terms.title').toUpperCase() }}</strong><br>
             <em>({{ t('terms.subtitle') }})</em>
           </p>
+          <p><strong>{{ t('terms.version') }}</strong></p>
+          <p><strong>{{ t('terms.effective') }}</strong></p>
           <p>{{ t('terms.intro') }}</p>
         </section>
 
@@ -29,6 +31,7 @@
           <p><strong>2.1.</strong> {{ t('terms.section2.p1') }}</p>
           <p><strong>2.2.</strong> {{ t('terms.section2.p2') }}</p>
           <p><strong>2.3.</strong> {{ t('terms.section2.p3') }}</p>
+          <p><strong>2.3.1.</strong> {{ t('terms.section2.p31') }}</p>
           <p><strong>2.4.</strong> {{ t('terms.section2.p4') }}</p>
           <p><strong>2.5.</strong> {{ t('terms.section2.p5') }}</p>
           <p><strong>2.6.</strong> {{ t('terms.section2.p6') }}</p>
@@ -48,8 +51,8 @@
           <p><strong>4.3.</strong> {{ t('terms.section4.p3') }}</p>
           <p><strong>4.4.</strong> {{ t('terms.section4.p4') }}</p>
           <p><strong>4.5.</strong> {{ t('terms.section4.p5') }}</p>
-          <p><strong>4.5.1.</strong> {{ t('terms.section4.p51') }}</p>
           <p><strong>4.6.</strong> {{ t('terms.section4.p6') }}</p>
+          <p><strong>4.7.</strong> {{ t('terms.section4.p7') }}</p>
         </section>
 
         <section>
@@ -59,6 +62,7 @@
           <p><strong>5.3.</strong> {{ t('terms.section5.p3') }}</p>
           <p><strong>5.4.</strong> {{ t('terms.section5.p4') }}</p>
           <p><strong>5.5.</strong> {{ t('terms.section5.p5') }}</p>
+          <p><strong>5.6.</strong> {{ t('terms.section5.p6') }}</p>
         </section>
 
         <section>
@@ -83,9 +87,10 @@
           <p><strong>8.1.</strong> {{ t('terms.section8.p1') }}</p>
           <p><strong>8.2.</strong> {{ t('terms.section8.p2') }}</p>
           <p><strong>8.3.</strong> {{ t('terms.section8.p3') }}</p>
-          <p><strong>8.4.</strong> {{ t('terms.section8.p41') }}</p>
+          <p><strong>8.4.</strong> {{ t('terms.section8.p4') }}</p>
           <p><strong>8.5.</strong> {{ t('terms.section8.p5') }}</p>
           <p><strong>8.6.</strong> {{ t('terms.section8.p6') }}</p>
+          <p><strong>8.7.</strong> {{ t('terms.section8.p7') }}</p>
         </section>
 
         <section>
