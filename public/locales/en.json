@@ -354,8 +354,8 @@
       "p3": "Remote technical assistance: At the Customer’s separate request and with the Customer’s explicit consent, the Provider may provide remote technical assistance for setup/activation. In such case, the Provider uses the provided data/access solely to fulfill the order, does not change critical account parameters (email/login/password/payment settings) unless agreed with the Customer, and recommends changing the password after the work is completed (if applicable).",
       "p4": "Estimated supply time: 15 minutes to 24 hours during support working hours, unless otherwise stated on the website/in the order confirmation.",
       "p5": "Moment of fulfillment: The Digital Good/Service is deemed supplied/provided from the moment the code/link/instructions are delivered or access is actually enabled (whichever occurs first).",
-      "p51": "Start of the Access Period: If, for a particular Digital Good/subscription, the Access Period depends on actual activation on the service side, the Access Period starts from the moment of actual activation/access enablement, as confirmed by the service’s technical status and/or the Provider’s electronic message.",
-      "p6": "Order/payment confirmation (receipt/email/message) is provided to the Customer electronically (durable medium)."
+      "p6": "Start of the Access Period: If, for a particular Digital Good/subscription, the Access Period depends on actual activation on the service side, the Access Period starts from the moment of actual activation/access enablement, as confirmed by the service’s technical status and/or the Provider’s electronic message.",
+      "p7": "Order/payment confirmation (receipt/email/message) is provided to the Customer electronically (durable medium)."
     },
     "section5": {
       "title": "5. PRICE, CURRENCY AND PAYMENT",

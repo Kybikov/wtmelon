@@ -354,8 +354,8 @@
       "p3": "Remote-technische Unterstützung: Auf gesonderte Anfrage und mit ausdrücklicher Zustimmung des Kunden kann die Anbieterin Remote-Support zur Einrichtung/Aktivierung leisten. In diesem Fall nutzt die Anbieterin bereitgestellte Daten/Zugänge ausschließlich zur Auftragserfüllung, ändert keine kritischen Kontoparameter (E-Mail/Login/Passwort/Zahlungseinstellungen), sofern nicht mit dem Kunden vereinbart, und empfiehlt nach Abschluss der Arbeiten eine Passwortänderung (falls anwendbar).",
       "p4": "Voraussichtliche Bereitstellungszeit: 15 Minuten bis 24 Stunden während der Supportzeiten, sofern auf der Website/in der Bestellbestätigung nichts anderes angegeben ist.",
       "p5": "Zeitpunkt der Erfüllung: Die digitale Ware/Dienstleistung gilt als geliefert/erbracht, sobald der Code/Link/die Anleitung übermittelt wurde oder der Zugang tatsächlich freigeschaltet ist (je nachdem, was zuerst eintritt).",
-      "p51": "Beginn des Zugangszeitraums: Wenn der Zugangszeitraum einer bestimmten digitalen Ware/eines Abonnements von der tatsächlichen Aktivierung auf Seiten des Dienstes abhängt, beginnt der Zugangszeitraum mit der tatsächlichen Aktivierung/Freischaltung, bestätigt durch den technischen Status des Dienstes und/oder eine elektronische Mitteilung der Anbieterin.",
-      "p6": "Eine Bestell-/Zahlungsbestätigung (Beleg/E-Mail/Nachricht) wird dem Kunden elektronisch bereitgestellt (dauerhafter Datenträger)."
+      "p6": "Beginn des Zugangszeitraums: Wenn der Zugangszeitraum einer bestimmten digitalen Ware/eines Abonnements von der tatsächlichen Aktivierung auf Seiten des Dienstes abhängt, beginnt der Zugangszeitraum mit der tatsächlichen Aktivierung/Freischaltung, bestätigt durch den technischen Status des Dienstes und/oder eine elektronische Mitteilung der Anbieterin.",
+      "p7": "Eine Bestell-/Zahlungsbestätigung (Beleg/E-Mail/Nachricht) wird dem Kunden elektronisch bereitgestellt (dauerhafter Datenträger)."
     },
     "section5": {
       "title": "5. PREIS, WÄHRUNG UND ZAHLUNG",
