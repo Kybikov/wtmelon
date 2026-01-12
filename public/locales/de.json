@@ -555,5 +555,10 @@
       "director": "Inhaberin (Einzelunternehmerin):",
       "directorName": "Sovha Yevheniia Vasylivna"
     }
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "message": "Entschuldigung, aber die Seite, die Sie suchen, existiert nicht oder wurde verschoben.",
+    "backHome": "Zurück zur Startseite"
   }
 }

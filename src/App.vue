@@ -1,24 +1,36 @@
 <template>
   <div id="app">
-    <Navbar />
-    <router-view />
-    <Footer />
+    <LoadingSpinner v-if="loading" />
+    <template v-else>
+      <Navbar />
+      <router-view />
+      <Footer />
+    </template>
   </div>
 </template>
 
 <script>
+import { computed } from 'vue'
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
+import LoadingSpinner from './components/LoadingSpinner.vue'
 import { useSEO } from './composables/useSEO'
+import { useLocale } from './composables/useLocale'
 
 export default {
   name: 'App',
   components: {
     Navbar,
-    Footer
+    Footer,
+    LoadingSpinner
   },
   setup() {
     useSEO()
+    const { loading } = useLocale()
+
+    return {
+      loading: computed(() => loading.value)
+    }
   }
 }
 </script>

@@ -5,6 +5,7 @@ import Terms from '../pages/Terms.vue'
 import Refund from '../pages/Refund.vue'
 import Delivery from '../pages/Delivery.vue'
 import Requisites from '../pages/Requisites.vue'
+import NotFound from '../pages/NotFound.vue'
 
 const SUPPORTED_LOCALES = ['en', 'uk', 'de', 'ru']
 
@@ -110,6 +111,11 @@ const routes = [
         next('/requisites')
       }
     }
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: NotFound
   }
 ]
 

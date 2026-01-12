@@ -20,6 +20,7 @@ const LOCALE_NAMES = {
 
 const currentLocale = ref(DEFAULT_LOCALE)
 const translations = ref({})
+const isLoading = ref(true)
 
 export function useLocale() {
   const router = useRouter()
@@ -27,6 +28,7 @@ export function useLocale() {
 
   const locale = computed(() => currentLocale.value)
   const currency = computed(() => CURRENCY_SYMBOLS[currentLocale.value])
+  const loading = computed(() => isLoading.value)
 
   const setLocale = (newLocale) => {
     if (!SUPPORTED_LOCALES.includes(newLocale)) {
@@ -88,6 +90,7 @@ export function useLocale() {
   }
 
   const loadTranslations = async () => {
+    isLoading.value = true
     try {
       const response = await fetch(`/locales/${currentLocale.value}.json`)
       if (response.ok) {
@@ -95,6 +98,8 @@ export function useLocale() {
       }
     } catch (error) {
       console.error('Failed to load translations:', error)
+    } finally {
+      isLoading.value = false
     }
   }
 
@@ -110,6 +115,7 @@ export function useLocale() {
   return {
     locale,
     currency,
+    loading,
     setLocale,
     initLocale,
     t,
