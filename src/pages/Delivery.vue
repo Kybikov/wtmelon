@@ -52,12 +52,10 @@
 
         <section>
           <h2>{{ t('delivery.section7.title') }}</h2>
-          <p>
-            {{ t('delivery.section7.contact') }}<br>
-            <strong>{{ t('delivery.section7.telegram') }}</strong><br>
-            <strong>{{ t('delivery.section7.email') }}</strong><br>
-            <strong>{{ t('delivery.section7.phone') }}</strong>
-          </p>
+          <p>{{ t('delivery.section7.contact') }}</p>
+          <p><strong>{{ t('delivery.section7.telegram') }}</strong></p>
+          <p><strong>{{ t('delivery.section7.email') }}</strong></p>
+          <p><strong>{{ t('delivery.section7.phone') }}</strong></p>
         </section>
       </div>
     </div>

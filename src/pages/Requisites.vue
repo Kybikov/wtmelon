@@ -9,7 +9,6 @@
           <h2>{{ t('requisites.section1.title') }}</h2>
           <p><strong>{{ t('requisites.section1.company') }}</strong> {{ t('requisites.section1.companyName') }}</p>
           <p><strong>{{ t('requisites.section1.registration') }}</strong> {{ t('requisites.section1.registrationNumber') }}</p>
-          <p><strong>{{ t('requisites.section1.vat') }}</strong> {{ t('requisites.section1.vatNumber') }}</p>
           <p><strong>{{ t('requisites.section1.brand') }}</strong> {{ t('requisites.section1.brandName') }}</p>
         </section>
 
@@ -23,15 +22,18 @@
           <h2>{{ t('requisites.section3.title') }}</h2>
           <p><strong>{{ t('requisites.section3.email') }}</strong> {{ t('requisites.section3.emailValue') }}</p>
           <p><strong>{{ t('requisites.section3.phone') }}</strong> {{ t('requisites.section3.phoneValue') }}</p>
-          <p><strong>{{ t('requisites.section3.telegram') }}</strong> {{ t('requisites.section3.telegramValue') }}</p>
           <p><strong>{{ t('requisites.section3.website') }}</strong> {{ t('requisites.section3.websiteValue') }}</p>
+          <p><strong>{{ t('requisites.section3.messengers') }}</strong> {{ t('requisites.section3.messengersValue') }}</p>
         </section>
 
         <section>
           <h2>{{ t('requisites.section4.title') }}</h2>
+          <p><strong>{{ t('requisites.section4.recipient') }}</strong> {{ t('requisites.section4.recipientName') }}</p>
           <p><strong>{{ t('requisites.section4.bank') }}</strong> {{ t('requisites.section4.bankName') }}</p>
+          <p><strong>{{ t('requisites.section4.mfo') }}</strong> {{ t('requisites.section4.mfoValue') }}</p>
           <p><strong>{{ t('requisites.section4.iban') }}</strong> {{ t('requisites.section4.ibanNumber') }}</p>
           <p><strong>{{ t('requisites.section4.swift') }}</strong> {{ t('requisites.section4.swiftCode') }}</p>
+          <p><strong>{{ t('requisites.section4.purpose') }}</strong> {{ t('requisites.section4.purposeValue') }}</p>
           <p><em>{{ t('requisites.section4.note') }}</em></p>
         </section>
 
