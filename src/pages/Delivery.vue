@@ -61,12 +61,12 @@
         <section>
           <h2>{{ t('delivery.section14.title') }}</h2>
           <p>
-            <strong>{{ t('delivery.section14.company') }}</strong><br>
-            {{ t('delivery.section14.code') }}<br>
-            {{ t('delivery.section14.address') }}<br>
-            {{ t('delivery.section14.email') }}<br>
-            {{ t('delivery.section14.phone') }}<br>
-            {{ t('delivery.section14.brand') }}
+            <strong>{{ t('terms.section14.company') }}</strong><br>
+            {{ t('terms.section14.code') }}<br>
+            {{ t('terms.section14.address') }}<br>
+            {{ t('terms.section14.email') }}<br>
+            {{ t('terms.section14.phone') }}<br>
+            {{ t('terms.section14.brand') }}
           </p>
         </section>
       </div>

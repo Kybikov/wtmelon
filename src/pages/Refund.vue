@@ -49,12 +49,12 @@
         <section>
           <h2>{{ t('refund.section14.title') }}</h2>
           <p>
-            <strong>{{ t('refund.section14.company') }}</strong><br>
-            {{ t('refund.section14.code') }}<br>
-            {{ t('refund.section14.address') }}<br>
-            {{ t('refund.section14.email') }}<br>
-            {{ t('refund.section14.phone') }}<br>
-            {{ t('refund.section14.brand') }}
+            <strong>{{ t('terms.section14.company') }}</strong><br>
+            {{ t('terms.section14.code') }}<br>
+            {{ t('terms.section14.address') }}<br>
+            {{ t('terms.section14.email') }}<br>
+            {{ t('terms.section14.phone') }}<br>
+            {{ t('terms.section14.brand') }}
           </p>
         </section>
       </div>

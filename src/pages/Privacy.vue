@@ -84,23 +84,12 @@
           <h2>{{ t('privacy.section8.title') }}</h2>
           <p>{{ t('privacy.section8.intro') }}</p>
           <p>
-            <strong>{{ t('privacy.section8.company') }}</strong><br>
-            {{ t('privacy.section8.email') }}<br>
-            {{ t('privacy.section8.phone') }}<br>
-            {{ t('privacy.section8.address') }}<br>
-            {{ t('privacy.section8.additional') }}
-          </p>
-        </section>
-
-        <section>
-          <h2>{{ t('privacy.section14.title') }}</h2>
-          <p>
-            <strong>{{ t('privacy.section14.company') }}</strong><br>
-            {{ t('privacy.section14.code') }}<br>
-            {{ t('privacy.section14.address') }}<br>
-            {{ t('privacy.section14.email') }}<br>
-            {{ t('privacy.section14.phone') }}<br>
-            {{ t('privacy.section14.brand') }}
+            <strong>{{ t('terms.section14.company') }}</strong><br>
+            {{ t('terms.section14.code') }}<br>
+            {{ t('terms.section14.address') }}<br>
+            {{ t('terms.section14.email') }}<br>
+            {{ t('terms.section14.phone') }}<br>
+            {{ t('terms.section14.brand') }}
           </p>
         </section>
       </div>
