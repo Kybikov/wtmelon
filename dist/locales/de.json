@@ -260,12 +260,13 @@
     },
     "section8": {
       "title": "8. KONTAKTINFORMATIONEN",
-      "intro": "Wenn Sie Fragen zum Datenschutz haben oder Ihre Rechte ausüben möchten, kontaktieren Sie uns bitte (die Kontaktdaten entsprechen den Angaben im öffentlichen Angebot und auf der Seite „Requisites/Legal“):",
+      "intro": "Wenn Sie Fragen zum Datenschutz haben oder Ihre Rechte ausüben möchten, kontaktieren Sie uns bitte (die Kontaktdaten entsprechen den Angaben im öffentlichen Angebot und auf der Seite «Requisites/Legal»,):",
       "company": "Einzelunternehmerin (FOP) Sovha Yevheniia Vasylivna",
+      "code": "Steuernummer (RNOKPP): 3053915382",
+      "address": "Adresse: Ukraine, 90000, Oblast Transkarpatien, Rajon Chust, Siedlung städtischen Typs Mizhhiria, Straße Nezalezhnosti, Gebäude 19",
       "email": "E-mail: support@wtmelon.store",
       "phone": "Telefon: +380633084244",
-      "address": "Postanschrift: Ukraine, 90000, Oblast Transkarpatien, Rajon Chust, Siedlung städtischen Typs Mizhhiria, Straße Nezalezhnosti, Gebäude 19",
-      "additional": "Zusätzlich: Offizielle Support-Kanäle (Messenger) sind auf wtmelon.store aufgeführt"
+      "brand": "Handelsname/Marke: WaterMelon (wtmelon.store)"
     }
   },
   "order": {
@@ -354,8 +355,8 @@
       "p3": "Remote-technische Unterstützung: Auf gesonderte Anfrage und mit ausdrücklicher Zustimmung des Kunden kann die Anbieterin Remote-Support zur Einrichtung/Aktivierung leisten. In diesem Fall nutzt die Anbieterin bereitgestellte Daten/Zugänge ausschließlich zur Auftragserfüllung, ändert keine kritischen Kontoparameter (E-Mail/Login/Passwort/Zahlungseinstellungen), sofern nicht mit dem Kunden vereinbart, und empfiehlt nach Abschluss der Arbeiten eine Passwortänderung (falls anwendbar).",
       "p4": "Voraussichtliche Bereitstellungszeit: 15 Minuten bis 24 Stunden während der Supportzeiten, sofern auf der Website/in der Bestellbestätigung nichts anderes angegeben ist.",
       "p5": "Zeitpunkt der Erfüllung: Die digitale Ware/Dienstleistung gilt als geliefert/erbracht, sobald der Code/Link/die Anleitung übermittelt wurde oder der Zugang tatsächlich freigeschaltet ist (je nachdem, was zuerst eintritt).",
-      "p51": "Beginn des Zugangszeitraums: Wenn der Zugangszeitraum einer bestimmten digitalen Ware/eines Abonnements von der tatsächlichen Aktivierung auf Seiten des Dienstes abhängt, beginnt der Zugangszeitraum mit der tatsächlichen Aktivierung/Freischaltung, bestätigt durch den technischen Status des Dienstes und/oder eine elektronische Mitteilung der Anbieterin.",
-      "p6": "Eine Bestell-/Zahlungsbestätigung (Beleg/E-Mail/Nachricht) wird dem Kunden elektronisch bereitgestellt (dauerhafter Datenträger)."
+      "p6": "Beginn des Zugangszeitraums: Wenn der Zugangszeitraum einer bestimmten digitalen Ware/eines Abonnements von der tatsächlichen Aktivierung auf Seiten des Dienstes abhängt, beginnt der Zugangszeitraum mit der tatsächlichen Aktivierung/Freischaltung, bestätigt durch den technischen Status des Dienstes und/oder eine elektronische Mitteilung der Anbieterin.",
+      "p7": "Eine Bestell-/Zahlungsbestätigung (Beleg/E-Mail/Nachricht) wird dem Kunden elektronisch bereitgestellt (dauerhafter Datenträger)."
     },
     "section5": {
       "title": "5. PREIS, WÄHRUNG UND ZAHLUNG",
@@ -461,9 +462,13 @@
     },
     "section5": {
       "title": "5. KONTAKTINFORMATIONEN",
-      "contact": "Für Rückerstattungen oder Umtausch kontaktieren Sie uns bitte:",
-      "telegram": "Telegram: @WTmelon (oder der aktuelle Support-Kontakt, der auf der Website angegeben ist)",
-      "email": "Email: support@wtmelon.store"
+      "contact": "Für Rückerstattungen oder Umtausch kontaktieren Sie uns bitte (die Kontaktdaten entsprechen den Angaben im öffentlichen Angebot und auf der Seite «Requisites/Legal»,):",
+      "company": "Einzelunternehmerin (FOP) Sovha Yevheniia Vasylivna",
+      "code": "Steuernummer (RNOKPP): 3053915382",
+      "address": "Adresse: Ukraine, 90000, Oblast Transkarpatien, Rajon Chust, Siedlung städtischen Typs Mizhhiria, Straße Nezalezhnosti, Gebäude 19",
+      "email": "E-mail: support@wtmelon.store",
+      "phone": "Telefon: +380633084244",
+      "brand": "Handelsname/Marke: WaterMelon (wtmelon.store)"
     }
   },
   "delivery": {
@@ -506,10 +511,13 @@
     },
     "section7": {
       "title": "7. KONTAKTINFORMATIONEN",
-      "contact": "Bei Fragen zu Zahlung und Bereitstellung der Leistungen kontaktieren Sie uns bitte (die Kontaktdaten entsprechen der Public Offer und der Seite „Requisites/Legal“): Adresse: Ukraine, 90000, Zakarpattia region, Khust district, urban-type settlement Mizhhiria, Nezalezhnosti street, building 19.",
-      "telegram": "Zusätzlich: Offizielle Support-Kanäle (Messenger) sind auf wtmelon.store aufgeführt",
+      "contact": "Bei Fragen zu Zahlung und Bereitstellung der Leistungen kontaktieren Sie uns bitte (die Kontaktdaten entsprechen den Angaben im öffentlichen Angebot und auf der Seite «Requisites/Legal»,):",
+      "company": "Einzelunternehmerin (FOP) Sovha Yevheniia Vasylivna",
+      "code": "Steuernummer (RNOKPP): 3053915382",
+      "address": "Adresse: Ukraine, 90000, Oblast Transkarpatien, Rajon Chust, Siedlung städtischen Typs Mizhhiria, Straße Nezalezhnosti, Gebäude 19",
       "email": "E-mail: support@wtmelon.store",
-      "phone": "Telefon: +380633084244"
+      "phone": "Telefon: +380633084244",
+      "brand": "Handelsname/Marke: WaterMelon (wtmelon.store)"
     }
   },
   "requisites": {
@@ -553,15 +561,17 @@
       "iban": "IBAN:",
       "ibanNumber": "UA143220010000026001360036064",
       "swift": "SWIFT:",
-      "swiftCode": "UNJSUAUKXXX",
-      "purpose": "Verwendungszweck (empfohlen):",
-      "purposeValue": "Zahlung für digitale Waren/Dienstleistungen von WaterMelon, Bestell-Nr. _____",
-      "note": "Genaue Zahlungsdaten können auch während des Checkouts oder vom Manager im Chat bereitgestellt werden (je nach gewählter Zahlungsmethode)."
+      "swiftCode": "UNJSUAUKXXX"
     },
     "section5": {
       "title": "5. GESCHÄFTSFÜHRUNG",
       "director": "Inhaber (Einzelunternehmer/FOP):",
       "directorName": "Sovga Yevheniia Vasylivna"
     }
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "message": "Entschuldigung, aber die Seite, die Sie suchen, existiert nicht oder wurde verschoben.",
+    "backHome": "Zurück zur Startseite"
   }
 }
