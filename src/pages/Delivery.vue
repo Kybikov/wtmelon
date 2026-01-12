@@ -53,22 +53,14 @@
         <section>
           <h2>{{ t('delivery.section7.title') }}</h2>
           <p>{{ t('delivery.section7.contact') }}</p>
-          <p><strong>{{ t('delivery.section7.telegram') }}</strong></p>
-          <p><strong>{{ t('delivery.section7.email') }}</strong></p>
-          <p><strong>{{ t('delivery.section7.phone') }}</strong></p>
+          <strong>{{ t('terms.section14.company') }}</strong><br>
+          {{ t('terms.section14.code') }}<br>
+          {{ t('terms.section14.address') }}<br>
+          {{ t('terms.section14.email') }}<br>
+          {{ t('terms.section14.phone') }}<br>
+          {{ t('terms.section14.brand') }}
         </section>
 
-        <section>
-          <h2>{{ t('delivery.section14.title') }}</h2>
-          <p>
-            <strong>{{ t('terms.section14.company') }}</strong><br>
-            {{ t('terms.section14.code') }}<br>
-            {{ t('terms.section14.address') }}<br>
-            {{ t('terms.section14.email') }}<br>
-            {{ t('terms.section14.phone') }}<br>
-            {{ t('terms.section14.brand') }}
-          </p>
-        </section>
       </div>
     </div>
   </div>

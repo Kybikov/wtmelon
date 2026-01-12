@@ -40,22 +40,12 @@
         <section>
           <h2>{{ t('refund.section5.title') }}</h2>
           <p>{{ t('refund.section5.contact') }}</p>
-          <p><strong>{{ t('refund.section5.email') }}</strong></p>
-          <p><strong>{{ t('refund.section5.phone') }}</strong></p>
-          <p><strong>{{ t('refund.section5.address') }}</strong></p>
-          <p><strong>{{ t('refund.section5.telegram') }}</strong></p>
-        </section>
-
-        <section>
-          <h2>{{ t('refund.section14.title') }}</h2>
-          <p>
-            <strong>{{ t('terms.section14.company') }}</strong><br>
-            {{ t('terms.section14.code') }}<br>
-            {{ t('terms.section14.address') }}<br>
-            {{ t('terms.section14.email') }}<br>
-            {{ t('terms.section14.phone') }}<br>
-            {{ t('terms.section14.brand') }}
-          </p>
+          <strong>{{ t('terms.section14.company') }}</strong><br>
+          {{ t('terms.section14.code') }}<br>
+          {{ t('terms.section14.address') }}<br>
+          {{ t('terms.section14.email') }}<br>
+          {{ t('terms.section14.phone') }}<br>
+          {{ t('terms.section14.brand') }}
         </section>
       </div>
     </div>
