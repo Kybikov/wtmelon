@@ -3,10 +3,14 @@
     "about": "Über uns",
     "products": "Produkte",
     "partners": "Partner",
+    "reviews": "Bewertungen",
     "howItWorks": "So funktioniert es",
     "contact": "Kontakt",
     "privacy": "Datenschutzerklärung",
-    "terms": "Nutzungsbedingungen"
+    "terms": "Nutzungsbedingungen",
+    "refund": "Rückgabe & Umtausch",
+    "delivery": "Lieferung & Zahlung",
+    "requisites": "Firmendetails"
   },
   "hero": {
     "title": "Zugangsdienste für",
@@ -83,6 +87,50 @@
     },
     "features": "Vorteile"
   },
+  "reviews": {
+    "title": "Kundenbewertungen",
+    "subtitle": "Sehen Sie, was unsere Kunden über uns sagen",
+    "items": [
+      {
+        "author": "Oleksandr Tymchenko Petrovych",
+        "text": "Schnell und hochwertig. Alles funktioniert!",
+        "platform": "rozetka"
+      },
+      {
+        "author": "Atlas 🦋",
+        "text": "Alles ist großartig! Habe bereits wieder das ChatGPT-Abonnement gekauft, und alles funktioniert einwandfrei. Support ist sofort da, und die Manager sind echte Profis! Empfehle, der beste Service! 😍",
+        "platform": "telegram"
+      },
+      {
+        "author": "Rafchik",
+        "text": "Alles ist sehr cool, ich kaufe Discord Nitro seit einem halben Jahr, sie erinnern mich, wann ich bezahlen muss, der Service ist bombastisch (ICH EMPFEHLE ES ALLEN!!)",
+        "platform": "telegram"
+      },
+      {
+        "author": "Nanami.o.o",
+        "text": "Der beste Service und erschwinglicher Preis, sie machen alles sehr schnell und sind vollständig kundenorientiert 💯",
+        "platform": "telegram"
+      },
+      {
+        "author": "Ivan Andreevich",
+        "text": "Habe GPT und Canva bekommen, alles ist schnell, klar und zuverlässig, ich empfehle es, werde es weiterhin nutzen und andere Abonnements bekommen 💪🔥",
+        "platform": "telegram"
+      },
+      {
+        "author": "thelifeofpablo 🤪",
+        "text": "Habe vorher Photoshop genommen und dann das Abonnement verlängert, heute habe ich Google + Netflix für sechs Monate genommen, alles ist ausgezeichnet, danke Leute! ❤️🔥🎉🎊",
+        "platform": "telegram"
+      },
+      {
+        "author": "Vs",
+        "text": "Habe GPTChat gekauft, glücklich wie ein Elefant!!!! Sehr reaktionsschnell und anständig, was heutzutage selten ist! Nutzen Sie die Empfehlung!!!! ❤️👍🔥",
+        "platform": "telegram"
+      }
+    ],
+    "ctaText": "Sehen Sie alle unsere Bewertungen auf den Plattformen",
+    "rozetkaButton": "Bewertungen auf Rozetka",
+    "telegramButton": "Bewertungen auf Telegram"
+  },
   "partners": {
     "title": "Unsere Partner",
     "subtitle": "Wir arbeiten mit den besten Unternehmen der Ukraine zusammen",
@@ -101,7 +149,7 @@
         "Qualitätsgarantie auf alle Produkte",
         "Treueprogramm für Stammkunden"
       ],
-      "website": "https://rozetka.com.ua"
+      "website": "https://rozetka.com.ua/ua/seller/watermelon-shop/"
     },
     "sweettv": {
       "name": "Sweet TV",
@@ -154,135 +202,358 @@
     "noService": "Wir bieten keine Dienstleistungen in Russland und Belarus an"
   },
   "privacy": {
-    "title": "Datenschutzerklärung",
-    "subtitle": "Richtlinie zur Verarbeitung personenbezogener Daten",
-    "updated": "Letzte Aktualisierung: 1. Januar 2025",
-    "intro": "Diese Datenschutzerklärung legt das Verfahren zur Erhebung, Speicherung, Nutzung und zum Schutz personenbezogener Daten der Benutzer des Online-Shops „WaterMelon“ fest. Wir respektieren Ihre Privatsphäre. Mit Ihrer Bestellung vertrauen Sie uns Ihre Daten an, und wir garantieren, dass diese ausschließlich zur Erbringung der Dienstleistungen verwendet werden.",
+    "title": "Privacy Policy",
+    "subtitle": "Personal Data Processing Policy",
+    "updated": "Last updated: January 11, 2026",
+    "intro": "This Privacy Policy explains how the online store “WaterMelon” (wtmelon.store) collects, stores, uses and protects users’ personal data. We respect your privacy. By placing an order or contacting support, you provide certain information, and we use it solely to fulfill your order, provide technical support, and handle requests.",
     "section1": {
-      "title": "1. ALLGEMEINE BESTIMMUNGEN",
-      "p1": "Diese Richtlinie wurde in Übereinstimmung mit der geltenden Gesetzgebung der Ukraine entwickelt, insbesondere dem Gesetz der Ukraine „Über den Schutz personenbezogener Daten“.",
-      "p2": "Durch die Nutzung der Website oder des Bots des WaterMelon-Shops sowie durch die Bezahlung der Bestellung gibt der Benutzer (Kunde) seine bedingungslose Zustimmung zur Verarbeitung personenbezogener Daten gemäß dieser Richtlinie.",
-      "p3": "Inhaber und Verantwortlicher für personenbezogene Daten ist die Einzelunternehmerin Sovha Yevheniia Vasylivna."
+      "title": "1. GENERAL PROVISIONS",
+      "p1": "This Policy is prepared in accordance with applicable Ukrainian legislation, including the Law of Ukraine “On Personal Data Protection”.",
+      "p2": "By using the WaterMelon website, contacting us via official channels (messengers/social media) and/or paying for an order, the User (Customer) gives consent to the processing of personal data under this Policy to the extent necessary to provide services and fulfill the order.",
+      "p3": "The controller (owner) of personal data is Sole Proprietor (FOP) Sovha Yevheniia Vasylivna."
     },
     "section2": {
-      "title": "2. WELCHE DATEN WIR SAMMELN",
-      "intro": "Wir sammeln nur die Mindestinformationen, die für die Auftragsabwicklung und Rückmeldung erforderlich sind:",
-      "contact": "Kontaktdaten: Name, Telegram-Benutzername, Telefonnummer, E-Mail-Adresse.",
-      "service": "Dienstleistungsdaten: In Fällen, in denen die Aktivierung des Abonnements eine Anmeldung im Konto erfordert (z. B. Spotify, YouTube), können wir temporäre Zugangsdaten (Login/Passwort) anfordern.",
-      "payment": "Zahlungsdaten: Wir sammeln oder speichern keine vollständigen Daten Ihrer Bankkarten (Nummer, CVV). Sie bezahlen die Bestellung über eine Bank-App oder ein Zahlungsgateway, und wir sehen nur den Eingang der Gelder.",
-      "technical": "Technische Daten: IP-Adresse, Browser- und Gerätetyp (werden automatisch für den korrekten Betrieb der Website gesammelt)."
+      "title": "2. WHAT DATA WE COLLECT",
+      "intro": "We collect only the minimum information necessary to fulfill orders, communicate with you, and provide support:",
+      "contact": "Contact data: name (or nickname), messenger username/profile (e.g., Telegram), phone number, e-mail address.",
+      "service": "Service-related data: data required to provide access (e.g., account e-mail, invitation link, profile identifier). If, at your request, remote technical assistance is required, we may receive temporary access credentials (login/password or another access method) solely for activation/setup and only with your explicit consent.",
+      "payment": "Payment data: we do not collect or store full bank card details (card number, expiry date, CVV). Payments are processed by a bank/payment gateway (acquiring, including Fondy or another provider). We receive payment confirmation and basic payment attributes (amount, currency, status, transaction ID) only to the extent needed to fulfill the order and for accounting/tax purposes.",
+      "technical": "Technical data: IP address, browser and device type, event logs (may be collected automatically for security, fraud prevention and proper website operation)."
     },
     "section3": {
-      "title": "3. ZWECK DER DATENERHEBUNG",
-      "intro": "Wir verwenden Ihre Daten für:",
-      "item1": "Bearbeitung und Ausführung Ihrer Bestellung (Versand von Zugangsschlüsseln, Einladungen).",
-      "item2": "Kommunikation mit Ihnen über Messenger für technischen Support.",
-      "item3": "Lösung von Streitfällen (Rückerstattung, Produktaustausch).",
-      "item4": "Information über den Abonnementstatus (Erinnerung an Ablauf)."
+      "title": "3. PURPOSES OF DATA PROCESSING",
+      "intro": "We use your data to:",
+      "item1": "Process and fulfill your order (provide access codes, invites, instructions, activation/setup).",
+      "item2": "Communicate with you via e-mail/messengers to clarify order details and provide technical support.",
+      "item3": "Resolve disputes and requests (access replacement, refunds, complaint handling).",
+      "item4": "Inform you about your order/subscription status (service messages related to your order)."
     },
     "section4": {
-      "title": "4. SICHERHEIT VON KONTODATEN (Wichtig)",
-      "p1": "Wenn Sie uns zur Aktivierung des Dienstes Login und Passwort für Ihr persönliches Konto übermitteln:",
-      "item1": "Wir verwenden diese Daten ausschließlich zum Zeitpunkt der Aktivierung.",
-      "item2": "Wir speichern Ihre Passwörter nach Abschluss der Bestellung nicht in Datenbanken.",
-      "item3": "Wir verpflichten uns, Ihre persönlichen Daten nicht zu ändern und den Zugang nicht an Dritte weiterzugeben.",
-      "p2": "Nach Erbringung der Dienstleistung (Aktivierung des Abonnements) empfehlen wir dringend, das Passwort Ihres Kontos zu ändern."
+      "title": "4. ACCOUNT DATA SECURITY (IMPORTANT)",
+      "p1": "If, for activation/setup, you voluntarily provide us with access credentials to your account:",
+      "item1": "We use such credentials solely to fulfill your order and provide technical assistance.",
+      "item2": "We do not use your credentials for any other purposes and do not share them with third parties without lawful grounds.",
+      "item3": "We do not change critical account settings (email/login/password/payment settings) unless required to fulfill the order and agreed with you.",
+      "p2": "After the service is completed (activation/setup), we recommend changing your password (or another access method) if you provided it during order fulfillment."
     },
     "section5": {
-      "title": "5. WEITERGABE VON DATEN AN DRITTE",
-      "intro": "Wir geben Ihre personenbezogenen Daten nicht an Dritte weiter, außer in folgenden Fällen:",
-      "item1": "An Bankinstitute (zur Durchführung und Bestätigung von Transaktionen).",
-      "item2": "Auf begründete Anfrage staatlicher Behörden (gemäß der Gesetzgebung der Ukraine).",
-      "note": "Wir verkaufen Kundenbasen kategorisch nicht an Spammer oder Werbeunternehmen."
+      "title": "5. SHARING DATA WITH THIRD PARTIES",
+      "intro": "We do not sell or share your personal data with third parties except where necessary to provide services or as required by law, including:",
+      "item1": "Banks, payment systems and payment providers/acquirers (e.g., Fondy or another provider) — to process and confirm transactions, prevent fraud, and process refunds.",
+      "item2": "Communication services/messengers/e-mail providers (Telegram, Viber, Instagram, e-mail providers) — to the extent necessary to communicate with you and provide support.",
+      "item3": "Upon a justified request by government authorities — in accordance with Ukrainian law.",
+      "note": "We do not provide customer databases to spammers or advertising companies."
     },
     "section6": {
-      "title": "6. DATENSCHUTZ",
-      "p1": "Zugang zu personenbezogenen Daten haben nur autorisierte Manager des WaterMelon-Shops, die eine Geheimhaltungsvereinbarung unterzeichnet haben.",
-      "p2": "Die Website verwendet SSL-Verschlüsselung zum Schutz der Datenübertragung."
+      "title": "6. INFORMATION SECURITY AND RETENTION",
+      "p1": "Access to personal data is limited to authorized persons who need it to fulfill orders and provide support. We apply organizational and technical security measures to prevent unauthorized access.",
+      "p2": "The website uses SSL/TLS encryption to protect data transmission.",
+      "p3": "Retention period: we keep data no longer than necessary to fulfill orders, provide support, resolve disputes and/or comply with legal requirements (including payment accounting). Once it is no longer needed, data may be deleted or anonymized."
     },
     "section7": {
-      "title": "7. RECHTE DES BENUTZERS",
-      "intro": "Gemäß Art. 8 des Gesetzes der Ukraine „Über den Schutz personenbezogener Daten“ haben Sie das Recht:",
-      "item1": "Zu wissen, welche Ihrer Daten wir genau verarbeiten.",
-      "item2": "Die Änderung oder Löschung Ihrer personenbezogenen Daten aus unserer Datenbank zu verlangen (Recht auf Vergessenwerden).",
-      "item3": "Die Einwilligung zur Datenverarbeitung zu widerrufen.",
-      "note": "Um diese Rechte auszuüben, kontaktieren Sie bitte unseren Support."
+      "title": "7. USER RIGHTS",
+      "intro": "Under Ukrainian law, you have the right to:",
+      "item1": "Know what personal data we process and for what purposes.",
+      "item2": "Request correction of inaccurate data or deletion of data if there are no lawful grounds for further retention.",
+      "item3": "Withdraw consent to data processing (this may make it impossible to fulfill an order or continue support if such data is technically/legally required).",
+      "note": "To exercise these rights, please contact our support using the details below."
     },
     "section8": {
-      "title": "8. KONTAKTINFORMATIONEN",
-      "intro": "Wenn Sie Fragen zum Datenschutz haben, kontaktieren Sie uns bitte:",
-      "company": "Einzelunternehmerin Sovha Yevheniia Vasylivna",
-      "email": "E-Mail: support@wtmelon.store",
-      "telegram": "Telegram: @WTmelon (oder aktueller Support-Kontakt)",
-      "phone": "Telefon: +380633084244",
-      "address": "Postanschrift: Ukraine, 90000, Gebiet Transkarpatien, Bezirk Chust, Siedlung Mischhirja, Unabhängigkeitsstraße, Haus 19"
+      "title": "8. CONTACT INFORMATION",
+      "intro": "If you have questions about privacy or want to exercise your rights, please contact us:",
+      "company": "Sole Proprietor (FOP) Sovha Yevheniia Vasylivna",
+      "email": "E-mail: support@wtmelon.store",
+      "telegram": "Telegram: @WTmelon (or the current support contact listed on the website)",
+      "phone": "Phone: +380633084244",
+      "address": "Mailing address: Ukraine, 90000, Zakarpattia region, Khust district, urban-type settlement Mizhhiria, Nezalezhnosti street, building 19"
+    }
+  },
+  "order": {
+    "title": "Bestellung aufgeben",
+    "product": "Produkt",
+    "plan": "Plan",
+    "duration": "Dauer",
+    "price": "Preis",
+    "total": "Summe",
+    "placeOrder": "Bestellen",
+    "form": {
+      "name": "Ihr Name",
+      "namePlaceholder": "Geben Sie Ihren Namen ein",
+      "telegram": "Telegram (empfohlen)",
+      "telegramPlaceholder": "@username",
+      "phone": "Telefon",
+      "phonePlaceholder": "+380XXXXXXXXX",
+      "email": "E-Mail",
+      "emailPlaceholder": "ihre@email.com",
+      "comment": "Kommentar",
+      "commentPlaceholder": "Zusätzliche Wünsche oder Fragen",
+      "contactNote": "Bitte geben Sie Telegram oder Telefon (erforderlich) und E-Mail (erforderlich) an",
+      "agreement": {
+        "prefix": "Ich stimme den",
+        "terms": "Nutzungsbedingungen",
+        "privacy": "Datenschutzerklärung",
+        "and": "und",
+        "refund": "Rückgabebedingungen zu"
+      },
+      "immediateStart": {
+        "label": "Sofort mit der Ausführung beginnen (innerhalb von 14 Tagen)",
+        "fullText": "Ich bitte um den Beginn der Auftragsausführung und/oder Lieferung digitaler Inhalte vor Ablauf der 14-tägigen Frist (falls zutreffend) und bestätige, dass nach dem tatsächlichen Beginn der Lieferung das Widerrufsrecht gemäß den Angebotsbedingungen und der Gesetzgebung eingeschränkt sein kann."
+      },
+      "submit": "Bestellung absenden"
+    },
+    "errors": {
+      "nameRequired": "Bitte geben Sie Ihren Namen ein",
+      "telegramInvalid": "Ungültiges Telegram-Benutzername-Format",
+      "emailRequired": "E-Mail ist erforderlich",
+      "emailInvalid": "Ungültiges E-Mail-Format",
+      "telegramOrPhoneRequired": "Bitte geben Sie Telegram oder Telefon an",
+      "termsRequired": "Sie müssen den Bedingungen zustimmen",
+      "submitFailed": "Fehler beim Absenden der Bestellung. Bitte versuchen Sie es erneut."
+    },
+    "success": {
+      "message": "Vielen Dank für Ihre Bestellung! Unser Manager wird sich in Kürze mit Ihnen in Verbindung setzen."
     }
   },
   "terms": {
-    "title": "Allgemeine Geschäftsbedingungen (AGB)",
-    "subtitle": "Vereinbarung über die Bereitstellung von Dienstleistungen und digitalen Inhalten",
-    "updated": "Letzte Aktualisierung: 1. Januar 2025",
-    "intro": "Dieser Vertrag ist ein offizielles öffentliches Angebot (Offerte) des Online-Shops „WaterMelon“, vertreten durch die Einzelunternehmerin Sovha Yevheniia Vasylivna (im Folgenden – „Auftragnehmer“), die auf der Grundlage eines Eintrags im Einheitlichen Staatsregister der juristischen Personen und Einzelunternehmer handelt, gerichtet an jede natürliche Person (im Folgenden – „Kunde“), einen Vertrag zu den unten aufgeführten Bedingungen abzuschließen.",
+    "title": "Öffentliches Angebot (AGB)",
+    "subtitle": "Lieferung digitaler Produkte und Erbringung digitaler Dienstleistungen",
+    "updated": "Zuletzt aktualisiert: 11. Januar 2026",
+    "intro": "Dieses Dokument ist ein öffentliches Angebot (die „AGB“/das „Angebot“) des Online-Shops „WaterMelon“ (Website: wtmelon.store), vertreten durch die Einzelunternehmerin (FOP) Sovha Yevheniia Vasylivna (der „Anbieter“), gerichtet an jede geschäftsfähige natürliche Person und/oder juristische Person (der „Kunde“/„Verbraucher“), einen elektronischen Vertrag zu den nachstehenden Bedingungen abzuschließen.",
     "section1": {
-      "title": "1. BEGRIFFSBESTIMMUNGEN",
-      "offer": "Offerte – ein öffentliches Angebot des Auftragnehmers, das auf der Website oder in offiziellen Kanälen des WaterMelon-Shops veröffentlicht wird, bezüglich der Bereitstellung digitaler Dienstleistungen.",
-      "acceptance": "Akzeptanz – die vollständige und bedingungslose Annahme der Bedingungen dieser Offerte durch den Kunden durch Bezahlung der Dienstleistungen oder Beginn der tatsächlichen Nutzung der Dienstleistungen (bei Aktivierung vor Bezahlung).",
-      "service": "Dienstleistung / Digitales Produkt – Bereitstellung des Zugangs zu kostenpflichtigen Funktionen von Drittanbieterdiensten (Spotify, Canva, YouTube, Netflix usw.) durch Übermittlung von Codes, Links oder Kontokonfiguration."
+      "title": "1. BEGRIFFE UND DEFINITIONEN",
+      "offer": "Angebot – der öffentliche Vorschlag des Anbieters, einen Vertrag zu diesen Bedingungen abzuschließen, veröffentlicht auf wtmelon.store und/oder in den offiziellen Kanälen von WaterMelon.",
+      "acceptance": "Annahme – die vollständige und vorbehaltlose Annahme dieser Bedingungen durch eine oder mehrere Handlungen: Bestellung, Zahlung, Bestätigung von Einwilligungen (Checkboxen) und/oder tatsächlicher Erhalt digitaler Produkte/Dienstleistungen.",
+      "digitalGoods": "Digitale Produkte – digitale Waren (Codes/Keys/E-Gutscheine/Abonnements/Aktivierungen/Zugang), die elektronisch geliefert werden und die Nutzung von digitalen Inhalten oder eines Dienstes gemäß der Produktbeschreibung auf der Website ermöglichen.",
+      "service": "Digitale Dienstleistung / Dienstleistung – Unterstützung bei Organisation, Einrichtung, Betreuung oder technische Hilfe, um digitale Produkte/Zugang zu erhalten und zu nutzen.",
+      "period": "Zugangszeitraum – die Dauer, für die Zugang/Aktivierung gemäß dem gewählten Tarif bereitgestellt wird.",
+      "durableMedium": "Dauerhafter Datenträger – ein Medium, das die Speicherung von Informationen zur späteren Nutzung ermöglicht (u. a. E-Mail, Kundenkonto auf der Website, Datei/Nachricht, die gespeichert werden kann).",
+      "supportHours": "Supportzeiten – täglich von 10:00 bis 22:00 Uhr (Kyjiw-Zeit), sofern auf der Website nichts anderes angegeben ist."
     },
     "section2": {
       "title": "2. VERTRAGSGEGENSTAND",
-      "p1": "Der Auftragnehmer verpflichtet sich, dem Kunden die Dienstleistung zur Aktivierung des Zugangs zum gewählten Dienst zu erbringen, und der Kunde verpflichtet sich, diese anzunehmen und zu bezahlen.",
-      "p2": "Besonderheiten der Dienstleistung: Der Auftragnehmer ist nicht Eigentümer, Entwickler oder offizieller Vertreter der Plattformen (Canva, Spotify usw.). Der Auftragnehmer bietet Vermittlungs- und technische Hilfsdienste bei der Organisation des Zugangs an (z. B. Aufnahme in eine „Familiengruppe“, Bereitstellung eines Prepaid-Kontos usw.)."
+      "p1": "Der Anbieter verpflichtet sich, dem Kunden digitale Produkte zu liefern und/oder Dienstleistungen zu erbringen, und der Kunde verpflichtet sich, diese anzunehmen und zu bezahlen.",
+      "p2": "Die konkreten Bedingungen (Bezeichnung, Tarif, Laufzeit, Umfang, Lieferart, Preis) ergeben sich aus den Informationen auf der Website und/oder der Bestätigung durch den Manager und sind Bestandteil dieses Vertrags.",
+      "p3": "Bestimmte digitale Produkte/Dienstleistungen können mit Diensten Dritter verbunden sein. Der Kunde verpflichtet sich, die Regeln solcher Dienste einzuhalten.",
+      "p4": "Offizielle Vertriebskanäle und Verträge: Der Anbieter handelt auf Grundlage von Verträgen mit Lieferanten/Partnern und/oder über Marktplätze. Insbesondere handelt der Anbieter bei bestimmten digitalen Produkten/Abonnements auf Grundlage von Lieferverträgen mit Lieferanten (z. B. digitale Produkte der Marke SWEET.TV mit dem Recht zur Weiterveräußerung an Endverbraucher). Der Anbieter kann Produkte/Dienstleistungen auch über Marktplätze, einschließlich der Plattform Rozetka (LLC „Terminal Rozetka“), gemäß deren Regeln und Bedingungen vertreiben.",
+      "p5": "Nachweisunterlagen: Auf begründete Anfrage einer Acquiring-Bank/Zahlungsdienstleisters und/oder zuständiger Behörden kann der Anbieter Kopien/Auszüge von Dokumenten bereitstellen, die die rechtliche Grundlage der Geschäftstätigkeit bestätigen, unter Wahrung der Vertraulichkeit und/oder mit Schwärzung sensibler Daten (falls erforderlich).",
+      "p6": "Verbundene Dokumente: Datenschutzrichtlinie (Privacy Policy), Rückerstattungsrichtlinie (Refund Policy), Richtlinie zu Zahlung & Lieferung (Delivery & Payment Policy) sowie die Seite „Legal/Impressum“, die auf der Website veröffentlicht sind, sind Bestandteil der Servicebedingungen von WaterMelon. Im Falle von Abweichungen haben diese AGB (das Angebot) Vorrang."
     },
     "section3": {
-      "title": "3. BESTELL- UND AKTIVIERUNGSVERFAHREN",
-      "p1": "Die Bestellung erfolgt über die Website-Schnittstelle oder durch Kontaktaufnahme mit einem Manager über Messenger (Telegram, Viber, Instagram).",
-      "p2": "Bereitstellungsmethoden (Lieferung): Abhängig von der Art des erworbenen Abonnements kann der Auftragnehmer den Zugang auf eine der folgenden Weisen gewähren:",
-      "method1": "Senden von Login und Passwort eines aktivierten Kontos an den Kunden;",
-      "method2": "Senden eines Einladungslinks (Invite) zum Beitritt des eigenen Kontos des Kunden zum Abonnement;",
-      "method3": "Manuelle Aktivierung durch den Manager: Anmeldung im Konto des Kunden (mit den bereitgestellten Daten) und Durchführung der Zahlung/Einrichtung des Abonnements.",
-      "p3": "Ausführungszeit: Die Dienstleistung wird von einem WaterMelon-Manager während der Arbeitszeit nach Auftragsbestätigung erbracht. Die Standardausführungszeit beträgt 15 Minuten bis 24 Stunden.",
-      "p4": "Der Auftragnehmer behält sich das Recht vor, das Abonnement für den Kunden nach eigenem Ermessen vor der Bezahlung zu aktivieren (Post-Payment). In diesem Fall verpflichtet sich der Kunde, die Zahlung innerhalb der vereinbarten Frist zu leisten. Bei Nichtzahlung wird der Zugang widerrufen."
+      "title": "3. GESCHÄFTSFÄHIGKEIT UND ALTER",
+      "p1": "Der Kunde bestätigt, dass er voll geschäftsfähig ist.",
+      "p2": "Ist der Kunde unter 18 Jahre alt, muss die Bestellung und Zahlung mit Zustimmung eines gesetzlichen Vertreters erfolgen.",
+      "p3": "Der Kunde bestätigt zudem die Einhaltung etwaiger Altersbeschränkungen nach den Regeln der jeweiligen Dienste/Inhaltsanbieter."
     },
     "section4": {
-      "title": "4. BEZAHLUNG DER DIENSTLEISTUNGEN",
-      "p1": "Die Preise für Dienstleistungen sind auf der Website oder im Katalog des WaterMelon-Shops angegeben.",
-      "p2": "Die Zahlung erfolgt in der Landeswährung der Ukraine (Hrywnja).",
-      "p3": "Zahlungsmethode: Die Zahlung erfolgt durch Überweisung von Geldern auf das Bankkonto des Auftragnehmers (IBAN), dessen Daten vom Manager bei der Bestellung mitgeteilt oder auf der Website angegeben werden. Bei Anschluss von Acquiring kann die Zahlung per Bankkarte direkt auf der Website erfolgen.",
-      "p4": "Der Vertrag gilt im Moment der Gutschrift der Gelder auf dem Konto des Auftragnehmers als bezahlt."
+      "title": "4. BESTELLUNG UND LIEFERUNG",
+      "p1": "Bestellungen können auf wtmelon.store oder über einen Manager über die offiziellen Kanäle von WaterMelon aufgegeben werden.",
+      "p2": "Die Lieferung erfolgt elektronisch und kann umfassen: (a) Bereitstellung eines Codes/Keys/E-Gutscheins; (b) Bereitstellung eines Links/einer Einladung (invite) oder Anweisungen; (c) technische Unterstützung/Betreuung.",
+      "p3": "Remote-technische Unterstützung: Auf gesonderte Anfrage und mit ausdrücklicher Zustimmung des Kunden kann der Anbieter Remote-Support zur Einrichtung/Aktivierung leisten. Dabei nutzt der Anbieter bereitgestellte Daten/Zugänge ausschließlich zur Auftragsausführung, ändert keine kritischen Kontoparameter (E-Mail/Login/Passwort/Zahlungseinstellungen), sofern nicht mit dem Kunden vereinbart, und kann eine Passwortänderung nach Abschluss empfehlen (falls relevant).",
+      "p4": "Voraussichtliche Lieferzeit: 15 Minuten bis 24 Stunden innerhalb der Supportzeiten, sofern auf der Website/Bestellbestätigung nichts anderes angegeben ist.",
+      "p5": "Zeitpunkt der Leistung: Digitale Produkte/Dienstleistungen gelten als geliefert/erbracht mit Bereitstellung des Codes/Links/der Anweisungen oder mit tatsächlicher Freischaltung des Zugangs (je nachdem, was früher eintritt).",
+      "p51": "Beginn des Zugangszeitraums: Hängt bei einem bestimmten digitalen Produkt/Abonnement der Zugangszeitraum von der tatsächlichen Aktivierung auf Seiten des Dienstes ab, beginnt der Zeitraum mit der tatsächlichen Aktivierung/Freischaltung, bestätigt durch den technischen Status des Dienstes und/oder eine elektronische Mitteilung des Anbieters.",
+      "p6": "Bestell-/Zahlungsbestätigungen (Beleg/E-Mail/Nachricht) werden dem Kunden elektronisch bereitgestellt (dauerhafter Datenträger)."
     },
     "section5": {
-      "title": "5. GARANTIEN UND RÜCKERSTATTUNG",
-      "warranty": "Garantiezeitraum: Der Auftragnehmer garantiert die Funktionsfähigkeit der bereitgestellten Dienstleistung (Abonnement) während des gesamten bezahlten Zeitraums (z. B. 1, 3, 6 oder 12 Monate).",
-      "replacement": "Ersatzbedingungen: Wenn der Zugang zum Dienst vor Ablauf des bezahlten Zeitraums ohne Verschulden des Kunden endet (technischer Fehler, Verlust des Premium-Status), verpflichtet sich der Auftragnehmer, den Zugang wiederherzustellen oder innerhalb von 24 Stunden nach Anfrage des Kunden Ersatz (anderes Konto/Link) zu leisten.",
-      "refund": "Rückerstattung:",
-      "refundItem1": "Eine Rückerstattung ist möglich, wenn sich die Dienstleistung als nicht funktionsfähig erwiesen hat und der Auftragnehmer innerhalb von 24 Stunden keinen Ersatz leisten oder den Betrieb wiederherstellen konnte.",
-      "refundItem2": "Gelder werden nicht zurückerstattet, wenn der Kunde es sich nach Erhalt des funktionierenden Zugangs anders überlegt hat, da das digitale Produkt im Moment der Gewährung des Zugangs als konsumiert gilt (gemäß dem Gesetz der Ukraine „Über digitale Inhalte und digitale Dienstleistungen“)."
+      "title": "5. PREIS, WÄHRUNG UND ZAHLUNG",
+      "p1": "Preise werden auf der Website angezeigt oder vor der Zahlung vom Manager mitgeteilt.",
+      "p2": "Zahlungen können in UAH / USD / EUR erfolgen (abhängig von der Zahlungsseite). Eine ggf. erforderliche Währungsumrechnung erfolgt durch die Bank/Zahlungsplattform des Kunden.",
+      "p3": "Zahlungsarten: Bankkarte über Acquiring/Zahlungsdienstleister, Überweisung auf das IBAN-Konto des Anbieters oder andere auf der Website verfügbare Methoden.",
+      "p4": "Die Zahlung gilt als erfolgt, sobald die Transaktion vom Zahlungssystem bestätigt wurde oder die Mittel dem Konto des Anbieters gutgeschrieben wurden.",
+      "p5": "Der Kunde stimmt zu, dass Bestell-/Zahlungsbestätigungen sowie Mitteilungen zu Lieferung/Ersatz/Rückerstattung elektronisch (E-Mail, Messenger, Kundenkonto) übermittelt werden können und damit einen dauerhaften Datenträger darstellen."
     },
     "section6": {
-      "title": "6. NUTZUNGSREGELN UND HAFTUNGSBESCHRÄNKUNG",
-      "prohibition": "Verbot der Datenänderung: Dem Kunden ist es untersagt, kritische Einstellungen der bereitgestellten Konten (Login, E-Mail, Passwort, Zahlungsprofil) ohne vorherige Zustimmung des Auftragnehmers zu ändern.",
-      "warranty_void": "Erlöschen der Garantie: Bei Verletzung von Punkt 6.1 (eigenmächtige Datenänderung) erlischt die Garantie für die Ware, und der Auftragnehmer haftet nicht für den weiteren Betrieb des Kontos. Gelder werden in diesem Fall nicht zurückerstattet.",
-      "liability": "Der Auftragnehmer haftet nicht für:",
-      "liabilityItem1": "Globale technische Ausfälle im Betrieb der Dienste (z. B. wenn Spotify-Server weltweit nicht funktionieren);",
-      "liabilityItem2": "Sperrung des Kontos durch die Verwaltung des Dienstes aufgrund von Verstößen des Kunden gegen die Community-Regeln (Spam, Verwendung verbotener Software usw.)."
+      "title": "6. LEISTUNGSBEGINN VOR ABLAUF DER 14-TAGE-FRIST UND WIDERRUFSRECHT",
+      "p1": "Bestimmte digitale Produkte/Dienstleistungen können digitale Inhalte/digitale Dienstleistungen darstellen, die nicht auf einem körperlichen Datenträger geliefert werden.",
+      "p2": "Der Kunde bestätigt, dass er vor der Zahlung die Möglichkeit hatte, diese AGB sowie die verbundenen Richtlinien auf der Website zu lesen.",
+      "p3": "Schnellstart-Option (Wahl des Kunden): Der Kunde kann freiwillig verlangen, dass die Auftragsausführung und/oder die Lieferung digitaler Inhalte vor Ablauf einer 14-tägigen Widerrufsfrist beginnt (sofern eine solche Frist für die jeweilige Bestellung gilt). In diesem Fall erteilt der Kunde seine Zustimmung durch Setzen einer separaten Checkbox beim Checkout und/oder durch schriftliche Bestätigung in elektronischer Form (E-Mail/Messenger).",
+      "p4": "Der Kunde erkennt an, dass, wenn digitale Inhalte/digitale Dienstleistungen nicht auf einem körperlichen Datenträger geliefert werden und die Lieferung mit vorheriger ausdrücklicher Zustimmung des Kunden tatsächlich begonnen hat, das Widerrufsrecht nach Beginn der Lieferung im Rahmen des geltenden Rechts eingeschränkt sein kann.",
+      "p5": "Hat der Kunde die in Ziffer 6.3 beschriebene Zustimmung nicht erteilt, beginnt der Anbieter mit der Ausführung in dem Zeitrahmen und in der Weise, die mit dem Kunden in der Korrespondenz und/oder in der Bestellbestätigung vereinbart wurde."
     },
     "section7": {
-      "title": "7. PERSONENBEZOGENE DATEN",
-      "p1": "Der Kunde stimmt der Verarbeitung seiner personenbezogenen Daten (Name, Telefon, Kontodaten) ausschließlich zum Zweck der Auftragsabwicklung und der Bereitstellung technischer Unterstützung zu.",
-      "p2": "Falls der Kunde dem Auftragnehmer zur Aktivierung des Abonnements Zugangsdaten für sein persönliches Konto übermittelt, verpflichtet sich der Auftragnehmer, diese Daten nicht für andere Zwecke zu verwenden, sie nicht zu ändern und nicht an Dritte weiterzugeben. Nach Aktivierung des Abonnements empfiehlt der Auftragnehmer dem Kunden, das temporäre Passwort zu ändern."
+      "title": "7. GEWÄHRLEISTUNG, KONFORMITÄT UND SUPPORT",
+      "p1": "Der Anbieter gewährleistet, dass die digitalen Produkte/der Zugang zum Zeitpunkt der Lieferung der Bestellbeschreibung entsprechen.",
+      "p2": "Werden digitale Produkte/Dienstleistungen nicht bereitgestellt, kann der Kunde deren Bereitstellung verlangen; erfolgt diese nicht innerhalb einer zusätzlich vereinbarten oder angemessenen Frist, kann der Kunde den Vertrag kündigen.",
+      "p3": "Bei Nichtkonformität (Zugang/Aktivierung funktioniert nicht oder nicht wie beschrieben) kann der Kunde Konformität (Wiederherstellung/Ersatz) oder eine verhältnismäßige Preisminderung/Kündigung verlangen – soweit gesetzlich vorgesehen.",
+      "p4": "Übliche Reaktionszeit des Supports: bis zu 24 Stunden innerhalb der Supportzeiten."
     },
     "section8": {
-      "title": "8. HÖHERE GEWALT",
-      "p1": "Die Parteien sind von der Haftung für teilweise oder vollständige Nichterfüllung der Verpflichtungen aus diesem Vertrag befreit, wenn dies die Folge von Umständen höherer Gewalt war (Kriegsrecht, Blackouts, Cyberangriffe auf das Bankensystem usw.)."
+      "title": "8. ERSATZ UND RÜCKERSTATTUNGEN",
+      "p1": "Endet der Zugang/die Aktivierung vor Ablauf des Zugangszeitraums nicht aufgrund des Kunden (einschließlich technischer Probleme auf Seiten des Dienstes), stellt der Anbieter auf Anfrage des Kunden innerhalb von 24 Stunden entweder (a) den Zugang wieder her oder (b) stellt einen Ersatz (gleichwertiger Zugang/dieselbe Aktivierung für denselben Dienst) bereit.",
+      "p2": "Im gegenseitigen Einvernehmen kann alternativ ein anderes digitales Produkt/ein anderer Dienst zu gleichwertigen Bedingungen bereitgestellt werden.",
+      "p3": "Konnte der Anbieter den Zugang aufgrund eigenen Verschuldens nicht bereitstellen/verbinden oder den Zugang nicht innerhalb der in Ziffer 8.1 genannten Frist wiederherstellen/ersetzen, kann der Kunde verlangen: (a) Rückerstattung oder (b) Rückerstattung für den ungenutzten Teil des Zugangszeitraums (anteilig).",
+      "p4": "Rückerstattungen erfolgen über dieselbe Zahlungsmethode wie die Zahlung oder über eine andere vereinbarte Methode, sofern technisch erforderlich.",
+      "p41": "Support-Kanäle: Anfragen zur Auftragsausführung, Wiederherstellung/Ersatz des Zugangs und/oder Rückerstattungen werden über jeden Kontaktkanal akzeptiert, der im Bereich „Legal/Kontakte“ auf der Website angegeben ist.",
+      "p5": "Berechnung der anteiligen Rückerstattung: Wenn eine anteilige Rückerstattung gilt, wird der Betrag anhand der ungenutzten Tage/Zeiträume des bezahlten Tarifs berechnet (z. B.: gezahlter Betrag / Anzahl der Tage im Zugangszeitraum × ungenutzte Tage), sofern die Tarifbedingungen nichts anderes vorsehen.",
+      "p6": "Rückerstattungsfrist: Rückerstattungen werden innerhalb der gesetzlich und durch Zahlungsregeln vorgegebenen Frist bearbeitet, in der Regel jedoch spätestens innerhalb von 14 Kalendertagen ab dem Zeitpunkt, an dem die Parteien die Grundlage für die Rückerstattung vereinbaren (sofern nicht gesetzlich oder durch Bank/Provider-Prozesse anders erforderlich)."
     },
     "section9": {
-      "title": "9. KONTAKTDATEN DES AUFTRAGNEHMERS",
-      "company": "Einzelunternehmerin Sovha Yevheniia Vasylivna",
-      "code": "Steuernummer (RNOKPP): 3053915382",
-      "address": "Adresse: Ukraine, 90000, Gebiet Transkarpatien, Bezirk Chust, Siedlung Mischhirja, Unabhängigkeitsstraße, Haus 19",
-      "email": "E-Mail: support@wtmelon.store",
+      "title": "9. NUTZUNGSREGELN UND HAFTUNGSBESCHRÄNKUNG",
+      "p1": "Der Kunde darf keine Handlungen vornehmen, die zum Verlust des Zugangs führen können (Verstoß gegen Dienstregeln, Betrug, Umgehung von Beschränkungen usw.).",
+      "p2": "Verstößt der Kunde gegen Regeln eines Drittanbieterdienstes und führt dies zu Sperrung/Beschränkung, können Gewährleistungsansprüche gegenüber dem Anbieter entfallen.",
+      "liability": "Der Anbieter haftet nicht für:",
+      "liabilityItem1": "globale technische Ausfälle von Drittanbieterdiensten;",
+      "liabilityItem2": "Internetverbindung/Hardware des Kunden;",
+      "liabilityItem3": "Folgen von Handlungen des Kunden entgegen Anweisungen des Anbieters oder entgegen Dienstregeln;",
+      "liabilityItem4": "die Unmöglichkeit, einen Dienst zu nutzen, wenn dem Kunden die technische Möglichkeit oder das Nutzungsrecht fehlt (z. B. wegen Anforderungen/Restriktionen des Dienstes, regionaler Einschränkungen, Alter, Konto-/Geräteeinstellungen usw.), sofern der Anbieter den Zugang/die Aktivierung entsprechend der Bestellbeschreibung bereitgestellt hat."
+    },
+    "section10": {
+      "title": "10. PERSONENBEZOGENE DATEN",
+      "p1": "Personenbezogene Daten werden vom Anbieter gemäß der Datenschutzrichtlinie auf der Website und den anwendbaren ukrainischen Rechtsvorschriften verarbeitet.",
+      "p2": "Stellt der Kunde Zugangsdaten für Remote-Support bereit, nutzt der Anbieter diese ausschließlich zur Auftragserfüllung und gibt sie ohne rechtliche Grundlage nicht an Dritte weiter."
+    },
+    "section11": {
+      "title": "11. HÖHERE GEWALT",
+      "p1": "Die Parteien sind von der Haftung für Nichterfüllung aufgrund höherer Gewalt befreit (Krieg, Blackouts, Cyberangriffe, Unfälle, Kommunikationsausfälle usw.)."
+    },
+    "section12": {
+      "title": "12. LAUFZEIT, ÄNDERUNGEN, SPRACHE",
+      "p1": "Dieser Vertrag tritt mit Annahme in Kraft und gilt bis zur vollständigen Erfüllung der Verpflichtungen durch die Parteien.",
+      "p2": "Der Anbieter kann diese Bedingungen ändern. Eine neue Version tritt mit Veröffentlichung auf der Website in Kraft und gilt für Bestellungen, die nach der Veröffentlichung aufgegeben werden.",
+      "p3": "Diese Bedingungen können in mehreren Sprachen verfügbar sein. Im Falle von Abweichungen hat die ukrainische Version Vorrang."
+    },
+    "section13": {
+      "title": "13. ANWENDBARES RECHT UND STREITBEILEGUNG",
+      "p1": "Anwendbares Recht: Recht der Ukraine.",
+      "p2": "Streitigkeiten werden durch Verhandlungen beigelegt; andernfalls nach Maßgabe des ukrainischen Rechts.",
+      "p3": "Wenn der Kunde Verbraucher ist und dauerhaft außerhalb der Ukraine wohnt, können zwingende Verbraucherschutzvorschriften des Wohnsitzstaates insoweit Anwendung finden, wie dies ausdrücklich durch das internationale Privatrecht und/oder anwendbares Recht vorgesehen ist."
+    },
+    "section14": {
+      "title": "14. ANBIETERANGABEN",
+      "company": "Einzelunternehmerin (FOP) Sovha Yevheniia Vasylivna",
+      "code": "Steuer-ID (RNOKPP): 3053915382",
+      "address": "Adresse: Ukraine, 90000, Oblast Transkarpatien, Bezirk Chust, Siedlung Mizhhiria, Nezalezhnosti-Straße, Gebäude 19",
+      "email": "E-mail: support@wtmelon.store",
+      "phone": "Telefon: +380633084244",
+      "brand": "Handelsname/Marke: WaterMelon (wtmelon.store)"
+    }
+  },
+  "refund": {
+    "title": "Rückgabe & Umtausch",
+    "updated": "Zuletzt aktualisiert: 11. Januar 2026",
+    "section1": {
+      "title": "1. ALLGEMEINE BEDINGUNGEN",
+      "p1": "Wir bemühen uns um einen hohen Service-Standard und gewährleisten die Funktionsfähigkeit des bereitgestellten Zugangs/Abonnements für den bezahlten Zeitraum, sofern der Kunde die Regeln des jeweiligen Dienstes sowie unsere Public Offer (AGB) einhält.",
+      "p2": "Bei Problemen mit dem Zugang stellen wir den Zugang wieder her oder bieten innerhalb von 24 Stunden nach Ihrer Anfrage einen Ersatz an. Ist dies aufgrund eines Verschuldens des Anbieters nicht möglich, kann der Kunde gemäß den nachstehenden Bedingungen eine Rückerstattung verlangen."
+    },
+    "section2": {
+      "title": "2. VORAUSSETZUNGEN FÜR EINE RÜCKERSTATTUNG",
+      "intro": "Eine Rückerstattung ist in folgenden Fällen möglich:",
+      "item1": "Zugang/Aktivierung funktioniert nicht oder wurde ohne Verschulden des Kunden beendet und wir konnten den Zugang nicht wiederherstellen oder innerhalb von 24 Stunden nach Ihrer Anfrage keinen Ersatz bereitstellen.",
+      "item2": "Wir konnten den Zugang aufgrund eines Verschuldens des Anbieters nicht bereitstellen/verbinden (z. B. Aktivierungs-/Einrichtungsfehler auf unserer Seite).",
+      "item3": "Nach gegenseitiger Vereinbarung – eine anteilige Rückerstattung für den ungenutzten Teil des bezahlten Zeitraums, wenn der Kunde diese Option anstelle eines Ersatzes wählt."
+    },
+    "section3": {
+      "title": "3. FÄLLE, IN DENEN KEINE RÜCKERSTATTUNG ERFOLGT",
+      "p1": "Eine Rückerstattung wird in folgenden Fällen nicht gewährt:",
+      "item1": "Der Kunde hat es sich nach Erhalt eines funktionierenden Zugangs/einer Aktivierung anders überlegt (digitale Produkte gelten als geliefert, sobald der Zugang freigeschaltet oder ein Code/Link/Anweisungen bereitgestellt wurden).",
+      "item2": "Das Problem entstand aufgrund eines Verstoßes des Kunden gegen Nutzungsregeln (unautorisierte Änderungen kritischer Kontodaten, Verstoß gegen Dienstregeln, betrügerische Handlungen usw.).",
+      "item3": "Dem Kunden fehlt die technische Möglichkeit oder das Nutzungsrecht für den Dienst (z. B. regionale/Altersbeschränkungen, Konto-/Geräteeinstellungen), sofern wir den Zugang gemäß der Bestellbeschreibung bereitgestellt haben."
+    },
+    "section4": {
+      "title": "4. ABLAUF DER RÜCKERSTATTUNG",
+      "p1": "Um eine Rückerstattung oder einen Ersatz zu beantragen, kontaktieren Sie bitte unseren Support über Telegram oder per E-Mail und nennen Sie: Angaben zur Identifizierung des Kaufs (Bestellung/Datum/Betrag), den Namen des Dienstes sowie eine kurze Problembeschreibung (wenn möglich mit Screenshot). Wir empfehlen, sich unmittelbar nach Auftreten des Problems zu melden.",
+      "p2": "Rückerstattungen erfolgen über dieselbe Zahlungsmethode, die für die Transaktion verwendet wurde (sofern technisch möglich). Die Bearbeitungszeit richtet sich nach den Regeln der Bank/Zahlungssysteme: typischerweise 5–10 Werktage nach Genehmigung, jedoch in der Regel nicht später als 14 Kalendertage (sofern nicht gesetzlich oder durch Bank/Provider-Prozesse anders erforderlich)."
+    },
+    "section5": {
+      "title": "5. KONTAKTINFORMATIONEN",
+      "contact": "Für Rückerstattungen oder Umtausch kontaktieren Sie uns bitte:",
+      "telegram": "Telegram: @WTmelon (oder der aktuelle Support-Kontakt, der auf der Website angegeben ist)",
+      "email": "Email: support@wtmelon.store"
+    }
+  },
+  "delivery": {
+    "title": "Lieferung & Zahlung",
+    "updated": "Zuletzt aktualisiert: 11. Januar 2026",
+    "section1": {
+      "title": "1. WIE WIR DIGITALE PRODUKTE/DIENSTLEISTUNGEN LIEFERN",
+      "p1": "Da wir digitale Produkte liefern und digitale Dienstleistungen anbieten (Abo-Zugang, Codes, Einladungen, Aktivierungen), ist keine physische Lieferung erforderlich. Die Bereitstellung erfolgt online auf eine der folgenden Arten:",
+      "p2": "Die Art der Bereitstellung hängt vom gewählten Dienst/Tarif ab und kann je nach Produkt variieren."
+    },
+    "section2": {
+      "title": "2. BESTELLUNG UND ZUGANGSERHALT",
+      "intro": "Der Ablauf zur Bereitstellung eines Abos/digitalen Produkts sieht in der Regel so aus:",
+      "step1": "Wählen Sie den gewünschten Dienst und Tarif auf unserer Website oder kontaktieren Sie unseren Manager über offizielle Support-Kanäle (z. B. Telegram).",
+      "step2": "Geben Sie eine Bestellung auf und führen Sie die Zahlung durch (oder vereinbaren Sie eine andere Zahlungsart).",
+      "step3": "Sie erhalten eine Bestell-/Zahlungsbestätigung in elektronischer Form (Nachricht/E-Mail).",
+      "step4": "Sie erhalten den Zugang über eine der folgenden Methoden: Code/Link/Einladung/Anleitung oder Aktivierung/Einrichtung in Abstimmung mit unserem Manager."
+    },
+    "section3": {
+      "title": "3. LIEFERZEITEN",
+      "p1": "Standard-Liefer-/Aktivierungszeit: 15 Minuten bis 24 Stunden innerhalb der Supportzeiten (täglich 10:00–22:00 Uhr, Kyjiw-Zeit), sofern auf der Produktseite nichts anderes angegeben ist.",
+      "p2": "In Ausnahmefällen (Ausfälle von Drittanbieterdiensten, hohe Auslastung, zusätzliche Zahlungsprüfung) kann sich die Lieferzeit verlängern. Wir informieren Sie darüber per Chat oder E-Mail."
+    },
+    "section4": {
+      "title": "4. ZAHLUNGSMETHODEN",
+      "p1": "Wir akzeptieren Zahlungen mit folgenden Methoden (abhängig von der Verfügbarkeit auf der Website und dem Land des Käufers):",
+      "item1": "Kartenzahlung (Visa/Mastercard) über Acquiring/Zahlungsdienstleister (z. B. Fondy).",
+      "item2": "Banküberweisung auf das IBAN-Konto der Einzelunternehmerin – die Daten werden beim Checkout bereitgestellt oder sind auf der Website verfügbar.",
+      "item3": "Weitere Methoden, die auf der Zahlungsseite verfügbar sind oder mit unserem Manager vereinbart werden (falls erforderlich)."
+    },
+    "section5": {
+      "title": "5. WÄHRUNG UND ZAHLUNGSBESTÄTIGUNG",
+      "p1": "Zahlungen können in UAH / USD / EUR erfolgen (abhängig von der Zahlungsseite). Eine ggf. erforderliche Währungsumrechnung erfolgt durch die Bank/Zahlungsplattform des Käufers.",
+      "p2": "Die Zahlung gilt als abgeschlossen, sobald die Transaktion vom Zahlungssystem bestätigt wurde oder die Mittel dem Konto des Anbieters gutgeschrieben wurden. Eine Bestell-/Zahlungsbestätigung wird elektronisch bereitgestellt."
+    },
+    "section6": {
+      "title": "6. WICHTIGE NUTZUNGSBEDINGUNGEN",
+      "p1": "Um einen Dienst nutzen zu können, muss der Kunde die technische Möglichkeit und das Nutzungsrecht für den jeweiligen Dienst besitzen (einschließlich Anforderungen/Restriktionen des Dienstes, regionaler und/oder Altersbeschränkungen sowie Konto-/Geräteeinstellungen).",
+      "p2": "In einigen Fällen können wir auf Ihren Wunsch Remote-technische Unterstützung für Aktivierung/Einrichtung leisten. Solche Handlungen erfolgen nur mit Ihrer Zustimmung und nur in dem Umfang, der zur Auftragsausführung erforderlich ist."
+    },
+    "section7": {
+      "title": "7. KONTAKTINFORMATIONEN",
+      "contact": "Bei Fragen zu Zahlung oder Lieferung kontaktieren Sie uns bitte:",
+      "telegram": "Telegram: @WTmelon (oder der aktuelle Support-Kontakt, der auf der Website angegeben ist)",
+      "email": "E-mail: support@wtmelon.store",
       "phone": "Telefon: +380633084244"
+    }
+  },
+  "requisites": {
+    "title": "Unternehmensangaben",
+    "updated": "Zuletzt aktualisiert: 11. Januar 2026",
+    "section1": {
+      "title": "1. GRUNDINFORMATIONEN",
+      "company": "Rechtlicher Name:",
+      "companyName": "Einzelunternehmerin (FOP) Sovha Yevheniia Vasylivna",
+      "registration": "Steuer-ID (RNOKPP):",
+      "registrationNumber": "3053915382",
+      "vat": "USt-/Steuernummer:",
+      "vatNumber": "3053915382",
+      "brand": "Handelsname/Marke:",
+      "brandName": "WaterMelon (wtmelon.store)"
+    },
+    "section2": {
+      "title": "2. ADRESSE",
+      "legal": "Rechtsadresse:",
+      "legalAddress": "Ukraine, 90000, Oblast Transkarpatien, Bezirk Chust, Siedlung Mizhhiria, Nezalezhnosti-Straße, Gebäude 19",
+      "physical": "Geschäftsadresse:",
+      "physicalAddress": "Ukraine, 90000, Oblast Transkarpatien, Bezirk Chust, Siedlung Mizhhiria, Nezalezhnosti-Straße, Gebäude 19"
+    },
+    "section3": {
+      "title": "3. KONTAKTINFORMATIONEN",
+      "email": "E-mail:",
+      "emailValue": "support@wtmelon.store",
+      "phone": "Telefon:",
+      "phoneValue": "+380633084244",
+      "telegram": "Telegram:",
+      "telegramValue": "@WTmelon",
+      "website": "Webseite:",
+      "websiteValue": "wtmelon.store"
+    },
+    "section4": {
+      "title": "4. BANKVERBINDUNG",
+      "bank": "Bank:",
+      "bankName": "JSC CB „PRIVATBANK“",
+      "iban": "IBAN:",
+      "ibanNumber": "UA___________________________",
+      "swift": "SWIFT:",
+      "swiftCode": "PBANUA2X",
+      "note": "Die genauen Bankdaten für die Zahlung werden beim Checkout oder durch unseren Manager im Chat bereitgestellt."
+    },
+    "section5": {
+      "title": "5. LEITUNG",
+      "director": "Inhaberin (Einzelunternehmerin):",
+      "directorName": "Sovha Yevheniia Vasylivna"
     }
   }
 }
