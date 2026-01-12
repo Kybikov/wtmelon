@@ -40,10 +40,23 @@
 
         <section>
           <h2>{{ t('delivery.section5.title') }}</h2>
+          <p>{{ t('delivery.section5.p1') }}</p>
+          <p>{{ t('delivery.section5.p2') }}</p>
+        </section>
+
+        <section>
+          <h2>{{ t('delivery.section6.title') }}</h2>
+          <p>{{ t('delivery.section6.p1') }}</p>
+          <p>{{ t('delivery.section6.p2') }}</p>
+        </section>
+
+        <section>
+          <h2>{{ t('delivery.section7.title') }}</h2>
           <p>
-            {{ t('delivery.section5.contact') }}<br>
-            <strong>{{ t('delivery.section5.telegram') }}</strong><br>
-            <strong>{{ t('delivery.section5.email') }}</strong>
+            {{ t('delivery.section7.contact') }}<br>
+            <strong>{{ t('delivery.section7.telegram') }}</strong><br>
+            <strong>{{ t('delivery.section7.email') }}</strong><br>
+            <strong>{{ t('delivery.section7.phone') }}</strong>
           </p>
         </section>
       </div>

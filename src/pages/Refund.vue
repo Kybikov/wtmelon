@@ -27,6 +27,7 @@
           <ul>
             <li>{{ t('refund.section3.item1') }}</li>
             <li>{{ t('refund.section3.item2') }}</li>
+            <li>{{ t('refund.section3.item3') }}</li>
           </ul>
         </section>
 
