@@ -1,10 +1,10 @@
 <template>
-  <div class="loading-overlay">
+  <div class="loading-overlay" :class="{ 'dark': isDark }">
     <div class="watermelon-spinner">
       <div class="watermelon">
         <div class="watermelon-slice">
           <div class="red-part"></div>
-          <div class="white-part"></div>
+          <div class="white-part" :class="{ 'dark': isDark }"></div>
           <div class="green-part"></div>
           <div class="seed seed-1"></div>
           <div class="seed seed-2"></div>
@@ -19,11 +19,13 @@
 <script>
 import { computed } from 'vue'
 import { useLocale } from '../composables/useLocale'
+import { useTheme } from '../composables/useTheme'
 
 export default {
   name: 'LoadingSpinner',
   setup() {
     const { locale } = useLocale()
+    const { isDark } = useTheme()
 
     const loadingText = computed(() => {
       const texts = {
@@ -35,7 +37,7 @@ export default {
       return texts[locale.value] || texts.en
     })
 
-    return { loadingText }
+    return { loadingText, isDark }
   }
 }
 </script>
@@ -141,11 +143,11 @@ export default {
   animation: fadeInOut 1.5s ease-in-out infinite;
 }
 
-.dark-theme .loading-overlay {
+.loading-overlay.dark {
   background: #1a1a1a;
 }
 
-.dark-theme .white-part {
+.white-part.dark {
   background: linear-gradient(135deg, #e8e8e8 0%, #d5d5d5 100%);
 }
 
