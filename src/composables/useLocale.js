@@ -21,6 +21,7 @@ const LOCALE_NAMES = {
 const currentLocale = ref(DEFAULT_LOCALE)
 const translations = ref({})
 const isLoading = ref(true)
+let isInitialized = false
 
 export function useLocale() {
   const router = useRouter()
@@ -50,25 +51,29 @@ export function useLocale() {
     }
   }
 
-  const initLocale = (routeLocale) => {
+  const initLocale = async (routeLocale) => {
+    if (isInitialized && !routeLocale) {
+      return
+    }
+
     if (routeLocale && SUPPORTED_LOCALES.includes(routeLocale)) {
       currentLocale.value = routeLocale
-      return
+    } else if (!isInitialized) {
+      const savedLocale = localStorage.getItem('preferredLocale')
+      if (savedLocale && SUPPORTED_LOCALES.includes(savedLocale)) {
+        currentLocale.value = savedLocale
+      } else {
+        const browserLocale = navigator.language.split('-')[0]
+        if (SUPPORTED_LOCALES.includes(browserLocale)) {
+          currentLocale.value = browserLocale
+        } else {
+          currentLocale.value = DEFAULT_LOCALE
+        }
+      }
     }
 
-    const savedLocale = localStorage.getItem('preferredLocale')
-    if (savedLocale && SUPPORTED_LOCALES.includes(savedLocale)) {
-      currentLocale.value = savedLocale
-      return
-    }
-
-    const browserLocale = navigator.language.split('-')[0]
-    if (SUPPORTED_LOCALES.includes(browserLocale)) {
-      currentLocale.value = browserLocale
-      return
-    }
-
-    currentLocale.value = DEFAULT_LOCALE
+    await loadTranslations()
+    isInitialized = true
   }
 
   const t = (key) => {
@@ -110,7 +115,7 @@ export function useLocale() {
     return localePrices
   }
 
-  watch(locale, loadTranslations, { immediate: true })
+  watch(locale, loadTranslations)
 
   return {
     locale,

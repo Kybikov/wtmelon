@@ -6,6 +6,7 @@ import Refund from '../pages/Refund.vue'
 import Delivery from '../pages/Delivery.vue'
 import Requisites from '../pages/Requisites.vue'
 import NotFound from '../pages/NotFound.vue'
+import { useLocale } from '../composables/useLocale'
 
 const SUPPORTED_LOCALES = ['en', 'uk', 'de', 'ru']
 
@@ -134,6 +135,13 @@ const router = createRouter({
     }
     return { top: 0 }
   }
+})
+
+router.beforeEach(async (to, from, next) => {
+  const { initLocale } = useLocale()
+  const routeLocale = to.params.locale
+  await initLocale(routeLocale)
+  next()
 })
 
 export default router
