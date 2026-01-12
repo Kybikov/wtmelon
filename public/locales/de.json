@@ -266,6 +266,15 @@
       "phone": "Telefon: +380633084244",
       "address": "Postanschrift: Ukraine, 90000, Oblast Transkarpatien, Rajon Chust, Siedlung städtischen Typs Mizhhiria, Straße Nezalezhnosti, Gebäude 19",
       "additional": "Zusätzlich: Offizielle Support-Kanäle (Messenger) sind auf wtmelon.store aufgeführt"
+    },
+    "section14": {
+      "title": "14. ANGABEN ZUR ANBIETERIN",
+      "company": "Einzelunternehmerin (FOP) Sovha Yevheniia Vasylivna",
+      "code": "Steuernummer (RNOKPP): 3053915382",
+      "address": "Adresse: Ukraine, 90000, Oblast Transkarpatien, Rajon Chust, Siedlung städtischen Typs Mizhhiria, Straße Nezalezhnosti, Gebäude 19",
+      "email": "E-mail: support@wtmelon.store",
+      "phone": "Telefon: +380633084244",
+      "brand": "Handelsname/Marke: WaterMelon (wtmelon.store)"
     }
   },
   "order": {
@@ -464,6 +473,15 @@
       "contact": "Für Rückerstattungen oder Umtausch kontaktieren Sie uns bitte:",
       "telegram": "Telegram: @WTmelon (oder der aktuelle Support-Kontakt, der auf der Website angegeben ist)",
       "email": "Email: support@wtmelon.store"
+    },
+    "section14": {
+      "title": "14. ANGABEN ZUR ANBIETERIN",
+      "company": "Einzelunternehmerin (FOP) Sovha Yevheniia Vasylivna",
+      "code": "Steuernummer (RNOKPP): 3053915382",
+      "address": "Adresse: Ukraine, 90000, Oblast Transkarpatien, Rajon Chust, Siedlung städtischen Typs Mizhhiria, Straße Nezalezhnosti, Gebäude 19",
+      "email": "E-mail: support@wtmelon.store",
+      "phone": "Telefon: +380633084244",
+      "brand": "Handelsname/Marke: WaterMelon (wtmelon.store)"
     }
   },
   "delivery": {
@@ -510,6 +528,15 @@
       "telegram": "Zusätzlich: Offizielle Support-Kanäle (Messenger) sind auf wtmelon.store aufgeführt",
       "email": "E-mail: support@wtmelon.store",
       "phone": "Telefon: +380633084244"
+    },
+    "section14": {
+      "title": "14. ANGABEN ZUR ANBIETERIN",
+      "company": "Einzelunternehmerin (FOP) Sovha Yevheniia Vasylivna",
+      "code": "Steuernummer (RNOKPP): 3053915382",
+      "address": "Adresse: Ukraine, 90000, Oblast Transkarpatien, Rajon Chust, Siedlung städtischen Typs Mizhhiria, Straße Nezalezhnosti, Gebäude 19",
+      "email": "E-mail: support@wtmelon.store",
+      "phone": "Telefon: +380633084244",
+      "brand": "Handelsname/Marke: WaterMelon (wtmelon.store)"
     }
   },
   "requisites": {
@@ -553,10 +580,7 @@
       "iban": "IBAN:",
       "ibanNumber": "UA143220010000026001360036064",
       "swift": "SWIFT:",
-      "swiftCode": "UNJSUAUKXXX",
-      "purpose": "Verwendungszweck (empfohlen):",
-      "purposeValue": "Zahlung für digitale Waren/Dienstleistungen von WaterMelon, Bestell-Nr. _____",
-      "note": "Genaue Zahlungsdaten können auch während des Checkouts oder vom Manager im Chat bereitgestellt werden (je nach gewählter Zahlungsmethode)."
+      "swiftCode": "UNJSUAUKXXX"
     },
     "section5": {
       "title": "5. GESCHÄFTSFÜHRUNG",

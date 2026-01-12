@@ -91,6 +91,18 @@
             {{ t('privacy.section8.additional') }}
           </p>
         </section>
+
+        <section>
+          <h2>{{ t('privacy.section14.title') }}</h2>
+          <p>
+            <strong>{{ t('privacy.section14.company') }}</strong><br>
+            {{ t('privacy.section14.code') }}<br>
+            {{ t('privacy.section14.address') }}<br>
+            {{ t('privacy.section14.email') }}<br>
+            {{ t('privacy.section14.phone') }}<br>
+            {{ t('privacy.section14.brand') }}
+          </p>
+        </section>
       </div>
     </div>
   </div>

@@ -33,8 +33,6 @@
           <p><strong>{{ t('requisites.section4.mfo') }}</strong> {{ t('requisites.section4.mfoValue') }}</p>
           <p><strong>{{ t('requisites.section4.iban') }}</strong> {{ t('requisites.section4.ibanNumber') }}</p>
           <p><strong>{{ t('requisites.section4.swift') }}</strong> {{ t('requisites.section4.swiftCode') }}</p>
-          <p><strong>{{ t('requisites.section4.purpose') }}</strong> {{ t('requisites.section4.purposeValue') }}</p>
-          <p><em>{{ t('requisites.section4.note') }}</em></p>
         </section>
 
         <section>

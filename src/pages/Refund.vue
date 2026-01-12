@@ -45,6 +45,18 @@
           <p><strong>{{ t('refund.section5.address') }}</strong></p>
           <p><strong>{{ t('refund.section5.telegram') }}</strong></p>
         </section>
+
+        <section>
+          <h2>{{ t('refund.section14.title') }}</h2>
+          <p>
+            <strong>{{ t('refund.section14.company') }}</strong><br>
+            {{ t('refund.section14.code') }}<br>
+            {{ t('refund.section14.address') }}<br>
+            {{ t('refund.section14.email') }}<br>
+            {{ t('refund.section14.phone') }}<br>
+            {{ t('refund.section14.brand') }}
+          </p>
+        </section>
       </div>
     </div>
   </div>
