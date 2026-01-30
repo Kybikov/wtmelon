@@ -689,5 +689,32 @@
         }
       }
     ]
+  },
+  {
+    "id": "jetbrains",
+    "category": "ai",
+    "name": "JetBrains All-In Tool",
+    "shortDescription": "Широкий набір для розробки",
+    "description": "Потужний інструмент для навчання та роботи. Доступні весь пакет програм.",
+    "icon": "https://res.cloudinary.com/dtvh4rws0/image/upload/v1767721978/perplexity_ydthgf.webp",
+    "plans": [
+      {
+        "id": "all",
+        "name": "JetBrains All-In Dev Tool ",
+        "description": "Особистий акаунт при покупці на 12 місяців. На менший термін — доступ від нас.",
+        "features": [
+          "Доступний весь пакет програм",
+          "Code with me",
+          "JetBrains Academy",
+          "Топ за свої гроші"
+        ],
+        "prices": {
+          "1": 119,
+          "3": 339,
+          "6": 640,
+          "12": 1100
+        }
+      }
+    ]
   }
 ]
