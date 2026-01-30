@@ -74,17 +74,14 @@ export default {
       this.error = false
 
       try {
-        const response = await fetch(`/products-${this.currentLanguage}.json`)
+        const lang = this.currentLanguage || 'en'
+        const response = await fetch(`/.netlify/functions/catalog?lang=${encodeURIComponent(lang)}`)
 
         if (!response.ok) {
-          const fallback = await fetch('/products.json')
-          if (!fallback.ok) {
-            throw new Error('Failed to load products')
-          }
-          this.products = await fallback.json()
-        } else {
-          this.products = await response.json()
+          throw new Error(`Failed to load products: HTTP ${response.status}`)
         }
+
+        this.products = await response.json()
       } catch (error) {
         console.error('Error loading products:', error)
         this.error = true
