@@ -10,12 +10,13 @@
 </template>
 
 <script>
-import { computed } from 'vue'
+import { computed, onMounted } from 'vue'
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 import LoadingSpinner from './components/LoadingSpinner.vue'
 import { useSEO } from './composables/useSEO'
 import { useLocale } from './composables/useLocale'
+import { useAuth } from './composables/useAuth'
 
 export default {
   name: 'App',
@@ -27,6 +28,11 @@ export default {
   setup() {
     useSEO()
     const { loading } = useLocale()
+    const { initAuth } = useAuth()
+
+    onMounted(() => {
+      initAuth()
+    })
 
     return {
       loading: computed(() => loading.value)

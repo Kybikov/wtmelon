@@ -5,8 +5,11 @@ import Terms from '../pages/Terms.vue'
 import Refund from '../pages/Refund.vue'
 import Delivery from '../pages/Delivery.vue'
 import Requisites from '../pages/Requisites.vue'
+import Login from '../pages/Login.vue'
+import Cabinet from '../pages/Cabinet.vue'
 import NotFound from '../pages/NotFound.vue'
 import { useLocale } from '../composables/useLocale'
+import { supabase } from '../services/supabaseClient'
 
 const SUPPORTED_LOCALES = ['en', 'uk', 'de', 'ru']
 
@@ -15,6 +18,18 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login,
+    meta: { requiresGuest: true }
+  },
+  {
+    path: '/cabinet',
+    name: 'Cabinet',
+    component: Cabinet,
+    meta: { requiresAuth: true }
   },
   {
     path: '/privacy',
@@ -137,11 +152,21 @@ const router = createRouter({
   }
 })
 
-router.beforeEach((to, from, next) => {
+router.beforeEach(async (to, from, next) => {
   const { initLocale } = useLocale()
   const routeLocale = to.params.locale
   initLocale(routeLocale)
-  next()
+
+  const { data: { session } } = await supabase.auth.getSession()
+  const isAuthenticated = !!session
+
+  if (to.meta.requiresAuth && !isAuthenticated) {
+    next('/login')
+  } else if (to.meta.requiresGuest && isAuthenticated) {
+    next('/cabinet')
+  } else {
+    next()
+  }
 })
 
 export default router

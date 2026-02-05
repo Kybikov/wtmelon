@@ -573,5 +573,36 @@
     "title": "Page Not Found",
     "message": "Sorry, but the page you are looking for does not exist or has been moved.",
     "backHome": "Back to Home"
+  },
+  "login": {
+    "signin": "Sign In",
+    "signup": "Sign Up",
+    "email": "Email",
+    "emailPlaceholder": "Enter your email",
+    "password": "Password",
+    "passwordPlaceholder": "Enter password",
+    "loading": "Loading...",
+    "sendCode": "Send code to email",
+    "usePassword": "Sign in with password",
+    "useMagicLink": "Sign in with email code",
+    "haveAccount": "Already have an account? Sign in",
+    "noAccount": "Don't have an account? Sign up",
+    "error": "An error occurred. Please try again.",
+    "magicLinkSent": "Code sent to your email. Please check your inbox.",
+    "signupSuccess": "Registration successful! Redirecting..."
+  },
+  "cabinet": {
+    "title": "Customer Cabinet",
+    "signout": "Sign Out",
+    "userInfo": "User Information",
+    "email": "Email",
+    "registered": "Registered",
+    "orders": "My Orders",
+    "loading": "Loading...",
+    "refresh": "Refresh",
+    "noOrders": "You don't have any orders yet",
+    "orderNumber": "Order",
+    "nethuntData": "NetHunt Data",
+    "noNethuntData": "No data found"
   }
 }

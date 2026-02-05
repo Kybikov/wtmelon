@@ -56,6 +56,13 @@
         </ul>
 
         <div class="nav-controls">
+          <router-link v-if="user" to="/cabinet" class="cabinet-link">
+            <i class="fa-solid fa-user"></i>
+          </router-link>
+          <router-link v-else to="/login" class="login-link">
+            <i class="fa-solid fa-right-to-bracket"></i>
+          </router-link>
+
           <a href="tel:+380633084244" class="phone-link">
             <i class="fa-solid fa-phone"></i>
             <span class="phone-number">+380 63 308 42 44</span>
@@ -99,6 +106,7 @@ import { onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { useLocale } from '../composables/useLocale'
 import { useTheme } from '../composables/useTheme'
+import { useAuth } from '../composables/useAuth'
 
 export default {
   name: 'Navbar',
@@ -106,6 +114,7 @@ export default {
     const route = useRoute()
     const { locale, setLocale, initLocale, t } = useLocale()
     const { isDark, toggleTheme } = useTheme()
+    const { user } = useAuth()
 
     onMounted(() => {
       initLocale(route.params.locale)
@@ -116,7 +125,8 @@ export default {
       setLocale,
       t,
       isDark,
-      toggleTheme
+      toggleTheme,
+      user
     }
   },
   data() {
@@ -166,3 +176,44 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.cabinet-link,
+.login-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  transition: all 0.3s ease;
+  margin-right: 12px;
+}
+
+.cabinet-link:hover,
+.login-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.cabinet-link i,
+.login-link i {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .cabinet-link,
+  .login-link {
+    width: 36px;
+    height: 36px;
+    margin-right: 8px;
+  }
+
+  .cabinet-link i,
+  .login-link i {
+    font-size: 16px;
+  }
+}
+</style>

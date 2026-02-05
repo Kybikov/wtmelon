@@ -573,5 +573,36 @@
     "title": "Seite nicht gefunden",
     "message": "Entschuldigung, aber die Seite, die Sie suchen, existiert nicht oder wurde verschoben.",
     "backHome": "Zurück zur Startseite"
+  },
+  "login": {
+    "signin": "Anmelden",
+    "signup": "Registrieren",
+    "email": "E-Mail",
+    "emailPlaceholder": "Geben Sie Ihre E-Mail ein",
+    "password": "Passwort",
+    "passwordPlaceholder": "Passwort eingeben",
+    "loading": "Laden...",
+    "sendCode": "Code an E-Mail senden",
+    "usePassword": "Mit Passwort anmelden",
+    "useMagicLink": "Mit E-Mail-Code anmelden",
+    "haveAccount": "Bereits ein Konto? Anmelden",
+    "noAccount": "Kein Konto? Registrieren",
+    "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+    "magicLinkSent": "Code an Ihre E-Mail gesendet. Bitte überprüfen Sie Ihren Posteingang.",
+    "signupSuccess": "Registrierung erfolgreich! Weiterleitung..."
+  },
+  "cabinet": {
+    "title": "Kundenkabinett",
+    "signout": "Abmelden",
+    "userInfo": "Benutzerinformationen",
+    "email": "E-Mail",
+    "registered": "Registriert",
+    "orders": "Meine Bestellungen",
+    "loading": "Laden...",
+    "refresh": "Aktualisieren",
+    "noOrders": "Sie haben noch keine Bestellungen",
+    "orderNumber": "Bestellung",
+    "nethuntData": "NetHunt-Daten",
+    "noNethuntData": "Keine Daten gefunden"
   }
 }
