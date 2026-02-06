@@ -2,29 +2,29 @@
   <div class="login-page">
     <div class="login-container">
       <div class="login-card">
-        <h1 class="login-title">{{ isSignUp ? $t('login.signup') : $t('login.signin') }}</h1>
+        <h1 class="login-title">{{ isSignUp ? t('login.signup') : t('login.signin') }}</h1>
 
         <form @submit.prevent="handleSubmit" class="login-form">
           <div class="form-group">
-            <label for="email">{{ $t('login.email') }}</label>
+            <label for="email">{{ t('login.email') }}</label>
             <input
               id="email"
               v-model="email"
               type="email"
               required
-              :placeholder="$t('login.emailPlaceholder')"
+              :placeholder="t('login.emailPlaceholder')"
               class="form-input"
             />
           </div>
 
           <div v-if="!useMagicLink" class="form-group">
-            <label for="password">{{ $t('login.password') }}</label>
+            <label for="password">{{ t('login.password') }}</label>
             <input
               id="password"
               v-model="password"
               type="password"
               required
-              :placeholder="$t('login.passwordPlaceholder')"
+              :placeholder="t('login.passwordPlaceholder')"
               class="form-input"
             />
           </div>
@@ -38,19 +38,19 @@
           </div>
 
           <button type="submit" class="btn-submit" :disabled="isLoading">
-            <span v-if="isLoading">{{ $t('login.loading') }}</span>
-            <span v-else-if="useMagicLink">{{ $t('login.sendCode') }}</span>
-            <span v-else>{{ isSignUp ? $t('login.signup') : $t('login.signin') }}</span>
+            <span v-if="isLoading">{{ t('login.loading') }}</span>
+            <span v-else-if="useMagicLink">{{ t('login.sendCode') }}</span>
+            <span v-else>{{ isSignUp ? t('login.signup') : t('login.signin') }}</span>
           </button>
         </form>
 
         <div class="login-options">
           <button @click="useMagicLink = !useMagicLink" class="link-button">
-            {{ useMagicLink ? $t('login.usePassword') : $t('login.useMagicLink') }}
+            {{ useMagicLink ? t('login.usePassword') : t('login.useMagicLink') }}
           </button>
 
           <button v-if="!useMagicLink" @click="isSignUp = !isSignUp" class="link-button">
-            {{ isSignUp ? $t('login.haveAccount') : $t('login.noAccount') }}
+            {{ isSignUp ? t('login.haveAccount') : t('login.noAccount') }}
           </button>
         </div>
       </div>
