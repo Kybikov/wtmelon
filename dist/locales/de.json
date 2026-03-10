@@ -569,6 +569,67 @@
       "directorName": "Sovga Yevheniia Vasylivna"
     }
   },
+  "activation": {
+    "badge": "Watermelon Anleitung",
+    "title": "Aktivieren Sie Ihren Zugang in wenigen einfachen Schritten",
+    "lead": "Wir haben diese Seite so verständlich wie möglich gestaltet, damit Sie die Aktivierung ganz ruhig und ohne Stress durchführen können.",
+    "steps": {
+      "step1": {
+        "title": "Geben Sie Ihren Aktivierungsschlüssel ein",
+        "text": "Fügen Sie den Schlüssel genau so ein, wie Sie ihn erhalten haben, und klicken Sie auf die Prüfen-Schaltfläche."
+      },
+      "step2": {
+        "title": "Öffnen Sie die Session-Seite",
+        "text": "Mit den Schaltflächen unten können Sie zuerst ChatGPT und danach die Session-Seite in einem separaten Tab öffnen."
+      },
+      "step3": {
+        "title": "Fügen Sie den Session-Token ein und starten Sie die Aktivierung",
+        "text": "Danach fügen Sie den Token in das Formular ein und klicken auf Aktivieren. Wenn alles korrekt ist, wird der Zugang verbunden."
+      }
+    },
+    "form": {
+      "title": "Aktivierungsformular",
+      "subtitle": "Gehen Sie die Schritte nacheinander durch. Meist dauert es nur eine Minute.",
+      "keyLabel": "Aktivierungsschlüssel",
+      "keyPlaceholder": "XXXXX-XXXXX-XXX",
+      "tokenLabel": "Session-Token",
+      "tokenPlaceholder": "Fügen Sie hier Ihren Session-Token ein",
+      "checkButton": "Schlüssel prüfen",
+      "checking": "Schlüssel wird geprüft...",
+      "openService": "ChatGPT öffnen",
+      "openSession": "Session-Seite öffnen",
+      "tip": "Tipp: Prüfen Sie zuerst den Schlüssel, fügen Sie dann den Token ein und starten Sie die Aktivierung.",
+      "activateButton": "Zugang aktivieren",
+      "activating": "Wird aktiviert...",
+      "resultTitle": "Status"
+    },
+    "status": {
+      "available": "Perfekt, der Schlüssel ist zur Aktivierung bereit.",
+      "used": "Dieser Schlüssel wurde bereits verwendet.",
+      "expired": "Dieser Schlüssel ist nicht mehr aktiv.",
+      "unknown": "Schlüsselstatus erhalten"
+    },
+    "messages": {
+      "checkSuccess": "Der Schlüssel wurde erfolgreich geprüft.",
+      "checkError": "Der Schlüssel konnte gerade nicht geprüft werden.",
+      "activateSuccess": "Die Aktivierungsanfrage wurde gesendet.",
+      "activateError": "Die Aktivierung konnte nicht gestartet werden."
+    },
+    "notes": {
+      "note1": {
+        "title": "Keine Extra-Schritte",
+        "text": "Sie brauchen nur den Schlüssel und Ihren aktuellen Session-Token."
+      },
+      "note2": {
+        "title": "Nehmen Sie sich Zeit",
+        "text": "Folgen Sie einfach den Schritten der Reihe nach und füllen Sie das Formular sorgfältig aus. Es ist wirklich nicht kompliziert."
+      },
+      "note3": {
+        "title": "Brauchen Sie Hilfe?",
+        "text": "Wenn etwas nicht klappt, schreiben Sie dem Support und senden Sie den verwendeten Schlüssel mit."
+      }
+    }
+  },
   "notFound": {
     "title": "Seite nicht gefunden",
     "message": "Entschuldigung, aber die Seite, die Sie suchen, existiert nicht oder wurde verschoben.",

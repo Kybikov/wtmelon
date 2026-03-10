@@ -569,6 +569,67 @@
       "directorName": "Sovga Yevheniia Vasylivna"
     }
   },
+  "activation": {
+    "badge": "Watermelon Guide",
+    "title": "Activate your access in a few simple steps",
+    "lead": "We made this page as clear as possible so you can calmly complete activation without confusion.",
+    "steps": {
+      "step1": {
+        "title": "Enter your activation key",
+        "text": "Paste the key exactly as you received it and click the check button."
+      },
+      "step2": {
+        "title": "Open your session page",
+        "text": "Use the buttons below to open ChatGPT and then open the session page in a separate tab."
+      },
+      "step3": {
+        "title": "Paste your session token and activate",
+        "text": "After that, paste the token into the form and click activate. If everything is correct, access will be connected."
+      }
+    },
+    "form": {
+      "title": "Activation form",
+      "subtitle": "Follow the steps one by one. It usually takes only a minute.",
+      "keyLabel": "Activation key",
+      "keyPlaceholder": "XXXXX-XXXXX-XXX",
+      "tokenLabel": "Session token",
+      "tokenPlaceholder": "Paste your session token here",
+      "checkButton": "Check key",
+      "checking": "Checking key...",
+      "openService": "Open ChatGPT",
+      "openSession": "Open session page",
+      "tip": "Tip: first check the key, then paste the token and start activation.",
+      "activateButton": "Activate access",
+      "activating": "Activating...",
+      "resultTitle": "Status"
+    },
+    "status": {
+      "available": "Great, the key is ready for activation.",
+      "used": "This key has already been used.",
+      "expired": "This key is no longer active.",
+      "unknown": "Key status received"
+    },
+    "messages": {
+      "checkSuccess": "The key has been checked successfully.",
+      "checkError": "We could not check the key right now.",
+      "activateSuccess": "Your activation request has been sent.",
+      "activateError": "We could not start activation."
+    },
+    "notes": {
+      "note1": {
+        "title": "No extra steps",
+        "text": "You only need the key and your current session token."
+      },
+      "note2": {
+        "title": "Take your time",
+        "text": "Read each step in order and fill the form carefully. There is nothing complicated here."
+      },
+      "note3": {
+        "title": "Need help?",
+        "text": "If something does not work, contact support and send the key you used."
+      }
+    }
+  },
   "notFound": {
     "title": "Page Not Found",
     "message": "Sorry, but the page you are looking for does not exist or has been moved.",

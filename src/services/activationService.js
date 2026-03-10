@@ -1,4 +1,4 @@
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080'
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '/.netlify/functions/activation'
 
 async function sendRequest(path, options = {}) {
   const response = await fetch(`${API_BASE_URL}${path}`, {
@@ -21,15 +21,22 @@ async function sendRequest(path, options = {}) {
 }
 
 export function checkActivationKey(key) {
-  return sendRequest('/api/activation/check', {
+  return sendRequest('', {
     method: 'POST',
-    body: JSON.stringify({ key })
+    body: JSON.stringify({
+      action: 'check',
+      key
+    })
   })
 }
 
 export function activateKey(key, userToken) {
-  return sendRequest('/api/activation/redeem', {
+  return sendRequest('', {
     method: 'POST',
-    body: JSON.stringify({ key, userToken })
+    body: JSON.stringify({
+      action: 'redeem',
+      key,
+      userToken
+    })
   })
 }
