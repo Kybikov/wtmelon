@@ -5,6 +5,7 @@ import Terms from '../pages/Terms.vue'
 import Refund from '../pages/Refund.vue'
 import Delivery from '../pages/Delivery.vue'
 import Requisites from '../pages/Requisites.vue'
+import Activate from '../pages/Activate.vue'
 import NotFound from '../pages/NotFound.vue'
 import { useLocale } from '../composables/useLocale'
 
@@ -40,6 +41,11 @@ const routes = [
     path: '/requisites',
     name: 'Requisites',
     component: Requisites
+  },
+  {
+    path: '/activate',
+    name: 'Activate',
+    component: Activate
   },
   {
     path: '/:locale',
@@ -110,6 +116,18 @@ const routes = [
         next()
       } else {
         next('/requisites')
+      }
+    }
+  },
+  {
+    path: '/:locale/activate',
+    name: 'LocaleActivate',
+    component: Activate,
+    beforeEnter: (to, from, next) => {
+      if (SUPPORTED_LOCALES.includes(to.params.locale)) {
+        next()
+      } else {
+        next('/activate')
       }
     }
   },
