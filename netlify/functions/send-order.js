@@ -30,16 +30,21 @@ function escapeHtml(value) {
 }
 
 function getOrigin(event) {
+  const proto = event.headers['x-forwarded-proto'] || 'https'
+  const host = event.headers.host || ''
+  const requestOrigin = host ? `${proto}://${host}` : ''
+  const isLocalHost = /(^localhost\b)|(^127\.0\.0\.1\b)|(^::1$)/i.test(host)
   const explicitOrigin = process.env.FRONTEND_ORIGIN
+
+  if (isLocalHost && requestOrigin) {
+    return requestOrigin
+  }
 
   if (explicitOrigin) {
     return explicitOrigin.replace(/\/$/, '')
   }
 
-  const proto = event.headers['x-forwarded-proto'] || 'https'
-  const host = event.headers.host
-
-  return `${proto}://${host}`
+  return requestOrigin
 }
 
 function normalizeAmount(price) {

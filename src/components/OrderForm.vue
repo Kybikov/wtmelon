@@ -293,7 +293,7 @@ const handleSubmit = async () => {
     emit('success', result);
   } catch (error) {
     console.error('Order submission error:', error);
-    submitError.value = t('order.errors.submitFailed');
+    submitError.value = error?.message || t('order.errors.submitFailed');
   } finally {
     loading.value = false;
   }
