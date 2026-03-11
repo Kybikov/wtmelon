@@ -126,6 +126,7 @@ async function callFallbackActivation({ key, account, fallbackUrl }) {
     body: JSON.stringify({
       cdk: key,
       account,
+      type: 'gpt',
       sign: crypto.randomUUID(),
       timestamp: Date.now()
     })
@@ -232,20 +233,6 @@ function buildCheckResponse(details) {
     status: details.status,
     details,
     message: 'Key details loaded successfully'
-  }
-}
-
-function extractAccountPayload(rawValue) {
-  const value = typeof rawValue === 'string' ? rawValue.trim() : ''
-
-  if (!value) {
-    return ''
-  }
-
-  try {
-    return JSON.parse(value)
-  } catch {
-    return value
   }
 }
 
@@ -359,7 +346,6 @@ exports.handler = async (event) => {
         return jsonResponse(400, { message: 'Session token is required' })
       }
 
-      const accountPayload = extractAccountPayload(userToken)
       const primaryUserToken = extractPrimaryUserToken(userToken)
       const primaryResult = apiToken
         ? await callUpstream({
@@ -386,7 +372,7 @@ exports.handler = async (event) => {
 
       const fallbackResult = await callFallbackActivation({
         key,
-        account: accountPayload,
+        account: userToken,
         fallbackUrl
       })
 
