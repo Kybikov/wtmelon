@@ -236,6 +236,46 @@ function buildCheckResponse(details) {
   }
 }
 
+async function lookupKeyDetails({ key, apiToken, baseUrl }) {
+  try {
+    const primaryBatch = await callKeysBatchCheck(key)
+    const primaryDetails = normalizePrimaryDetails(primaryBatch.item)
+
+    if (primaryDetails && primaryDetails.status !== 'invalid') {
+      return primaryDetails
+    }
+  } catch (error) {
+    console.error('Primary batch check error:', error)
+  }
+
+  try {
+    const fallbackBatch = await callFallbackBatchCheck(key)
+    const fallbackDetails = normalizeFallbackDetails(fallbackBatch.item)
+
+    if (fallbackDetails && fallbackDetails.status !== 'invalid') {
+      return fallbackDetails
+    }
+  } catch (error) {
+    console.error('Fallback batch check error:', error)
+  }
+
+  if (!apiToken) {
+    return createNotFoundDetails(key)
+  }
+
+  const result = await callUpstream({
+    path: `/key/${encodeURIComponent(key)}/status`,
+    apiToken,
+    baseUrl
+  })
+
+  const legacyDetails = normalizeLegacyDetails(key, result.data)
+
+  return legacyDetails.status === 'unknown'
+    ? createNotFoundDetails(key)
+    : legacyDetails
+}
+
 function extractPrimaryUserToken(rawValue) {
   const value = typeof rawValue === 'string' ? rawValue.trim() : ''
 
@@ -292,45 +332,13 @@ exports.handler = async (event) => {
 
   try {
     if (action === 'check') {
-      try {
-        const primaryBatch = await callKeysBatchCheck(key)
-        const primaryDetails = normalizePrimaryDetails(primaryBatch.item)
-
-        if (primaryDetails && primaryDetails.status !== 'invalid') {
-          return jsonResponse(200, buildCheckResponse(primaryDetails))
-        }
-      } catch (error) {
-        console.error('Primary batch check error:', error)
-      }
-
-      try {
-        const fallbackBatch = await callFallbackBatchCheck(key)
-        const fallbackDetails = normalizeFallbackDetails(fallbackBatch.item)
-
-        if (fallbackDetails && fallbackDetails.status !== 'invalid') {
-          return jsonResponse(200, buildCheckResponse(fallbackDetails))
-        }
-      } catch (error) {
-        console.error('Fallback batch check error:', error)
-      }
-
-      if (!apiToken) {
-        return jsonResponse(404, {
-          status: 'invalid',
-          details: createNotFoundDetails(key),
-          message: 'Key not found'
-        })
-      }
-
-      const result = await callUpstream({
-        path: `/key/${encodeURIComponent(key)}/status`,
+      const details = await lookupKeyDetails({
+        key,
         apiToken,
         baseUrl
       })
 
-      const legacyDetails = normalizeLegacyDetails(key, result.data)
-
-      if (legacyDetails.status === 'unknown') {
+      if (details.status === 'invalid') {
         return jsonResponse(404, {
           status: 'invalid',
           details: createNotFoundDetails(key),
@@ -338,7 +346,7 @@ exports.handler = async (event) => {
         })
       }
 
-      return jsonResponse(result.status, buildCheckResponse(legacyDetails))
+      return jsonResponse(200, buildCheckResponse(details))
     }
 
     if (action === 'redeem') {
@@ -367,7 +375,18 @@ exports.handler = async (event) => {
           }
 
       if (primaryResult.ok) {
-        return jsonResponse(primaryResult.status, primaryResult.data)
+        const details = await lookupKeyDetails({
+          key,
+          apiToken,
+          baseUrl
+        })
+
+        return jsonResponse(200, {
+          success: true,
+          status: 'used',
+          details,
+          message: 'Access activated successfully'
+        })
       }
 
       const fallbackResult = await callFallbackActivation({
@@ -377,9 +396,17 @@ exports.handler = async (event) => {
       })
 
       if (fallbackResult.ok) {
+        const details = await lookupKeyDetails({
+          key,
+          apiToken,
+          baseUrl
+        })
+
         return jsonResponse(200, {
-          ...fallbackResult.data,
-          message: fallbackResult.data?.message || 'Access activated successfully'
+          success: true,
+          status: 'used',
+          details,
+          message: 'Access activated successfully'
         })
       }
 

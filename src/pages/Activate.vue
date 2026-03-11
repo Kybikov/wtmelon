@@ -1,5 +1,16 @@
 <template>
   <main class="activation-page">
+    <div v-if="popup.show" class="activation-popup-backdrop" @click="closePopup">
+      <div class="activation-popup" @click.stop>
+        <div class="activation-popup-icon">OK</div>
+        <h3>{{ popup.title }}</h3>
+        <p>{{ popup.text }}</p>
+        <button class="btn1 activation-popup-button" @click="closePopup">
+          {{ popup.button }}
+        </button>
+      </div>
+    </div>
+
     <section class="activation-hero section-padding">
       <div class="container">
         <div class="activation-shell">
@@ -211,6 +222,12 @@ export default {
     const keyStatus = ref(null)
     const activationResult = ref(null)
     const message = ref({ type: '', text: '' })
+    const popup = ref({
+      show: false,
+      title: '',
+      text: '',
+      button: 'OK'
+    })
 
     const copy = (key, fallbackMap) => {
       const translated = t(key)
@@ -312,6 +329,24 @@ export default {
       message.value = { type, text }
     }
 
+    const openPopup = (title, text) => {
+      popup.value = {
+        show: true,
+        title,
+        text,
+        button: copy('activation.popup.button', {
+          en: 'Great',
+          ru: 'Понятно',
+          uk: 'Зрозуміло',
+          de: 'Verstanden'
+        })
+      }
+    }
+
+    const closePopup = () => {
+      popup.value.show = false
+    }
+
     const handleCheck = async () => {
       checking.value = true
       activationResult.value = null
@@ -366,9 +401,42 @@ export default {
 
       try {
         activationResult.value = await activateKey(form.key.trim(), form.userToken.trim())
-        setMessage('success', t('activation.messages.activateSuccess'))
+        if (activationResult.value?.details) {
+          keyStatus.value = {
+            details: activationResult.value.details
+          }
+        } else {
+          keyStatus.value = await checkActivationKey(form.key.trim())
+        }
+
+        setMessage('success', copy('activation.messages.activateSuccessFriendly', {
+          en: 'Activation completed successfully.',
+          ru: 'Активация успешно завершена.',
+          uk: 'Активацію успішно завершено.',
+          de: 'Die Aktivierung wurde erfolgreich abgeschlossen.'
+        }))
+
+        openPopup(
+          copy('activation.popup.title', {
+            en: 'Access activated',
+            ru: 'Доступ активирован',
+            uk: 'Доступ активовано',
+            de: 'Zugang aktiviert'
+          }),
+          copy('activation.popup.text', {
+            en: 'Everything is ready. The key information has already been updated on this page.',
+            ru: 'Все готово. Информация по ключу уже обновилась на этой странице.',
+            uk: 'Усе готово. Інформація про ключ вже оновилась на цій сторінці.',
+            de: 'Alles ist bereit. Die Schluesselinformationen wurden bereits auf dieser Seite aktualisiert.'
+          })
+        )
       } catch (error) {
-        setMessage('error', error.message || t('activation.messages.activateError'))
+        setMessage('error', copy('activation.messages.activateErrorFriendly', {
+          en: 'We could not complete the activation right now. Please check the session data and try again.',
+          ru: 'Сейчас не удалось завершить активацию. Проверьте данные session и попробуйте еще раз.',
+          uk: 'Зараз не вдалося завершити активацію. Перевірте дані session і спробуйте ще раз.',
+          de: 'Die Aktivierung konnte gerade nicht abgeschlossen werden. Bitte pruefen Sie die Session-Daten und versuchen Sie es erneut.'
+        }))
       } finally {
         activating.value = false
       }
@@ -378,6 +446,7 @@ export default {
       activating,
       canActivate,
       checking,
+      closePopup,
       copy,
       detailFallbacks,
       detailsClass,
@@ -388,6 +457,7 @@ export default {
       handleCheck,
       keyStatusLabel,
       message,
+      popup,
       resultSummary,
       statusClass,
       t
@@ -403,6 +473,58 @@ export default {
     radial-gradient(circle at top left, rgba(46, 213, 115, 0.16), transparent 28%),
     radial-gradient(circle at top right, rgba(255, 71, 87, 0.16), transparent 28%),
     linear-gradient(180deg, rgba(248, 249, 250, 0.96), rgba(255, 255, 255, 1));
+}
+
+.activation-popup-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(16, 22, 30, 0.42);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 30;
+}
+
+.activation-popup {
+  width: min(440px, 100%);
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.activation-popup-icon {
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(46, 213, 115, 0.14);
+  color: #138a4d;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.activation-popup h3 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: var(--dark-color);
+}
+
+.activation-popup p {
+  margin: 0;
+  color: var(--text-color);
+  line-height: 1.7;
+}
+
+.activation-popup-button {
+  width: 100%;
+  justify-content: center;
+  margin-top: 22px;
 }
 
 .activation-shell {
@@ -723,6 +845,10 @@ export default {
 .dark-theme .activation-note {
   background: rgba(36, 37, 38, 0.92);
   border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark-theme .activation-popup {
+  background: rgba(36, 37, 38, 0.98);
 }
 
 .dark-theme .activation-field input,
