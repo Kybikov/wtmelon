@@ -1,134 +1,254 @@
-exports.handler = async (event, context) => {
-  if (event.httpMethod !== 'POST') {
-    return {
-      statusCode: 405,
-      body: JSON.stringify({ error: 'Method not allowed' })
-    };
+const headers = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Headers': 'Content-Type',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Content-Type': 'application/json'
+}
+
+const CURRENCY_CODES = {
+  '$': 840,
+  '€': 978,
+  '₴': 980,
+  UAH: 980,
+  USD: 840,
+  EUR: 978
+}
+
+function jsonResponse(statusCode, body) {
+  return {
+    statusCode,
+    headers,
+    body: JSON.stringify(body)
+  }
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+}
+
+function getOrigin(event) {
+  const explicitOrigin = process.env.FRONTEND_ORIGIN
+
+  if (explicitOrigin) {
+    return explicitOrigin.replace(/\/$/, '')
   }
 
-  const headers = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Headers': 'Content-Type',
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Content-Type': 'application/json'
-  };
+  const proto = event.headers['x-forwarded-proto'] || 'https'
+  const host = event.headers.host
 
+  return `${proto}://${host}`
+}
+
+function normalizeAmount(price) {
+  const parsed = typeof price === 'number' ? price : Number.parseFloat(String(price).replace(',', '.'))
+
+  if (!Number.isFinite(parsed) || parsed <= 0) {
+    return null
+  }
+
+  return Math.round(parsed * 100)
+}
+
+function getCurrencyCode(currency) {
+  return CURRENCY_CODES[currency] || 980
+}
+
+async function sendTelegramMessage(text) {
+  const botToken = process.env.TELEGRAM_BOT_TOKEN
+  const chatId = process.env.TELEGRAM_CHAT_ID
+
+  if (!botToken || !chatId) {
+    return
+  }
+
+  await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      chat_id: chatId,
+      text,
+      parse_mode: 'HTML'
+    })
+  })
+}
+
+function buildTelegramMessage(order) {
+  const timestamp = new Date().toLocaleString('uk-UA', {
+    timeZone: 'Europe/Kyiv',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit'
+  })
+
+  const lines = [
+    `<b>Нове замовлення #${escapeHtml(order.orderId)}</b>`,
+    '',
+    `<b>Продукт:</b> ${escapeHtml(order.productName)}`,
+    `<b>План:</b> ${escapeHtml(order.plan)}`,
+    `<b>Термін:</b> ${escapeHtml(order.duration)}`,
+    `<b>Сума:</b> ${escapeHtml(`${order.price} ${order.currency}`)}`,
+    '',
+    `<b>Клієнт:</b> ${escapeHtml(order.customerName)}`,
+    `<b>Email:</b> ${escapeHtml(order.email)}`
+  ]
+
+  if (order.telegram) {
+    lines.push(`<b>Telegram:</b> ${escapeHtml(order.telegram.startsWith('@') ? order.telegram : `@${order.telegram}`)}`)
+  }
+
+  if (order.phone) {
+    lines.push(`<b>Телефон:</b> ${escapeHtml(order.phone)}`)
+  }
+
+  if (order.comment) {
+    lines.push('', `<b>Коментар:</b> ${escapeHtml(order.comment)}`)
+  }
+
+  if (order.immediateStart) {
+    lines.push('', '<b>Клієнт погодився на негайний старт виконання.</b>')
+  }
+
+  lines.push('', `<b>Час:</b> ${escapeHtml(timestamp)}`)
+
+  return lines.join('\n')
+}
+
+exports.handler = async (event) => {
   if (event.httpMethod === 'OPTIONS') {
-    return {
-      statusCode: 200,
-      headers,
-      body: ''
-    };
+    return jsonResponse(200, {})
+  }
+
+  if (event.httpMethod !== 'POST') {
+    return jsonResponse(405, { error: 'Method not allowed' })
+  }
+
+  let body
+
+  try {
+    body = JSON.parse(event.body || '{}')
+  } catch {
+    return jsonResponse(400, { error: 'Invalid request body' })
+  }
+
+  const {
+    productName,
+    plan,
+    duration,
+    price,
+    currency,
+    customerName,
+    telegram,
+    phone,
+    email,
+    comment,
+    immediateStart
+  } = body
+
+  if (!productName || !plan || !duration || !customerName || !email || (!telegram && !phone)) {
+    return jsonResponse(400, { error: 'Missing required fields' })
+  }
+
+  const amount = normalizeAmount(price)
+
+  if (!amount) {
+    return jsonResponse(400, { error: 'Invalid price value' })
+  }
+
+  const monoToken = process.env.MONOBANK_TOKEN
+
+  if (!monoToken) {
+    return jsonResponse(500, { error: 'Monobank token is not configured' })
+  }
+
+  const origin = getOrigin(event)
+  const webhookSecret = process.env.MONOBANK_WEBHOOK_SECRET
+  const orderId = `${Date.now().toString(36)}${Math.random().toString(36).slice(2, 8)}`.toUpperCase()
+  const ccy = getCurrencyCode(currency)
+
+  const invoicePayload = {
+    amount,
+    ccy,
+    paymentType: 'debit',
+    redirectUrl: `${origin}/?payment=return&orderId=${encodeURIComponent(orderId)}`,
+    webHookUrl: webhookSecret
+      ? `${origin}/.netlify/functions/monobank-webhook?secret=${encodeURIComponent(webhookSecret)}`
+      : `${origin}/.netlify/functions/monobank-webhook`,
+    merchantPaymInfo: {
+      reference: orderId,
+      destination: `${productName} • ${plan} • ${duration}`,
+      comment: `Customer: ${customerName}; Email: ${email}`,
+      customerEmails: [email],
+      basketOrder: [
+        {
+          name: `${productName} (${plan}, ${duration})`,
+          qty: 1,
+          sum: amount,
+          code: orderId
+        }
+      ]
+    }
   }
 
   try {
-    const {
-      productName,
-      plan,
-      duration,
-      price,
-      currency,
-      customerName,
-      telegram,
-      phone,
-      email,
-      comment
-    } = JSON.parse(event.body);
-
-    if (!customerName || !email || (!telegram && !phone)) {
-      return {
-        statusCode: 400,
-        headers,
-        body: JSON.stringify({ error: 'Missing required fields' })
-      };
-    }
-
-    const botToken = process.env.TELEGRAM_BOT_TOKEN;
-    const chatId = process.env.TELEGRAM_CHAT_ID;
-
-    if (!botToken || !chatId) {
-      console.error('Missing Telegram credentials');
-      return {
-        statusCode: 500,
-        headers,
-        body: JSON.stringify({ error: 'Server configuration error' })
-      };
-    }
-
-    const timestamp = new Date().toLocaleString('uk-UA', {
-      timeZone: 'Europe/Kiev',
-      year: 'numeric',
-      month: '2-digit',
-      day: '2-digit',
-      hour: '2-digit',
-      minute: '2-digit'
-    });
-
-    const orderId = Date.now().toString(36).toUpperCase();
-
-    let message = `🍉 <b>Нове замовлення #${orderId}</b>\n\n`;
-    message += `📦 <b>Продукт:</b> ${productName}\n`;
-    message += `💎 <b>План:</b> ${plan}\n`;
-    message += `⏱ <b>Термін:</b> ${duration}\n`;
-    message += `💰 <b>Ціна:</b> ${price} ${currency}\n\n`;
-    message += `👤 <b>Клієнт:</b> ${customerName}\n`;
-
-    if (telegram) {
-      message += `📱 <b>Telegram:</b> @${telegram.replace('@', '')}\n`;
-    }
-    if (phone) {
-      message += `📞 <b>Телефон:</b> ${phone}\n`;
-    }
-    if (email) {
-      message += `📧 <b>Email:</b> ${email}\n`;
-    }
-    if (comment) {
-      message += `\n💬 <b>Коментар:</b>\n${comment}\n`;
-    }
-
-    message += `\n🕐 <b>Час:</b> ${timestamp}`;
-
-    const telegramApiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
-
-    const response = await fetch(telegramApiUrl, {
+    const response = await fetch('https://api.monobank.ua/api/merchant/invoice/create', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'X-Token': monoToken,
+        'X-Cms': 'wtmelon',
+        'X-Cms-Version': '1.0.0'
       },
-      body: JSON.stringify({
-        chat_id: chatId,
-        text: message,
-        parse_mode: 'HTML'
-      })
-    });
+      body: JSON.stringify(invoicePayload)
+    })
 
-    const data = await response.json();
+    const data = await response.json().catch(() => ({}))
 
     if (!response.ok) {
-      console.error('Telegram API error:', data);
-      return {
-        statusCode: 500,
-        headers,
-        body: JSON.stringify({ error: 'Failed to send message to Telegram' })
-      };
+      console.error('Monobank invoice create error:', data)
+      return jsonResponse(response.status, {
+        error: data.errText || data.errorDescription || 'Failed to create Monobank invoice'
+      })
     }
 
-    return {
-      statusCode: 200,
-      headers,
-      body: JSON.stringify({
-        success: true,
-        orderId,
-        message: 'Order sent successfully'
-      })
-    };
+    if (!data.pageUrl) {
+      console.error('Monobank response without pageUrl:', data)
+      return jsonResponse(502, { error: 'Payment URL is missing in Monobank response' })
+    }
 
+    try {
+      await sendTelegramMessage(buildTelegramMessage({
+        orderId,
+        productName,
+        plan,
+        duration,
+        price,
+        currency,
+        customerName,
+        telegram,
+        phone,
+        email,
+        comment,
+        immediateStart
+      }))
+    } catch (notificationError) {
+      console.error('Telegram notification error:', notificationError)
+    }
+
+    return jsonResponse(200, {
+      success: true,
+      orderId,
+      invoiceId: data.invoiceId,
+      paymentUrl: data.pageUrl
+    })
   } catch (error) {
-    console.error('Error processing order:', error);
-    return {
-      statusCode: 500,
-      headers,
-      body: JSON.stringify({ error: 'Internal server error' })
-    };
+    console.error('Error processing order:', error)
+    return jsonResponse(500, { error: 'Internal server error' })
   }
-};
+}

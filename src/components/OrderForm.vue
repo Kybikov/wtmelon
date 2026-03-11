@@ -284,6 +284,12 @@ const handleSubmit = async () => {
     };
 
     const result = await sendOrder(orderPayload);
+
+    if (result?.paymentUrl) {
+      window.location.assign(result.paymentUrl);
+      return;
+    }
+
     emit('success', result);
   } catch (error) {
     console.error('Order submission error:', error);
