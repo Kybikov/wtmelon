@@ -62,6 +62,40 @@ function encodeMetadata(value) {
   return Buffer.from(JSON.stringify(value), 'utf8').toString('base64url')
 }
 
+async function loadCatalogProductIcon(productId, locale) {
+  const apiBase = process.env.API_BASE
+
+  if (!apiBase || !productId) {
+    return ''
+  }
+
+  try {
+    const response = await fetch(`${apiBase}/rpc/catalog`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        lang_in: ['uk', 'en', 'de', 'ru'].includes(locale) ? locale : 'en'
+      })
+    })
+
+    if (!response.ok) {
+      return ''
+    }
+
+    const products = await response.json().catch(() => [])
+    const matchedProduct = Array.isArray(products)
+      ? products.find((item) => item?.id === productId)
+      : null
+
+    return typeof matchedProduct?.icon === 'string' ? matchedProduct.icon : ''
+  } catch (error) {
+    console.error('Catalog icon lookup error:', error)
+    return ''
+  }
+}
+
 function buildTelegramMessage(order) {
   const timestamp = new Date().toLocaleString('ru-RU', {
     timeZone: 'Europe/Kyiv',
@@ -145,6 +179,7 @@ exports.handler = async (event) => {
   }
 
   const {
+    productId,
     productName,
     productIcon,
     plan,
@@ -181,14 +216,17 @@ exports.handler = async (event) => {
   const origin = getOrigin(event)
   const webhookSecret = process.env.MONOBANK_WEBHOOK_SECRET
   const numericCurrencyCode = getCurrencyNumericCode(currencyCode)
+  const catalogProductIcon = await loadCatalogProductIcon(productId, locale)
+  const resolvedProductIcon = catalogProductIcon || productIcon || ''
   const metadata = encodeMetadata({
     orderId,
     email,
     locale: locale || 'ru',
+    productId: productId || '',
     productName,
     plan,
     duration,
-    productIcon: productIcon || ''
+    productIcon: resolvedProductIcon
   })
 
   const webhookUrl = new URL(`${origin}/.netlify/functions/monobank-webhook`)
@@ -216,7 +254,7 @@ exports.handler = async (event) => {
           qty: 1,
           sum: amount,
           code: orderId,
-          icon: productIcon || undefined
+          icon: resolvedProductIcon || undefined
         }
       ]
     }

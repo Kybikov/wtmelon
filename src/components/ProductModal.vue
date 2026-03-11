@@ -179,6 +179,7 @@ export default {
 
       const price = this.getPrice(this.selectedDuration)
       this.orderData = {
+        productId: this.product.id,
         productName: this.product.name,
         productIcon: this.product.icon,
         plan: this.selectedPlan.name,
