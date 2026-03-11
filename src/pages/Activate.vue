@@ -88,6 +88,20 @@
                 {{ message.text }}
               </div>
 
+              <div v-if="detailRows.length" class="activation-details" :class="detailsClass">
+                <h3>{{ copy('activation.form.detailsTitle', detailFallbacks.detailsTitle) }}</h3>
+                <div class="activation-detail-list">
+                  <div
+                    v-for="detail in detailRows"
+                    :key="detail.label"
+                    class="activation-detail-item"
+                  >
+                    <span class="detail-label">{{ detail.label }}</span>
+                    <span class="detail-value">{{ detail.value }}</span>
+                  </div>
+                </div>
+              </div>
+
               <div v-if="resultSummary" class="activation-result">
                 <h3>{{ t('activation.form.resultTitle') }}</h3>
                 <p>{{ resultSummary }}</p>
@@ -120,10 +134,73 @@ import { computed, reactive, ref } from 'vue'
 import { useLocale } from '../composables/useLocale'
 import { activateKey, checkActivationKey } from '../services/activationService'
 
+const detailFallbacks = {
+  detailsTitle: {
+    en: 'Key details',
+    ru: 'Информация по ключу',
+    uk: 'Інформація про ключ',
+    de: 'Schluesseldetails'
+  },
+  activatedAt: {
+    en: 'Activated',
+    ru: 'Активирован',
+    uk: 'Активовано',
+    de: 'Aktiviert'
+  },
+  subscription: {
+    en: 'Plan',
+    ru: 'Тариф',
+    uk: 'Тариф',
+    de: 'Tarif'
+  },
+  product: {
+    en: 'Service',
+    ru: 'Сервис',
+    uk: 'Сервіс',
+    de: 'Dienst'
+  },
+  account: {
+    en: 'Account',
+    ru: 'Аккаунт',
+    uk: 'Акаунт',
+    de: 'Konto'
+  },
+  duration: {
+    en: 'Duration',
+    ru: 'Срок',
+    uk: 'Термін',
+    de: 'Dauer'
+  },
+  daysSuffix: {
+    en: 'days',
+    ru: 'дней',
+    uk: 'днів',
+    de: 'Tage'
+  },
+  monthDuration: {
+    en: '1 month',
+    ru: '1 месяц',
+    uk: '1 місяць',
+    de: '1 Monat'
+  },
+  yearDuration: {
+    en: '1 year',
+    ru: '1 год',
+    uk: '1 рік',
+    de: '1 Jahr'
+  },
+  unavailable: {
+    en: '-',
+    ru: '-',
+    uk: '-',
+    de: '-'
+  }
+}
+
 export default {
   name: 'ActivatePage',
   setup() {
-    const { t } = useLocale()
+    const { locale, t } = useLocale()
     const form = reactive({
       key: '',
       userToken: ''
@@ -135,14 +212,29 @@ export default {
     const activationResult = ref(null)
     const message = ref({ type: '', text: '' })
 
+    const copy = (key, fallbackMap) => {
+      const translated = t(key)
+      if (translated !== key) {
+        return translated
+      }
+
+      return fallbackMap?.[locale.value] || fallbackMap?.en || key
+    }
+
     const keyStatusLabel = computed(() => {
       if (!keyStatus.value) return ''
 
-      const status = keyStatus.value?.data?.status || keyStatus.value?.status || 'unknown'
+      const status = keyStatus.value?.details?.status || keyStatus.value?.data?.status || keyStatus.value?.status || 'unknown'
       const labels = {
         available: t('activation.status.available'),
         used: t('activation.status.used'),
         expired: t('activation.status.expired'),
+        invalid: copy('activation.status.invalid', {
+          en: 'We could not find this key.',
+          ru: 'Мы не нашли этот ключ.',
+          uk: 'Ми не знайшли цей ключ.',
+          de: 'Dieser Schluessel wurde nicht gefunden.'
+        }),
         unknown: t('activation.status.unknown')
       }
 
@@ -150,10 +242,18 @@ export default {
     })
 
     const statusClass = computed(() => {
-      const status = keyStatus.value?.data?.status || keyStatus.value?.status
+      const status = keyStatus.value?.details?.status || keyStatus.value?.data?.status || keyStatus.value?.status
       if (status === 'available') return 'success'
-      if (status === 'used' || status === 'expired') return 'error'
+      if (status === 'used') return 'info'
+      if (status === 'expired' || status === 'invalid') return 'error'
       return 'neutral'
+    })
+
+    const detailsClass = computed(() => {
+      const status = keyStatus.value?.details?.status
+      if (status === 'available') return 'success'
+      if (status === 'used') return 'info'
+      return 'error'
     })
 
     const canActivate = computed(() => form.key.trim() && form.userToken.trim())
@@ -164,6 +264,48 @@ export default {
       return activationResult.value?.message
         || activationResult.value?.data?.message
         || t('activation.messages.activateSuccess')
+    })
+
+    const formatDuration = (days) => {
+      if (!days) {
+        return copy('activation.form.unavailable', detailFallbacks.unavailable)
+      }
+
+      if (days === 30) {
+        return copy('activation.form.monthDuration', detailFallbacks.monthDuration)
+      }
+
+      if (days === 365) {
+        return copy('activation.form.yearDuration', detailFallbacks.yearDuration)
+      }
+
+      return `${days} ${copy('activation.form.durationDaysSuffix', detailFallbacks.daysSuffix)}`
+    }
+
+    const detailRows = computed(() => {
+      const details = keyStatus.value?.details
+      if (!details) return []
+
+      const empty = copy('activation.form.unavailable', detailFallbacks.unavailable)
+
+      return [
+        {
+          label: copy('activation.form.activatedAtLabel', detailFallbacks.activatedAt),
+          value: details.activatedAt || empty
+        },
+        {
+          label: copy('activation.form.subscriptionLabel', detailFallbacks.subscription),
+          value: details.subscription || empty
+        },
+        {
+          label: copy('activation.form.accountLabel', detailFallbacks.account),
+          value: details.account || empty
+        },
+        {
+          label: copy('activation.form.durationLabel', detailFallbacks.duration),
+          value: formatDuration(details.durationDays)
+        }
+      ]
     })
 
     const setMessage = (type, text) => {
@@ -177,9 +319,40 @@ export default {
 
       try {
         keyStatus.value = await checkActivationKey(form.key.trim())
-        setMessage('success', t('activation.messages.checkSuccess'))
+        const status = keyStatus.value?.details?.status
+
+        if (status === 'used') {
+          setMessage('success', copy('activation.messages.usedSuccess', {
+            en: 'The key was found and is already activated.',
+            ru: 'Ключ найден и уже активирован.',
+            uk: 'Ключ знайдено та вже активовано.',
+            de: 'Der Schluessel wurde gefunden und ist bereits aktiviert.'
+          }))
+        } else if (status === 'available') {
+          setMessage('info', copy('activation.messages.availableSuccess', {
+            en: 'The key was found and is ready to use.',
+            ru: 'Ключ найден и готов к активации.',
+            uk: 'Ключ знайдено та він готовий до активації.',
+            de: 'Der Schluessel wurde gefunden und ist zur Aktivierung bereit.'
+          }))
+        } else {
+          setMessage('error', copy('activation.messages.invalidError', {
+            en: 'We could not find this key.',
+            ru: 'Мы не нашли этот ключ.',
+            uk: 'Ми не знайшли цей ключ.',
+            de: 'Dieser Schluessel wurde nicht gefunden.'
+          }))
+        }
       } catch (error) {
-        keyStatus.value = null
+        keyStatus.value = {
+          details: {
+            activatedAt: '',
+            subscription: '',
+            account: '',
+            durationDays: null,
+            status: 'invalid'
+          }
+        }
         setMessage('error', error.message || t('activation.messages.checkError'))
       } finally {
         checking.value = false
@@ -205,7 +378,12 @@ export default {
       activating,
       canActivate,
       checking,
+      copy,
+      detailFallbacks,
+      detailsClass,
+      detailRows,
       form,
+      formatDuration,
       handleActivate,
       handleCheck,
       keyStatusLabel,
@@ -418,6 +596,12 @@ export default {
   color: #138a4d;
 }
 
+.status-chip.info,
+.activation-message.info {
+  background: rgba(54, 123, 245, 0.14);
+  color: #2f63d8;
+}
+
 .status-chip.error,
 .activation-message.error {
   background: rgba(255, 71, 87, 0.14);
@@ -434,6 +618,62 @@ export default {
   border-radius: 20px;
   background: #1e272e;
   color: #f8f9fa;
+}
+
+.activation-details {
+  padding: 18px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+}
+
+.activation-details.success {
+  background: rgba(46, 213, 115, 0.08);
+  border-color: rgba(46, 213, 115, 0.16);
+}
+
+.activation-details.info {
+  background: rgba(54, 123, 245, 0.08);
+  border-color: rgba(54, 123, 245, 0.16);
+}
+
+.activation-details.error {
+  background: rgba(255, 71, 87, 0.08);
+  border-color: rgba(255, 71, 87, 0.16);
+}
+
+.activation-details h3 {
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: var(--dark-color);
+}
+
+.activation-detail-list {
+  display: grid;
+  gap: 10px;
+}
+
+.activation-detail-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.detail-label {
+  color: var(--text-color);
+  opacity: 0.75;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.detail-value {
+  color: var(--dark-color);
+  font-size: 14px;
+  font-weight: 700;
+  text-align: right;
+  word-break: break-word;
 }
 
 .activation-result h3 {
@@ -489,6 +729,25 @@ export default {
 .dark-theme .activation-field textarea {
   background: rgba(24, 25, 26, 0.95);
   border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark-theme .activation-details.success {
+  background: rgba(46, 213, 115, 0.12);
+  border-color: rgba(46, 213, 115, 0.16);
+}
+
+.dark-theme .activation-details.info {
+  background: rgba(54, 123, 245, 0.14);
+  border-color: rgba(54, 123, 245, 0.18);
+}
+
+.dark-theme .activation-details.error {
+  background: rgba(255, 71, 87, 0.12);
+  border-color: rgba(255, 71, 87, 0.16);
+}
+
+.dark-theme .activation-detail-item {
+  background: rgba(24, 25, 26, 0.72);
 }
 
 @media (max-width: 991px) {

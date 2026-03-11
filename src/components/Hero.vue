@@ -18,7 +18,7 @@
             {{ t('hero.title') }} <span class="highlight">{{ t('hero.subtitle') }}</span>
           </h2>
           <p>{{ t('hero.subsubtitle') }}</p>
-          <a href="#products" class="btn1">{{ t('hero.cta') }}</a>
+          <a href="/#products" class="btn1" @click.prevent="navigateToProducts">{{ t('hero.cta') }}</a>
         </div>
 
         <div class="home-image">
@@ -48,13 +48,27 @@
 </template>
 
 <script>
+import { useRouter } from 'vue-router'
 import { useLocale } from '../composables/useLocale'
 
 export default {
   name: 'Hero',
   setup() {
-    const { t } = useLocale()
-    return { t }
+    const router = useRouter()
+    const { locale, t } = useLocale()
+
+    const navigateToProducts = () => {
+      const localePrefix = locale.value && locale.value !== 'en'
+        ? `/${locale.value}`
+        : ''
+
+      router.push(`${localePrefix}/#products`)
+    }
+
+    return {
+      navigateToProducts,
+      t
+    }
   }
 }
 </script>

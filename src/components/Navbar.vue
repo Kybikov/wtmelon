@@ -8,22 +8,22 @@
 
         <ul class="menu" :class="{ active: menuOpen }">
           <li class="nav-item">
-            <a href="#products" class="nav-link" @click="closeMenu">{{ t('nav.products') }}</a>
+            <a href="/#products" class="nav-link" @click.prevent="navigateToSection('products')">{{ t('nav.products') }}</a>
           </li>
           <li class="nav-item">
-            <a href="#about" class="nav-link" @click="closeMenu">{{ t('nav.about') }}</a>
+            <a href="/#about" class="nav-link" @click.prevent="navigateToSection('about')">{{ t('nav.about') }}</a>
           </li>
           <li class="nav-item">
-            <a href="#partners" class="nav-link" @click="closeMenu">{{ t('nav.partners') }}</a>
+            <a href="/#partners" class="nav-link" @click.prevent="navigateToSection('partners')">{{ t('nav.partners') }}</a>
           </li>
           <li class="nav-item">
-            <a href="#reviews" class="nav-link" @click="closeMenu">{{ t('nav.reviews') }}</a>
+            <a href="/#reviews" class="nav-link" @click.prevent="navigateToSection('reviews')">{{ t('nav.reviews') }}</a>
           </li>
           <li class="nav-item">
-            <a href="#how-it-works" class="nav-link" @click="closeMenu">{{ t('nav.howItWorks') }}</a>
+            <a href="/#how-it-works" class="nav-link" @click.prevent="navigateToSection('how-it-works')">{{ t('nav.howItWorks') }}</a>
           </li>
           <li class="nav-item">
-            <a href="#contact" class="nav-link" @click="closeMenu">{{ t('nav.contact') }}</a>
+            <a href="/#contact" class="nav-link" @click.prevent="navigateToSection('contact')">{{ t('nav.contact') }}</a>
           </li>
 
           <li class="nav-item mobile-only">
@@ -96,7 +96,7 @@
 
 <script>
 import { onMounted } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import { useLocale } from '../composables/useLocale'
 import { useTheme } from '../composables/useTheme'
 
@@ -104,6 +104,7 @@ export default {
   name: 'Navbar',
   setup() {
     const route = useRoute()
+    const router = useRouter()
     const { locale, setLocale, initLocale, t } = useLocale()
     const { isDark, toggleTheme } = useTheme()
 
@@ -113,6 +114,7 @@ export default {
 
     return {
       currentLanguage: locale,
+      router,
       setLocale,
       t,
       isDark,
@@ -154,6 +156,16 @@ export default {
     },
     closeMenu() {
       this.menuOpen = false
+    },
+    navigateToSection(sectionId) {
+      const localePrefix = this.currentLanguage && this.currentLanguage !== 'en'
+        ? `/${this.currentLanguage}`
+        : ''
+
+      this.closeMenu()
+      this.langMenuOpen = false
+
+      this.router.push(`${localePrefix}/#${sectionId}`)
     },
     toggleLangMenu() {
       this.langMenuOpen = !this.langMenuOpen
