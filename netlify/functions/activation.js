@@ -34,6 +34,62 @@ async function callUpstream({ path, method = 'GET', payload, apiToken, baseUrl }
   }
 }
 
+async function activateWithPrimary({ key, userToken, primaryUserToken, apiToken, baseUrl }) {
+  if (!apiToken) {
+    return {
+      ok: false,
+      status: 503,
+      data: {
+        message: 'Primary activation is temporarily unavailable'
+      }
+    }
+  }
+
+  const attempts = []
+  const normalizedRawToken = normalizeTokenCandidate(userToken)
+
+  if (primaryUserToken) {
+    attempts.push(primaryUserToken)
+  }
+
+  if (normalizedRawToken && normalizedRawToken !== primaryUserToken) {
+    attempts.push(normalizedRawToken)
+  }
+
+  if (!attempts.length) {
+    return {
+      ok: false,
+      status: 422,
+      data: {
+        message: 'Unable to extract accessToken from the session data'
+      }
+    }
+  }
+
+  let lastResult = null
+
+  for (const token of attempts) {
+    const result = await callUpstream({
+      path: '/activate',
+      method: 'POST',
+      payload: {
+        key,
+        user_token: token
+      },
+      apiToken,
+      baseUrl
+    })
+
+    if (result.ok) {
+      return result
+    }
+
+    lastResult = result
+  }
+
+  return lastResult
+}
+
 function getCookieHeader(response) {
   const getSetCookie = response.headers?.getSetCookie
     ? response.headers.getSetCookie()
@@ -126,7 +182,6 @@ async function callFallbackActivation({ key, account, fallbackUrl }) {
     body: JSON.stringify({
       cdk: key,
       account,
-      type: 'gpt',
       sign: crypto.randomUUID(),
       timestamp: Date.now()
     })
@@ -276,6 +331,77 @@ async function lookupKeyDetails({ key, apiToken, baseUrl }) {
     : legacyDetails
 }
 
+function extractJsonValue(rawValue) {
+  const value = typeof rawValue === 'string' ? rawValue.trim() : ''
+
+  if (!value) {
+    return null
+  }
+
+  try {
+    return JSON.parse(value)
+  } catch {
+    return null
+  }
+}
+
+function extractAccountPayload(rawValue) {
+  const value = typeof rawValue === 'string' ? rawValue.trim() : ''
+
+  if (!value) {
+    return ''
+  }
+
+  return extractJsonValue(value) || value
+}
+
+function normalizeTokenCandidate(candidate) {
+  if (typeof candidate !== 'string') {
+    return ''
+  }
+
+  const normalized = candidate.trim().replace(/^Bearer\s+/i, '')
+
+  return normalized
+}
+
+function pickNestedToken(payload) {
+  if (!payload || typeof payload !== 'object') {
+    return ''
+  }
+
+  const directToken = normalizeTokenCandidate(
+    payload.accessToken
+    || payload.access_token
+    || payload.token
+    || payload.userToken
+    || payload.user_token
+    || payload.sessionToken
+    || payload.session_token
+  )
+
+  if (directToken) {
+    return directToken
+  }
+
+  const nestedSources = [
+    payload.data,
+    payload.session,
+    payload.user,
+    payload.tokens,
+    payload.auth
+  ]
+
+  for (const source of nestedSources) {
+    const nestedToken = pickNestedToken(source)
+    if (nestedToken) {
+      return nestedToken
+    }
+  }
+
+  return ''
+}
+
 function extractPrimaryUserToken(rawValue) {
   const value = typeof rawValue === 'string' ? rawValue.trim() : ''
 
@@ -283,16 +409,12 @@ function extractPrimaryUserToken(rawValue) {
     return ''
   }
 
-  try {
-    const parsed = JSON.parse(value)
-
-    return parsed?.accessToken
-      || parsed?.access_token
-      || parsed?.token
-      || ''
-  } catch {
-    return value
+  const parsed = extractJsonValue(value)
+  if (parsed) {
+    return pickNestedToken(parsed)
   }
+
+  return normalizeTokenCandidate(value)
 }
 
 function getClientMessage(result) {
@@ -354,25 +476,15 @@ exports.handler = async (event) => {
         return jsonResponse(400, { message: 'Session token is required' })
       }
 
+      const accountPayload = extractAccountPayload(userToken)
       const primaryUserToken = extractPrimaryUserToken(userToken)
-      const primaryResult = apiToken
-        ? await callUpstream({
-            path: '/activate',
-            method: 'POST',
-            payload: {
-              key,
-              user_token: primaryUserToken
-            },
-            apiToken,
-            baseUrl
-          })
-        : {
-            ok: false,
-            status: 503,
-            data: {
-              message: 'Primary activation is temporarily unavailable'
-            }
-          }
+      const primaryResult = await activateWithPrimary({
+        key,
+        userToken,
+        primaryUserToken,
+        apiToken,
+        baseUrl
+      })
 
       if (primaryResult.ok) {
         const details = await lookupKeyDetails({
@@ -391,7 +503,7 @@ exports.handler = async (event) => {
 
       const fallbackResult = await callFallbackActivation({
         key,
-        account: userToken,
+        account: accountPayload,
         fallbackUrl
       })
 
