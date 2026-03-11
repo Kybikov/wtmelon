@@ -107,8 +107,8 @@ export default {
   },
   emits: ['close'],
   setup() {
-    const { locale, currency, t } = useLocale()
-    return { locale, currency, t }
+    const { locale, currency, currencyCode, currencyNumericCode, t } = useLocale()
+    return { locale, currency, currencyCode, currencyNumericCode, t }
   },
   data() {
     return {
@@ -180,10 +180,13 @@ export default {
       const price = this.getPrice(this.selectedDuration)
       this.orderData = {
         productName: this.product.name,
+        productIcon: this.product.icon,
         plan: this.selectedPlan.name,
         duration: this.t('productModal.duration.' + this.selectedDuration),
         price: price,
-        currency: this.currency
+        currency: this.currency,
+        currencyCode: this.currencyCode,
+        currencyNumericCode: this.currencyNumericCode
       }
       this.showOrderForm = true
 

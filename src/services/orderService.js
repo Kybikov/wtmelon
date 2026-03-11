@@ -22,3 +22,26 @@ export async function sendOrder(orderData) {
     throw error;
   }
 }
+
+export async function checkPaymentStatus(invoiceId, notifyTelegram = false) {
+  const url = new URL('/.netlify/functions/payment-status', window.location.origin)
+  url.searchParams.set('invoiceId', invoiceId)
+
+  if (notifyTelegram) {
+    url.searchParams.set('notifyTelegram', 'true')
+  }
+
+  const response = await fetch(url.toString(), {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+
+  if (!response.ok) {
+    const errorData = await response.json().catch(() => ({}))
+    throw new Error(errorData.error || 'Failed to check payment status')
+  }
+
+  return response.json()
+}

@@ -5,10 +5,7 @@ const headers = {
   'Content-Type': 'application/json'
 }
 
-const CURRENCY_CODES = {
-  '$': 840,
-  '€': 978,
-  '₴': 980,
+const CURRENCY_NUMERIC_CODES = {
   UAH: 980,
   USD: 840,
   EUR: 978
@@ -57,8 +54,56 @@ function normalizeAmount(price) {
   return Math.round(parsed * 100)
 }
 
-function getCurrencyCode(currency) {
-  return CURRENCY_CODES[currency] || 980
+function getCurrencyNumericCode(currencyCode) {
+  return CURRENCY_NUMERIC_CODES[String(currencyCode || '').toUpperCase()] || 980
+}
+
+function encodeMetadata(value) {
+  return Buffer.from(JSON.stringify(value), 'utf8').toString('base64url')
+}
+
+function buildTelegramMessage(order) {
+  const timestamp = new Date().toLocaleString('ru-RU', {
+    timeZone: 'Europe/Kyiv',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit'
+  })
+
+  const lines = [
+    `<b>Создан новый заказ #${escapeHtml(order.orderId)}</b>`,
+    '',
+    `<b>Товар:</b> ${escapeHtml(order.productName)}`,
+    `<b>Тариф:</b> ${escapeHtml(order.plan)}`,
+    `<b>Срок:</b> ${escapeHtml(order.duration)}`,
+    `<b>Сумма:</b> ${escapeHtml(`${order.price} ${order.currencyCode}`)}`,
+    '',
+    `<b>Клиент:</b> ${escapeHtml(order.customerName)}`,
+    `<b>Email:</b> ${escapeHtml(order.email)}`,
+    `<b>Статус:</b> Счет создан, ожидает оплату. Деньги еще не получены.`
+  ]
+
+  if (order.telegram) {
+    lines.push(`<b>Telegram:</b> ${escapeHtml(order.telegram.startsWith('@') ? order.telegram : `@${order.telegram}`)}`)
+  }
+
+  if (order.phone) {
+    lines.push(`<b>Телефон:</b> ${escapeHtml(order.phone)}`)
+  }
+
+  if (order.comment) {
+    lines.push('', `<b>Комментарий:</b> ${escapeHtml(order.comment)}`)
+  }
+
+  if (order.immediateStart) {
+    lines.push('', '<b>Клиент согласился на немедленное начало оказания услуги.</b>')
+  }
+
+  lines.push('', `<b>Время:</b> ${escapeHtml(timestamp)}`)
+
+  return lines.join('\n')
 }
 
 async function sendTelegramMessage(text) {
@@ -82,49 +127,6 @@ async function sendTelegramMessage(text) {
   })
 }
 
-function buildTelegramMessage(order) {
-  const timestamp = new Date().toLocaleString('uk-UA', {
-    timeZone: 'Europe/Kyiv',
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-    hour: '2-digit',
-    minute: '2-digit'
-  })
-
-  const lines = [
-    `<b>Нове замовлення #${escapeHtml(order.orderId)}</b>`,
-    '',
-    `<b>Продукт:</b> ${escapeHtml(order.productName)}`,
-    `<b>План:</b> ${escapeHtml(order.plan)}`,
-    `<b>Термін:</b> ${escapeHtml(order.duration)}`,
-    `<b>Сума:</b> ${escapeHtml(`${order.price} ${order.currency}`)}`,
-    '',
-    `<b>Клієнт:</b> ${escapeHtml(order.customerName)}`,
-    `<b>Email:</b> ${escapeHtml(order.email)}`
-  ]
-
-  if (order.telegram) {
-    lines.push(`<b>Telegram:</b> ${escapeHtml(order.telegram.startsWith('@') ? order.telegram : `@${order.telegram}`)}`)
-  }
-
-  if (order.phone) {
-    lines.push(`<b>Телефон:</b> ${escapeHtml(order.phone)}`)
-  }
-
-  if (order.comment) {
-    lines.push('', `<b>Коментар:</b> ${escapeHtml(order.comment)}`)
-  }
-
-  if (order.immediateStart) {
-    lines.push('', '<b>Клієнт погодився на негайний старт виконання.</b>')
-  }
-
-  lines.push('', `<b>Час:</b> ${escapeHtml(timestamp)}`)
-
-  return lines.join('\n')
-}
-
 exports.handler = async (event) => {
   if (event.httpMethod === 'OPTIONS') {
     return jsonResponse(200, {})
@@ -144,16 +146,19 @@ exports.handler = async (event) => {
 
   const {
     productName,
+    productIcon,
     plan,
     duration,
     price,
+    currencyCode,
     currency,
     customerName,
     telegram,
     phone,
     email,
     comment,
-    immediateStart
+    immediateStart,
+    locale
   } = body
 
   if (!productName || !plan || !duration || !customerName || !email || (!telegram && !phone)) {
@@ -172,19 +177,34 @@ exports.handler = async (event) => {
     return jsonResponse(500, { error: 'Monobank token is not configured' })
   }
 
+  const orderId = `${Date.now().toString(36)}${Math.random().toString(36).slice(2, 8)}`.toUpperCase()
   const origin = getOrigin(event)
   const webhookSecret = process.env.MONOBANK_WEBHOOK_SECRET
-  const orderId = `${Date.now().toString(36)}${Math.random().toString(36).slice(2, 8)}`.toUpperCase()
-  const ccy = getCurrencyCode(currency)
+  const numericCurrencyCode = getCurrencyNumericCode(currencyCode)
+  const metadata = encodeMetadata({
+    orderId,
+    email,
+    locale: locale || 'ru',
+    productName,
+    plan,
+    duration,
+    productIcon: productIcon || ''
+  })
+
+  const webhookUrl = new URL(`${origin}/.netlify/functions/monobank-webhook`)
+
+  if (webhookSecret) {
+    webhookUrl.searchParams.set('secret', webhookSecret)
+  }
+
+  webhookUrl.searchParams.set('meta', metadata)
 
   const invoicePayload = {
     amount,
-    ccy,
+    ccy: numericCurrencyCode,
     paymentType: 'debit',
     redirectUrl: `${origin}/?payment=return&orderId=${encodeURIComponent(orderId)}`,
-    webHookUrl: webhookSecret
-      ? `${origin}/.netlify/functions/monobank-webhook?secret=${encodeURIComponent(webhookSecret)}`
-      : `${origin}/.netlify/functions/monobank-webhook`,
+    webHookUrl: webhookUrl.toString(),
     merchantPaymInfo: {
       reference: orderId,
       destination: `${productName} • ${plan} • ${duration}`,
@@ -195,7 +215,8 @@ exports.handler = async (event) => {
           name: `${productName} (${plan}, ${duration})`,
           qty: 1,
           sum: amount,
-          code: orderId
+          code: orderId,
+          icon: productIcon || undefined
         }
       ]
     }
@@ -234,7 +255,7 @@ exports.handler = async (event) => {
         plan,
         duration,
         price,
-        currency,
+        currencyCode: currencyCode || currency || 'UAH',
         customerName,
         telegram,
         phone,

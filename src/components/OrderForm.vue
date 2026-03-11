@@ -280,12 +280,21 @@ const handleSubmit = async () => {
   try {
     const orderPayload = {
       ...props.orderData,
-      ...formData
+      ...formData,
+      locale: locale.value
     };
 
     const result = await sendOrder(orderPayload);
 
     if (result?.paymentUrl) {
+      if (result?.orderId && result?.invoiceId) {
+        localStorage.setItem(`monoInvoice:${result.orderId}`, JSON.stringify({
+          invoiceId: result.invoiceId,
+          email: formData.email,
+          createdAt: Date.now()
+        }));
+      }
+
       window.location.assign(result.paymentUrl);
       return;
     }

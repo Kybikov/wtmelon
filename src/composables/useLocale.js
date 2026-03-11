@@ -4,11 +4,11 @@ import { useRouter, useRoute } from 'vue-router'
 const SUPPORTED_LOCALES = ['en', 'uk', 'de', 'ru']
 const DEFAULT_LOCALE = 'en'
 
-const CURRENCY_SYMBOLS = {
-  en: '$',
-  uk: '₴',
-  de: '€',
-  ru: '₴'
+const CURRENCY_CONFIG = {
+  en: { symbol: '$', code: 'USD', numericCode: 840 },
+  uk: { symbol: '₴', code: 'UAH', numericCode: 980 },
+  de: { symbol: '€', code: 'EUR', numericCode: 978 },
+  ru: { symbol: '₴', code: 'UAH', numericCode: 980 }
 }
 
 const LOCALE_NAMES = {
@@ -54,7 +54,9 @@ export function useLocale() {
   const route = useRoute()
 
   const locale = computed(() => currentLocale.value)
-  const currency = computed(() => CURRENCY_SYMBOLS[currentLocale.value])
+  const currency = computed(() => CURRENCY_CONFIG[currentLocale.value]?.symbol || CURRENCY_CONFIG[DEFAULT_LOCALE].symbol)
+  const currencyCode = computed(() => CURRENCY_CONFIG[currentLocale.value]?.code || CURRENCY_CONFIG[DEFAULT_LOCALE].code)
+  const currencyNumericCode = computed(() => CURRENCY_CONFIG[currentLocale.value]?.numericCode || CURRENCY_CONFIG[DEFAULT_LOCALE].numericCode)
   const loading = computed(() => isLoading.value)
 
   const setLocale = (newLocale) => {
@@ -104,11 +106,11 @@ export function useLocale() {
   }
 
   const t = (key) => {
-    const locale = translations.value[currentLocale.value]
-    if (!locale) return key
+    const localeDictionary = translations.value[currentLocale.value]
+    if (!localeDictionary) return key
 
     const keys = key.split('.')
-    let value = locale
+    let value = localeDictionary
 
     for (const k of keys) {
       if (value && typeof value === 'object' && k in value) {
@@ -131,6 +133,8 @@ export function useLocale() {
   return {
     locale,
     currency,
+    currencyCode,
+    currencyNumericCode,
     loading,
     setLocale,
     initLocale,
