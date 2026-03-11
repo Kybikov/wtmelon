@@ -249,6 +249,25 @@ function extractAccountPayload(rawValue) {
   }
 }
 
+function extractPrimaryUserToken(rawValue) {
+  const value = typeof rawValue === 'string' ? rawValue.trim() : ''
+
+  if (!value) {
+    return ''
+  }
+
+  try {
+    const parsed = JSON.parse(value)
+
+    return parsed?.accessToken
+      || parsed?.access_token
+      || parsed?.token
+      || ''
+  } catch {
+    return value
+  }
+}
+
 function getClientMessage(result) {
   if (!result?.data) {
     return ''
@@ -341,13 +360,14 @@ exports.handler = async (event) => {
       }
 
       const accountPayload = extractAccountPayload(userToken)
+      const primaryUserToken = extractPrimaryUserToken(userToken)
       const primaryResult = apiToken
         ? await callUpstream({
             path: '/activate',
             method: 'POST',
             payload: {
               key,
-              user_token: userToken
+              user_token: primaryUserToken
             },
             apiToken,
             baseUrl
